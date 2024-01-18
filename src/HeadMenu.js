@@ -6,8 +6,10 @@ import CssBaseline from '@mui/material/CssBaseline';
 import MuiAppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
+import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined';
+import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
+import ChatOutlinedIcon from '@mui/icons-material/ChatOutlined';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
@@ -19,7 +21,9 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import logo from './image32.png';
+import { Divider } from '@mui/material';
 import App from './App';
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -115,29 +119,42 @@ export default function HeadMenu() {
         open={open}
       >
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
+            <ListItem key={"Imóveis"} disablePadding>
+              <ListItemButton onClick={() => window.location.href = '/'}>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                 <HomeOutlinedIcon color="error" />
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary={"Imóveis"} />
               </ListItemButton>
             </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+            <Divider/>
+            <ListItem key={"Clientes"} disablePadding>
+              <ListItemButton  onClick={() => window.location.href = '/clientes'}>
+                <ListItemIcon >
+                 <Person2OutlinedIcon color="error" />
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary={"Clientes"} />
               </ListItemButton>
             </ListItem>
-          ))}
+            <Divider/>
+            <ListItem key={"Mensagens"} disablePadding>
+              <ListItemButton color="error" >
+                <ListItemIcon>
+                 <ChatOutlinedIcon color="error" />
+                </ListItemIcon>
+                <ListItemText primary={"Mensagens"} />
+              </ListItemButton>
+            </ListItem>
+            <Divider/>
+            <ListItem key={"Erros"} disablePadding>
+              <ListItemButton color="error" >
+                <ListItemIcon>
+                 <ErrorOutlineOutlinedIcon color="error" />
+                </ListItemIcon>
+                <ListItemText primary={"Erros"} />
+              </ListItemButton>
+            </ListItem>
+
         </List>
       </Drawer>
       <Main open={open}>

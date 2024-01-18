@@ -1,0 +1,4419 @@
+{
+"users":[
+    {
+     "IDUNIDADE": "AB01H",
+     "DIALOGO_PRE_CHECKIN": "61c9d0840494328dbcb4b4de",
+     "DIALOGO_PRE_CHECKOUT": "61c9d082d5c1791ec21363fc",
+     "NOME_COMERCIAL": "Apto Itacolomi Home Club",
+     "PROPIETARIO": "Daiana Pereira",
+     "N_WHATSAPP": "55 47 91265939",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "AF01H",
+     "DIALOGO_PRE_CHECKIN": "61c9ca8b9fa1e91b75d73676",
+     "DIALOGO_PRE_CHECKOUT": "61c9ca898be3f3258af64b61",
+     "NOME_COMERCIAL": "Bali Beach Home Club",
+     "PROPIETARIO": "Daiana Pereira",
+     "N_WHATSAPP": "55 47 91265939",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "AG01H",
+     "DIALOGO_PRE_CHECKIN": "61c71329eb2e38a142917b75",
+     "DIALOGO_PRE_CHECKOUT": "61c71327d756f8223959915c",
+     "NOME_COMERCIAL": "Apto W Residence",
+     "PROPIETARIO": "Ligia Zermiani",
+     "N_WHATSAPP": "55 47 9197 6281",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "AI01H",
+     "DIALOGO_PRE_CHECKIN": "61d43c767e12e6f325008ece",
+     "DIALOGO_PRE_CHECKOUT": "61d43c744cdd62523fc2745e",
+     "NOME_COMERCIAL": "Acomodação Village - Imbituba",
+     "PROPIETARIO": "Deise Chiele",
+     "N_WHATSAPP": "55 54 9923 3763",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "AM01H",
+     "DIALOGO_PRE_CHECKIN": "61cdc2b17e12e6f325003ce2",
+     "DIALOGO_PRE_CHECKOUT": "61cdc2af985d6407486887bd",
+     "NOME_COMERCIAL": "Apto 100m do Mar - Praia Alegre",
+     "PROPIETARIO": "Vilberto Poffo",
+     "N_WHATSAPP": "55 47 88117911",
+     "N_WHATSAPP2": "55 47 91811630",
+     "N_WHATSAPP3": "55 47 9197 6281",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "AN01H",
+     "DIALOGO_PRE_CHECKIN": "61d2eed667f5b26dc2f0bcfa",
+     "DIALOGO_PRE_CHECKOUT": "61d2eed4d5c1791ec213f6bf",
+     "NOME_COMERCIAL": "Duplex com Vista pro Mar - Imbituba",
+     "PROPIETARIO": "Allan Júnior",
+     "N_WHATSAPP": "55 48 9963 2939",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "AP01H",
+     "DIALOGO_PRE_CHECKIN": "61d593ee8318e6f3ccc4d3d9",
+     "DIALOGO_PRE_CHECKOUT": "61d593ecd756f822395aa4df",
+     "NOME_COMERCIAL": "Apto Nantes com Vista pro Beto Carrero World",
+     "PROPIETARIO": "Alexsandro do Nascimento",
+     "N_WHATSAPP": "55 13 98112 7877",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "AP02H",
+     "DIALOGO_PRE_CHECKIN": "61c9d0840494328dbcb4b4de",
+     "DIALOGO_PRE_CHECKOUT": "61c9d082d5c1791ec21363fc",
+     "NOME_COMERCIAL": "Apto Itacolomi Home Club",
+     "PROPIETARIO": "Daiana Pereira",
+     "N_WHATSAPP": "55 47 91265939",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "AT01H",
+     "DIALOGO_PRE_CHECKIN": "61d43c767e12e6f325008ece",
+     "DIALOGO_PRE_CHECKOUT": "61d43c744cdd62523fc2745e",
+     "NOME_COMERCIAL": "Acomodação Village - Imbituba",
+     "PROPIETARIO": "Deise Chiele",
+     "N_WHATSAPP": "55 54 9923 3763",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "AT03H",
+     "DIALOGO_PRE_CHECKIN": "63c9987ea907cef860bf239d",
+     "DIALOGO_PRE_CHECKOUT": "63c9987f6f8242baaabde7c6",
+     "NOME_COMERCIAL": "Sitio Libardo",
+     "PROPIETARIO": "Vanderli Libardo",
+     "N_WHATSAPP": "55 48 99406226"
+    },
+    {
+     "IDUNIDADE": "AV01H",
+     "DIALOGO_PRE_CHECKIN": "61d89cc4bf89bd83adcf8cec",
+     "DIALOGO_PRE_CHECKOUT": "61d8a12e28b738b3ef5da68a",
+     "NOME_COMERCIAL": "Apartamento Premium nos Ingleses",
+     "PROPIETARIO": "Marlisa Eckhardt",
+     "N_WHATSAPP": "55 48 96263349"
+    },
+    {
+     "IDUNIDADE": "AW01H",
+     "DIALOGO_PRE_CHECKIN": "61e01e52a526c76e2793b351",
+     "DIALOGO_PRE_CHECKOUT": "61e01e507f07332d7db6428b",
+     "NOME_COMERCIAL": "Sitio do Alto: Casa Privativa",
+     "PROPIETARIO": "Bruno Oliveira",
+     "N_WHATSAPP": "55 48 96563714",
+     "N_WHATSAPP2": "55 48 91732304",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "AW02H",
+     "DIALOGO_PRE_CHECKIN": "61f30efcbb0b0375b57234d9",
+     "DIALOGO_PRE_CHECKOUT": "61f30ef5dd59edc22f45c23e",
+     "NOME_COMERCIAL": "Sítio do Alto: Chalé Premium",
+     "PROPIETARIO": "Bruno Oliveira",
+     "N_WHATSAPP": "55 48 96563714",
+     "N_WHATSAPP2": "55 48 91732304"
+    },
+    {
+     "IDUNIDADE": "AW03H",
+     "DIALOGO_PRE_CHECKIN": "62d0774af1904f0c49ee8e82",
+     "DIALOGO_PRE_CHECKOUT": "62d0774c2137bafa64ce5567",
+     "NOME_COMERCIAL": "Sitio do Alto: Casa e Chalé Privativos",
+     "PROPIETARIO": "Bruno Oliveira",
+     "N_WHATSAPP": "55 48 96563714",
+     "N_WHATSAPP2": "55 48 91732304"
+    },
+    {
+     "IDUNIDADE": "BC01H",
+     "DIALOGO_PRE_CHECKIN": "61e1bc9c73a0d4fdc5006d0d",
+     "DIALOGO_PRE_CHECKOUT": "61e1bc9bf374a885bda43588",
+     "NOME_COMERCIAL": "Casa Golden - Lagoa da Conceição",
+     "PROPIETARIO": "Mário Vieira",
+     "N_WHATSAPP": "55 48 98152223",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "BD01H",
+     "DIALOGO_PRE_CHECKIN": "61e6c2ea12949810aa1c7787",
+     "DIALOGO_PRE_CHECKOUT": "61e6c2e88a561736de046326",
+     "NOME_COMERCIAL": "Casa com Piscina em Penha",
+     "PROPIETARIO": "Eliana Dacol",
+     "N_WHATSAPP": "55 41 99210664",
+     "N_FUNCIONARIO": "55 47 96937744"
+    },
+    {
+     "IDUNIDADE": "BH01H",
+     "DIALOGO_PRE_CHECKIN": "631127d9bc09c27bf469c9fb",
+     "DIALOGO_PRE_CHECKOUT": "631127db58e338a8f222d827",
+     "NOME_COMERCIAL": "Aconchego dos Reis - 500m da Praia",
+     "PROPIETARIO": "Noris Rafaela Acosta",
+     "N_WHATSAPP": "55 48 99168634 "
+    },
+    {
+     "IDUNIDADE": "BI01H",
+     "DIALOGO_PRE_CHECKIN": "6307df2024c418e58e4256f4",
+     "DIALOGO_PRE_CHECKOUT": "6307df6bdfe21658e55812cc",
+     "NOME_COMERCIAL": "Nautilus",
+     "PROPIETARIO": "Solon Schafer",
+     "N_WHATSAPP": "55 48 8414 7882",
+     "N_WHATSAPP2": "55 47 9197 6281"
+    },
+    {
+     "IDUNIDADE": "BK01H",
+     "DIALOGO_PRE_CHECKIN": "61eea2c675e605221a295ac4",
+     "DIALOGO_PRE_CHECKOUT": "61eea2c44fed2c8f0dd61b50",
+     "NOME_COMERCIAL": "Sítio Colina dos Sonhos",
+     "PROPIETARIO": "Paulo Henrique Wombemel",
+     "N_WHATSAPP": "55 48 98248843"
+    },
+    {
+     "IDUNIDADE": "BP02H",
+     "DIALOGO_PRE_CHECKIN": "61f3203463dad70001951c8a",
+     "DIALOGO_PRE_CHECKOUT": "61f320322e8b7155d391febb",
+     "NOME_COMERCIAL": "Apto de Frente pro Mar - 50m da Praia do Sonho",
+     "PROPIETARIO": "Joice Fraga",
+     "N_WHATSAPP": "55 48 99750115"
+    },
+    {
+     "IDUNIDADE": "BQ01H",
+     "DIALOGO_PRE_CHECKIN": "61fa9c7bab2a1b1206b2a38a",
+     "DIALOGO_PRE_CHECKOUT": "61fa9c7ac91479da008214c5",
+     "NOME_COMERCIAL": "Chácara Verdes Campos",
+     "PROPIETARIO": "Marcelo de Liz",
+     "N_WHATSAPP": "55 49 91222525",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "BR01H",
+     "DIALOGO_PRE_CHECKIN": "61fa8f7a51a0b4ba8d0dc73f",
+     "DIALOGO_PRE_CHECKOUT": "61fa8f7876fd34b60c8ecb8d",
+     "NOME_COMERCIAL": "Sítio Missioneira - Alfredo Wagner",
+     "PROPIETARIO": "Jorge Luiz Wombemel",
+     "N_WHATSAPP": "55 47 84033823",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "BV01H",
+     "DIALOGO_PRE_CHECKIN": "61c9ca8b9fa1e91b75d73676",
+     "DIALOGO_PRE_CHECKOUT": "61c9ca898be3f3258af64b61",
+     "NOME_COMERCIAL": "Bali Beach Home Club",
+     "PROPIETARIO": "Daiana Pereira",
+     "N_WHATSAPP": "55 47 91265939",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "CC01H",
+     "DIALOGO_PRE_CHECKIN": "620422e9083a26b4fe65b16e",
+     "DIALOGO_PRE_CHECKOUT": "620422ebc91479da0083130b",
+     "NOME_COMERCIAL": "Casa Lótus: Piscina, Conforto e Elegância",
+     "PROPIETARIO": "Marcos de Liz",
+     "N_WHATSAPP": "55 48 91714717",
+     "N_WHATSAPP2": "55 48 91033330",
+     "N_WHATSAPP3": "55 48 91288517",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "CE01H",
+     "DIALOGO_PRE_CHECKIN": "61c9d0840494328dbcb4b4de",
+     "DIALOGO_PRE_CHECKOUT": "61c9d082d5c1791ec21363fc",
+     "NOME_COMERCIAL": "Apto Itacolomi Home Club",
+     "PROPIETARIO": "Daiana Pereira",
+     "N_WHATSAPP": "55 47 91265939",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "CE02H",
+     "DIALOGO_PRE_CHECKIN": "6307e12c379fa82b6f0db56d",
+     "DIALOGO_PRE_CHECKOUT": "6307e128db025f6f2a6722aa",
+     "NOME_COMERCIAL": "Nautilus Luz da Lua em Penha",
+     "PROPIETARIO": "Stella Tschoeke",
+     "N_WHATSAPP": "55 47 9197 6281",
+     "N_WHATSAPP2": "55 47 84160867",
+     "N_WHATSAPP3": "55 47 89165390",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "CL01H",
+     "DIALOGO_PRE_CHECKIN": "62161b180ba87536cc47ab89",
+     "DIALOGO_PRE_CHECKOUT": "62161b168458ccfb7acf9d06",
+     "NOME_COMERCIAL": "Casa Flor de Lis: Piscina, Gourmet e Conforto",
+     "PROPIETARIO": "Ubiraci Farias",
+     "N_WHATSAPP": "55 48 84780271",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "CP01H",
+     "DIALOGO_PRE_CHECKIN": "5fb81b69d8a994cbd4b9b1dd",
+     "DIALOGO_PRE_CHECKOUT": "5fb81ce25525847a638dcd95",
+     "NOME_COMERCIAL": "Nautilus Cobertura Master",
+     "PROPIETARIO": "Jennifer Schultz Gram Jespersen",
+     "N_WHATSAPP": "55 41 85150626",
+     "N_WHATSAPP2": "55 47 9197 6281",
+     "N_WHATSAPP3": "55 41 99771305",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "CR01H",
+     "DIALOGO_PRE_CHECKIN": "60a81948050fa3fb6162a5ac",
+     "DIALOGO_PRE_CHECKOUT": "6225ff6abcce7be9d7942ab5",
+     "NOME_COMERCIAL": "Cobertura Infinity Blue",
+     "PROPIETARIO": "Antônio da Silva",
+     "N_WHATSAPP": "55 48 98569920",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "DE01H",
+     "DIALOGO_PRE_CHECKIN": "62e178cfffabddbf112070f2",
+     "DIALOGO_PRE_CHECKOUT": "62e178d2503b5b9822b4ac45",
+     "NOME_COMERCIAL": "Summer Residence Gov Celso Ramos",
+     "PROPIETARIO": "Ignacio Wopereis",
+     "N_WHATSAPP": "55 48 9107 2606",
+     "N_WHATSAPP2": "55 48 8466 7112"
+    },
+    {
+     "IDUNIDADE": "DE02H",
+     "DIALOGO_PRE_CHECKIN": "62e178cfffabddbf112070f2",
+     "DIALOGO_PRE_CHECKOUT": "62e178d2503b5b9822b4ac45",
+     "NOME_COMERCIAL": "Summer Residence Gov Celso Ramos",
+     "PROPIETARIO": "Ignacio Wopereis",
+     "N_WHATSAPP": "55 48 9107 2606",
+     "N_WHATSAPP2": "55 48 8466 7112"
+    },
+    {
+     "IDUNIDADE": "DR01H",
+     "DIALOGO_PRE_CHECKIN": "623a36fecac1b3e6e4b569f5",
+     "DIALOGO_PRE_CHECKOUT": "623a36fcc48b85e9dfb552bf",
+     "NOME_COMERCIAL": "Apartamento Prime na Lagoa da Conceição",
+     "PROPIETARIO": "Walid Moustafa",
+     "N_WHATSAPP": "55 11 944468517",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "EB01H",
+     "DIALOGO_PRE_CHECKIN": "62473dc868ac439c2b427a16",
+     "DIALOGO_PRE_CHECKOUT": "62473dce0a14bf05c91357d6",
+     "NOME_COMERCIAL": "Apartamento Design em Curitiba\/PR",
+     "PROPIETARIO": "Maria Bernadete",
+     "N_WHATSAPP": "55 41 99952003",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "EJ01H",
+     "DIALOGO_PRE_CHECKIN": "6255f07686adfdd57832f60b",
+     "DIALOGO_PRE_CHECKOUT": "6255f0740a14bf05c914859b",
+     "NOME_COMERCIAL": "Casa Master com Piscina em Gov Celso Ramos",
+     "PROPIETARIO": "Marcelo Wopereis",
+     "N_WHATSAPP": "55 48 99618958",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "EO01H",
+     "DIALOGO_PRE_CHECKIN": "62587c6f95a918c45cd50f98",
+     "DIALOGO_PRE_CHECKOUT": "62587c7128a1ca8f4ccdd9b2",
+     "NOME_COMERCIAL": "Casa de Férias em Penha\/SC",
+     "PROPIETARIO": "Ana Caroline",
+     "N_WHATSAPP": "55 47 96837895"
+    },
+    {
+     "IDUNIDADE": "EU01H",
+     "DIALOGO_PRE_CHECKIN": "626061af28a1ca8f4cce664f",
+     "DIALOGO_PRE_CHECKOUT": "626061b1ca323bd83d2100c2",
+     "NOME_COMERCIAL": "Romântico e Charmoso Trailer com Vista Incrível",
+     "PROPIETARIO": "Motaury Porto Filho",
+     "N_WHATSAPP": "55 48 99487733",
+     "N_WHATSAPP2": "55 48 99688103"
+    },
+    {
+     "IDUNIDADE": "EX02H",
+     "DIALOGO_PRE_CHECKIN": "626ae1e708f02567311f5327",
+     "DIALOGO_PRE_CHECKOUT": "626ae1e6a8761a27e6d926e0",
+     "NOME_COMERCIAL": "Pousada Rio Túnel",
+     "PROPIETARIO": "Emerson Fernandes",
+     "N_WHATSAPP": "55 48 99728273",
+     "N_WHATSAPP2": "55 48 96223222",
+     "N_WHATSAPP3": "55 48 96577447",
+     "N_FUNCIONARIO": "55 48 98636174"
+    },
+    {
+     "IDUNIDADE": "FA01H",
+     "DIALOGO_PRE_CHECKIN": "626ae1e708f02567311f5327",
+     "DIALOGO_PRE_CHECKOUT": "626ae1e6a8761a27e6d926e0",
+     "NOME_COMERCIAL": "Pousada Rio Túnel",
+     "PROPIETARIO": "Emerson Fernandes",
+     "N_WHATSAPP": "55 48 99728273",
+     "N_WHATSAPP2": "55 48 96223222",
+     "N_WHATSAPP3": "55 48 96577447",
+     "N_FUNCIONARIO": "55 48 98636174"
+    },
+    {
+     "IDUNIDADE": "FY01H",
+     "DIALOGO_PRE_CHECKIN": "628d1c11ad1cbd688b657a7b",
+     "DIALOGO_PRE_CHECKOUT": "628d1c138d9b019dfb036982",
+     "NOME_COMERCIAL": "Pousada Estação Sol e Lua",
+     "PROPIETARIO": "Audrey Lobo",
+     "N_WHATSAPP": "55 48 91116003",
+     "N_WHATSAPP2": "55 49 88392225"
+    },
+    {
+     "IDUNIDADE": "FY02H",
+     "DIALOGO_PRE_CHECKIN": "628d1c11ad1cbd688b657a7b",
+     "DIALOGO_PRE_CHECKOUT": "628d1c138d9b019dfb036982",
+     "NOME_COMERCIAL": "Pousada Estação Sol e Lua",
+     "PROPIETARIO": "Audrey Lobo",
+     "N_WHATSAPP": "55 48 91116003",
+     "N_WHATSAPP2": "55 49 88392225"
+    },
+    {
+     "IDUNIDADE": "FY03H",
+     "DIALOGO_PRE_CHECKIN": "628d1c11ad1cbd688b657a7b",
+     "DIALOGO_PRE_CHECKOUT": "628d1c138d9b019dfb036982",
+     "NOME_COMERCIAL": "Pousada Estação Sol e Lua",
+     "PROPIETARIO": "Audrey Lobo",
+     "N_WHATSAPP": "55 48 91116003",
+     "N_WHATSAPP2": "55 49 88392225"
+    },
+    {
+     "IDUNIDADE": "FY04H",
+     "DIALOGO_PRE_CHECKIN": "628d1c11ad1cbd688b657a7b",
+     "DIALOGO_PRE_CHECKOUT": "628d1c138d9b019dfb036982",
+     "NOME_COMERCIAL": "Pousada Estação Sol e Lua",
+     "PROPIETARIO": "Audrey Lobo",
+     "N_WHATSAPP": "55 48 91116003",
+     "N_WHATSAPP2": "55 49 88392225"
+    },
+    {
+     "IDUNIDADE": "FY08H",
+     "DIALOGO_PRE_CHECKIN": "628d1c11ad1cbd688b657a7b",
+     "DIALOGO_PRE_CHECKOUT": "628d1c138d9b019dfb036982",
+     "NOME_COMERCIAL": "Pousada Estação Sol e Lua",
+     "PROPIETARIO": "Audrey Lobo",
+     "N_WHATSAPP": "55 48 91116003",
+     "N_WHATSAPP2": "55 49 88392225"
+    },
+    {
+     "IDUNIDADE": "FY09H",
+     "DIALOGO_PRE_CHECKIN": "628d1c11ad1cbd688b657a7b",
+     "DIALOGO_PRE_CHECKOUT": "628d1c138d9b019dfb036982",
+     "NOME_COMERCIAL": "Pousada Estação Sol e Lua",
+     "PROPIETARIO": "Audrey Lobo",
+     "N_WHATSAPP": "55 48 91116003",
+     "N_WHATSAPP2": "55 49 88392225"
+    },
+    {
+     "IDUNIDADE": "FY13H",
+     "DIALOGO_PRE_CHECKIN": "628d1c11ad1cbd688b657a7b",
+     "DIALOGO_PRE_CHECKOUT": "628d1c138d9b019dfb036982",
+     "NOME_COMERCIAL": "Pousada Estação Sol e Lua",
+     "PROPIETARIO": "Audrey Lobo",
+     "N_WHATSAPP": "55 48 91116003",
+     "N_WHATSAPP2": "55 49 88392225"
+    },
+    {
+     "IDUNIDADE": "FY14H",
+     "DIALOGO_PRE_CHECKIN": "628d1c11ad1cbd688b657a7b",
+     "DIALOGO_PRE_CHECKOUT": "628d1c138d9b019dfb036982",
+     "NOME_COMERCIAL": "Pousada Estação Sol e Lua",
+     "PROPIETARIO": "Audrey Lobo",
+     "N_WHATSAPP": "55 48 91116003",
+     "N_WHATSAPP2": "55 49 88392225"
+    },
+    {
+     "IDUNIDADE": "GC01G",
+     "DIALOGO_PRE_CHECKIN": "5fac6c93069e0cc8eb9ae8b2",
+     "DIALOGO_PRE_CHECKOUT": "5fac6d646d69a3c1d55c86c6",
+     "NOME_COMERCIAL": "Teresinha",
+     "PROPIETARIO": "Teresinha Mendes",
+     "N_WHATSAPP": "55 48 9953 5242"
+    },
+    {
+     "IDUNIDADE": "GC02G",
+     "DIALOGO_PRE_CHECKIN": "5fad44ed9a7a2e97ff77c4ea",
+     "DIALOGO_PRE_CHECKOUT": "5fad47a8afe0e81fd62e6c18",
+     "NOME_COMERCIAL": "Neli Campeche",
+     "PROPIETARIO": "Manelir Vieira",
+     "N_WHATSAPP": "55 48 9902 6873"
+    },
+    {
+     "IDUNIDADE": "GC03G",
+     "DIALOGO_PRE_CHECKIN": "5fac6c93069e0cc8eb9ae8b2",
+     "DIALOGO_PRE_CHECKOUT": "5fac6d646d69a3c1d55c86c6",
+     "NOME_COMERCIAL": "Teresinha",
+     "PROPIETARIO": "Teresinha Mendes",
+     "N_WHATSAPP": "55 48 9953 5242"
+    },
+    {
+     "IDUNIDADE": "GC03G",
+     "DIALOGO_PRE_CHECKIN": "5fac6c93069e0cc8eb9ae8b2",
+     "DIALOGO_PRE_CHECKOUT": "5fac6d646d69a3c1d55c86c6",
+     "NOME_COMERCIAL": "Teresinha",
+     "PROPIETARIO": "Teresinha Mendes",
+     "N_WHATSAPP": "55 48 9953 5242",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "GC04G",
+     "DIALOGO_PRE_CHECKIN": "5fad44ed9a7a2e97ff77c4ea",
+     "DIALOGO_PRE_CHECKOUT": "5fad47a8afe0e81fd62e6c18",
+     "NOME_COMERCIAL": "Neli Campeche",
+     "PROPIETARIO": "Manelir Vieira",
+     "N_WHATSAPP": "55 48 9902 6873"
+    },
+    {
+     "IDUNIDADE": "GC05G",
+     "DIALOGO_PRE_CHECKIN": "5fad44ed9a7a2e97ff77c4ea",
+     "DIALOGO_PRE_CHECKOUT": "5fad47a8afe0e81fd62e6c18",
+     "NOME_COMERCIAL": "Neli Campeche",
+     "PROPIETARIO": "Manelir Vieira",
+     "N_WHATSAPP": "55 48 9902 6873"
+    },
+    {
+     "IDUNIDADE": "GC06G",
+     "DIALOGO_PRE_CHECKIN": "5fad44ed9a7a2e97ff77c4ea",
+     "DIALOGO_PRE_CHECKOUT": "5fad47a8afe0e81fd62e6c18",
+     "NOME_COMERCIAL": "Neli Campeche",
+     "PROPIETARIO": "Manelir Vieira",
+     "N_WHATSAPP": "55 48 9902 6873"
+    },
+    {
+     "IDUNIDADE": "GC07G",
+     "DIALOGO_PRE_CHECKIN": "5fad906422cf17f741acc4f3",
+     "DIALOGO_PRE_CHECKOUT": "5fad9075a6853f171b363236",
+     "NOME_COMERCIAL": "Pousada Souza",
+     "PROPIETARIO": "Natalicio Souza",
+     "N_WHATSAPP": "55 48 9611 6261",
+     "N_WHATSAPP2": "55 48 9164 1306"
+    },
+    {
+     "IDUNIDADE": "GC08G",
+     "DIALOGO_PRE_CHECKIN": "5fad906422cf17f741acc4f3",
+     "DIALOGO_PRE_CHECKOUT": "5fad9075a6853f171b363236",
+     "NOME_COMERCIAL": "Pousada Souza",
+     "PROPIETARIO": "Natalicio Souza",
+     "N_WHATSAPP": "55 48 9611 6261",
+     "N_WHATSAPP2": "55 48 9164 1306"
+    },
+    {
+     "IDUNIDADE": "GC09G",
+     "DIALOGO_PRE_CHECKIN": "5fad906422cf17f741acc4f3",
+     "DIALOGO_PRE_CHECKOUT": "5fad9075a6853f171b363236",
+     "NOME_COMERCIAL": "Pousada Souza",
+     "PROPIETARIO": "Natalicio Souza",
+     "N_WHATSAPP": "55 48 9611 6261",
+     "N_WHATSAPP2": "55 48 9164 1306"
+    },
+    {
+     "IDUNIDADE": "GC10G",
+     "DIALOGO_PRE_CHECKIN": "5fad906422cf17f741acc4f3",
+     "DIALOGO_PRE_CHECKOUT": "5fad9075a6853f171b363236",
+     "NOME_COMERCIAL": "Pousada Souza",
+     "PROPIETARIO": "Natalicio Souza",
+     "N_WHATSAPP": "55 48 9611 6261",
+     "N_WHATSAPP2": "55 48 9164 1306"
+    },
+    {
+     "IDUNIDADE": "GC11G",
+     "DIALOGO_PRE_CHECKIN": "5fad906422cf17f741acc4f3",
+     "DIALOGO_PRE_CHECKOUT": "5fad9075a6853f171b363236",
+     "NOME_COMERCIAL": "Pousada Souza",
+     "PROPIETARIO": "Natalicio Souza",
+     "N_WHATSAPP": "55 48 9611 6261",
+     "N_WHATSAPP2": "55 48 9164 1306"
+    },
+    {
+     "IDUNIDADE": "GD01H",
+     "DIALOGO_PRE_CHECKIN": "628fd6b3f2682aaa9db689fe",
+     "DIALOGO_PRE_CHECKOUT": "628fd6b776f3644591054a05",
+     "NOME_COMERCIAL": "Casa Green Piccoli",
+     "PROPIETARIO": "Danielle Piccoli",
+     "N_WHATSAPP": "55 47 99027443"
+    },
+    {
+     "IDUNIDADE": "GE04G",
+     "DIALOGO_PRE_CHECKIN": "65982047ded533fef1d6ef5a",
+     "DIALOGO_PRE_CHECKOUT": "6441a4d9694e78504d69fb14",
+     "NOME_COMERCIAL": "Pousada Recanto do Sul",
+     "PROPIETARIO": "Teresinha Mendes",
+     "N_WHATSAPP": "55 48 99535242",
+     "N_WHATSAPP2": "55 48 98212001"
+    },
+    {
+     "IDUNIDADE": "GE05G",
+     "DIALOGO_PRE_CHECKIN": "65982047ded533fef1d6ef5a",
+     "DIALOGO_PRE_CHECKOUT": "6441a4d9694e78504d69fb14",
+     "NOME_COMERCIAL": "Pousada Recanto do Sul",
+     "PROPIETARIO": "Teresinha Mendes",
+     "N_WHATSAPP": "55 48 99535242",
+     "N_WHATSAPP2": "55 48 98212001"
+    },
+    {
+     "IDUNIDADE": "GE06G",
+     "DIALOGO_PRE_CHECKIN": "65982047ded533fef1d6ef5a",
+     "DIALOGO_PRE_CHECKOUT": "6441a4d9694e78504d69fb14",
+     "NOME_COMERCIAL": "Pousada Recanto do Sul",
+     "PROPIETARIO": "Teresinha Mendes",
+     "N_WHATSAPP": "55 48 99535242",
+     "N_WHATSAPP3": "55 48 98212001"
+    },
+    {
+     "IDUNIDADE": "GE07G",
+     "DIALOGO_PRE_CHECKIN": "65982047ded533fef1d6ef5a",
+     "DIALOGO_PRE_CHECKOUT": "6441a4d9694e78504d69fb14",
+     "NOME_COMERCIAL": "Pousada Recanto do Sul",
+     "PROPIETARIO": "Teresinha Mendes",
+     "N_WHATSAPP": "55 48 99535242",
+     "N_WHATSAPP3": "55 48 98212001"
+    },
+    {
+     "IDUNIDADE": "GE08G",
+     "DIALOGO_PRE_CHECKIN": "65982047ded533fef1d6ef5a",
+     "DIALOGO_PRE_CHECKOUT": "6441a4d9694e78504d69fb14",
+     "NOME_COMERCIAL": "Pousada Recanto do Sul",
+     "PROPIETARIO": "Teresinha Mendes",
+     "N_WHATSAPP": "55 48 99535242",
+     "N_WHATSAPP3": "55 48 98212001"
+    },
+    {
+     "IDUNIDADE": "GE09G",
+     "DIALOGO_PRE_CHECKIN": "65982047ded533fef1d6ef5a",
+     "DIALOGO_PRE_CHECKOUT": "6441a4d9694e78504d69fb14",
+     "NOME_COMERCIAL": "Pousada Recanto do Sul",
+     "PROPIETARIO": "Teresinha Mendes",
+     "N_WHATSAPP": "55 48 99535242",
+     "N_WHATSAPP2": "55 48 98212001"
+    },
+    {
+     "IDUNIDADE": "GE10G",
+     "DIALOGO_PRE_CHECKIN": "64ef6ffc8121d23e45532c01",
+     "DIALOGO_PRE_CHECKOUT": "64ef6ffd72c4b4be4b242ae8",
+     "NOME_COMERCIAL": "Villa do Mar",
+     "PROPIETARIO": "Alberto Vaia",
+     "N_WHATSAPP": "54 93 415088031",
+     "N_FUNCIONARIO": "55 48 99528407"
+    },
+    {
+     "IDUNIDADE": "GE18G",
+     "DIALOGO_PRE_CHECKIN": "65982043ac81a11c9d9fb750",
+     "DIALOGO_PRE_CHECKOUT": "6441a4d9694e78504d69fb14",
+     "NOME_COMERCIAL": "Pousada Recanto do Sul",
+     "PROPIETARIO": "Teresinha Mendes",
+     "N_WHATSAPP": "55 48 99535242",
+     "N_WHATSAPP2": "55 48 98212001"
+    },
+    {
+     "IDUNIDADE": "GG02G",
+     "DIALOGO_PRE_CHECKIN": "604767186647966503bb0ebd",
+     "DIALOGO_PRE_CHECKOUT": "604767432f6959b5540f2581",
+     "NOME_COMERCIAL": "Casa do Beija-Flor",
+     "PROPIETARIO": "Solon Schafer",
+     "N_WHATSAPP": "55 48 8414 7882"
+    },
+    {
+     "IDUNIDADE": "GG03G",
+     "DIALOGO_PRE_CHECKIN": "604767186647966503bb0ebd",
+     "DIALOGO_PRE_CHECKOUT": "604767432f6959b5540f2581",
+     "NOME_COMERCIAL": "Casa do Beija-Flor",
+     "PROPIETARIO": "Solon Schafer",
+     "N_WHATSAPP": "55 48 8414 7882"
+    },
+    {
+     "IDUNIDADE": "GG06G",
+     "DIALOGO_PRE_CHECKIN": "5fae9cdc4d0cbc61d0c2809d",
+     "DIALOGO_PRE_CHECKOUT": "5fae94b8f5a7e9d0440f1cdb",
+     "NOME_COMERCIAL": "Sítio Morada do Pai",
+     "PROPIETARIO": "Anice Beirão",
+     "N_WHATSAPP": "55 48 9978 3003"
+    },
+    {
+     "IDUNIDADE": "GH02G",
+     "DIALOGO_PRE_CHECKIN": "5fa47c4b62102931cf0736d7",
+     "DIALOGO_PRE_CHECKOUT": "5fa55a952c06fb190aed8806",
+     "NOME_COMERCIAL": "Chalés e Bangalôs Ibiraquera",
+     "PROPIETARIO": "Ivan Saurer",
+     "N_WHATSAPP": "55 48 9168 8743",
+     "N_FUNCIONARIO": "55 48 91811690"
+    },
+    {
+     "IDUNIDADE": "GH03G",
+     "DIALOGO_PRE_CHECKIN": "5fad35cf22cf17f741acc05c",
+     "DIALOGO_PRE_CHECKOUT": "5fad376686186834aaf7f336",
+     "NOME_COMERCIAL": "Residencial Ibirawave",
+     "PROPIETARIO": "Maria Fernanda",
+     "N_WHATSAPP": "55 48 9123 4132"
+    },
+    {
+     "IDUNIDADE": "GH04G",
+     "DIALOGO_PRE_CHECKIN": "5fad35cf22cf17f741acc05c",
+     "DIALOGO_PRE_CHECKOUT": "5fad376686186834aaf7f336",
+     "NOME_COMERCIAL": "Residencial Ibirawave",
+     "PROPIETARIO": "Maria Fernanda",
+     "N_WHATSAPP": "55 48 9123 4132"
+    },
+    {
+     "IDUNIDADE": "GH05G",
+     "DIALOGO_PRE_CHECKIN": "5fad35cf22cf17f741acc05c",
+     "DIALOGO_PRE_CHECKOUT": "5fad376686186834aaf7f336",
+     "NOME_COMERCIAL": "Residencial Ibirawave",
+     "PROPIETARIO": "Maria Fernanda",
+     "N_WHATSAPP": "55 48 9123 4132"
+    },
+    {
+     "IDUNIDADE": "GH06G",
+     "DIALOGO_PRE_CHECKIN": "5fad35cf22cf17f741acc05c",
+     "DIALOGO_PRE_CHECKOUT": "5fad376686186834aaf7f336",
+     "NOME_COMERCIAL": "Residencial Ibirawave",
+     "PROPIETARIO": "Maria Fernanda",
+     "N_WHATSAPP": "55 48 9123 4132"
+    },
+    {
+     "IDUNIDADE": "GH07G",
+     "DIALOGO_PRE_CHECKIN": "5fad35cf22cf17f741acc05c",
+     "DIALOGO_PRE_CHECKOUT": "5fad376686186834aaf7f336",
+     "NOME_COMERCIAL": "Residencial Ibirawave",
+     "PROPIETARIO": "Maria Fernanda",
+     "N_WHATSAPP": "55 48 9123 4132"
+    },
+    {
+     "IDUNIDADE": "GJ01G",
+     "DIALOGO_PRE_CHECKIN": "5fa9c47fd512e11484bffea9",
+     "DIALOGO_PRE_CHECKOUT": "5fa9c4d1cedf27a35699a935",
+     "NOME_COMERCIAL": "Quinta da Margem",
+     "PROPIETARIO": "Jalda Quintana",
+     "N_WHATSAPP": "55 48 9695 6823",
+     "N_WHATSAPP2": 554899238238,
+     "N_FUNCIONARIO": "55 48 96093968",
+     "N_FUNCIONARIO2": "55 48 32241061"
+    },
+    {
+     "IDUNIDADE": "GJ02G",
+     "DIALOGO_PRE_CHECKIN": "5fa9c47fd512e11484bffea9",
+     "DIALOGO_PRE_CHECKOUT": "5fa9c4d1cedf27a35699a935",
+     "NOME_COMERCIAL": "Quinta da Margem",
+     "PROPIETARIO": "Jalda Quintana",
+     "N_WHATSAPP": "55 48 9695 6823",
+     "N_WHATSAPP2": 554899238238,
+     "N_FUNCIONARIO": "55 48 96093968",
+     "N_FUNCIONARIO2": "55 48 32241061"
+    },
+    {
+     "IDUNIDADE": "GJ03G",
+     "DIALOGO_PRE_CHECKIN": "5fa9c47fd512e11484bffea9",
+     "DIALOGO_PRE_CHECKOUT": "5fa9c4d1cedf27a35699a935",
+     "NOME_COMERCIAL": "Quinta da Margem",
+     "PROPIETARIO": "Jalda Quintana",
+     "N_WHATSAPP": "55 48 9695 6823",
+     "N_WHATSAPP2": 554899238238,
+     "N_FUNCIONARIO": "55 48 96093968",
+     "N_FUNCIONARIO2": "55 48 32241061"
+    },
+    {
+     "IDUNIDADE": "GJ04G",
+     "DIALOGO_PRE_CHECKIN": "5fa9c47fd512e11484bffea9",
+     "DIALOGO_PRE_CHECKOUT": "5fa9c4d1cedf27a35699a935",
+     "NOME_COMERCIAL": "Quinta da Margem",
+     "PROPIETARIO": "Jalda Quintana",
+     "N_WHATSAPP": "55 48 9695 6823",
+     "N_WHATSAPP2": 554899238238,
+     "N_FUNCIONARIO": "55 48 96093968",
+     "N_FUNCIONARIO2": "55 48 32241061"
+    },
+    {
+     "IDUNIDADE": "GJ05G",
+     "DIALOGO_PRE_CHECKIN": "5fa9c47fd512e11484bffea9",
+     "DIALOGO_PRE_CHECKOUT": "5fa9c4d1cedf27a35699a935",
+     "NOME_COMERCIAL": "Quinta da Margem",
+     "PROPIETARIO": "Jalda Quintana",
+     "N_WHATSAPP": "55 48 9695 6823",
+     "N_WHATSAPP2": 554899238238,
+     "N_FUNCIONARIO": "55 48 96093968",
+     "N_FUNCIONARIO2": "55 48 32241061"
+    },
+    {
+     "IDUNIDADE": "GJ06G",
+     "DIALOGO_PRE_CHECKIN": "5fa9c47fd512e11484bffea9",
+     "DIALOGO_PRE_CHECKOUT": "5fa9c4d1cedf27a35699a935",
+     "NOME_COMERCIAL": "Quinta da Margem",
+     "PROPIETARIO": "Jalda Quintana",
+     "N_WHATSAPP": "55 48 9695 6823",
+     "N_WHATSAPP2": 554899238238,
+     "N_FUNCIONARIO": "55 48 96093968",
+     "N_FUNCIONARIO2": "55 48 32241061"
+    },
+    {
+     "IDUNIDADE": "GN01G",
+     "DIALOGO_PRE_CHECKIN": "6197a7fa9247afae71667c27",
+     "DIALOGO_PRE_CHECKOUT": "5fa55a952c06fb190aed8806",
+     "NOME_COMERCIAL": "Chalés e Bangalôs Ibiraquera",
+     "PROPIETARIO": "Ivan Saurer",
+     "N_WHATSAPP": "55 48 9168 8743",
+     "N_FUNCIONARIO": "55 48 91811690"
+    },
+    {
+     "IDUNIDADE": "GN02G",
+     "DIALOGO_PRE_CHECKIN": "6197a7fa9247afae71667c27",
+     "DIALOGO_PRE_CHECKOUT": "5fa55a952c06fb190aed8806",
+     "NOME_COMERCIAL": "Chalés e Bangalôs Ibiraquera",
+     "PROPIETARIO": "Ivan Saurer",
+     "N_WHATSAPP": "55 48 9168 8743",
+     "N_FUNCIONARIO": "55 48 91811690"
+    },
+    {
+     "IDUNIDADE": "GN03G",
+     "DIALOGO_PRE_CHECKIN": "5fa47c4b62102931cf0736d7",
+     "DIALOGO_PRE_CHECKOUT": "5fa55a952c06fb190aed8806",
+     "NOME_COMERCIAL": "Chalés e Bangalôs Ibiraquera",
+     "PROPIETARIO": "Ivan Saurer",
+     "N_WHATSAPP": "55 48 9168 8743",
+     "N_FUNCIONARIO": "55 48 91811690"
+    },
+    {
+     "IDUNIDADE": "GN04G",
+     "DIALOGO_PRE_CHECKIN": "6197a7fa9247afae71667c27",
+     "DIALOGO_PRE_CHECKOUT": "5fa55a952c06fb190aed8806",
+     "NOME_COMERCIAL": "Chalés e Bangalôs Ibiraquera",
+     "PROPIETARIO": "Ivan Saurer",
+     "N_WHATSAPP": "55 48 9168 8743",
+     "N_FUNCIONARIO": "55 48 91811690"
+    },
+    {
+     "IDUNIDADE": "GN05G",
+     "DIALOGO_PRE_CHECKIN": "5fa47c4b62102931cf0736d7",
+     "DIALOGO_PRE_CHECKOUT": "5fa55a952c06fb190aed8806",
+     "NOME_COMERCIAL": "Chalés e Bangalôs Ibiraquera",
+     "PROPIETARIO": "Ivan Saurer",
+     "N_WHATSAPP": "55 48 9168 8743",
+     "N_FUNCIONARIO": "55 48 91811690"
+    },
+    {
+     "IDUNIDADE": "GN09G",
+     "DIALOGO_PRE_CHECKIN": "604a51936647966503bba429",
+     "DIALOGO_PRE_CHECKOUT": "5faebe6f82a85b252725617e",
+     "NOME_COMERCIAL": "Sítio Morada da Neblina",
+     "PROPIETARIO": "Janaina Kumm",
+     "N_WHATSAPP": "55 48 9934 4086"
+    },
+    {
+     "IDUNIDADE": "GN10G",
+     "DIALOGO_PRE_CHECKIN": "6197a7fa9247afae71667c27",
+     "DIALOGO_PRE_CHECKOUT": "5fa55a952c06fb190aed8806",
+     "NOME_COMERCIAL": "Chalés e Bangalôs Ibiraquera",
+     "PROPIETARIO": "Ivan Saurer",
+     "N_WHATSAPP": "55 48 9168 8743",
+     "N_FUNCIONARIO": "55 48 91811690"
+    },
+    {
+     "IDUNIDADE": "GR01H",
+     "DIALOGO_PRE_CHECKIN": "62a25f6b3198c7761babc89c",
+     "DIALOGO_PRE_CHECKOUT": "62a25f6d02ab90f23ffde5e7",
+     "NOME_COMERCIAL": "Apto no Centro a 500m do Mar no Coração de Bc!",
+     "PROPIETARIO": "Sandra Huscher",
+     "N_WHATSAPP": "55 47 97079801"
+    },
+    {
+     "IDUNIDADE": "GR02H",
+     "DIALOGO_PRE_CHECKIN": "62a25df313156ed93dd56df8",
+     "DIALOGO_PRE_CHECKOUT": "62a25df4c6e75d46df6a01b9",
+     "NOME_COMERCIAL": "Casa c\/ Piscina e Vista à Praia de Taquaras - BC",
+     "PROPIETARIO": "Sandra Huscher",
+     "N_WHATSAPP": "55 47 97079801"
+    },
+    {
+     "IDUNIDADE": "GR03H",
+     "DIALOGO_PRE_CHECKIN": "62a26036164bef5a5346db64",
+     "DIALOGO_PRE_CHECKOUT": "62a260383198c7761babc8b2",
+     "NOME_COMERCIAL": "Apto Com Acesso Exclusivo a Praia em BC",
+     "PROPIETARIO": "Sandra Huscher",
+     "N_WHATSAPP": "55 47 97079801",
+     "N_WHATSAPP2": "55 67 99159922"
+    },
+    {
+     "IDUNIDADE": "GR05H",
+     "DIALOGO_PRE_CHECKIN": "62a0d8f477d4b1ebd2e48a51",
+     "DIALOGO_PRE_CHECKOUT": "62a0d8f27b7b9f00c72389db",
+     "NOME_COMERCIAL": "RanchoD'ju - Camboriú\/SC",
+     "PROPIETARIO": "Moisés Guilanzoni",
+     "N_WHATSAPP": "55 47 97086077"
+    },
+    {
+     "IDUNIDADE": "GR06H",
+     "DIALOGO_PRE_CHECKIN": "62a0d8f477d4b1ebd2e48a51",
+     "DIALOGO_PRE_CHECKOUT": "62a0d8f27b7b9f00c72389db",
+     "NOME_COMERCIAL": "RanchoD'ju - Camboriú\/SC",
+     "PROPIETARIO": "Moisés Guilanzoni",
+     "N_WHATSAPP": "55 47 97086077"
+    },
+    {
+     "IDUNIDADE": "GU02H",
+     "DIALOGO_PRE_CHECKIN": "62a396ef54b43e08af6949fa",
+     "DIALOGO_PRE_CHECKOUT": "62a396f112af6ab636cd4cd3",
+     "NOME_COMERCIAL": "Chácara João de Barro",
+     "PROPIETARIO": "Lucas Coldebella",
+     "N_WHATSAPP": "55 67 81654434"
+    },
+    {
+     "IDUNIDADE": "HF02H",
+     "DIALOGO_PRE_CHECKIN": "62b2388182cd55102691dc29",
+     "DIALOGO_PRE_CHECKOUT": "62b2388312af6ab636ce51fa",
+     "NOME_COMERCIAL": "Ibiraquera Life",
+     "PROPIETARIO": "Paula Wertalik",
+     "N_WHATSAPP": "12 03 5617650",
+     "N_WHATSAPP2": "12 03 7675594",
+     "N_WHATSAPP3": "55 48 9166 4965",
+     "N_FUNCIONARIO2": "55 48 96057140"
+    },
+    {
+     "IDUNIDADE": "HF03H",
+     "DIALOGO_PRE_CHECKIN": "62b2388182cd55102691dc29",
+     "DIALOGO_PRE_CHECKOUT": "62b2388312af6ab636ce51fa",
+     "NOME_COMERCIAL": "Ibiraquera Life",
+     "PROPIETARIO": "Paula Wertalik",
+     "N_WHATSAPP": "12 03 5617650",
+     "N_WHATSAPP2": "12 03 7675594",
+     "N_WHATSAPP3": "55 48 9166 4965",
+     "N_FUNCIONARIO2": "55 48 96057140"
+    },
+    {
+     "IDUNIDADE": "HF04H",
+     "DIALOGO_PRE_CHECKIN": "62b2388182cd55102691dc29",
+     "DIALOGO_PRE_CHECKOUT": "62b2388312af6ab636ce51fa",
+     "NOME_COMERCIAL": "Ibiraquera Life",
+     "PROPIETARIO": "Paula Wertalik",
+     "N_WHATSAPP": "12 03 5617650",
+     "N_WHATSAPP2": "12 03 7675594",
+     "N_WHATSAPP3": "55 48 9166 4965",
+     "N_FUNCIONARIO2": "55 48 96057140"
+    },
+    {
+     "IDUNIDADE": "HG01H",
+     "DIALOGO_PRE_CHECKIN": "62b37d1f364212c838c2ec87",
+     "DIALOGO_PRE_CHECKOUT": "62b37d22e1595b559e3a5a5b",
+     "NOME_COMERCIAL": "Recanto do Sol em Santo Amaro",
+     "PROPIETARIO": "Gabriel Ventura",
+     "N_WHATSAPP": "55 48 91900714"
+    },
+    {
+     "IDUNIDADE": "HH02H",
+     "DIALOGO_PRE_CHECKIN": "62bca8059edf391e4f6c4596",
+     "DIALOGO_PRE_CHECKOUT": "62bca80412af6ab636cf1b83",
+     "NOME_COMERCIAL": "Casa Centenária em Rancho Queimado",
+     "PROPIETARIO": "Arael Kuhnen",
+     "N_WHATSAPP": "55 48 99883836",
+     "N_WHATSAPP2": "55 48 99013679"
+    },
+    {
+     "IDUNIDADE": "HJ01G",
+     "DIALOGO_PRE_CHECKIN": "5fad4853a60dd6a8cb22e655",
+     "DIALOGO_PRE_CHECKOUT": "5fad4b4398e70470d360e858",
+     "NOME_COMERCIAL": "Alto Astral",
+     "PROPIETARIO": "Osnilda Ramos",
+     "N_WHATSAPP": "55 48 9958 6144"
+    },
+    {
+     "IDUNIDADE": "HJ02G",
+     "DIALOGO_PRE_CHECKIN": "5fad4853a60dd6a8cb22e655",
+     "DIALOGO_PRE_CHECKOUT": "5fad4b4398e70470d360e858",
+     "NOME_COMERCIAL": "Alto Astral",
+     "PROPIETARIO": "Osnilda Ramos",
+     "N_WHATSAPP": "55 48 9958 6144"
+    },
+    {
+     "IDUNIDADE": "HJ08G",
+     "DIALOGO_PRE_CHECKIN": "5fad4853a60dd6a8cb22e655",
+     "DIALOGO_PRE_CHECKOUT": "5fad4b4398e70470d360e858",
+     "NOME_COMERCIAL": "Alto Astral",
+     "PROPIETARIO": "Osnilda Ramos",
+     "N_WHATSAPP": "55 48 9958 6144"
+    },
+    {
+     "IDUNIDADE": "HL02H",
+     "DIALOGO_PRE_CHECKIN": "62ba0c5312af6ab636ced8bf",
+     "DIALOGO_PRE_CHECKOUT": "62ba0c556d698d27c1af4f09",
+     "NOME_COMERCIAL": "Cabana Brisa Serrana",
+     "PROPIETARIO": "Gisele Machado",
+     "N_WHATSAPP": "55 49 99353557",
+     "N_WHATSAPP2": "55 49 91424224"
+    },
+    {
+     "IDUNIDADE": "HM02H",
+     "DIALOGO_PRE_CHECKIN": "62ba0c5312af6ab636ced8bf",
+     "DIALOGO_PRE_CHECKOUT": "62ba0c556d698d27c1af4f09",
+     "NOME_COMERCIAL": "Cabana Brisa Serrana",
+     "PROPIETARIO": "Gisele Machado",
+     "N_WHATSAPP": "55 49 99353557",
+     "N_WHATSAPP2": "55 49 91424224"
+    },
+    {
+     "IDUNIDADE": "HO01H",
+     "DIALOGO_PRE_CHECKIN": "62bf5e788ef079511a205d1b",
+     "DIALOGO_PRE_CHECKOUT": "62bf5e7a57bd2b2e8e5d1597",
+     "NOME_COMERCIAL": "Casa Estrela Rubi em Jurerê Internacional",
+     "PROPIETARIO": "Walter Miguel",
+     "N_WHATSAPP": "55 48 96542014"
+    },
+    {
+     "IDUNIDADE": "HV01H",
+     "DIALOGO_PRE_CHECKIN": "62c7448612af6ab636cff088",
+     "DIALOGO_PRE_CHECKOUT": "62c744887d53c07cecc563bd",
+     "NOME_COMERCIAL": "Acolhedor Ranchinho Campestre",
+     "PROPIETARIO": "Motaury Porto Filho",
+     "N_WHATSAPP": "55 48 99487733",
+     "N_WHATSAPP2": "55 48 99688103"
+    },
+    {
+     "IDUNIDADE": "ID01H",
+     "DIALOGO_PRE_CHECKIN": "62d6f6b9d3a10d265a2c2638",
+     "DIALOGO_PRE_CHECKOUT": "62d6f6bbd1f47b42375b5dd4",
+     "NOME_COMERCIAL": "Sítio Segue Reto Toda Vida",
+     "PROPIETARIO": "Leila Moretto",
+     "N_WHATSAPP": "55 48 96513965"
+    },
+    {
+     "IDUNIDADE": "IH01G",
+     "DIALOGO_PRE_CHECKIN": "5fac656da8dd2e1a8e7a0cfd",
+     "DIALOGO_PRE_CHECKOUT": "5fac66c69efcd91ecb96980c",
+     "NOME_COMERCIAL": "Ap Helio",
+     "PROPIETARIO": "Helio Mendes",
+     "N_WHATSAPP": "55 48 9993 7869"
+    },
+    {
+     "IDUNIDADE": "IH02G",
+     "DIALOGO_PRE_CHECKIN": "5fac656da8dd2e1a8e7a0cfd",
+     "DIALOGO_PRE_CHECKOUT": "5fac66c69efcd91ecb96980c",
+     "NOME_COMERCIAL": "Cobertura",
+     "PROPIETARIO": "Helio Mendes",
+     "N_WHATSAPP": "55 48 9993 7869",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "IH03G",
+     "DIALOGO_PRE_CHECKIN": "63a313a2c3a224e1fc9c3210",
+     "DIALOGO_PRE_CHECKOUT": "5fac66c69efcd91ecb96980c",
+     "NOME_COMERCIAL": "Ap Aconchego Superior",
+     "PROPIETARIO": "Helio Mendes",
+     "N_WHATSAPP": "55 48 9993 7869"
+    },
+    {
+     "IDUNIDADE": "IK01G",
+     "DIALOGO_PRE_CHECKIN": "65982047ded533fef1d6ef5a",
+     "DIALOGO_PRE_CHECKOUT": "6441a4d9694e78504d69fb14",
+     "NOME_COMERCIAL": "Pousada Recanto do Sul",
+     "PROPIETARIO": "Teresinha Mendes",
+     "N_WHATSAPP": "55 48 99535242",
+     "N_WHATSAPP2": "55 48 98212001"
+    },
+    {
+     "IDUNIDADE": "IU01H",
+     "DIALOGO_PRE_CHECKIN": "62ec0d2fadef46e247c6544b",
+     "DIALOGO_PRE_CHECKOUT": "62ec0d3187b76787f864e20b",
+     "NOME_COMERCIAL": "Sítio Fuchsia Régia em Rancho Queimado\/SC",
+     "PROPIETARIO": "Fabiano Nascimento",
+     "N_WHATSAPP": "55 48 99115983",
+     "N_WHATSAPP2": "55 48 99628282"
+    },
+    {
+     "IDUNIDADE": "IW01H",
+     "DIALOGO_PRE_CHECKIN": "62ec162125a36d66368247ab",
+     "DIALOGO_PRE_CHECKOUT": "62ec1623c0e41c19594b12dd",
+     "NOME_COMERCIAL": "Apartamento Térreo - Casa da Estrela",
+     "PROPIETARIO": "Charlene da Silva",
+     "N_WHATSAPP": "55 48 9919 0225"
+    },
+    {
+     "IDUNIDADE": "IW02H",
+     "DIALOGO_PRE_CHECKIN": "62ec17abadef46e247c6572e",
+     "DIALOGO_PRE_CHECKOUT": "62ec17acf6d132148bef353b",
+     "NOME_COMERCIAL": "Refúgio Zen - Casa da Estrela",
+     "PROPIETARIO": "Charlene da Silva",
+     "N_WHATSAPP": "55 48 9919 0225"
+    },
+    {
+     "IDUNIDADE": "JD01H",
+     "DIALOGO_PRE_CHECKIN": "62f55325fbd4f83094e62b38",
+     "DIALOGO_PRE_CHECKOUT": "62b2388312af6ab636ce51fa",
+     "NOME_COMERCIAL": "Ibiraquera Life - House Premium",
+     "PROPIETARIO": "Paula Wertalik",
+     "N_WHATSAPP": "12 03 5617650",
+     "N_WHATSAPP2": "12 03 7675594",
+     "N_WHATSAPP3": "55 48 9166 4965",
+     "N_FUNCIONARIO2": "55 48 96057140"
+    },
+    {
+     "IDUNIDADE": "JF01G",
+     "DIALOGO_PRE_CHECKIN": "5fad842da8dd2e1a8e7a1273",
+     "DIALOGO_PRE_CHECKOUT": "5fad8a8f05a296999af02922",
+     "NOME_COMERCIAL": "Pousada morada do sol",
+     "PROPIETARIO": "Ione Ramos",
+     "N_WHATSAPP": "55 48 9142 0533"
+    },
+    {
+     "IDUNIDADE": "JF03G",
+     "DIALOGO_PRE_CHECKIN": "5fad842da8dd2e1a8e7a1273",
+     "DIALOGO_PRE_CHECKOUT": "5fad8a8f05a296999af02922",
+     "NOME_COMERCIAL": "Pousada morada do sol",
+     "PROPIETARIO": "Ione Ramos",
+     "N_WHATSAPP": "55 48 9142 0533"
+    },
+    {
+     "IDUNIDADE": "JF09G",
+     "DIALOGO_PRE_CHECKIN": "5fad842da8dd2e1a8e7a1273",
+     "DIALOGO_PRE_CHECKOUT": "5fad8a8f05a296999af02922",
+     "NOME_COMERCIAL": "Pousada morada do sol",
+     "PROPIETARIO": "Ione Ramos",
+     "N_WHATSAPP": "55 48 9142 0533"
+    },
+    {
+     "IDUNIDADE": "JG01G",
+     "DIALOGO_PRE_CHECKIN": "5fad842da8dd2e1a8e7a1273",
+     "DIALOGO_PRE_CHECKOUT": "5fad8a8f05a296999af02922",
+     "NOME_COMERCIAL": "Pousada morada do sol",
+     "PROPIETARIO": "Ione Ramos",
+     "N_WHATSAPP": "55 48 9142 0533"
+    },
+    {
+     "IDUNIDADE": "JI01G",
+     "DIALOGO_PRE_CHECKIN": "5fad842da8dd2e1a8e7a1273",
+     "DIALOGO_PRE_CHECKOUT": "5fad8a8f05a296999af02922",
+     "NOME_COMERCIAL": "Pousada morada do sol",
+     "PROPIETARIO": "Ione Ramos",
+     "N_WHATSAPP": "55 48 9142 0533"
+    },
+    {
+     "IDUNIDADE": "JJ02H",
+     "DIALOGO_PRE_CHECKIN": "63052a21c39012412960bd1f",
+     "DIALOGO_PRE_CHECKOUT": "63052a222e71ab0a0614d163",
+     "NOME_COMERCIAL": "Apto Espelho das Águas",
+     "PROPIETARIO": "Cintia Bolzan",
+     "N_WHATSAPP": "55 48 91382282",
+     "N_WHATSAPP2": "55 48 91382282",
+     "N_FUNCIONARIO": "55 48 88424273"
+    },
+    {
+     "IDUNIDADE": "JJ04H",
+     "DIALOGO_PRE_CHECKIN": "62fe8b86858b639225e61d2a",
+     "DIALOGO_PRE_CHECKOUT": "62fe8b8849c53eb36b7d20b8",
+     "NOME_COMERCIAL": "Girassóis da Lagoa - Guesthouse",
+     "PROPIETARIO": "Rodrigo Afonso",
+     "N_WHATSAPP": "55 48 99342650"
+    },
+    {
+     "IDUNIDADE": "JJ05H",
+     "DIALOGO_PRE_CHECKIN": "62fe8b86858b639225e61d2a",
+     "DIALOGO_PRE_CHECKOUT": "62fe8b8849c53eb36b7d20b8",
+     "NOME_COMERCIAL": "Girassóis da Lagoa - Guesthouse",
+     "PROPIETARIO": "Rodrigo Afonso"
+    },
+    {
+     "IDUNIDADE": "JJ06H",
+     "DIALOGO_PRE_CHECKIN": "62fe8b86858b639225e61d2a",
+     "DIALOGO_PRE_CHECKOUT": "62fe8b8849c53eb36b7d20b8",
+     "NOME_COMERCIAL": "Girassóis da Lagoa - Guesthouse",
+     "PROPIETARIO": "Rodrigo Afonso"
+    },
+    {
+     "IDUNIDADE": "JJ07H",
+     "DIALOGO_PRE_CHECKIN": "62fe8b86858b639225e61d2a",
+     "DIALOGO_PRE_CHECKOUT": "62fe8b8849c53eb36b7d20b8",
+     "NOME_COMERCIAL": "Girassóis da Lagoa - Guesthouse",
+     "PROPIETARIO": "Rodrigo Afonso"
+    },
+    {
+     "IDUNIDADE": "JJ08H",
+     "DIALOGO_PRE_CHECKIN": "62fe8b86858b639225e61d2a",
+     "DIALOGO_PRE_CHECKOUT": "62fe8b8849c53eb36b7d20b8",
+     "NOME_COMERCIAL": "Girassóis da Lagoa - Guesthouse",
+     "PROPIETARIO": "Rodrigo Afonso"
+    },
+    {
+     "IDUNIDADE": "JL01H",
+     "DIALOGO_PRE_CHECKIN": "6307e12b5a46cb8ee9e4ab98",
+     "DIALOGO_PRE_CHECKOUT": "6307e127f7a242407b9109b7",
+     "NOME_COMERCIAL": "Nautilus",
+     "PROPIETARIO": "Lizzie Wohlers",
+     "N_WHATSAPP": "55 47 99514638",
+     "N_WHATSAPP2": "55 47 91976281"
+    },
+    {
+     "IDUNIDADE": "JP01H",
+     "DIALOGO_PRE_CHECKIN": "62b2388182cd55102691dc29",
+     "DIALOGO_PRE_CHECKOUT": "62b2388312af6ab636ce51fa",
+     "NOME_COMERCIAL": "Ibiraquera Life",
+     "PROPIETARIO": "Paula Wertalik",
+     "N_WHATSAPP": "12 03 5617650",
+     "N_WHATSAPP2": "12 03 7675594",
+     "N_WHATSAPP3": "55 48 9166 4965",
+     "N_FUNCIONARIO2": "55 48 96057140"
+    },
+    {
+     "IDUNIDADE": "JT01G",
+     "DIALOGO_PRE_CHECKIN": "5fae890cc22bda29b45ecbec",
+     "DIALOGO_PRE_CHECKOUT": "5fae8938d8a994cbd4b96866",
+     "NOME_COMERCIAL": "Casa Vista da Lagoa",
+     "PROPIETARIO": "André Marcos Domingos",
+     "N_WHATSAPP": "55 48 9933 3479"
+    },
+    {
+     "IDUNIDADE": "JX01H",
+     "DIALOGO_PRE_CHECKIN": "63124778361d562f5816bd19",
+     "DIALOGO_PRE_CHECKOUT": "6312477a58e338a8f222ee12",
+     "NOME_COMERCIAL": "Nautilus Prime Beach - Penha\/SC",
+     "PROPIETARIO": "Pollyane Penz",
+     "N_WHATSAPP": "55 47 99226999"
+    },
+    {
+     "IDUNIDADE": "KE01H",
+     "DIALOGO_PRE_CHECKIN": "631a5b3c9436f142f8a7489a",
+     "DIALOGO_PRE_CHECKOUT": "631a5b3f2338003565a5bd48",
+     "NOME_COMERCIAL": "Nautilus Premium View",
+     "PROPIETARIO": "Pollyane Penz",
+     "N_WHATSAPP": "55 47 99226999"
+    },
+    {
+     "IDUNIDADE": "KI01G",
+     "DIALOGO_PRE_CHECKIN": "5fad842da8dd2e1a8e7a1273",
+     "DIALOGO_PRE_CHECKOUT": "5fad8a8f05a296999af02922",
+     "NOME_COMERCIAL": "Pousada morada do sol",
+     "PROPIETARIO": "Ione Ramos",
+     "N_WHATSAPP": "55 48 9142 0533"
+    },
+    {
+     "IDUNIDADE": "KI02G",
+     "DIALOGO_PRE_CHECKIN": "5fad842da8dd2e1a8e7a1273",
+     "DIALOGO_PRE_CHECKOUT": "5fad8a8f05a296999af02922",
+     "NOME_COMERCIAL": "Pousada morada do sol",
+     "PROPIETARIO": "Ione Ramos",
+     "N_WHATSAPP": "55 48 9142 0533"
+    },
+    {
+     "IDUNIDADE": "KI03G",
+     "DIALOGO_PRE_CHECKIN": "5fad842da8dd2e1a8e7a1273",
+     "DIALOGO_PRE_CHECKOUT": "5fad8a8f05a296999af02922",
+     "NOME_COMERCIAL": "Pousada morada do sol",
+     "PROPIETARIO": "Ione Ramos",
+     "N_WHATSAPP": "55 48 9142 0533"
+    },
+    {
+     "IDUNIDADE": "KI04G",
+     "DIALOGO_PRE_CHECKIN": "5fad842da8dd2e1a8e7a1273",
+     "DIALOGO_PRE_CHECKOUT": "5fad8a8f05a296999af02922",
+     "NOME_COMERCIAL": "Pousada morada do sol",
+     "PROPIETARIO": "Ione Ramos",
+     "N_WHATSAPP": "55 48 9142 0533"
+    },
+    {
+     "IDUNIDADE": "KI05G",
+     "DIALOGO_PRE_CHECKIN": "5fad842da8dd2e1a8e7a1273",
+     "DIALOGO_PRE_CHECKOUT": "5fad8a8f05a296999af02922",
+     "NOME_COMERCIAL": "Pousada morada do sol",
+     "PROPIETARIO": "Ione Ramos",
+     "N_WHATSAPP": "55 48 9142 0533"
+    },
+    {
+     "IDUNIDADE": "KK01G",
+     "DIALOGO_PRE_CHECKIN": "5fac656da8dd2e1a8e7a0cfd",
+     "DIALOGO_PRE_CHECKOUT": "5fac66c69efcd91ecb96980c",
+     "NOME_COMERCIAL": "Casa Helio",
+     "PROPIETARIO": "Helio Mendes",
+     "N_WHATSAPP": "55 48 9993 7869"
+    },
+    {
+     "IDUNIDADE": "KK02H",
+     "DIALOGO_PRE_CHECKIN": "6320e22ef591612967419dd8",
+     "DIALOGO_PRE_CHECKOUT": "6320e23092fefc3cf03334ae",
+     "NOME_COMERCIAL": "Pousada Girassol - Urubici",
+     "PROPIETARIO": "Taís Neves",
+     "N_WHATSAPP": "55 49 99676410"
+    },
+    {
+     "IDUNIDADE": "KK03H",
+     "DIALOGO_PRE_CHECKIN": "6320e22ef591612967419dd8",
+     "DIALOGO_PRE_CHECKOUT": "6320e23092fefc3cf03334ae",
+     "NOME_COMERCIAL": "Pousada Girassol - Urubici",
+     "PROPIETARIO": "Taís Neves",
+     "N_WHATSAPP": "55 49 99676410"
+    },
+    {
+     "IDUNIDADE": "KK04H",
+     "DIALOGO_PRE_CHECKIN": "6320e22ef591612967419dd8",
+     "DIALOGO_PRE_CHECKOUT": "6320e23092fefc3cf03334ae",
+     "NOME_COMERCIAL": "Pousada Girassol - Urubici",
+     "PROPIETARIO": "Taís Neves",
+     "N_WHATSAPP": "55 49 99676410"
+    },
+    {
+     "IDUNIDADE": "KK05H",
+     "DIALOGO_PRE_CHECKIN": "6320e22ef591612967419dd8",
+     "DIALOGO_PRE_CHECKOUT": "6320e23092fefc3cf03334ae",
+     "NOME_COMERCIAL": "Pousada Girassol - Urubici",
+     "PROPIETARIO": "Taís Neves",
+     "N_WHATSAPP": "55 49 99676410"
+    },
+    {
+     "IDUNIDADE": "KK06H",
+     "DIALOGO_PRE_CHECKIN": "6320e22ef591612967419dd8",
+     "DIALOGO_PRE_CHECKOUT": "6320e23092fefc3cf03334ae",
+     "NOME_COMERCIAL": "Pousada Girassol - Urubici",
+     "PROPIETARIO": "Taís Neves",
+     "N_WHATSAPP": "55 49 99676410"
+    },
+    {
+     "IDUNIDADE": "KK07H",
+     "DIALOGO_PRE_CHECKIN": "6320e22ef591612967419dd8",
+     "DIALOGO_PRE_CHECKOUT": "6320e23092fefc3cf03334ae",
+     "NOME_COMERCIAL": "Pousada Girassol - Urubici",
+     "PROPIETARIO": "Taís Neves",
+     "N_WHATSAPP": "55 49 99676410"
+    },
+    {
+     "IDUNIDADE": "KL02H",
+     "DIALOGO_PRE_CHECKIN": "63223557c6d9b3cdbe44ab0c",
+     "DIALOGO_PRE_CHECKOUT": "632235598e7b7a6dbe484be6",
+     "NOME_COMERCIAL": "Casa da Montanha - Sto Amaro",
+     "PROPIETARIO": "Ignacio Wopereis",
+     "N_WHATSAPP": "55 48 9107 2606",
+     "N_WHATSAPP2": "55 48 8466 7112"
+    },
+    {
+     "IDUNIDADE": "KM02H",
+     "DIALOGO_PRE_CHECKIN": "6324c587c47e0892e75cd711",
+     "DIALOGO_PRE_CHECKOUT": "6324c585a2377fefd722cc49",
+     "NOME_COMERCIAL": "Casa Praia da Fortaleza em Penha\/SC",
+     "PROPIETARIO": "Diego Nascimento",
+     "N_WHATSAPP": "55 47 97925982",
+     "N_WHATSAPP2": "55 47 96535806"
+    },
+    {
+     "IDUNIDADE": "KR01G",
+     "DIALOGO_PRE_CHECKIN": "5fcaa76d5b8d49d2620b9d6d",
+     "DIALOGO_PRE_CHECKOUT": "5fcaa7e5d99712eade146e73",
+     "NOME_COMERCIAL": "Cabana à beira d'água linda vista",
+     "PROPIETARIO": "Carlos Tedesco",
+     "N_WHATSAPP": "55 48 9927 9950",
+     "N_FUNCIONARIO": "55 48 99186941"
+    },
+    {
+     "IDUNIDADE": "KR02H",
+     "DIALOGO_PRE_CHECKIN": "632a2b31c47e0892e75d327c",
+     "DIALOGO_PRE_CHECKOUT": "632a2b332b487baef4fafb2c",
+     "NOME_COMERCIAL": "Casa Canto Lindo em Urubici\/SC",
+     "PROPIETARIO": "Lincoln Salvador",
+     "N_WHATSAPP": "55 48 96487704",
+     "N_WHATSAPP2": "55 48 96246722",
+     "N_WHATSAPP3": "55 49 98335544"
+    },
+    {
+     "IDUNIDADE": "KR04H",
+     "DIALOGO_PRE_CHECKIN": "632a2b31c47e0892e75d327c",
+     "DIALOGO_PRE_CHECKOUT": "632a2b332b487baef4fafb2c",
+     "NOME_COMERCIAL": "Casa Canto Lindo em Urubici\/SC",
+     "PROPIETARIO": "Lincoln Salvador",
+     "N_WHATSAPP": "55 48 96487704",
+     "N_WHATSAPP2": "55 48 96246722",
+     "N_WHATSAPP3": "55 49 98335544"
+    },
+    {
+     "IDUNIDADE": "KU02H",
+     "DIALOGO_PRE_CHECKIN": "632e173ddcba04b771e2a3a0",
+     "DIALOGO_PRE_CHECKOUT": "632e173fa0e74a87c9d3b9af",
+     "NOME_COMERCIAL": "Casa de Praia no Rosa - Vista Espetacular",
+     "PROPIETARIO": "Francisco Amaro",
+     "N_WHATSAPP": "55 51 96777516",
+     "N_FUNCIONARIO": "55 48 99306228"
+    },
+    {
+     "IDUNIDADE": "KY01H",
+     "DIALOGO_PRE_CHECKIN": "63336c7c3c287eaf113afbd4",
+     "DIALOGO_PRE_CHECKOUT": "63336c7e045ae035fb2cbec3",
+     "NOME_COMERCIAL": "Nautilus Family - Beto Carrero - Penha",
+     "PROPIETARIO": "Junelene Pruner",
+     "N_WHATSAPP": "55 47 91027374",
+     "N_WHATSAPP2": "55 47 91976281",
+     "N_WHATSAPP3": "55 47 89165390"
+    },
+    {
+     "IDUNIDADE": "KY02H",
+     "DIALOGO_PRE_CHECKIN": "633f23840eaef7e4490487e5",
+     "DIALOGO_PRE_CHECKOUT": "633f2385532ac7f935de29f2",
+     "NOME_COMERCIAL": "Nautilus Alphaville - Beto Carrero - Penha\/SC",
+     "PROPIETARIO": "Pollyane Penz",
+     "N_WHATSAPP": "55 47 99226999"
+    },
+    {
+     "IDUNIDADE": "KZ01G",
+     "DIALOGO_PRE_CHECKIN": "636d4c15d7df8bcaae1d9dc8",
+     "DIALOGO_PRE_CHECKOUT": "636d4c16c0bbfc32420dbbe8",
+     "NOME_COMERCIAL": "Sublime",
+     "PROPIETARIO": "Ivan Saurer",
+     "N_WHATSAPP": "55 48 9168 8743",
+     "N_WHATSAPP2": "55 48 9997 2444"
+    },
+    {
+     "IDUNIDADE": "KZ02G",
+     "DIALOGO_PRE_CHECKIN": "636d4c15d7df8bcaae1d9dc8",
+     "DIALOGO_PRE_CHECKOUT": "636d4c16c0bbfc32420dbbe8",
+     "NOME_COMERCIAL": "Sublime",
+     "PROPIETARIO": "Ivan Saurer",
+     "N_WHATSAPP": "55 48 9168 8743",
+     "N_WHATSAPP2": "55 48 9997 2444"
+    },
+    {
+     "IDUNIDADE": "KZ02H",
+     "DIALOGO_PRE_CHECKIN": "633b3e146766edaf31d47cce",
+     "DIALOGO_PRE_CHECKOUT": "633b3e16c3850f610975f329",
+     "NOME_COMERCIAL": "Pousart Floripa",
+     "PROPIETARIO": "Maria Aparecida Medeiros",
+     "N_WHATSAPP": "55 48 99727710",
+     "N_WHATSAPP2": "55 48 91210157"
+    },
+    {
+     "IDUNIDADE": "KZ03H",
+     "DIALOGO_PRE_CHECKIN": "633b3e146766edaf31d47cce",
+     "DIALOGO_PRE_CHECKOUT": "633b3e16c3850f610975f329",
+     "NOME_COMERCIAL": "Pousart Floripa",
+     "PROPIETARIO": "Maria Aparecida Medeiros",
+     "N_WHATSAPP": "55 48 99727710",
+     "N_WHATSAPP2": "55 48 91210157"
+    },
+    {
+     "IDUNIDADE": "KZ04H",
+     "DIALOGO_PRE_CHECKIN": "633b3e146766edaf31d47cce",
+     "DIALOGO_PRE_CHECKOUT": "633b3e16c3850f610975f329",
+     "NOME_COMERCIAL": "Pousart Floripa",
+     "PROPIETARIO": "Maria Aparecida Medeiros",
+     "N_WHATSAPP": "55 48 99727710",
+     "N_WHATSAPP2": "55 48 91210157"
+    },
+    {
+     "IDUNIDADE": "KZ06H",
+     "DIALOGO_PRE_CHECKIN": "633b3e146766edaf31d47cce",
+     "DIALOGO_PRE_CHECKOUT": "633b3e16c3850f610975f329",
+     "NOME_COMERCIAL": "Pousart Floripa",
+     "PROPIETARIO": "Maria Aparecida Medeiros",
+     "N_WHATSAPP": "55 48 99727710",
+     "N_WHATSAPP2": "55 48 91210157"
+    },
+    {
+     "IDUNIDADE": "LD01G",
+     "DIALOGO_PRE_CHECKIN": "609ac7b11123ca5a39d49b96",
+     "DIALOGO_PRE_CHECKOUT": "609ac7f4f95e5cfae17461dc",
+     "NOME_COMERCIAL": " Ap Família no Estreito",
+     "PROPIETARIO": "Valdir Santiago",
+     "N_WHATSAPP": "55 48 99655046"
+    },
+    {
+     "IDUNIDADE": "LG01H",
+     "DIALOGO_PRE_CHECKIN": "633de15cd49d926abfa93714",
+     "DIALOGO_PRE_CHECKOUT": "633de15f0964fbdbfccfbc55",
+     "NOME_COMERCIAL": "Nautilus Concept - Penha\/SC",
+     "PROPIETARIO": "Francisco Faria",
+     "N_WHATSAPP": "55 51 91346905",
+     "N_WHATSAPP2": "55 51 92163449",
+     "N_FUNCIONARIO": "55 47 96937744"
+    },
+    {
+     "IDUNIDADE": "LG02H",
+     "DIALOGO_PRE_CHECKIN": "633dde0b532ac7f935de092a",
+     "DIALOGO_PRE_CHECKOUT": "633dde0d1019f626d76bead3",
+     "NOME_COMERCIAL": "Loft Jardim no Campeche - Floripa\/SC",
+     "PROPIETARIO": "Cleusa Maria da Silva",
+     "N_WHATSAPP": "55 48 91099446"
+    },
+    {
+     "IDUNIDADE": "LG03H",
+     "DIALOGO_PRE_CHECKIN": "633dde0b532ac7f935de092a",
+     "DIALOGO_PRE_CHECKOUT": "633dde0d1019f626d76bead3",
+     "NOME_COMERCIAL": "Apartamento Jardim no Campeche - Floripa\/SC",
+     "PROPIETARIO": "Cleusa Maria da Silva",
+     "N_WHATSAPP": "55 48 91099446"
+    },
+    {
+     "IDUNIDADE": "LH01H",
+     "DIALOGO_PRE_CHECKIN": "6351aac634c374772941b527",
+     "DIALOGO_PRE_CHECKOUT": "6351aac864de9b0fb0f85335",
+     "NOME_COMERCIAL": "Apartamento Golden: Piscina, Praia",
+     "PROPIETARIO": "Claudia Coutinho Soares",
+     "N_WHATSAPP": "55 48 91536593",
+     "N_WHATSAPP2": "55 48 99630160"
+    },
+    {
+     "IDUNIDADE": "LM02H",
+     "DIALOGO_PRE_CHECKIN": "6345c23573c35a4454c09380",
+     "DIALOGO_PRE_CHECKOUT": "6345c2372927cb5c3c19ca51",
+     "NOME_COMERCIAL": "Residencial Ilha do Campeche - Floripa",
+     "PROPIETARIO": "Elizabete Ventura",
+     "N_WHATSAPP": "55 48 96548261",
+     "N_WHATSAPP2": "55 48 98440243"
+    },
+    {
+     "IDUNIDADE": "LN02H",
+     "DIALOGO_PRE_CHECKIN": "6345d0df3ea00ae42591ea1c",
+     "DIALOGO_PRE_CHECKOUT": "6345d11f93efec646cbb5ce4",
+     "NOME_COMERCIAL": "Residencial Ilha do Campeche - Floripa",
+     "PROPIETARIO": "Maiara Ventura",
+     "N_WHATSAPP": "55 48 96806702"
+    },
+    {
+     "IDUNIDADE": "LY03G",
+     "DIALOGO_PRE_CHECKIN": "5fde6313a1a8b04395f18f97",
+     "DIALOGO_PRE_CHECKOUT": "5ff31057b390632375450dc9",
+     "NOME_COMERCIAL": "Studio Carrara",
+     "PROPIETARIO": "Alexandra Andersson",
+     "N_WHATSAPP": "46 73 346 66 40"
+    },
+    {
+     "IDUNIDADE": "LZ01G",
+     "DIALOGO_PRE_CHECKIN": "5fde64fe77a58042fb837ee9",
+     "DIALOGO_PRE_CHECKOUT": "5fde659b77a58042fb837eee",
+     "NOME_COMERCIAL": "Sítio Refúgio da Cachoeira",
+     "PROPIETARIO": "Elisabete Steil",
+     "N_WHATSAPP": "55 48 91668813",
+     "N_WHATSAPP2": "55 48 99783003",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "ME04G",
+     "DIALOGO_PRE_CHECKIN": "5fe4966051bbb801b2ff9771",
+     "DIALOGO_PRE_CHECKOUT": "5fe4a0f4ca7d0edc719d9cf4",
+     "NOME_COMERCIAL": "Cabana Rosas",
+     "PROPIETARIO": "André Costa",
+     "N_WHATSAPP": "55 48 9836 7500"
+    },
+    {
+     "IDUNIDADE": "ME06G",
+     "DIALOGO_PRE_CHECKIN": "5fe4966051bbb801b2ff9771",
+     "DIALOGO_PRE_CHECKOUT": "5fe4a0f4ca7d0edc719d9cf4",
+     "NOME_COMERCIAL": "Cabana Rosas",
+     "PROPIETARIO": "André Costa",
+     "N_WHATSAPP": "55 48 9836 7500"
+    },
+    {
+     "IDUNIDADE": "ME07G",
+     "DIALOGO_PRE_CHECKIN": "6166d7c5c99c26804a22c7bb",
+     "DIALOGO_PRE_CHECKOUT": "6166d7e8ff6689e8118e4b03",
+     "NOME_COMERCIAL": "Casa de Férias com Duas Piscinas",
+     "PROPIETARIO": "André Costa",
+     "N_WHATSAPP": "55 48 9836 7500",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "ME10G",
+     "DIALOGO_PRE_CHECKIN": "5fe4966051bbb801b2ff9771",
+     "DIALOGO_PRE_CHECKOUT": "5fe4a0f4ca7d0edc719d9cf4",
+     "NOME_COMERCIAL": "Cabana Rosas",
+     "PROPIETARIO": "André Costa",
+     "N_WHATSAPP": "55 48 9836 7500"
+    },
+    {
+     "IDUNIDADE": "ME11G",
+     "DIALOGO_PRE_CHECKIN": "5fe4966051bbb801b2ff9771",
+     "DIALOGO_PRE_CHECKOUT": "5fe4a0f4ca7d0edc719d9cf4",
+     "NOME_COMERCIAL": "Cabana Rosas",
+     "PROPIETARIO": "André Costa",
+     "N_WHATSAPP": "55 48 9836 7500"
+    },
+    {
+     "IDUNIDADE": "MS02H",
+     "DIALOGO_PRE_CHECKIN": "63879cf5bac4205de23f0c6c",
+     "DIALOGO_PRE_CHECKOUT": "637293eadc21c314a6d9b66e",
+     "NOME_COMERCIAL": "Residencial Praia Bella",
+     "PROPIETARIO": "Maria Inês Noronha",
+     "N_WHATSAPP": "55 48 9976 2266",
+     "N_FUNCIONARIO": "55 48 8869 5130"
+    },
+    {
+     "IDUNIDADE": "MS03H",
+     "DIALOGO_PRE_CHECKIN": "637293e840189a26d9fcd4ba",
+     "DIALOGO_PRE_CHECKOUT": "637293eadc21c314a6d9b66e",
+     "NOME_COMERCIAL": "Residencial Praia Bella",
+     "PROPIETARIO": "Maria Inês Noronha",
+     "N_WHATSAPP": "55 48 9976 2266",
+     "N_FUNCIONARIO": "55 48 8869 5130"
+    },
+    {
+     "IDUNIDADE": "MS04H",
+     "DIALOGO_PRE_CHECKIN": "63879cf6bfec26b9f3aa9543",
+     "DIALOGO_PRE_CHECKOUT": "637293eadc21c314a6d9b66e",
+     "NOME_COMERCIAL": "Residencial Praia Bella",
+     "PROPIETARIO": "Maria Inês Noronha",
+     "N_WHATSAPP": "55 48 9976 2266",
+     "N_FUNCIONARIO": "55 48 8869 5130"
+    },
+    {
+     "IDUNIDADE": "MS05H",
+     "DIALOGO_PRE_CHECKIN": "63879cf2ae24f476fb768275",
+     "DIALOGO_PRE_CHECKOUT": "637293eadc21c314a6d9b66e",
+     "NOME_COMERCIAL": "Residencial Praia Bella",
+     "PROPIETARIO": "Maria Inês Noronha",
+     "N_WHATSAPP": "55 48 9976 2266",
+     "N_FUNCIONARIO": "55 48 8869 5130"
+    },
+    {
+     "IDUNIDADE": "MS06H",
+     "DIALOGO_PRE_CHECKIN": "63a45cecdeeb8edbac0e2ee8",
+     "DIALOGO_PRE_CHECKOUT": "637293eadc21c314a6d9b66e",
+     "NOME_COMERCIAL": "Residencial Praia Bella",
+     "PROPIETARIO": "Maria Inês Noronha",
+     "N_WHATSAPP": "55 48 9976 2266",
+     "N_FUNCIONARIO": "55 48 8869 5130"
+    },
+    {
+     "IDUNIDADE": "ND01H",
+     "DIALOGO_PRE_CHECKIN": "637e81232be11a9e991cd32f",
+     "DIALOGO_PRE_CHECKOUT": "637e81251ce06f6a45ce4dc7",
+     "NOME_COMERCIAL": "Casa Vista Mar - Ribeirão da Ilha",
+     "PROPIETARIO": "Alexandre Medeiros",
+     "N_WHATSAPP": "55 48 8460 2160"
+    },
+    {
+     "IDUNIDADE": "NE02H",
+     "DIALOGO_PRE_CHECKIN": "637fb59712b0ce071f273a3e",
+     "DIALOGO_PRE_CHECKOUT": "637fb599035e18a0076ef97b",
+     "NOME_COMERCIAL": "Studios Campeche",
+     "PROPIETARIO": "Ivan Saurer",
+     "N_WHATSAPP": "55 48 9168 8743",
+     "N_FUNCIONARIO": "55 48 9210 7547"
+    },
+    {
+     "IDUNIDADE": "NE03H",
+     "DIALOGO_PRE_CHECKIN": "637fbafc9ee83b2cf24c4d92",
+     "DIALOGO_PRE_CHECKOUT": "637fb599035e18a0076ef97b",
+     "NOME_COMERCIAL": "Studios Campeche",
+     "PROPIETARIO": "Ivan Saurer",
+     "N_WHATSAPP": "55 48 9168 8743",
+     "N_FUNCIONARIO": "55 48 9210 7547"
+    },
+    {
+     "IDUNIDADE": "NE04H",
+     "DIALOGO_PRE_CHECKIN": "637fbafdc18cdb16edbd2e48",
+     "DIALOGO_PRE_CHECKOUT": "637fb599035e18a0076ef97b",
+     "NOME_COMERCIAL": "Studios Campeche",
+     "PROPIETARIO": "Ivan Saurer",
+     "N_WHATSAPP": "55 48 9168 8743",
+     "N_FUNCIONARIO": "55 48 9210 7547"
+    },
+    {
+     "IDUNIDADE": "NE05H",
+     "DIALOGO_PRE_CHECKIN": "637fbaffd2034ffd7f37ed94",
+     "DIALOGO_PRE_CHECKOUT": "637fb599035e18a0076ef97b",
+     "NOME_COMERCIAL": "Studios Campeche",
+     "PROPIETARIO": "Ivan Saurer",
+     "N_WHATSAPP": "55 48 9168 8743",
+     "N_FUNCIONARIO": "55 48 9210 7547"
+    },
+    {
+     "IDUNIDADE": "NE06H",
+     "DIALOGO_PRE_CHECKIN": "637fbb0012b0ce071f273ac5",
+     "DIALOGO_PRE_CHECKOUT": "637fb599035e18a0076ef97b",
+     "NOME_COMERCIAL": "Studios Campeche",
+     "PROPIETARIO": "Ivan Saurer",
+     "N_WHATSAPP": "55 48 9168 8743",
+     "N_FUNCIONARIO": "55 48 9210 7547"
+    },
+    {
+     "IDUNIDADE": "NE07H",
+     "DIALOGO_PRE_CHECKIN": "637fcd7ae1c4256a23be607a",
+     "DIALOGO_PRE_CHECKOUT": "637fcd78183dc2ab7f8da741",
+     "NOME_COMERCIAL": "Ap Brighton - Praia dos Ingleses",
+     "PROPIETARIO": "Dilceia Guimarães",
+     "N_WHATSAPP": "55 48 9902 5239",
+     "N_FUNCIONARIO": "55 48 8869 5130"
+    },
+    {
+     "IDUNIDADE": "NE08H",
+     "DIALOGO_PRE_CHECKIN": "639cdac328e4fc22b28e97e4",
+     "DIALOGO_PRE_CHECKOUT": "637fb599035e18a0076ef97b",
+     "NOME_COMERCIAL": "Studios Campeche",
+     "PROPIETARIO": "Ivan Saurer",
+     "N_WHATSAPP": "55 48 9168 8743",
+     "N_FUNCIONARIO": "55 48 9210 7547"
+    },
+    {
+     "IDUNIDADE": "NE09H",
+     "DIALOGO_PRE_CHECKIN": "63aa032832b66c8941a55f95",
+     "DIALOGO_PRE_CHECKOUT": "637fb599035e18a0076ef97b",
+     "NOME_COMERCIAL": "Studios Campeche",
+     "PROPIETARIO": "Ivan Saurer",
+     "N_WHATSAPP": "55 48 9168 8743",
+     "N_FUNCIONARIO": "55 48 9210 7547"
+    },
+    {
+     "IDUNIDADE": "NK02H",
+     "DIALOGO_PRE_CHECKIN": "6387a5270e10d1c5155b1f93",
+     "DIALOGO_PRE_CHECKOUT": "6387a52030568cac76ca758c",
+     "NOME_COMERCIAL": "Casa Pantai Beach Village",
+     "PROPIETARIO": "Bruno Bertoluci",
+     "N_WHATSAPP": "55 51 9313 3009"
+    },
+    {
+     "IDUNIDADE": "NK04H",
+     "DIALOGO_PRE_CHECKIN": "6387a51e46cb756d35e8deb4",
+     "DIALOGO_PRE_CHECKOUT": "6387a52030568cac76ca758c",
+     "NOME_COMERCIAL": "Ap Vista e Piscina - Pantai Village",
+     "PROPIETARIO": "Bruno Bertoluci",
+     "N_WHATSAPP": "55 51 9313 3009"
+    },
+    {
+     "IDUNIDADE": "NK05H",
+     "DIALOGO_PRE_CHECKIN": "6387a525ae24f476fb7684ad",
+     "DIALOGO_PRE_CHECKOUT": "6387a52030568cac76ca758c",
+     "NOME_COMERCIAL": "Ap Térreo com Piscina - Pantai Village",
+     "PROPIETARIO": "Bruno Bertoluci",
+     "N_WHATSAPP": "55 51 9313 3009"
+    },
+    {
+     "IDUNIDADE": "NK06H",
+     "DIALOGO_PRE_CHECKIN": "6387a51e46cb756d35e8deb4",
+     "DIALOGO_PRE_CHECKOUT": "6387a52030568cac76ca758c",
+     "NOME_COMERCIAL": "Ap Vista e Piscina - Pantai Village",
+     "PROPIETARIO": "Bruno Bertoluci",
+     "N_WHATSAPP": "55 51 9313 3009"
+    },
+    {
+     "IDUNIDADE": "NN01G",
+     "DIALOGO_PRE_CHECKIN": "601977f2c2ce45d45497d627",
+     "DIALOGO_PRE_CHECKOUT": "601978e7099c3aff1e79542d",
+     "NOME_COMERCIAL": "Casa luxo Jurere",
+     "PROPIETARIO": "Lucrécia Miranda",
+     "N_WHATSAPP": "55 48 9962 2210"
+    },
+    {
+     "IDUNIDADE": "NQ01H",
+     "DIALOGO_PRE_CHECKIN": "627121d37b7ce9feebf77c87",
+     "DIALOGO_PRE_CHECKOUT": "62265b06b86e90a574e4c943",
+     "NOME_COMERCIAL": "Ap Beira-Mar - Praia Grande-SP",
+     "PROPIETARIO": "Roberto Lima",
+     "N_WHATSAPP": "55 11 983239904",
+     "N_FUNCIONARIO": "55 11 972448640"
+    },
+    {
+     "IDUNIDADE": "NR01H",
+     "DIALOGO_PRE_CHECKIN": "638fa00e7bd7992c2d3bdf7d",
+     "DIALOGO_PRE_CHECKOUT": "638fa00f6e4384c27487f4f9",
+     "NOME_COMERCIAL": "Casa Brisa do Mar: Piscina e Conforto - Penha",
+     "PROPIETARIO": "Ana Lúcia de Souza",
+     "N_WHATSAPP": "55 47 8858 5184",
+     "N_WHATSAPP2": "55 47 8846 0181",
+     "N_FUNCIONARIO": "55 47 9236 6515"
+    },
+    {
+     "IDUNIDADE": "NR02H",
+     "DIALOGO_PRE_CHECKIN": "639237550e68ded969fc2512",
+     "DIALOGO_PRE_CHECKOUT": "639237572efa1ce9574bd81b",
+     "NOME_COMERCIAL": "Loft Barra da Fortaleza: Piscina",
+     "PROPIETARIO": "Luciano Ayres",
+     "N_WHATSAPP": "55 48 9674 0244",
+     "N_FUNCIONARIO": "55 48 9129 5893",
+     "N_FUNCIONARIO2": "55 48 8871 2059"
+    },
+    {
+     "IDUNIDADE": "NS02H",
+     "DIALOGO_PRE_CHECKIN": "639a0c12920c91704f6e504e",
+     "DIALOGO_PRE_CHECKOUT": "639a0c147c5c58310bd8d24b",
+     "NOME_COMERCIAL": "O Vilarejo",
+     "PROPIETARIO": "André Vasconcelos",
+     "N_WHATSAPP": "55 48 9142 4303",
+     "N_WHATSAPP3": "55 48 9962 5894"
+    },
+    {
+     "IDUNIDADE": "NS03H",
+     "DIALOGO_PRE_CHECKIN": "639a0c12920c91704f6e504e",
+     "DIALOGO_PRE_CHECKOUT": "639a0c147c5c58310bd8d24b",
+     "NOME_COMERCIAL": "O Vilarejo",
+     "PROPIETARIO": "André Vasconcelos",
+     "N_WHATSAPP": "55 48 9142 4303",
+     "N_WHATSAPP3": "55 48 9962 5894"
+    },
+    {
+     "IDUNIDADE": "NT01H",
+     "DIALOGO_PRE_CHECKIN": "639cd0e23c223a17cec4d6d3",
+     "DIALOGO_PRE_CHECKOUT": "639cd0e499b728e75d79db39",
+     "NOME_COMERCIAL": "Ombak",
+     "PROPIETARIO": "William Henz",
+     "N_WHATSAPP": "55 48 9151 6611",
+     "N_WHATSAPP2": "55 51 9479 6006"
+    },
+    {
+     "IDUNIDADE": "NT02H",
+     "DIALOGO_PRE_CHECKIN": "63925229886edb4b56afc946",
+     "DIALOGO_PRE_CHECKOUT": "6392522c396e46563a9e893a",
+     "NOME_COMERCIAL": "Nautilus Philadelphia",
+     "PROPIETARIO": "Luciana Custodio",
+     "N_WHATSAPP": "55 47 9186 8216",
+     "N_WHATSAPP2": "55 47 91976281",
+     "N_WHATSAPP3": 5547991333940
+    },
+    {
+     "IDUNIDADE": "NV01G",
+     "DIALOGO_PRE_CHECKIN": "601ec9b459607489d98605be",
+     "DIALOGO_PRE_CHECKOUT": "601ec9d2e85072fb81cae2d9",
+     "NOME_COMERCIAL": "Apartamento Espaçoso em Barra da Ibiraquera",
+     "PROPIETARIO": "Allan Júnior",
+     "N_WHATSAPP": "55 48 9963 2939"
+    },
+    {
+     "IDUNIDADE": "NX02H",
+     "DIALOGO_PRE_CHECKIN": "639a0c12920c91704f6e504e",
+     "DIALOGO_PRE_CHECKOUT": "639a0c147c5c58310bd8d24b",
+     "NOME_COMERCIAL": "O Vilarejo",
+     "PROPIETARIO": "André Vasconcelos",
+     "N_WHATSAPP": "55 48 9142 4303",
+     "N_WHATSAPP3": "55 48 9962 5894"
+    },
+    {
+     "IDUNIDADE": "NX03H",
+     "DIALOGO_PRE_CHECKIN": "639a0c12920c91704f6e504e",
+     "DIALOGO_PRE_CHECKOUT": "639a0c147c5c58310bd8d24b",
+     "NOME_COMERCIAL": "O Vilarejo",
+     "PROPIETARIO": "André Vasconcelos",
+     "N_WHATSAPP": "55 48 9142 4303",
+     "N_WHATSAPP3": "55 48 9962 5894"
+    },
+    {
+     "IDUNIDADE": "NY02H",
+     "DIALOGO_PRE_CHECKIN": "63a0d0584ca439c1902572fc",
+     "DIALOGO_PRE_CHECKOUT": "63a0d05a9e53d3b5a3c27583",
+     "NOME_COMERCIAL": "Casa da Lagoa: Piscina, Conforto e Ibiraquera",
+     "PROPIETARIO": "Adelia Regina",
+     "N_WHATSAPP": "55 48 9648 6090"
+    },
+    {
+     "IDUNIDADE": "OA02H",
+     "DIALOGO_PRE_CHECKIN": "639b89b9e7fd24d0859a67c7",
+     "DIALOGO_PRE_CHECKOUT": "639b89bb6369f7203141e6a3",
+     "NOME_COMERCIAL": "Recanto da Lagoa Azul",
+     "PROPIETARIO": "Siomara Oliveira",
+     "N_WHATSAPP": "55 48 9860 7372",
+     "N_FUNCIONARIO": "55 48 9695 2250"
+    },
+    {
+     "IDUNIDADE": "OC01G",
+     "DIALOGO_PRE_CHECKIN": "605a362b3abfeb7d543699a2",
+     "DIALOGO_PRE_CHECKOUT": "605a364baee7b206cd48e740",
+     "NOME_COMERCIAL": "Apartamento de Frente pro Mar",
+     "PROPIETARIO": "Valter Guedes ",
+     "N_WHATSAPP": "55 21 996113538",
+     "N_FUNCIONARIO": "55 48 92107547"
+    },
+    {
+     "IDUNIDADE": "OC02G",
+     "DIALOGO_PRE_CHECKIN": "6095491d765b58d03cbeb5e2",
+     "DIALOGO_PRE_CHECKOUT": "60954992e0242d886349dd95",
+     "NOME_COMERCIAL": "Ap no Coração de Copacabana",
+     "PROPIETARIO": "Valter Guedes",
+     "N_WHATSAPP": "55 21 996113538"
+    },
+    {
+     "IDUNIDADE": "OC03G",
+     "DIALOGO_PRE_CHECKIN": "609b0bc4f95e5cfae174731c",
+     "DIALOGO_PRE_CHECKOUT": "609b0bc1da0fd2d52f6730f7",
+     "NOME_COMERCIAL": "Ap Conforto em Copacabana",
+     "PROPIETARIO": "Valter Guedes",
+     "N_WHATSAPP": "55 21 996113538"
+    },
+    {
+     "IDUNIDADE": "OG01H",
+     "DIALOGO_PRE_CHECKIN": "63a469a65217fbfdd4af69ce",
+     "DIALOGO_PRE_CHECKOUT": "63a469a7eeacffaa941b555b",
+     "NOME_COMERCIAL": "Ap Madri: Piscina, Centro e Conforto",
+     "PROPIETARIO": "Tabata Magrin",
+     "N_WHATSAPP": "55 48 9932 3596"
+    },
+    {
+     "IDUNIDADE": "OI01G",
+     "DIALOGO_PRE_CHECKIN": "6037cf3df57974d7ed57b544",
+     "DIALOGO_PRE_CHECKOUT": "6037cf80e99146e8d6187e82",
+     "NOME_COMERCIAL": "Sítio Salvador",
+     "PROPIETARIO": "Carla Quintino",
+     "N_WHATSAPP": "55 47 8864 2576"
+    },
+    {
+     "IDUNIDADE": "OM01H",
+     "DIALOGO_PRE_CHECKIN": "63ab4d8e3b58afb1db5bd733",
+     "DIALOGO_PRE_CHECKOUT": "63ab4d90ebd1760cfafcd3fe",
+     "NOME_COMERCIAL": "Cobertura Milão",
+     "PROPIETARIO": "Bernardo Aquino",
+     "N_WHATSAPP": "55 48 8864 1661",
+     "N_FUNCIONARIO": "55 48 8466 5967"
+    },
+    {
+     "IDUNIDADE": "OP02H",
+     "DIALOGO_PRE_CHECKIN": "63b43322c8569a108368c5a4",
+     "DIALOGO_PRE_CHECKOUT": "63b43324b44e450e058d6d21",
+     "NOME_COMERCIAL": "Residencial das Dunas",
+     "PROPIETARIO": "Lucas Kose",
+     "N_WHATSAPP": "55 11 972482934",
+     "N_WHATSAPP2": "55 47 9644 0214"
+    },
+    {
+     "IDUNIDADE": "OP03H",
+     "DIALOGO_PRE_CHECKIN": "63b43322c8569a108368c5a4",
+     "DIALOGO_PRE_CHECKOUT": "63b43324b44e450e058d6d21",
+     "NOME_COMERCIAL": "Residencial das Dunas",
+     "PROPIETARIO": "Lucas Kose",
+     "N_WHATSAPP": "55 11 972482934",
+     "N_WHATSAPP2": "55 47 9644 0214"
+    },
+    {
+     "IDUNIDADE": "OP04H",
+     "DIALOGO_PRE_CHECKIN": "63b42a37330dfcf3e06ee24e",
+     "DIALOGO_PRE_CHECKOUT": "63b42a39be6061f3d97a2b2a",
+     "NOME_COMERCIAL": "Velutti Vista Premium",
+     "PROPIETARIO": "Rodrigo Nogaroto",
+     "N_WHATSAPP": "55 19 999571600",
+     "N_FUNCIONARIO": "55 47 99125342"
+    },
+    {
+     "IDUNIDADE": "OP05H",
+     "DIALOGO_PRE_CHECKIN": "63b426bfce56df5f451b3a13",
+     "DIALOGO_PRE_CHECKOUT": "63b426c17476be5b60a6528e",
+     "NOME_COMERCIAL": "Cobertura Vista Mar - Jurerê Internacional",
+     "PROPIETARIO": "Walter Miguel",
+     "N_WHATSAPP": "55 48 96542014"
+    },
+    {
+     "IDUNIDADE": "OR01G",
+     "DIALOGO_PRE_CHECKIN": "6086c7af37b8c03adde5995d",
+     "DIALOGO_PRE_CHECKOUT": "6086c7c909bd8d36b7339d40",
+     "NOME_COMERCIAL": "Sítio Pedacinho do Céu",
+     "PROPIETARIO": "Valdir Santiago",
+     "N_WHATSAPP": "55 48 99655046"
+    },
+    {
+     "IDUNIDADE": "OT01G",
+     "DIALOGO_PRE_CHECKIN": "603fd0cfde1bcd7b3d0a7240",
+     "DIALOGO_PRE_CHECKOUT": "603fd11fd7ae5fac103378fb",
+     "NOME_COMERCIAL": "Casa da Montanha",
+     "PROPIETARIO": "Adriana Feier",
+     "N_WHATSAPP": "55 48 8431 3211",
+     "N_FUNCIONARIO": 55489492436,
+     "ERRO": "atualizar o numero do funcionario (este funcionario esta cadastrado como propritário, favor trocar de proprietário para funcionario o seguinte numero: 5548 9949 2436"
+    },
+    {
+     "IDUNIDADE": "OW01H",
+     "DIALOGO_PRE_CHECKIN": "63bd53c24a367c0816569b37",
+     "DIALOGO_PRE_CHECKOUT": "63bd53c555ac9871b5aeb0f1",
+     "NOME_COMERCIAL": "Apto Texas em Balneário Camboriú\/SC",
+     "PROPIETARIO": "Sandra Huscher",
+     "N_WHATSAPP": "55 47 97079801"
+    },
+    {
+     "IDUNIDADE": "PA01H",
+     "DIALOGO_PRE_CHECKIN": "63c052fcd771a299306988ca",
+     "DIALOGO_PRE_CHECKOUT": "63c052fe0d1b73322b88dac8",
+     "NOME_COMERCIAL": "Ap Papyrus - Balneário Camboriú-SC",
+     "PROPIETARIO": "Sandra Huscher",
+     "N_WHATSAPP": "55 47 97079801"
+    },
+    {
+     "IDUNIDADE": "PH02H",
+     "DIALOGO_PRE_CHECKIN": "63c6f70bea077c4266adb7a9",
+     "DIALOGO_PRE_CHECKOUT": "63c6f70eea077c4266adb7b0",
+     "NOME_COMERCIAL": "Pousada da Celia",
+     "PROPIETARIO": "Ana Célia",
+     "N_WHATSAPP": "55 49 99581024"
+    },
+    {
+     "IDUNIDADE": "PH03H",
+     "DIALOGO_PRE_CHECKIN": "63c6f70bea077c4266adb7a9",
+     "DIALOGO_PRE_CHECKOUT": "63c6f70eea077c4266adb7b0",
+     "NOME_COMERCIAL": "Pousada da Celia",
+     "PROPIETARIO": "Ana Célia",
+     "N_WHATSAPP": "55 49 99581024"
+    },
+    {
+     "IDUNIDADE": "PH04H",
+     "DIALOGO_PRE_CHECKIN": "63c6f70bea077c4266adb7a9",
+     "DIALOGO_PRE_CHECKOUT": "63c6f70eea077c4266adb7b0",
+     "NOME_COMERCIAL": "Pousada da Celia",
+     "PROPIETARIO": "Ana Célia",
+     "N_WHATSAPP": "55 49 99581024"
+    },
+    {
+     "IDUNIDADE": "PH05H",
+     "DIALOGO_PRE_CHECKIN": "63c6f70a9f3c32645fbc33f8",
+     "DIALOGO_PRE_CHECKOUT": "63c6f70ec699b81a1873b0ef",
+     "NOME_COMERCIAL": "Casa de Praia na Barrinha - Garopaba\/SC",
+     "PROPIETARIO": "Marcus Santos",
+     "N_WHATSAPP": "55 48 99714010"
+    },
+    {
+     "IDUNIDADE": "PH07H",
+     "DIALOGO_PRE_CHECKIN": "63c6f70bea077c4266adb7a9",
+     "DIALOGO_PRE_CHECKOUT": "63c6f70eea077c4266adb7b0",
+     "NOME_COMERCIAL": "Pousada da Celia",
+     "PROPIETARIO": "Ana Célia",
+     "N_WHATSAPP": "55 49 99581024"
+    },
+    {
+     "IDUNIDADE": "PH08H",
+     "DIALOGO_PRE_CHECKIN": "63c6f70bea077c4266adb7a9",
+     "DIALOGO_PRE_CHECKOUT": "63c6f70eea077c4266adb7b0",
+     "NOME_COMERCIAL": "Pousada da Celia",
+     "PROPIETARIO": "Ana Célia",
+     "N_WHATSAPP": "55 49 99581024"
+    },
+    {
+     "IDUNIDADE": "PH09H",
+     "DIALOGO_PRE_CHECKIN": "63c6f70bea077c4266adb7a9",
+     "DIALOGO_PRE_CHECKOUT": "63c6f70eea077c4266adb7b0",
+     "NOME_COMERCIAL": "Pousada da Celia",
+     "PROPIETARIO": "Ana Célia",
+     "N_WHATSAPP": "55 49 99581024"
+    },
+    {
+     "IDUNIDADE": "PH10H",
+     "DIALOGO_PRE_CHECKIN": "63c6f70a58acc0de01ce7771",
+     "DIALOGO_PRE_CHECKOUT": "63c6f70da907cef860bee239",
+     "NOME_COMERCIAL": "Casa Jeferson",
+     "PROPIETARIO": "Jeferson Alves",
+     "N_WHATSAPP": "55 48 91373287"
+    },
+    {
+     "IDUNIDADE": "PM01H",
+     "DIALOGO_PRE_CHECKIN": "63d439d72e9acec683ce8f89",
+     "DIALOGO_PRE_CHECKOUT": "63d439d9dbeaca6e2b909179",
+     "NOME_COMERCIAL": "Casa João-de-Barro - Campeche",
+     "PROPIETARIO": "Erlanderson Moraes",
+     "N_WHATSAPP": "55 48 84594144"
+    },
+    {
+     "IDUNIDADE": "PN01H",
+     "DIALOGO_PRE_CHECKIN": "63cef191d0c4db59cbfe3c35",
+     "DIALOGO_PRE_CHECKOUT": "63cef193e7ea243018fc9ce7",
+     "NOME_COMERCIAL": "Recanto EmmAnnEssência",
+     "PROPIETARIO": "Mariza Vandresen",
+     "N_WHATSAPP": "55 48 9621 5497"
+    },
+    {
+     "IDUNIDADE": "PN03H",
+     "DIALOGO_PRE_CHECKIN": "63cef191d0c4db59cbfe3c35",
+     "DIALOGO_PRE_CHECKOUT": "63cef193e7ea243018fc9ce7",
+     "NOME_COMERCIAL": "Recanto EmmAnnEssência",
+     "PROPIETARIO": "Mariza Vandresen",
+     "N_WHATSAPP": "55 48 9621 5497"
+    },
+    {
+     "IDUNIDADE": "PO01H",
+     "DIALOGO_PRE_CHECKIN": "63d04516140b9d5e2b2f2743",
+     "DIALOGO_PRE_CHECKOUT": "63d04518e221f86dd990498b",
+     "NOME_COMERCIAL": "Studio Amsterdã - Campeche-SC",
+     "PROPIETARIO": "Gisele Santos",
+     "N_WHATSAPP": "55 11 943787426",
+     "N_FUNCIONARIO": "55 48 92107547"
+    },
+    {
+     "IDUNIDADE": "PQ01H",
+     "DIALOGO_PRE_CHECKIN": "63d2e0dcfe03b83c9abccec1",
+     "DIALOGO_PRE_CHECKOUT": "63d2e0deb726917ef40f6ea1",
+     "NOME_COMERCIAL": "Ap Massachusetts",
+     "PROPIETARIO": "Felipe Procopio",
+     "N_WHATSAPP": "55 47 9957 5840",
+     "N_FUNCIONARIO": "55 47 9133 3940"
+    },
+    {
+     "IDUNIDADE": "PQ02H",
+     "DIALOGO_PRE_CHECKIN": "63d2ea3007fb3fafcb45f4ec",
+     "DIALOGO_PRE_CHECKOUT": "63d2ea31c14b413f95ea561c",
+     "NOME_COMERCIAL": "Recanto Lisboa - Balneário Piçarras",
+     "PROPIETARIO": "Simone Martins",
+     "N_WHATSAPP": "55 47 99671338",
+     "N_WHATSAPP2": "55 47 91513483"
+    },
+    {
+     "IDUNIDADE": "PR01H",
+     "DIALOGO_PRE_CHECKIN": "63d42542ec60e8cd5073e67c",
+     "DIALOGO_PRE_CHECKOUT": "63d42543c798eec91240df1b",
+     "NOME_COMERCIAL": "Luxury Holiday Home In Ibiraquera",
+     "PROPIETARIO": "Roberta Maron",
+     "N_WHATSAPP": "55 47 88654719",
+     "N_FUNCIONARIO": 554888577221
+    },
+    {
+     "IDUNIDADE": "PX01H",
+     "DIALOGO_PRE_CHECKIN": "63e12b71f4d4eeba257ab395",
+     "DIALOGO_PRE_CHECKOUT": "63e12b733d783cfb02304035",
+     "NOME_COMERCIAL": "Cambuim Cabanas",
+     "PROPIETARIO": "Gabriel Theodoro",
+     "N_WHATSAPP": "55 48 91492283",
+     "N_WHATSAPP2": "55 49 9131 0089"
+    },
+    {
+     "IDUNIDADE": "PX03H",
+     "DIALOGO_PRE_CHECKIN": "63e12b71f4d4eeba257ab395",
+     "DIALOGO_PRE_CHECKOUT": "63e12b733d783cfb02304035",
+     "NOME_COMERCIAL": "Cambuim Cabanas",
+     "PROPIETARIO": "Gabriel Theodoro",
+     "N_WHATSAPP": "55 48 91492283",
+     "N_WHATSAPP2": "55 49 9131 0089"
+    },
+    {
+     "IDUNIDADE": "PX05H",
+     "DIALOGO_PRE_CHECKIN": "63e12b71f4d4eeba257ab395",
+     "DIALOGO_PRE_CHECKOUT": "63e12b733d783cfb02304035",
+     "NOME_COMERCIAL": "Cambuim Cabanas",
+     "PROPIETARIO": "Gabriel Theodoro",
+     "N_WHATSAPP": "55 48 91492283",
+     "N_WHATSAPP2": "55 49 9131 0089"
+    },
+    {
+     "IDUNIDADE": "PX09H",
+     "DIALOGO_PRE_CHECKIN": "63e12b71f4d4eeba257ab395",
+     "DIALOGO_PRE_CHECKOUT": "63e12b733d783cfb02304035",
+     "NOME_COMERCIAL": "Cambuim Cabanas",
+     "PROPIETARIO": "Gabriel Theodoro",
+     "N_WHATSAPP": "55 48 91492283",
+     "N_WHATSAPP2": "55 49 9131 0089"
+    },
+    {
+     "IDUNIDADE": "PX13H",
+     "DIALOGO_PRE_CHECKIN": "63e12b71f4d4eeba257ab395",
+     "DIALOGO_PRE_CHECKOUT": "63e12b733d783cfb02304035",
+     "NOME_COMERCIAL": "Cambuim Cabanas",
+     "PROPIETARIO": "Gabriel Theodoro",
+     "N_WHATSAPP": "55 48 91492283",
+     "N_WHATSAPP2": "55 49 9131 0089"
+    },
+    {
+     "IDUNIDADE": "PX15H",
+     "DIALOGO_PRE_CHECKIN": "63e12b71f4d4eeba257ab395",
+     "DIALOGO_PRE_CHECKOUT": "63e12b733d783cfb02304035",
+     "NOME_COMERCIAL": "Cambuim Cabanas",
+     "PROPIETARIO": "Gabriel Theodoro",
+     "N_WHATSAPP": "55 48 91492283",
+     "N_WHATSAPP2": "55 49 9131 0089"
+    },
+    {
+     "IDUNIDADE": "PX18H",
+     "DIALOGO_PRE_CHECKIN": "63e12b71f4d4eeba257ab395",
+     "DIALOGO_PRE_CHECKOUT": "63e12b733d783cfb02304035",
+     "NOME_COMERCIAL": "Cambuim Cabanas",
+     "PROPIETARIO": "Gabriel Theodoro",
+     "N_WHATSAPP": "55 48 91492283",
+     "N_WHATSAPP2": "55 49 9131 0089"
+    },
+    {
+     "IDUNIDADE": "PX20H",
+     "DIALOGO_PRE_CHECKIN": "63e12b71f4d4eeba257ab395",
+     "DIALOGO_PRE_CHECKOUT": "63e12b733d783cfb02304035",
+     "NOME_COMERCIAL": "Cambuim Cabanas",
+     "PROPIETARIO": "Gabriel Theodoro",
+     "N_WHATSAPP": "55 48 91492283",
+     "N_WHATSAPP2": "55 49 9131 0089"
+    },
+    {
+     "IDUNIDADE": "PY01H",
+     "DIALOGO_PRE_CHECKIN": "63dd592583013b0218f5108e",
+     "DIALOGO_PRE_CHECKOUT": "63dd5927c51fc8da4793d62c",
+     "NOME_COMERCIAL": "Refúgio Mirante da Lagoa",
+     "PROPIETARIO": "Tatiana Rigotti",
+     "N_WHATSAPP": "55 48 9119 7084",
+     "N_WHATSAPP2": "55 48 9974 0060"
+    },
+    {
+     "IDUNIDADE": "QB01H",
+     "DIALOGO_PRE_CHECKIN": "63e12e61fa3c1d4147f6be2b",
+     "DIALOGO_PRE_CHECKOUT": "63e3ddb06e0fde0ce56e1547",
+     "NOME_COMERCIAL": "Loft Vale das Montanhas",
+     "PROPIETARIO": "Ana Maria Teles",
+     "N_WHATSAPP": "55 54 99529495"
+    },
+    {
+     "IDUNIDADE": "QF01H",
+     "DIALOGO_PRE_CHECKIN": "63e69f405b550acdfcf04fcb",
+     "DIALOGO_PRE_CHECKOUT": "63e69f42f53aa8e66f21a24d",
+     "NOME_COMERCIAL": "Recanto das Cerejeiras",
+     "PROPIETARIO": "Fabio Selbach",
+     "N_WHATSAPP": "55 54 99367850"
+    },
+    {
+     "IDUNIDADE": "QF02H",
+     "DIALOGO_PRE_CHECKIN": "63e69f84aef3bfb75769204b",
+     "DIALOGO_PRE_CHECKOUT": "63e69f86983b571a955ecefc",
+     "NOME_COMERCIAL": "Recanto do Buda",
+     "PROPIETARIO": "Ronaldo Gregory",
+     "N_WHATSAPP": "55 51 93070290"
+    },
+    {
+     "IDUNIDADE": "QM01H",
+     "DIALOGO_PRE_CHECKIN": "63efe01962956b6254126682",
+     "DIALOGO_PRE_CHECKOUT": "63efe01a62956b6254126687",
+     "NOME_COMERCIAL": "Ap Premier Home Club",
+     "PROPIETARIO": "Danilton dos Santos",
+     "N_WHATSAPP": "55 41 98188755",
+     "N_WHATSAPP2": "55 47 91976281",
+     "N_WHATSAPP3": "55 47 89165390"
+    },
+    {
+     "IDUNIDADE": "QX01H",
+     "DIALOGO_PRE_CHECKIN": "63fe5f458e6949f571edb6de",
+     "DIALOGO_PRE_CHECKOUT": "63fe5f47a6a6217967447076",
+     "NOME_COMERCIAL": "Refúgio Águas Brancas",
+     "PROPIETARIO": "Greice Mariotto",
+     "N_WHATSAPP": "55 49 99980687",
+     "N_WHATSAPP2": "55 49 98292357"
+    },
+    {
+     "IDUNIDADE": "QX02H",
+     "DIALOGO_PRE_CHECKIN": "63fe65b694b1437d5326c50d",
+     "DIALOGO_PRE_CHECKOUT": "63fe5f48f895a1d409d4d227",
+     "NOME_COMERCIAL": "Velutti Rosilene",
+     "PROPIETARIO": "Rosilene Hoepoers",
+     "N_WHATSAPP": "55 47 97123084",
+     "N_WHATSAPP2": "55 47 91976281",
+     "N_WHATSAPP3": "55 47 89165390"
+    },
+    {
+     "IDUNIDADE": "RB01G",
+     "DIALOGO_PRE_CHECKIN": "609a948537b8c03adde90554",
+     "DIALOGO_PRE_CHECKOUT": "609a9480e0cfff00567c4df0",
+     "NOME_COMERCIAL": "Cabana Pôr do Sol",
+     "PROPIETARIO": "Lisiane Godinho",
+     "N_WHATSAPP": "55 48 9144 7273",
+     "N_WHATSAPP2": "55 48 99492436",
+     "ERRO": "Não execulta o diálogo ATENÇÃO AO CHECK-IN EM BREVE  e atualizar o numero do funcionario (este funcionario esta cadastrado como propritário, favor trocar de proprietário para funcionario o seguinte numero: 554899492436"
+    },
+    {
+     "IDUNIDADE": "RB02G",
+     "DIALOGO_PRE_CHECKIN": "633740b0c3b1989a83f96021",
+     "DIALOGO_PRE_CHECKOUT": "609a92d1679e1f9c7a4f8a63",
+     "NOME_COMERCIAL": "Sítio Ventura",
+     "PROPIETARIO": "Geovana Wambommel",
+     "N_WHATSAPP": "55 47 8476-8911",
+     "N_WHATSAPP2": "55 48 99650909",
+     "N_WHATSAPP3": "55 47 96634349",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "RE01H",
+     "DIALOGO_PRE_CHECKIN": "64079f624455be9c38e456d7",
+     "DIALOGO_PRE_CHECKOUT": "64079f64829dfac8a3036c4d",
+     "NOME_COMERCIAL": "Cabanas Recanto do Rancho",
+     "PROPIETARIO": "Juliana Tadeu dos Santos",
+     "N_WHATSAPP": "55 48 84010680"
+    },
+    {
+     "IDUNIDADE": "RE03H",
+     "DIALOGO_PRE_CHECKIN": "64079f624455be9c38e456d7",
+     "DIALOGO_PRE_CHECKOUT": "64079f64829dfac8a3036c4d",
+     "NOME_COMERCIAL": "Cabanas Recanto do Rancho",
+     "PROPIETARIO": "Juliana Tadeu dos Santos",
+     "N_WHATSAPP": "55 48 84010680"
+    },
+    {
+     "IDUNIDADE": "RE06H",
+     "DIALOGO_PRE_CHECKIN": "64079f624455be9c38e456d7",
+     "DIALOGO_PRE_CHECKOUT": "64079f64829dfac8a3036c4d",
+     "NOME_COMERCIAL": "Cabanas Recanto do Rancho",
+     "PROPIETARIO": "Juliana Tadeu dos Santos",
+     "N_WHATSAPP": "55 48 84010680"
+    },
+    {
+     "IDUNIDADE": "RG01H",
+     "DIALOGO_PRE_CHECKIN": "640a4376883df5fb3cd360f9",
+     "DIALOGO_PRE_CHECKOUT": "640a43778e246c30d4477fe9",
+     "NOME_COMERCIAL": "Alvorada Mountain",
+     "PROPIETARIO": "Angela Aguiar Pedro",
+     "N_WHATSAPP": "55 48 99946751",
+     "N_WHATSAPP2": "55 48 96013098"
+    },
+    {
+     "IDUNIDADE": "RG03H",
+     "DIALOGO_PRE_CHECKIN": "640a4376883df5fb3cd360f9",
+     "DIALOGO_PRE_CHECKOUT": "640a43778e246c30d4477fe9",
+     "NOME_COMERCIAL": "Alvorada Mountain",
+     "PROPIETARIO": "Angela Aguiar Pedro",
+     "N_WHATSAPP": "55 48 99946751",
+     "N_WHATSAPP2": "55 48 96013098"
+    },
+    {
+     "IDUNIDADE": "RH01G",
+     "DIALOGO_PRE_CHECKIN": "609b0d0f7c63e5c70d164426",
+     "DIALOGO_PRE_CHECKOUT": "609b0d0dc4e892aa62ace35d",
+     "NOME_COMERCIAL": "Casa Praia de Itapirubá",
+     "PROPIETARIO": "Álvaro Jose Vitto",
+     "N_WHATSAPP": "55 48 9178 7180",
+     "N_WHATSAPP2": "55 49 9149 1851"
+    },
+    {
+     "IDUNIDADE": "RH02H",
+     "DIALOGO_PRE_CHECKIN": "6410cef466f233401df2ea8e",
+     "DIALOGO_PRE_CHECKOUT": "6410cef6ec249a7afdde0e85",
+     "NOME_COMERCIAL": "Essencia da Guarda",
+     "PROPIETARIO": "Kelly Cristina Schell",
+     "N_WHATSAPP": "55 48 96016383"
+    },
+    {
+     "IDUNIDADE": "RH03H",
+     "DIALOGO_PRE_CHECKIN": "6410cef466f233401df2ea8e",
+     "DIALOGO_PRE_CHECKOUT": "6410cef6ec249a7afdde0e85",
+     "NOME_COMERCIAL": "Essencia da Guarda",
+     "PROPIETARIO": "Kelly Cristina Schell",
+     "N_WHATSAPP": "55 48 96016383"
+    },
+    {
+     "IDUNIDADE": "RH04H",
+     "DIALOGO_PRE_CHECKIN": "6410cef466f233401df2ea8e",
+     "DIALOGO_PRE_CHECKOUT": "6410cef6ec249a7afdde0e85",
+     "NOME_COMERCIAL": "Essencia da Guarda",
+     "PROPIETARIO": "Kelly Cristina Schell",
+     "N_WHATSAPP": "55 48 96016383"
+    },
+    {
+     "IDUNIDADE": "RH05H",
+     "DIALOGO_PRE_CHECKIN": "6410cef466f233401df2ea8e",
+     "DIALOGO_PRE_CHECKOUT": "6410cef6ec249a7afdde0e85",
+     "NOME_COMERCIAL": "Essencia da Guarda",
+     "PROPIETARIO": "Kelly Cristina Schell",
+     "N_WHATSAPP": "55 48 96016383"
+    },
+    {
+     "IDUNIDADE": "RH06H",
+     "DIALOGO_PRE_CHECKIN": "6410cef466f233401df2ea8e",
+     "DIALOGO_PRE_CHECKOUT": "6410cef6ec249a7afdde0e85",
+     "NOME_COMERCIAL": "Essencia da Guarda",
+     "PROPIETARIO": "Kelly Cristina Schell",
+     "N_WHATSAPP": "55 48 96016383"
+    },
+    {
+     "IDUNIDADE": "RH07H",
+     "DIALOGO_PRE_CHECKIN": "6410cef466f233401df2ea8e",
+     "DIALOGO_PRE_CHECKOUT": "6410cef6ec249a7afdde0e85",
+     "NOME_COMERCIAL": "Essencia da Guarda",
+     "PROPIETARIO": "Kelly Cristina Schell",
+     "N_WHATSAPP": "55 48 96016383"
+    },
+    {
+     "IDUNIDADE": "RJ01G",
+     "DIALOGO_PRE_CHECKIN": "609b0dabf1287842cf7e83c7",
+     "DIALOGO_PRE_CHECKOUT": "609b0da77c63e5c70d164435",
+     "NOME_COMERCIAL": "Sítio Recanto Rei Salomão",
+     "PROPIETARIO": "Leandro Serpa",
+     "N_WHATSAPP": "55 47 9248 0888",
+     "N_WHATSAPP2": "55 48 9978 3003"
+    },
+    {
+     "IDUNIDADE": "RN01H",
+     "DIALOGO_PRE_CHECKIN": "642c6c542ca0abffbfdfbea2",
+     "DIALOGO_PRE_CHECKOUT": "642c6c569ce4c01e60821fb6",
+     "NOME_COMERCIAL": "Carpe Diem SP",
+     "PROPIETARIO": "Dyego Campioni",
+     "N_WHATSAPP": "55 53 91028488"
+    },
+    {
+     "IDUNIDADE": "RO01H",
+     "DIALOGO_PRE_CHECKIN": "641cb058a4b77746d2558c30",
+     "DIALOGO_PRE_CHECKOUT": "641cb05a287d0b3c90a6301b",
+     "NOME_COMERCIAL": "NaCarapina",
+     "PROPIETARIO": "Cesar Pombo Rivas",
+     "N_WHATSAPP": "55 51 95651602",
+     "N_WHATSAPP2": "55 51 99607175"
+    },
+    {
+     "IDUNIDADE": "RO03H",
+     "DIALOGO_PRE_CHECKIN": "641cb058a4b77746d2558c30",
+     "DIALOGO_PRE_CHECKOUT": "641cb05a287d0b3c90a6301b",
+     "NOME_COMERCIAL": "NaCarapina",
+     "PROPIETARIO": "Cesar Pombo Rivas",
+     "N_WHATSAPP": "55 51 95651602",
+     "N_WHATSAPP2": "55 51 99607175"
+    },
+    {
+     "IDUNIDADE": "RO09H",
+     "DIALOGO_PRE_CHECKIN": "641cb058a4b77746d2558c30",
+     "DIALOGO_PRE_CHECKOUT": "641cb05a287d0b3c90a6301b",
+     "NOME_COMERCIAL": "NaCarapina",
+     "PROPIETARIO": "Cesar Pombo Rivas",
+     "N_WHATSAPP": "55 51 95651602",
+     "N_WHATSAPP2": "55 51 99607175"
+    },
+    {
+     "IDUNIDADE": "RP01G",
+     "DIALOGO_PRE_CHECKIN": "609b0daa3217375558663e1e",
+     "DIALOGO_PRE_CHECKOUT": "609b0da64eb0b1ddb681b3c3",
+     "NOME_COMERCIAL": "Casa com Piscina na Praia do Rosa",
+     "PROPIETARIO": "Conceição Vieira",
+     "N_WHATSAPP": "55 48 8819 8386",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "RR01H",
+     "DIALOGO_PRE_CHECKIN": "641e074bfea94361d51519a3",
+     "DIALOGO_PRE_CHECKOUT": "641e074eff8f3e6e115bb1b8",
+     "NOME_COMERCIAL": "Villagio Matera",
+     "PROPIETARIO": "Gustavo Rossa",
+     "N_WHATSAPP": "55 41 91846352",
+     "N_WHATSAPP2": "55 41 92026565"
+    },
+    {
+     "IDUNIDADE": "RR03H",
+     "DIALOGO_PRE_CHECKIN": "641e074bfea94361d51519a3",
+     "DIALOGO_PRE_CHECKOUT": "641e074eff8f3e6e115bb1b8",
+     "NOME_COMERCIAL": "Villagio Matera",
+     "PROPIETARIO": "Gustavo Rossa",
+     "N_WHATSAPP": "55 41 91846352",
+     "N_WHATSAPP2": "55 41 92026565"
+    },
+    {
+     "IDUNIDADE": "RR05H",
+     "DIALOGO_PRE_CHECKIN": "641e074bfea94361d51519a3",
+     "DIALOGO_PRE_CHECKOUT": "641e074eff8f3e6e115bb1b8",
+     "NOME_COMERCIAL": "Villagio Matera",
+     "PROPIETARIO": "Gustavo Rossa",
+     "N_WHATSAPP": "55 41 91846352",
+     "N_WHATSAPP2": "55 41 92026565"
+    },
+    {
+     "IDUNIDADE": "RR07H",
+     "DIALOGO_PRE_CHECKIN": "641e074bfea94361d51519a3",
+     "DIALOGO_PRE_CHECKOUT": "641e074eff8f3e6e115bb1b8",
+     "NOME_COMERCIAL": "Villagio Matera",
+     "PROPIETARIO": "Gustavo Rossa",
+     "N_WHATSAPP": "55 41 91846352",
+     "N_WHATSAPP2": "55 41 92026565"
+    },
+    {
+     "IDUNIDADE": "RR09H",
+     "DIALOGO_PRE_CHECKIN": "641e074bfea94361d51519a3",
+     "DIALOGO_PRE_CHECKOUT": "641e074eff8f3e6e115bb1b8",
+     "NOME_COMERCIAL": "Villagio Matera",
+     "PROPIETARIO": "Gustavo Rossa",
+     "N_WHATSAPP": "55 41 91846352",
+     "N_WHATSAPP2": "55 41 92026565"
+    },
+    {
+     "IDUNIDADE": "RR11H",
+     "DIALOGO_PRE_CHECKIN": "641e074bfea94361d51519a3",
+     "DIALOGO_PRE_CHECKOUT": "641e074eff8f3e6e115bb1b8",
+     "NOME_COMERCIAL": "Villagio Matera",
+     "PROPIETARIO": "Gustavo Rossa",
+     "N_WHATSAPP": "55 41 91846352",
+     "N_WHATSAPP2": "55 41 92026565"
+    },
+    {
+     "IDUNIDADE": "RR13H",
+     "DIALOGO_PRE_CHECKIN": "641e074bfea94361d51519a3",
+     "DIALOGO_PRE_CHECKOUT": "641e074eff8f3e6e115bb1b8",
+     "NOME_COMERCIAL": "Villagio Matera",
+     "PROPIETARIO": "Gustavo Rossa",
+     "N_WHATSAPP": "55 41 91846352",
+     "N_WHATSAPP2": "55 41 92026565"
+    },
+    {
+     "IDUNIDADE": "RR15H",
+     "DIALOGO_PRE_CHECKIN": "641d9af67fe0f52fb09a7b79",
+     "DIALOGO_PRE_CHECKOUT": "641d9af8fea94361d5150198",
+     "NOME_COMERCIAL": "Tiny House Garden",
+     "PROPIETARIO": "Alex Carniel",
+     "N_WHATSAPP": "55 48 91110719"
+    },
+    {
+     "IDUNIDADE": "RR17H",
+     "DIALOGO_PRE_CHECKIN": "641d9af67fe0f52fb09a7b79",
+     "DIALOGO_PRE_CHECKOUT": "641d9af8fea94361d5150198",
+     "NOME_COMERCIAL": "Tiny House Garden",
+     "PROPIETARIO": "Alex Carniel",
+     "N_WHATSAPP": "55 48 91110719"
+    },
+    {
+     "IDUNIDADE": "RR19H",
+     "DIALOGO_PRE_CHECKIN": "641d9af67fe0f52fb09a7b79",
+     "DIALOGO_PRE_CHECKOUT": "641d9af8fea94361d5150198",
+     "NOME_COMERCIAL": "Tiny House Garden",
+     "PROPIETARIO": "Alex Carniel",
+     "N_WHATSAPP": "55 48 91110719"
+    },
+    {
+     "IDUNIDADE": "RV01G",
+     "DIALOGO_PRE_CHECKIN": "60a82c205825e71448c3faf4",
+     "DIALOGO_PRE_CHECKOUT": "60a82c1e971eeb12bd9b3958",
+     "NOME_COMERCIAL": "Cabana Park Pouso",
+     "PROPIETARIO": "Geovan dos Santos",
+     "N_WHATSAPP": "55 48 8432 3104 ",
+     "N_WHATSAPP2": "55 48 8470 8817"
+    },
+    {
+     "IDUNIDADE": "RW01G",
+     "DIALOGO_PRE_CHECKIN": "60a809252790f8d5ac175413",
+     "DIALOGO_PRE_CHECKOUT": "60a80923098e13e3a3e396e7",
+     "NOME_COMERCIAL": "Chácara Recanto Prainha",
+     "PROPIETARIO": "Marcelo Nunes",
+     "N_WHATSAPP": 5515991652574
+    },
+    {
+     "IDUNIDADE": "RW02G",
+     "DIALOGO_PRE_CHECKIN": "60a82e9cad2d4a1c42d7d5bb",
+     "DIALOGO_PRE_CHECKOUT": "60a82e999bad731e1a32cc99",
+     "NOME_COMERCIAL": "Sítio Abençoado",
+     "PROPIETARIO": "Lucilene Santos",
+     "N_WHATSAPP": "55 48 9838 5108"
+    },
+    {
+     "IDUNIDADE": "RZ02H",
+     "DIALOGO_PRE_CHECKIN": "642349520991a0c10bd45073",
+     "DIALOGO_PRE_CHECKOUT": "642349549ce4c01e608170b5",
+     "NOME_COMERCIAL": "Pousada Mato Verde",
+     "PROPIETARIO": "Elqui Juliana",
+     "N_WHATSAPP": "55 49 84240623",
+     "N_WHATSAPP2": "55 49 84271773"
+    },
+    {
+     "IDUNIDADE": "RZ03H",
+     "DIALOGO_PRE_CHECKIN": "642349520991a0c10bd45073",
+     "DIALOGO_PRE_CHECKOUT": "642349549ce4c01e608170b5",
+     "NOME_COMERCIAL": "Pousada Mato Verde",
+     "PROPIETARIO": "Elqui Juliana",
+     "N_WHATSAPP": "55 49 84240623",
+     "N_WHATSAPP2": "55 49 84271773"
+    },
+    {
+     "IDUNIDADE": "RZ04H",
+     "DIALOGO_PRE_CHECKIN": "642349520991a0c10bd45073",
+     "DIALOGO_PRE_CHECKOUT": "642349549ce4c01e608170b5",
+     "NOME_COMERCIAL": "Pousada Mato Verde",
+     "PROPIETARIO": "Elqui Juliana",
+     "N_WHATSAPP": "55 49 84240623",
+     "N_WHATSAPP2": "55 49 84271773"
+    },
+    {
+     "IDUNIDADE": "RZ05H",
+     "DIALOGO_PRE_CHECKIN": "642349520991a0c10bd45073",
+     "DIALOGO_PRE_CHECKOUT": "642349549ce4c01e608170b5",
+     "NOME_COMERCIAL": "Pousada Mato Verde",
+     "PROPIETARIO": "Elqui Juliana",
+     "N_WHATSAPP": "55 49 84240623",
+     "N_WHATSAPP2": "55 49 84271773"
+    },
+    {
+     "IDUNIDADE": "SF01G",
+     "DIALOGO_PRE_CHECKIN": "60b100512fe725207dbb2776",
+     "DIALOGO_PRE_CHECKOUT": "60b1007102a756edf24cc5aa",
+     "NOME_COMERCIAL": "Rancho com Piscina na Serra",
+     "PROPIETARIO": "Rafael Santos",
+     "N_WHATSAPP": "55 47 9633 4017",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "SH01H",
+     "DIALOGO_PRE_CHECKIN": "642dc620623baf21c02d2c1d",
+     "DIALOGO_PRE_CHECKOUT": "642dc62216047c05b39c881e",
+     "NOME_COMERCIAL": "Rancho Otto",
+     "PROPIETARIO": "Geiza Boeira",
+     "N_WHATSAPP": "55 47 92610545",
+     "N_WHATSAPP2": "55 47 92612528"
+    },
+    {
+     "IDUNIDADE": "SH03H",
+     "DIALOGO_PRE_CHECKIN": "642dc620623baf21c02d2c1d",
+     "DIALOGO_PRE_CHECKOUT": "642dc62216047c05b39c881e",
+     "NOME_COMERCIAL": "Rancho Otto",
+     "PROPIETARIO": "Geiza Boeira",
+     "N_WHATSAPP": "55 47 92610545",
+     "N_WHATSAPP2": "55 47 92612528"
+    },
+    {
+     "IDUNIDADE": "SH05H",
+     "DIALOGO_PRE_CHECKIN": "642dc620623baf21c02d2c1d",
+     "DIALOGO_PRE_CHECKOUT": "642dc62216047c05b39c881e",
+     "NOME_COMERCIAL": "Rancho Otto",
+     "PROPIETARIO": "Geiza Boeira",
+     "N_WHATSAPP": "55 47 92610545",
+     "N_WHATSAPP2": "55 47 92612528"
+    },
+    {
+     "IDUNIDADE": "SH07H",
+     "DIALOGO_PRE_CHECKIN": "642dc620623baf21c02d2c1d",
+     "DIALOGO_PRE_CHECKOUT": "642dc62216047c05b39c881e",
+     "NOME_COMERCIAL": "Rancho Otto",
+     "PROPIETARIO": "Geiza Boeira",
+     "N_WHATSAPP": "55 47 92610545",
+     "N_WHATSAPP2": "55 47 92612528"
+    },
+    {
+     "IDUNIDADE": "SH09H",
+     "DIALOGO_PRE_CHECKIN": "642dc620623baf21c02d2c1d",
+     "DIALOGO_PRE_CHECKOUT": "642dc62216047c05b39c881e",
+     "NOME_COMERCIAL": "Rancho Otto",
+     "PROPIETARIO": "Geiza Boeira",
+     "N_WHATSAPP": "55 47 92610545",
+     "N_WHATSAPP2": "55 47 92612528"
+    },
+    {
+     "IDUNIDADE": "SH10H",
+     "DIALOGO_PRE_CHECKIN": "642f15ff3e3f5e81d7fe83ae",
+     "DIALOGO_PRE_CHECKOUT": "642f1600ea6444dffdb77cfa",
+     "NOME_COMERCIAL": "Sunset Ibiraquera",
+     "PROPIETARIO": "Ursula Luersen",
+     "N_WHATSAPP": "55 48 91859062"
+    },
+    {
+     "IDUNIDADE": "SM01H",
+     "DIALOGO_PRE_CHECKIN": "6435bf03dfb2d94422418f8f",
+     "DIALOGO_PRE_CHECKOUT": "6435bf05dfb2d94422418f94",
+     "NOME_COMERCIAL": "Refugio Na Praia Hospedagem",
+     "PROPIETARIO": "Juciane dos Santos",
+     "N_WHATSAPP": "55 48 99663420"
+    },
+    {
+     "IDUNIDADE": "SM03H",
+     "DIALOGO_PRE_CHECKIN": "6435bf03dfb2d94422418f8f",
+     "DIALOGO_PRE_CHECKOUT": "6435bf05dfb2d94422418f94",
+     "NOME_COMERCIAL": "Refugio Na Praia Hospedagem",
+     "PROPIETARIO": "Juciane dos Santos",
+     "N_WHATSAPP": "55 48 99663420"
+    },
+    {
+     "IDUNIDADE": "SN01G",
+     "DIALOGO_PRE_CHECKIN": "60cca3bb55dab4122bf7a782",
+     "DIALOGO_PRE_CHECKOUT": "60cca3b9608c55f0187a05d1",
+     "NOME_COMERCIAL": "Red House em Tijucas",
+     "PROPIETARIO": "Pedro Laus",
+     "N_WHATSAPP": "55 48 9918 0004",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "SP01H",
+     "DIALOGO_PRE_CHECKIN": "643844a194aaba9068c935a7",
+     "DIALOGO_PRE_CHECKOUT": "643844a4b718bc8ee2d3a71b",
+     "NOME_COMERCIAL": "Manhattan Tower - Nautilus Home Club",
+     "PROPIETARIO": "Pollyane Penz",
+     "N_WHATSAPP": "55 47 99226999"
+    },
+    {
+     "IDUNIDADE": "SP02H",
+     "DIALOGO_PRE_CHECKIN": "6438588f1ab8dba9acc88992",
+     "DIALOGO_PRE_CHECKOUT": "64385891b885de9f21369df3",
+     "NOME_COMERCIAL": "Venice Beach - Nautilus Home Club",
+     "PROPIETARIO": "Pollyane Penz",
+     "N_WHATSAPP": "55 47 99226999"
+    },
+    {
+     "IDUNIDADE": "SR01G",
+     "DIALOGO_PRE_CHECKIN": "60c349d01d04116928cf4edd",
+     "DIALOGO_PRE_CHECKOUT": "60c349cfc46df08882390543",
+     "NOME_COMERCIAL": "Aconchegante chalé no centro",
+     "PROPIETARIO": "Jamile Beretta",
+     "N_WHATSAPP": "55 48 8811 9435",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "SR01H",
+     "DIALOGO_PRE_CHECKIN": "643aa86ee43ee38e49fe5c54",
+     "DIALOGO_PRE_CHECKOUT": "643aa87107b8d7667b0ebc0f",
+     "NOME_COMERCIAL": "Shiva Boutique Hotel",
+     "PROPIETARIO": "Shiva Boutique Hotel",
+     "N_WHATSAPP": "55 48 91400043",
+     "N_WHATSAPP2": "55 48 91664965"
+    },
+    {
+     "IDUNIDADE": "SR02G",
+     "DIALOGO_PRE_CHECKIN": "60c35f0aba187c35cf2332d8",
+     "DIALOGO_PRE_CHECKOUT": "60c38e874b634f9949e012a7",
+     "NOME_COMERCIAL": "Casa Aconchegante nas Montanhas",
+     "PROPIETARIO": "Gerson Kraus",
+     "N_WHATSAPP": "55 48 9917 7030",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "SR03G",
+     "DIALOGO_PRE_CHECKIN": "60c3d81c8a49390e452786b4",
+     "DIALOGO_PRE_CHECKOUT": "60c3d8182b96a5c5d8e409ba",
+     "NOME_COMERCIAL": "Apto Condomínio Malibu no Campeche",
+     "PROPIETARIO": "Caroline Perez",
+     "N_WHATSAPP": "55 51 8170 8801",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "SR03H",
+     "DIALOGO_PRE_CHECKIN": "643aa86ee43ee38e49fe5c54",
+     "DIALOGO_PRE_CHECKOUT": "643aa87107b8d7667b0ebc0f",
+     "NOME_COMERCIAL": "Shiva Boutique Hotel",
+     "PROPIETARIO": "Shiva Boutique Hotel",
+     "N_WHATSAPP": "55 48 91400043",
+     "N_WHATSAPP2": "55 48 91664965"
+    },
+    {
+     "IDUNIDADE": "SR05H",
+     "DIALOGO_PRE_CHECKIN": "643aa86ee43ee38e49fe5c54",
+     "DIALOGO_PRE_CHECKOUT": "643aa87107b8d7667b0ebc0f",
+     "NOME_COMERCIAL": "Shiva Boutique Hotel",
+     "PROPIETARIO": "Shiva Boutique Hotel",
+     "N_WHATSAPP": "55 48 91400043",
+     "N_WHATSAPP2": "55 48 91664965"
+    },
+    {
+     "IDUNIDADE": "SR07H",
+     "DIALOGO_PRE_CHECKIN": "643aa86ee43ee38e49fe5c54",
+     "DIALOGO_PRE_CHECKOUT": "643aa87107b8d7667b0ebc0f",
+     "NOME_COMERCIAL": "Shiva Boutique Hotel",
+     "PROPIETARIO": "Shiva Boutique Hotel",
+     "N_WHATSAPP": "55 48 91400043",
+     "N_WHATSAPP2": "55 48 91664965"
+    },
+    {
+     "IDUNIDADE": "SR08H",
+     "DIALOGO_PRE_CHECKIN": "643aa86ee43ee38e49fe5c54",
+     "DIALOGO_PRE_CHECKOUT": "643aa87107b8d7667b0ebc0f",
+     "NOME_COMERCIAL": "Shiva Boutique Hotel",
+     "PROPIETARIO": "Shiva Boutique Hotel",
+     "N_WHATSAPP": "55 48 91400043",
+     "N_WHATSAPP2": "55 48 91664965"
+    },
+    {
+     "IDUNIDADE": "SR09H",
+     "DIALOGO_PRE_CHECKIN": "643aa86ee43ee38e49fe5c54",
+     "DIALOGO_PRE_CHECKOUT": "643aa87107b8d7667b0ebc0f",
+     "NOME_COMERCIAL": "Shiva Boutique Hotel",
+     "PROPIETARIO": "Shiva Boutique Hotel",
+     "N_WHATSAPP": "55 48 91400043",
+     "N_WHATSAPP2": "55 48 91664965"
+    },
+    {
+     "IDUNIDADE": "SS01G",
+     "DIALOGO_PRE_CHECKIN": "60c3d44a604649e9c3f36cac",
+     "DIALOGO_PRE_CHECKOUT": "60c3d447eabc67fd661d9cac",
+     "NOME_COMERCIAL": "Casa com Piscina no Santinho",
+     "PROPIETARIO": "Daniel Fernandes",
+     "N_WHATSAPP": "55 48 9660 1336",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "SY01G",
+     "DIALOGO_PRE_CHECKIN": "60d24ce5a6fa7d7ff08075ab",
+     "DIALOGO_PRE_CHECKOUT": "60d24ce4608c55f0187b1560",
+     "NOME_COMERCIAL": "Sítio Beirão",
+     "PROPIETARIO": "Carlos Eduardo Beirão",
+     "N_WHATSAPP": "55 48 9986 4341",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "TB02H",
+     "DIALOGO_PRE_CHECKIN": "64483d061824be79dbabb57a",
+     "DIALOGO_PRE_CHECKOUT": "64483d08653a8ab3d2fa5a6e",
+     "NOME_COMERCIAL": "Experiência na Montanha",
+     "PROPIETARIO": "Alessandra Munareto",
+     "N_WHATSAPP": "55 49 91356233"
+    },
+    {
+     "IDUNIDADE": "TB03H",
+     "DIALOGO_PRE_CHECKIN": "64483d061824be79dbabb57a",
+     "DIALOGO_PRE_CHECKOUT": "64483d08653a8ab3d2fa5a6e",
+     "NOME_COMERCIAL": "Experiência na Montanha",
+     "PROPIETARIO": "Alessandra Munareto",
+     "N_WHATSAPP": "55 49 91356233"
+    },
+    {
+     "IDUNIDADE": "TB04H",
+     "DIALOGO_PRE_CHECKIN": "64483d061824be79dbabb57a",
+     "DIALOGO_PRE_CHECKOUT": "64483d08653a8ab3d2fa5a6e",
+     "NOME_COMERCIAL": "Experiência na Montanha",
+     "PROPIETARIO": "Alessandra Munareto",
+     "N_WHATSAPP": "55 49 91356233"
+    },
+    {
+     "IDUNIDADE": "TB05H",
+     "DIALOGO_PRE_CHECKIN": "64483d061824be79dbabb57a",
+     "DIALOGO_PRE_CHECKOUT": "64483d08653a8ab3d2fa5a6e",
+     "NOME_COMERCIAL": "Experiência na Montanha",
+     "PROPIETARIO": "Alessandra Munareto",
+     "N_WHATSAPP": "55 49 91356233"
+    },
+    {
+     "IDUNIDADE": "TB07H",
+     "DIALOGO_PRE_CHECKIN": "64483d061824be79dbabb57a",
+     "DIALOGO_PRE_CHECKOUT": "64483d08653a8ab3d2fa5a6e",
+     "NOME_COMERCIAL": "Experiência na Montanha",
+     "PROPIETARIO": "Alessandra Munareto",
+     "N_WHATSAPP": "55 49 91356233"
+    },
+    {
+     "IDUNIDADE": "TB08H",
+     "DIALOGO_PRE_CHECKIN": "645a8aa9c7290e3f52b4f7de",
+     "DIALOGO_PRE_CHECKOUT": "64483d08653a8ab3d2fa5a6e",
+     "NOME_COMERCIAL": "Experiência na Montanha",
+     "PROPIETARIO": "Alessandra Munareto",
+     "N_WHATSAPP": "55 49 91356233"
+    },
+    {
+     "IDUNIDADE": "TD01H",
+     "DIALOGO_PRE_CHECKIN": "644bdb30695fdd064d63b990",
+     "DIALOGO_PRE_CHECKOUT": "644bdcb229c9961181dcde22",
+     "NOME_COMERCIAL": "EcoPousada Gravatal",
+     "PROPIETARIO": "Luciane Lorenzetti",
+     "N_WHATSAPP": "55 48 36482690"
+    },
+    {
+     "IDUNIDADE": "TD03H",
+     "DIALOGO_PRE_CHECKIN": "644bdb30695fdd064d63b990",
+     "DIALOGO_PRE_CHECKOUT": "644bdcb229c9961181dcde22",
+     "NOME_COMERCIAL": "EcoPousada Gravatal",
+     "PROPIETARIO": "Luciane Lorenzetti",
+     "N_WHATSAPP": "55 48 36482690"
+    },
+    {
+     "IDUNIDADE": "TD04H",
+     "DIALOGO_PRE_CHECKIN": "644bdb30695fdd064d63b990",
+     "DIALOGO_PRE_CHECKOUT": "644bdcb229c9961181dcde22",
+     "NOME_COMERCIAL": "EcoPousada Gravatal",
+     "PROPIETARIO": "Luciane Lorenzetti",
+     "N_WHATSAPP": "55 48 36482690"
+    },
+    {
+     "IDUNIDADE": "TD05H",
+     "DIALOGO_PRE_CHECKIN": "644bdb30695fdd064d63b990",
+     "DIALOGO_PRE_CHECKOUT": "644bdcb229c9961181dcde22",
+     "NOME_COMERCIAL": "EcoPousada Gravatal",
+     "PROPIETARIO": "Luciane Lorenzetti",
+     "N_WHATSAPP": "55 48 36482690"
+    },
+    {
+     "IDUNIDADE": "TD06H",
+     "DIALOGO_PRE_CHECKIN": "644bdb30695fdd064d63b990",
+     "DIALOGO_PRE_CHECKOUT": "644bdcb229c9961181dcde22",
+     "NOME_COMERCIAL": "EcoPousada Gravatal",
+     "PROPIETARIO": "Luciane Lorenzetti",
+     "N_WHATSAPP": "55 48 36482690"
+    },
+    {
+     "IDUNIDADE": "TD07H",
+     "DIALOGO_PRE_CHECKIN": "644bdb30695fdd064d63b990",
+     "DIALOGO_PRE_CHECKOUT": "644bdcb229c9961181dcde22",
+     "NOME_COMERCIAL": "EcoPousada Gravatal",
+     "PROPIETARIO": "Luciane Lorenzetti",
+     "N_WHATSAPP": "55 48 36482690"
+    },
+    {
+     "IDUNIDADE": "TD08H",
+     "DIALOGO_PRE_CHECKIN": "644bdb30695fdd064d63b990",
+     "DIALOGO_PRE_CHECKOUT": "644bdcb229c9961181dcde22",
+     "NOME_COMERCIAL": "EcoPousada Gravatal",
+     "PROPIETARIO": "Luciane Lorenzetti",
+     "N_WHATSAPP": "55 48 36482690"
+    },
+    {
+     "IDUNIDADE": "TD09H",
+     "DIALOGO_PRE_CHECKIN": "644bdb30695fdd064d63b990",
+     "DIALOGO_PRE_CHECKOUT": "644bdcb229c9961181dcde22",
+     "NOME_COMERCIAL": "EcoPousada Gravatal",
+     "PROPIETARIO": "Luciane Lorenzetti",
+     "N_WHATSAPP": "55 48 36482690"
+    },
+    {
+     "IDUNIDADE": "TD10H",
+     "DIALOGO_PRE_CHECKIN": "644bdb30695fdd064d63b990",
+     "DIALOGO_PRE_CHECKOUT": "644bdcb229c9961181dcde22",
+     "NOME_COMERCIAL": "EcoPousada Gravatal",
+     "PROPIETARIO": "Luciane Lorenzetti",
+     "N_WHATSAPP": "55 48 36482690"
+    },
+    {
+     "IDUNIDADE": "TE01H",
+     "DIALOGO_PRE_CHECKIN": "6435bf03dfb2d94422418f8f",
+     "DIALOGO_PRE_CHECKOUT": "6435bf05dfb2d94422418f94",
+     "NOME_COMERCIAL": "Refugio Na Praia Hospedagem",
+     "PROPIETARIO": "Juciane dos Santos",
+     "N_WHATSAPP": "55 48 99663420"
+    },
+    {
+     "IDUNIDADE": "TG01G",
+     "DIALOGO_PRE_CHECKIN": "60db1aa7a6fa7d7ff0822faf",
+     "DIALOGO_PRE_CHECKOUT": "60db1aa59f0b62ae53472a80",
+     "NOME_COMERCIAL": "Sítio Weber",
+     "PROPIETARIO": "Maria Luiza da Silva",
+     "N_WHATSAPP": "55 48 9608 6400",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "TG02G",
+     "DIALOGO_PRE_CHECKIN": "60f64419753927df9e993f0f",
+     "DIALOGO_PRE_CHECKOUT": "60f64415fe8720b7e4af10ac",
+     "NOME_COMERCIAL": "Chales Nova Trento",
+     "PROPIETARIO": "Vanderli Libardo",
+     "N_WHATSAPP": "55 48 9940 6226",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "TI01G",
+     "DIALOGO_PRE_CHECKIN": "60db17c255dab4122bfa690b",
+     "DIALOGO_PRE_CHECKOUT": "60db17c017b4a266718ec94e",
+     "NOME_COMERCIAL": "Chalé Caminho do Sol",
+     "PROPIETARIO": "Marcos Jacó",
+     "N_WHATSAPP": "55 48 9618 4642",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "TI01H",
+     "DIALOGO_PRE_CHECKIN": "6451702ffd5d37a4c09697c1",
+     "DIALOGO_PRE_CHECKOUT": "645170310835c8791ba3e406",
+     "NOME_COMERCIAL": "Nautilus Residence Beach",
+     "PROPIETARIO": "Vanderlei Genoni",
+     "N_WHATSAPP": "55 14 996710457",
+     "N_WHATSAPP2": "55 47 91976281",
+     "N_WHATSAPP3": "55 47 89165390"
+    },
+    {
+     "IDUNIDADE": "TI02G",
+     "DIALOGO_PRE_CHECKIN": "60db17c255dab4122bfa690b",
+     "DIALOGO_PRE_CHECKOUT": "60db17c017b4a266718ec94e",
+     "NOME_COMERCIAL": "Chalé Caminho do Sol 2",
+     "PROPIETARIO": "Marcos Jacó",
+     "N_WHATSAPP": "55 48 9618 4642"
+    },
+    {
+     "IDUNIDADE": "TL01H",
+     "DIALOGO_PRE_CHECKIN": "6455567b0835c8791ba43c28",
+     "DIALOGO_PRE_CHECKOUT": "6455567d58d4b8ff0ebdfa60",
+     "NOME_COMERCIAL": "Velutti Luz do Amanhecer - Penha - SC",
+     "PROPIETARIO": "Maria Lucileide",
+     "N_WHATSAPP": "55 47 96201865",
+     "N_WHATSAPP2": "55 47 91976281",
+     "N_WHATSAPP3": "55 47 89165390"
+    },
+    {
+     "IDUNIDADE": "TL02G",
+     "DIALOGO_PRE_CHECKIN": "60f64419753927df9e993f0f",
+     "DIALOGO_PRE_CHECKOUT": "60f64415fe8720b7e4af10ac",
+     "NOME_COMERCIAL": "Chales Nova Trento",
+     "PROPIETARIO": "Vanderli Libardo",
+     "N_WHATSAPP": "55 48 9940 6226",
+     "N_PARCEIRO": " ",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "TL02H",
+     "DIALOGO_PRE_CHECKIN": "6455663cf0c81c0a54878e1c",
+     "DIALOGO_PRE_CHECKOUT": "6455663fbaa44028cb2c64f2",
+     "NOME_COMERCIAL": "Ap Gold Coast Vista Mar",
+     "PROPIETARIO": "Pollyane Penz",
+     "N_WHATSAPP": "55 47 99226999"
+    },
+    {
+     "IDUNIDADE": "TP01H",
+     "DIALOGO_PRE_CHECKIN": "645d349790630e6ebe9d2162",
+     "DIALOGO_PRE_CHECKOUT": "645d34999b5e083e4972859e",
+     "NOME_COMERCIAL": "Nautilus Conchas do Mar - Pollyane",
+     "PROPIETARIO": "Pollyane Penz",
+     "N_WHATSAPP": "55 47 99226999",
+     "N_WHATSAPP2": "55 47 99857446"
+    },
+    {
+     "IDUNIDADE": "TR01H",
+     "DIALOGO_PRE_CHECKIN": "645e32d6d33850b79389b250",
+     "DIALOGO_PRE_CHECKOUT": "645e32d8dc1fa54c2bd40cf9",
+     "NOME_COMERCIAL": "Ap Oásis do Mar - Bali Beach",
+     "PROPIETARIO": "Pollyane Penz",
+     "N_WHATSAPP": "55 47 99226999",
+     "N_WHATSAPP2": "55 47 99857446"
+    },
+    {
+     "IDUNIDADE": "TS01G",
+     "DIALOGO_PRE_CHECKIN": "60f631f5890ce47e6432449b",
+     "DIALOGO_PRE_CHECKOUT": "60f631f226eed1a016bfa90e",
+     "NOME_COMERCIAL": "Casa com Piscina em Araçoiaba da Serra",
+     "PROPIETARIO": "Reni de Almeida",
+     "N_WHATSAPP": "55 15 8173 9526",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "TV01G",
+     "DIALOGO_PRE_CHECKIN": "60ddbc88d8cba8da987a1665",
+     "DIALOGO_PRE_CHECKOUT": "60ddbc867f43aff976f13fbc",
+     "NOME_COMERCIAL": "Sítio Verde Vida",
+     "PROPIETARIO": "José Henrique Vieira",
+     "N_WHATSAPP": " 55 48 9692 0868",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "TX01H",
+     "DIALOGO_PRE_CHECKIN": "64667c9574c0f76e07fe0632",
+     "DIALOGO_PRE_CHECKOUT": "64667c976889b54b39fdd8bd",
+     "NOME_COMERCIAL": "Ap Praia de Ouro - Venice Home Club",
+     "PROPIETARIO": "Gustavo Haase",
+     "N_WHATSAPP": "55 61 82888797",
+     "N_WHATSAPP2": "55 47 88753306",
+     "N_FUNCIONARIO": "55 45 99279055"
+    },
+    {
+     "IDUNIDADE": "UA01G",
+     "DIALOGO_PRE_CHECKIN": "610800fd4cf12fcb38e35091",
+     "DIALOGO_PRE_CHECKOUT": "610800fba271820a5226380e",
+     "NOME_COMERCIAL": "Casa Privativa com Piscina na Barra da Ferrugem",
+     "PROPIETARIO": "André Lopes",
+     "N_WHATSAPP": "55 51 9890 0999",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "UA03G",
+     "DIALOGO_PRE_CHECKIN": "60f64418a286575438a28724",
+     "DIALOGO_PRE_CHECKOUT": "60f644157159099413f8b2b9",
+     "NOME_COMERCIAL": "Chalé São Francisco do Sul",
+     "PROPIETARIO": "Liriane Santos",
+     "N_PARCEIRO": "55 48 9855 4794",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "UB01G",
+     "DIALOGO_PRE_CHECKIN": "610c3f54853794c56023a2b0",
+     "DIALOGO_PRE_CHECKOUT": "610c3f51e740fe4ff4a81b67",
+     "NOME_COMERCIAL": "Apartamento de 2 Quartos - Casa da Estrela",
+     "PROPIETARIO": "Charlene da Silva",
+     "N_WHATSAPP": "55 48 99190225",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "UB02G",
+     "DIALOGO_PRE_CHECKIN": "60f631f4d89881f0699562f5",
+     "DIALOGO_PRE_CHECKOUT": "60f631f2890ce47e6432448e",
+     "NOME_COMERCIAL": "Casa da Cachoeira em Rancho Queimado",
+     "PROPIETARIO": "Michelle Correia",
+     "N_WHATSAPP": "55 48 9613 3434",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "UD02G",
+     "DIALOGO_PRE_CHECKIN": "633740b0c3b1989a83f96021",
+     "DIALOGO_PRE_CHECKOUT": "609a92d1679e1f9c7a4f8a63",
+     "NOME_COMERCIAL": "Casa Ventura",
+     "PROPIETARIO": "Geovana Wambommel",
+     "N_WHATSAPP": "55 47 8476-8911",
+     "N_WHATSAPP2": "55 48 99650909"
+    },
+    {
+     "IDUNIDADE": "UJ02H",
+     "DIALOGO_PRE_CHECKIN": "6474ff3a88f1d6389cbb8597",
+     "DIALOGO_PRE_CHECKOUT": "6474ff3c7f0114ce577ffcc8",
+     "NOME_COMERCIAL": "Ibira Oásis - Imbituba - SC",
+     "PROPIETARIO": "Maria Aparecida da Silva",
+     "N_WHATSAPP": "55 48 96654700"
+    },
+    {
+     "IDUNIDADE": "UK01H",
+     "DIALOGO_PRE_CHECKIN": "64779bc689d4fdd47ecd66c0",
+     "DIALOGO_PRE_CHECKOUT": "64779bc7881e2a34ba845914",
+     "NOME_COMERCIAL": "Refúgio dos Pinheiros",
+     "PROPIETARIO": "Raquel Pinheiros Melo",
+     "N_WHATSAPP": "55 48 84185289",
+     "N_WHATSAPP2": "55 48 91083416"
+    },
+    {
+     "IDUNIDADE": "UM01H",
+     "DIALOGO_PRE_CHECKIN": "647e3d929d661a24c355470d",
+     "DIALOGO_PRE_CHECKOUT": "647e3d94821811c632e77834",
+     "NOME_COMERCIAL": "Nautilus Paraíso Tropical - Vista ao Mar",
+     "PROPIETARIO": "Manoel Salles",
+     "N_WHATSAPP": "55 47 91976281",
+     "N_WHATSAPP2": "55 41 96773566",
+     "N_WHATSAPP3": "55 41 98705567",
+     "N_FUNCIONARIO": "55 47 89165390",
+     "N_FUNCIONARIO2": 61416645932
+    },
+    {
+     "IDUNIDADE": "UN01H",
+     "DIALOGO_PRE_CHECKIN": "6487805534f04726a2ef5292",
+     "DIALOGO_PRE_CHECKOUT": "648780582709fb06fd58db1c",
+     "NOME_COMERCIAL": "Experiência Sensorial Domo Alpha",
+     "PROPIETARIO": "Motaury Porto Filho",
+     "N_WHATSAPP": "55 48 99487733",
+     "N_WHATSAPP2": "55 48 99688103"
+    },
+    {
+     "IDUNIDADE": "UP03G",
+     "DIALOGO_PRE_CHECKIN": "61182f994f9ec2a4f51c6d97",
+     "DIALOGO_PRE_CHECKOUT": "611831c977a5a4ec2e583099",
+     "NOME_COMERCIAL": "Cabana Dois Amores",
+     "PROPIETARIO": "Marilene Tomé",
+     "N_WHATSAPP": "55 (48) 88138471",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "UP04G",
+     "DIALOGO_PRE_CHECKIN": "61182bf0258c8455b6ca418d",
+     "DIALOGO_PRE_CHECKOUT": "61182be79e939c76dabf185f",
+     "NOME_COMERCIAL": "Cabana do Aconchego",
+     "PROPIETARIO": "Marilene Tomé",
+     "N_WHATSAPP": "55 (48) 88138471",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "UQ01G",
+     "DIALOGO_PRE_CHECKIN": "610c3c212ff8e1e7c10e092a",
+     "DIALOGO_PRE_CHECKOUT": "610c3c2052487ac067811ca3",
+     "NOME_COMERCIAL": "Recanto dos Pássaros na Serra Catarinense",
+     "PROPIETARIO": "Mariana de Abreu",
+     "N_WHATSAPP": "55 48 8437 9417",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "UU01G",
+     "DIALOGO_PRE_CHECKIN": "606f017c6d176262d39bc04d",
+     "DIALOGO_PRE_CHECKOUT": "606f017a172f08c57ee7358c",
+     "NOME_COMERCIAL": "Ravenna",
+     "PROPIETARIO": "Ligia Zermiani",
+     "N_WHATSAPP": "55 47 9197 6281",
+     "N_WHATSAPP2": "55 47 89165390"
+    },
+    {
+     "IDUNIDADE": "UU01H",
+     "DIALOGO_PRE_CHECKIN": "6489bb574c3333754b4bf494",
+     "DIALOGO_PRE_CHECKOUT": "6489bb58ce3afd5836fef349",
+     "NOME_COMERCIAL": "Casa Paraíso do Sol - Rancho Queimado - SC",
+     "PROPIETARIO": "Viviane Davoglio",
+     "N_WHATSAPP": "55 48 99359597"
+    },
+    {
+     "IDUNIDADE": "UU02G",
+     "DIALOGO_PRE_CHECKIN": "5fb81b69d8a994cbd4b9b1dd",
+     "DIALOGO_PRE_CHECKOUT": "5fb81ce25525847a638dcd95",
+     "NOME_COMERCIAL": "Nautilus",
+     "PROPIETARIO": "Ligia Zermiani",
+     "N_WHATSAPP": "55 47 9197 6281",
+     "N_WHATSAPP2": "55 47 89165390"
+    },
+    {
+     "IDUNIDADE": "UU03G",
+     "DIALOGO_PRE_CHECKIN": "60da2d94bcbf6d91b6926ad3",
+     "DIALOGO_PRE_CHECKOUT": "60da2d91d8cba8da9879539d",
+     "NOME_COMERCIAL": "Apartamento no Centro de Brusque",
+     "PROPIETARIO": "Ligia Zermiani",
+     "N_WHATSAPP": "55 47 9197 6281",
+     "N_WHATSAPP2": "55 47 89165390",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "UU04G",
+     "DIALOGO_PRE_CHECKIN": "6307df6de67e3548153670d4",
+     "DIALOGO_PRE_CHECKOUT": "6307df6adca77943b2a67506",
+     "NOME_COMERCIAL": "Nautilus",
+     "PROPIETARIO": "Fernando Moreira",
+     "N_WHATSAPP": "55 47 9197 6281",
+     "N_WHATSAPP2": "55 24 998311883",
+     "N_WHATSAPP3": "55 24 998311814",
+     "N_FUNCIONARIO": "55 47 89165390"
+    },
+    {
+     "IDUNIDADE": "UU05G",
+     "DIALOGO_PRE_CHECKIN": "6307dfd1be7140104aeb6214",
+     "DIALOGO_PRE_CHECKOUT": "6307dfd09d3313ad631eb6d2",
+     "NOME_COMERCIAL": "Nautilus",
+     "PROPIETARIO": "Cassiana Melek",
+     "N_WHATSAPP": "55 41 92551491",
+     "N_WHATSAPP2": "55 47 91976281",
+     "N_WHATSAPP3": "55 47 89165390"
+    },
+    {
+     "IDUNIDADE": "UU06G",
+     "DIALOGO_PRE_CHECKIN": "6307e12d93bb2f05aba575a0",
+     "DIALOGO_PRE_CHECKOUT": "6307e12893bb2f05aba57591",
+     "NOME_COMERCIAL": "Nautilus",
+     "PROPIETARIO": "Sonia Rodrigues",
+     "N_WHATSAPP": "55 47 9197 6281",
+     "N_WHATSAPP2": "55 47 91182142",
+     "N_WHATSAPP3": "55 47 89165390"
+    },
+    {
+     "IDUNIDADE": "UU07G",
+     "DIALOGO_PRE_CHECKIN": "5fb81b69d8a994cbd4b9b1dd",
+     "DIALOGO_PRE_CHECKOUT": "5fb81ce25525847a638dcd95",
+     "NOME_COMERCIAL": "Nautilus",
+     "PROPIETARIO": "Ângela Borges",
+     "N_WHATSAPP": "55 47 9197 6281",
+     "N_WHATSAPP2": "55 11 999973362"
+    },
+    {
+     "IDUNIDADE": "UX01G",
+     "DIALOGO_PRE_CHECKIN": "610c3f54853794c56023a2b0",
+     "DIALOGO_PRE_CHECKOUT": "610c3f51e740fe4ff4a81b67",
+     "NOME_COMERCIAL": "Apartamento de 2 Quartos - Casa da Estrela",
+     "PROPIETARIO": "Charlene da Silva",
+     "N_WHATSAPP": "55 48 9919 0225",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "VB01G",
+     "DIALOGO_PRE_CHECKIN": "6307e12c0aa3db299bdd705d",
+     "DIALOGO_PRE_CHECKOUT": "6307e12793bb2f05aba5758b",
+     "NOME_COMERCIAL": "Nautilus",
+     "PROPIETARIO": "Ricardo Troglio",
+     "N_WHATSAPP": "55 47 91976281",
+     "N_WHATSAPP2": "55 47 91789913",
+     "N_WHATSAPP3": "55 47 89165390",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "VC01G",
+     "DIALOGO_PRE_CHECKIN": "610c58fb944f60527c6c2ed4",
+     "DIALOGO_PRE_CHECKOUT": "610c58f9dcf90af7362c291e",
+     "NOME_COMERCIAL": "Casa da Lagoa no Rosa",
+     "PROPIETARIO": "Stella Maris",
+     "N_WHATSAPP": "55 48 9675 9997",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "VE01G",
+     "DIALOGO_PRE_CHECKIN": "6126ce54c883ae6edcf1c09a",
+     "DIALOGO_PRE_CHECKOUT": "6126ce51923c9342674402b4",
+     "NOME_COMERCIAL": "Refúgio Serra da Tartaruga",
+     "PROPIETARIO": "Robison dos Santos",
+     "N_WHATSAPP": "55 48 9866 1673",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "VE02G",
+     "DIALOGO_PRE_CHECKIN": "6126ce54c883ae6edcf1c09a",
+     "DIALOGO_PRE_CHECKOUT": "6126ce51923c9342674402b4",
+     "NOME_COMERCIAL": "Refúgio Serra da Tartaruga",
+     "PROPIETARIO": "Robison dos Santos",
+     "N_WHATSAPP": "55 48 9866 1673"
+    },
+    {
+     "IDUNIDADE": "VG01G",
+     "DIALOGO_PRE_CHECKIN": "6126d8ca2f784281a1695cd8",
+     "DIALOGO_PRE_CHECKOUT": "6126d8c86de14820853a74fb",
+     "NOME_COMERCIAL": "Casa com Piscina Governador Celso Ramos",
+     "PROPIETARIO": "Mariana dos Santos",
+     "N_WHATSAPP": "55 48 96280205",
+     "N_WHATSAPP2": "55 48 99537279",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "VJ01G",
+     "DIALOGO_PRE_CHECKIN": "61266d57919b1977ff676887",
+     "DIALOGO_PRE_CHECKOUT": "61266d55080f1f18b3da923e",
+     "NOME_COMERCIAL": "Franca's House",
+     "PROPIETARIO": "Clóvis Júnior",
+     "N_WHATSAPP": "55 48 9126 3727",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "VL01G",
+     "DIALOGO_PRE_CHECKIN": "6126a1e9ac9f18a8bfd8f63e",
+     "DIALOGO_PRE_CHECKOUT": "6126a1e6f8d00739e430b86c",
+     "NOME_COMERCIAL": "Casa com Piscina na Pinheira",
+     "PROPIETARIO": "Rodrigo Morais",
+     "N_WHATSAPP": "55 48 9695 8071",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "VM01G",
+     "DIALOGO_PRE_CHECKIN": "615e42ed0f9d93c3fb4bdc63",
+     "DIALOGO_PRE_CHECKOUT": "615e42f5869d648eceef972c",
+     "NOME_COMERCIAL": "Casa Grande com Piscina na Barra da Lagoa",
+     "PROPIETARIO": "Maristela Carpes",
+     "N_WHATSAPP": "55 48 84395933",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "VM01H",
+     "DIALOGO_PRE_CHECKIN": "649b45d20504012542f087b0",
+     "DIALOGO_PRE_CHECKOUT": "649b45d46c4f8fef0fa2fcb1",
+     "NOME_COMERCIAL": "Rancho Sol Poente",
+     "PROPIETARIO": "Thiago Drumond",
+     "N_WHATSAPP": 554891256289
+    },
+    {
+     "IDUNIDADE": "VO01H",
+     "DIALOGO_PRE_CHECKIN": "649f3bb9d24c01036189a372",
+     "DIALOGO_PRE_CHECKOUT": "649f3bbbeece6775047c39a3",
+     "NOME_COMERCIAL": "Vila Paraíso Blumenau",
+     "PROPIETARIO": "Patrícia Manske",
+     "N_WHATSAPP": 554791607755
+    },
+    {
+     "IDUNIDADE": "VO03H",
+     "DIALOGO_PRE_CHECKIN": "649f3bb9d24c01036189a372",
+     "DIALOGO_PRE_CHECKOUT": "649f3bbbeece6775047c39a3",
+     "NOME_COMERCIAL": "Vila Paraíso Blumenau",
+     "PROPIETARIO": "Patrícia Manske",
+     "N_WHATSAPP": 554791607755
+    },
+    {
+     "IDUNIDADE": "VO05H",
+     "DIALOGO_PRE_CHECKIN": "649f3bb9d24c01036189a372",
+     "DIALOGO_PRE_CHECKOUT": "649f3bbbeece6775047c39a3",
+     "NOME_COMERCIAL": "Vila Paraíso Blumenau",
+     "PROPIETARIO": "Patrícia Manske",
+     "N_WHATSAPP": 554791607755
+    },
+    {
+     "IDUNIDADE": "VO06H",
+     "DIALOGO_PRE_CHECKIN": "649f3bb9d24c01036189a372",
+     "DIALOGO_PRE_CHECKOUT": "649f3bbbeece6775047c39a3",
+     "NOME_COMERCIAL": "Vila Paraíso Blumenau",
+     "PROPIETARIO": "Patrícia Manske",
+     "N_WHATSAPP": 554791607755
+    },
+    {
+     "IDUNIDADE": "VZ01G",
+     "DIALOGO_PRE_CHECKIN": "6307dfd20940287cfad40231",
+     "DIALOGO_PRE_CHECKOUT": "6307dfcf24c418e58e425715",
+     "NOME_COMERCIAL": "Nautilus",
+     "PROPIETARIO": "Maria Aparecida Bertoldi",
+     "N_WHATSAPP": "55 47 91638303",
+     "N_WHATSAPP2": "55 47 9197 6281",
+     "N_WHATSAPP3": "55 47 89165390",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "WD02G",
+     "DIALOGO_PRE_CHECKIN": "62e192273f8143549906ed8f",
+     "DIALOGO_PRE_CHECKOUT": "62e192292b23c242d9b928dc",
+     "NOME_COMERCIAL": "Chalé das Bromélias",
+     "PROPIETARIO": "Daniela Santos",
+     "N_WHATSAPP": "55 48 88094786",
+     "N_WHATSAPP2": "55 48 98388206",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "WG01G",
+     "DIALOGO_PRE_CHECKIN": "60cca3bb55dab4122bf7a782",
+     "DIALOGO_PRE_CHECKOUT": "60cca3b9608c55f0187a05d1",
+     "NOME_COMERCIAL": "Recanto Virgínia em Tijucas",
+     "PROPIETARIO": "Pedro Laus",
+     "N_WHATSAPP": "55 48 9918 0004",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "WM01G",
+     "DIALOGO_PRE_CHECKIN": "614cd19b25bb4d6874723de6",
+     "DIALOGO_PRE_CHECKOUT": "614cd198b19936909d423cb8",
+     "NOME_COMERCIAL": "Apartamento com Piscina nos Açores",
+     "PROPIETARIO": "Beatris Luft",
+     "N_WHATSAPP": "55 51 8315 9920",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "WO01H",
+     "DIALOGO_PRE_CHECKIN": "64c2c6867e0d087a5d6f4f7d",
+     "DIALOGO_PRE_CHECKOUT": "64c2c68818a495df43d77bd8",
+     "NOME_COMERCIAL": "Apto 100m da Praia - Cachoeira do Bom Jesus",
+     "PROPIETARIO": "Ronaldo Amorim",
+     "N_WHATSAPP": 554896211388,
+     "N_WHATSAPP2": 554591389874
+    },
+    {
+     "IDUNIDADE": "WO03H",
+     "DIALOGO_PRE_CHECKIN": "64c2c49e6c0076809e6a35f7",
+     "DIALOGO_PRE_CHECKOUT": "64c2c4a12ee0b12268e9c399",
+     "NOME_COMERCIAL": "Refúgio dos Corais - Campeche",
+     "PROPIETARIO": "Ronaldo Amorim",
+     "N_WHATSAPP": 554896211388,
+     "N_WHATSAPP2": 554591389874
+    },
+    {
+     "IDUNIDADE": "WR02G",
+     "DIALOGO_PRE_CHECKIN": "614cd83cf0b2ba5778cd296f",
+     "DIALOGO_PRE_CHECKOUT": "614cd83922b82108956a5a79",
+     "NOME_COMERCIAL": "Aconchego à Beira-Mar em Gov Celso Ramos",
+     "PROPIETARIO": "Ignacio Wopereis",
+     "N_WHATSAPP": "55 48 9107 2606",
+     "N_WHATSAPP2": "55 48 8466 7112",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "WT01G",
+     "DIALOGO_PRE_CHECKIN": "614d16311f28dd0c910170e1",
+     "DIALOGO_PRE_CHECKOUT": "614d162f94c0009420544a81",
+     "NOME_COMERCIAL": "Casa com Piscina no Coração de Ibiraquera",
+     "PROPIETARIO": "Aloisio Ferreira",
+     "N_WHATSAPP": "55 51 9773 2255",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "WU01G",
+     "DIALOGO_PRE_CHECKIN": "614dfccf3f317f73b097f30c",
+     "DIALOGO_PRE_CHECKOUT": "614dfccefc4121c19d349740",
+     "NOME_COMERCIAL": "Casa com Piscina em Itapoá",
+     "PROPIETARIO": "Elisangela Rego",
+     "N_WHATSAPP": "55 47 88224186"
+    },
+    {
+     "IDUNIDADE": "XA01G",
+     "DIALOGO_PRE_CHECKIN": "615b0f22c99c26804a200453",
+     "DIALOGO_PRE_CHECKOUT": "615b0f20e184fc47f05e3099",
+     "NOME_COMERCIAL": "Casa Rosa: Confortável, Moderna e Perto da Praia",
+     "PROPIETARIO": "Anne Cordeiro",
+     "N_WHATSAPP": "55 51 9673 8708",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "XA02G",
+     "DIALOGO_PRE_CHECKIN": "615e42ee25bb4d6874779dda",
+     "DIALOGO_PRE_CHECKOUT": "615e42f44dd8265113f6d3a0",
+     "NOME_COMERCIAL": "Recanto das Acácias",
+     "PROPIETARIO": "Maria de Lourdes Albani",
+     "N_WHATSAPP": "55 51 91131512"
+    },
+    {
+     "IDUNIDADE": "XA03G",
+     "DIALOGO_PRE_CHECKIN": "6307e12b2535157cf78345c0",
+     "DIALOGO_PRE_CHECKOUT": "6307e1295a46cb8ee9e4ab8a",
+     "NOME_COMERCIAL": "Nautilus",
+     "PROPIETARIO": "Ligia Zermiani",
+     "N_WHATSAPP": "55 47 9197 6281",
+     "N_WHATSAPP3": "55 47 89165390",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "XB01G",
+     "DIALOGO_PRE_CHECKIN": "615e42ee25bb4d6874779dda",
+     "DIALOGO_PRE_CHECKOUT": "615e42f44dd8265113f6d3a0",
+     "NOME_COMERCIAL": "Recanto das Acácias",
+     "PROPIETARIO": "Maria de Lourdes Albani",
+     "N_WHATSAPP": "55 51 91131512",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "XC01G",
+     "DIALOGO_PRE_CHECKIN": "6166effde92da03f27f9845d",
+     "DIALOGO_PRE_CHECKOUT": "6166f007e92da03f27f98462",
+     "NOME_COMERCIAL": "Wood House: Conforto, Rústico e Praia",
+     "PROPIETARIO": "Maria Conceição Bastos",
+     "N_WHATSAPP": "55 51 97511921",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "XD01G",
+     "DIALOGO_PRE_CHECKIN": "615e42ecccbf0e3f54099390",
+     "DIALOGO_PRE_CHECKOUT": "615e42f2ccbf0e3f54099395",
+     "NOME_COMERCIAL": "Casa Premium: Conforto, Elegância, Praia",
+     "PROPIETARIO": "Ricardo Brati",
+     "N_WHATSAPP": "55 48 96492771",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "XG01G",
+     "DIALOGO_PRE_CHECKIN": "615e42ebe46598b9bf8acfa9",
+     "DIALOGO_PRE_CHECKOUT": "615e42f6e92da03f27f7b592",
+     "NOME_COMERCIAL": "Exclusive Recanto das Pitayas",
+     "PROPIETARIO": "Emanuele Sampaio",
+     "N_WHATSAPP": "55 51 94550908",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "XJ01G",
+     "DIALOGO_PRE_CHECKIN": "6176bd23c99c26804a27cff0",
+     "DIALOGO_PRE_CHECKOUT": "6176bd1dff6689e8119362a2",
+     "NOME_COMERCIAL": "Casa de ferias em Garopaba",
+     "PROPIETARIO": "Priscila Pires",
+     "N_WHATSAPP": "55 48 99403640",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "XJ02G",
+     "DIALOGO_PRE_CHECKIN": "6166effd94c00094205b4d6f",
+     "DIALOGO_PRE_CHECKOUT": "6166f00764349126ada95406",
+     "NOME_COMERCIAL": "Recanto Sol e Praia ",
+     "PROPIETARIO": "Leonardo Meirelles",
+     "N_WHATSAPP": "55 41 99858773",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "XJ03G",
+     "DIALOGO_PRE_CHECKIN": "6166effd94c00094205b4d6f",
+     "DIALOGO_PRE_CHECKOUT": "6166f00764349126ada95406",
+     "NOME_COMERCIAL": "Aconchego Céu e Mar",
+     "PROPIETARIO": "Leonardo Meirelles",
+     "N_WHATSAPP": "55 41 99858773",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "XK01G",
+     "DIALOGO_PRE_CHECKIN": "6165c725e87e04afceed2a1a",
+     "DIALOGO_PRE_CHECKOUT": "6165c7234dd8265113f865d7",
+     "NOME_COMERCIAL": "Casa Da Vinci",
+     "PROPIETARIO": "Elenir Arnhold",
+     "N_WHATSAPP": "55 51 96136799",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "XM01H",
+     "DIALOGO_PRE_CHECKIN": "64dfcad6845aacb68bcf0092",
+     "DIALOGO_PRE_CHECKOUT": "64dfcad85bc92f658daa28ee",
+     "NOME_COMERCIAL": "Cabana Monte Capanne",
+     "PROPIETARIO": "Carla Heinzen",
+     "N_WHATSAPP": "55 49 98163114"
+    },
+    {
+     "IDUNIDADE": "XO01G",
+     "DIALOGO_PRE_CHECKIN": "615e42ecccbf0e3f54099390",
+     "DIALOGO_PRE_CHECKOUT": "615e42f2ccbf0e3f54099395",
+     "NOME_COMERCIAL": "Casa Premium: Conforto, Elegância, Praia",
+     "PROPIETARIO": "Ricardo Brati",
+     "N_WHATSAPP": "55 48 96492771",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "XO02G",
+     "DIALOGO_PRE_CHECKIN": "6176bd23c99c26804a27cff0",
+     "DIALOGO_PRE_CHECKOUT": "6176bd1dff6689e8119362a2",
+     "NOME_COMERCIAL": "Casa com Piscina em Garopaba",
+     "PROPIETARIO": "Priscila Pires",
+     "N_WHATSAPP": "55 48 99403640",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "XP01G",
+     "DIALOGO_PRE_CHECKIN": "6172d80823428431a91265c1",
+     "DIALOGO_PRE_CHECKOUT": "6172d8181260ce275f65cca4",
+     "NOME_COMERCIAL": "Casa de Alto Padrão na Ilha da Magia",
+     "PROPIETARIO": "Douglas Silvério",
+     "N_WHATSAPP": "55 48 91907212",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "XT01G",
+     "DIALOGO_PRE_CHECKIN": "61716d3b0f9d93c3fb510369",
+     "DIALOGO_PRE_CHECKOUT": "61716d396e77367a1a01a9f7",
+     "NOME_COMERCIAL": "Casa Vista Privilegiada: Piscina e Conforto",
+     "PROPIETARIO": "Elenilda Raupp",
+     "N_WHATSAPP": "55 48 99667222",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "XT01H",
+     "DIALOGO_PRE_CHECKIN": "64e90fe43f242b38cbe3a975",
+     "DIALOGO_PRE_CHECKOUT": "64e90fe6b97feee3d2d51339",
+     "NOME_COMERCIAL": "Velutti Family Vista Mar",
+     "PROPIETARIO": "Dorilene Bagio Kempner",
+     "N_WHATSAPP": "55 47 99886315",
+     "N_WHATSAPP2": "55 47 99880454"
+    },
+    {
+     "IDUNIDADE": "XT02G",
+     "DIALOGO_PRE_CHECKIN": "6172cf664dd8265113fc9c92",
+     "DIALOGO_PRE_CHECKOUT": "6172cf6450dccbc089dd208f",
+     "NOME_COMERCIAL": "Casa Dream: Jacuzzi, Praia e Praticidade",
+     "PROPIETARIO": "Norma Pereira",
+     "N_WHATSAPP": "55 48 8496 3711",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "XU02G",
+     "DIALOGO_PRE_CHECKIN": "6307dfd20940287cfad40223",
+     "DIALOGO_PRE_CHECKOUT": "6307dfcf414d7c796b2b39eb",
+     "NOME_COMERCIAL": "Nautilus",
+     "PROPIETARIO": "Josiel Griseli",
+     "N_WHATSAPP": "55 54 91938130",
+     "N_WHATSAPP2": "55 47 9197 6281",
+     "N_WHATSAPP3": "55 47 89165390",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "XV02G",
+     "DIALOGO_PRE_CHECKIN": "617a9b350f9d93c3fb5415a4",
+     "DIALOGO_PRE_CHECKOUT": "617a9b3353eb2c6f1ac3578a",
+     "NOME_COMERCIAL": "Cobertura de Luxo na Praia do Sonho",
+     "PROPIETARIO": "Joice Fraga",
+     "N_WHATSAPP": "55 48 99750115",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "XW01G",
+     "DIALOGO_PRE_CHECKIN": "6176bd23ff6689e8119362e7",
+     "DIALOGO_PRE_CHECKOUT": "617738e76c311b83bcd7a2c5",
+     "NOME_COMERCIAL": "Recanto Estação em Ponta das Canas",
+     "PROPIETARIO": "Vanessa Lichtenberg",
+     "N_WHATSAPP": "55 48 96732944",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "XX01H",
+     "DIALOGO_PRE_CHECKIN": "64ee3472dc9673f091ef453c",
+     "DIALOGO_PRE_CHECKOUT": "64ee34745bf4bcd072c17a63",
+     "NOME_COMERCIAL": "Ap Cancun - Ed Papyrus - BC",
+     "PROPIETARIO": "Sandra Huscher",
+     "N_WHATSAPP": "55 47 97079801"
+    },
+    {
+     "IDUNIDADE": "XX02H",
+     "DIALOGO_PRE_CHECKIN": "64f24cad18c8dbc0b8555f56",
+     "DIALOGO_PRE_CHECKOUT": "64f24cafedf1c2baf21b56b6",
+     "NOME_COMERCIAL": "Pousada Rota do Corvo",
+     "PROPIETARIO": "Samuel Dacoreggio Borghesan",
+     "N_WHATSAPP": "55 11 991690231"
+    },
+    {
+     "IDUNIDADE": "XX04H",
+     "DIALOGO_PRE_CHECKIN": "64f24cad18c8dbc0b8555f56",
+     "DIALOGO_PRE_CHECKOUT": "64f24cafedf1c2baf21b56b6",
+     "NOME_COMERCIAL": "Pousada Rota do Corvo",
+     "PROPIETARIO": "Samuel Dacoreggio Borghesan",
+     "N_WHATSAPP": "55 11 991690231"
+    },
+    {
+     "IDUNIDADE": "XX05H",
+     "DIALOGO_PRE_CHECKIN": "64f24cad18c8dbc0b8555f56",
+     "DIALOGO_PRE_CHECKOUT": "64f24cafedf1c2baf21b56b6",
+     "NOME_COMERCIAL": "Pousada Rota do Corvo",
+     "PROPIETARIO": "Samuel Dacoreggio Borghesan",
+     "N_WHATSAPP": "55 11 991690231"
+    },
+    {
+     "IDUNIDADE": "XX06G",
+     "DIALOGO_PRE_CHECKIN": "6283e1e877d4b1ebd2e22ac6",
+     "DIALOGO_PRE_CHECKOUT": "6283e1ea958b9c80a7b2b6a3",
+     "NOME_COMERCIAL": "Cabana Casa da Floresta",
+     "PROPIETARIO": "Eduardo Lins",
+     "N_WHATSAPP": "55 48 96089164",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "XX06H",
+     "DIALOGO_PRE_CHECKIN": "64f24cad18c8dbc0b8555f56",
+     "DIALOGO_PRE_CHECKOUT": "64f24cafedf1c2baf21b56b6",
+     "NOME_COMERCIAL": "Pousada Rota do Corvo",
+     "PROPIETARIO": "Samuel Dacoreggio Borghesan",
+     "N_WHATSAPP": "55 11 991690231"
+    },
+    {
+     "IDUNIDADE": "YD01G",
+     "DIALOGO_PRE_CHECKIN": "617ffe2fdf6118c73241b8a4",
+     "DIALOGO_PRE_CHECKOUT": "617ffe2ec99c26804a2abbcc",
+     "NOME_COMERCIAL": "Cobertura Carpe Diem: Jacuzzi, Conforto, Campeche",
+     "PROPIETARIO": "Astrid Avila",
+     "N_WHATSAPP": "55 48 96138727",
+     "N_FUNCIONARIO": "55 48 98221253",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "YE01G",
+     "DIALOGO_PRE_CHECKIN": "6377d65a9309458e5c346274",
+     "DIALOGO_PRE_CHECKOUT": "6377d65cf72361fab7b04584",
+     "NOME_COMERCIAL": "Velutti",
+     "PROPIETARIO": "Ligia Zermiani",
+     "N_WHATSAPP": "55 47 9197 6281",
+     "N_WHATSAPP2": "55 47 89165390"
+    },
+    {
+     "IDUNIDADE": "YE02H",
+     "DIALOGO_PRE_CHECKIN": "64fb6476b58b13cda7e1c521",
+     "DIALOGO_PRE_CHECKOUT": "64f88547f4296594a88f11d2",
+     "NOME_COMERCIAL": "Esphera Glamping - Gravatai",
+     "PROPIETARIO": "André Brunetto",
+     "N_WHATSAPP": "55 51 99774526",
+     "N_WHATSAPP2": "55 51 92964192"
+    },
+    {
+     "IDUNIDADE": "YE03G",
+     "DIALOGO_PRE_CHECKIN": "618978d95d1c335243151c32",
+     "DIALOGO_PRE_CHECKOUT": "618978d70a9931673b00c00d",
+     "NOME_COMERCIAL": "Casa 250m do Mar em Canasvieiras",
+     "PROPIETARIO": "Tania Cunha",
+     "N_WHATSAPP": "55 51 80497949",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "YE03H",
+     "DIALOGO_PRE_CHECKIN": "64fb66911e92ec2964202bfd",
+     "DIALOGO_PRE_CHECKOUT": "64f88547f4296594a88f11d2",
+     "NOME_COMERCIAL": "Esphera Glamping - Gravatai",
+     "PROPIETARIO": "André Brunetto",
+     "N_WHATSAPP": "55 51 99774526",
+     "N_WHATSAPP2": "55 51 92964192"
+    },
+    {
+     "IDUNIDADE": "YE04G",
+     "DIALOGO_PRE_CHECKIN": "618d2136c0fdc212660adc04",
+     "DIALOGO_PRE_CHECKOUT": "618d21347af1e6a3750f66e7",
+     "NOME_COMERCIAL": "Casa Wagner",
+     "PROPIETARIO": "Wagner Souza",
+     "N_WHATSAPP": "55 48 99624768",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "YE04H",
+     "DIALOGO_PRE_CHECKIN": "64fb64e26cd5a89653927e1c",
+     "DIALOGO_PRE_CHECKOUT": "64f88547f4296594a88f11d2",
+     "NOME_COMERCIAL": "Esphera Glamping - Gravatai",
+     "PROPIETARIO": "André Brunetto",
+     "N_WHATSAPP": "55 51 99774526",
+     "N_WHATSAPP2": "55 51 92964192"
+    },
+    {
+     "IDUNIDADE": "YE05H",
+     "DIALOGO_PRE_CHECKIN": "64f885459f812b04d49c8abb",
+     "DIALOGO_PRE_CHECKOUT": "64f88547f4296594a88f11d2",
+     "NOME_COMERCIAL": "Esphera Glamping - Gravatai",
+     "PROPIETARIO": "André Brunetto",
+     "N_WHATSAPP": "55 51 99774526",
+     "N_WHATSAPP2": "55 51 92964192"
+    },
+    {
+     "IDUNIDADE": "YE06H",
+     "DIALOGO_PRE_CHECKIN": "64fb651e89a324a0d6cb327a",
+     "DIALOGO_PRE_CHECKOUT": "64f88547f4296594a88f11d2",
+     "NOME_COMERCIAL": "Esphera Glamping - Gravatai",
+     "PROPIETARIO": "André Brunetto",
+     "N_WHATSAPP": "55 51 99774526",
+     "N_WHATSAPP2": "55 51 92964192"
+    },
+    {
+     "IDUNIDADE": "YE07H",
+     "DIALOGO_PRE_CHECKIN": "64fb65ae121a2c151322f4ef",
+     "DIALOGO_PRE_CHECKOUT": "64f88547f4296594a88f11d2",
+     "NOME_COMERCIAL": "Esphera Glamping - Gravatai",
+     "PROPIETARIO": "André Brunetto",
+     "N_WHATSAPP": "55 51 99774526",
+     "N_WHATSAPP2": "55 51 92964192"
+    },
+    {
+     "IDUNIDADE": "YE08H",
+     "DIALOGO_PRE_CHECKIN": "64fb62f76cd5a89653927d83",
+     "DIALOGO_PRE_CHECKOUT": "64f88547f4296594a88f11d2",
+     "NOME_COMERCIAL": "Esphera Glamping - Gravatai",
+     "PROPIETARIO": "André Brunetto",
+     "N_WHATSAPP": "55 51 99774526",
+     "N_WHATSAPP2": "55 51 92964192"
+    },
+    {
+     "IDUNIDADE": "YF02H",
+     "DIALOGO_PRE_CHECKIN": "64f8db82fccacc5cf9c4d86c",
+     "DIALOGO_PRE_CHECKOUT": "64f8db83dbc638cb46524097",
+     "NOME_COMERCIAL": "Recanto Revoar - Campeche",
+     "PROPIETARIO": "Vivianny Constantino",
+     "N_WHATSAPP": "55 48 91916112",
+     "N_WHATSAPP2": "55 48 91072366"
+    },
+    {
+     "IDUNIDADE": "YK01G",
+     "DIALOGO_PRE_CHECKIN": "6192d9a1a8b9246d7f60e90a",
+     "DIALOGO_PRE_CHECKOUT": "6192d99f1afd894a4e0aa9f1",
+     "NOME_COMERCIAL": "Cobertura Mariscal em Bombinhas",
+     "PROPIETARIO": "João Bevilaqua",
+     "N_WHATSAPP": "55 47 9945 7190",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "YK03G",
+     "DIALOGO_PRE_CHECKIN": "61899bcef43c3632ccb99d3c",
+     "DIALOGO_PRE_CHECKOUT": "61899bcc1afd894a4e07b32d",
+     "NOME_COMERCIAL": "Cabanas Além do Mar",
+     "PROPIETARIO": "Neusa Alves",
+     "N_WHATSAPP": "55 48 98475909"
+    },
+    {
+     "IDUNIDADE": "YP01G",
+     "DIALOGO_PRE_CHECKIN": "618d2136c0fdc212660adc04",
+     "DIALOGO_PRE_CHECKOUT": "618d21347af1e6a3750f66e7",
+     "NOME_COMERCIAL": "Casa de Férias com Piscina na Praia do Rosa",
+     "PROPIETARIO": "Wagner Souza",
+     "N_WHATSAPP": "55 48 99624768",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "YQ01G",
+     "DIALOGO_PRE_CHECKIN": "615e42ee25bb4d6874779dda",
+     "DIALOGO_PRE_CHECKOUT": "615e42f44dd8265113f6d3a0",
+     "NOME_COMERCIAL": "Recanto das Acácias",
+     "PROPIETARIO": "Maria de Lourdes Albani",
+     "N_WHATSAPP": "55 51 91131512"
+    },
+    {
+     "IDUNIDADE": "YS01H",
+     "DIALOGO_PRE_CHECKIN": "65401243ba24ab7966820f6d",
+     "DIALOGO_PRE_CHECKOUT": "654012489138d78913661631",
+     "NOME_COMERCIAL": "Refúgio da Ibiraquera: Jacuzzi e Vista Especial",
+     "PROPIETARIO": "Daniela Teixeira Casal",
+     "N_WHATSAPP": "55 48 99631784",
+     "N_FUNCIONARIO": "55 48 96654700"
+    },
+    {
+     "IDUNIDADE": "YW01G",
+     "DIALOGO_PRE_CHECKIN": "619d0983bdcf3772c0081799",
+     "DIALOGO_PRE_CHECKOUT": "619d09818c30981fef88a7a6",
+     "NOME_COMERCIAL": "Apto Residencial Catavento no Campeche",
+     "PROPIETARIO": "Helio Mendes",
+     "N_WHATSAPP": "55 48 9993 7869",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "YX01G",
+     "DIALOGO_PRE_CHECKIN": "61899bcef43c3632ccb99d3c",
+     "DIALOGO_PRE_CHECKOUT": "61899bcc1afd894a4e07b32d",
+     "NOME_COMERCIAL": "Cabanas Além do Mar",
+     "PROPIETARIO": "Neusa Alves",
+     "N_WHATSAPP": "55 48 98475909"
+    },
+    {
+     "IDUNIDADE": "YX02G",
+     "DIALOGO_PRE_CHECKIN": "61899bcef43c3632ccb99d3c",
+     "DIALOGO_PRE_CHECKOUT": "61899bcc1afd894a4e07b32d",
+     "NOME_COMERCIAL": "Cabanas Além do Mar",
+     "PROPIETARIO": "Neusa Alves",
+     "N_WHATSAPP": "55 48 98475909"
+    },
+    {
+     "IDUNIDADE": "ZF01G",
+     "DIALOGO_PRE_CHECKIN": "61a0e01704af1231704edc4e",
+     "DIALOGO_PRE_CHECKOUT": "61a0e015efcb0fa0520859d9",
+     "NOME_COMERCIAL": "Capricho de Santo Amaro",
+     "PROPIETARIO": "Gabriel Ventura",
+     "N_WHATSAPP": "55 48 91900714",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "ZF03G",
+     "DIALOGO_PRE_CHECKIN": "61a6a93643e34dca17e931b8",
+     "DIALOGO_PRE_CHECKOUT": "61a6a93487338d809ea1eb6c",
+     "NOME_COMERCIAL": "Recanto do Sol em Santo Amaro",
+     "PROPIETARIO": "Gabriel Ventura",
+     "N_WHATSAPP": "55 48 91900714",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "ZF04G",
+     "DIALOGO_PRE_CHECKIN": "61a6a93643e34dca17e931b8",
+     "DIALOGO_PRE_CHECKOUT": "61a6a93487338d809ea1eb6c",
+     "NOME_COMERCIAL": "Recanto do Sol em Santo Amaro",
+     "PROPIETARIO": "Gabriel Ventura",
+     "N_WHATSAPP": "55 48 91900714",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "ZJ01G",
+     "DIALOGO_PRE_CHECKIN": "61bb4b75bab5f13d838a2d4b",
+     "DIALOGO_PRE_CHECKOUT": "61bb4b742c19e438b511a1b2",
+     "NOME_COMERCIAL": "Casa Amarela Campeche: Espaçosa, Lazer e Praia",
+     "PROPIETARIO": "Ivan Saurer",
+     "N_WHATSAPP": "55 48 9168 8743",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "ZJ02G",
+     "DIALOGO_PRE_CHECKIN": "61accd9ba33e9b9d2dad747b",
+     "DIALOGO_PRE_CHECKOUT": "61accd9ab0f075009b20b3bc",
+     "NOME_COMERCIAL": "Apartamento Caprichoso nos Ingleses",
+     "PROPIETARIO": "Marley Alborghetti",
+     "N_WHATSAPP": "55 48 9955 0210",
+     "N_FUNCIONARIO": "55 48 96194157",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "ZM01G",
+     "DIALOGO_PRE_CHECKIN": "61d839dc985d6407486949ea",
+     "DIALOGO_PRE_CHECKOUT": "61d839da1db021c3eb06f266",
+     "NOME_COMERCIAL": "Casa Primor: Piscina, Jacuzzi e Lazer",
+     "PROPIETARIO": "Rosangela Mendes",
+     "N_WHATSAPP": "55 48 8441 1801",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "ZM02G",
+     "DIALOGO_PRE_CHECKIN": "61b24f740f11b41f46756746",
+     "DIALOGO_PRE_CHECKOUT": " 61b24f71ebfb7ec4e88ebfff",
+     "NOME_COMERCIAL": "Aconchego nos Ingleses - Floripa",
+     "PROPIETARIO": "Eliane Gonçalves",
+     "N_WHATSAPP": "55 48 88094775",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "ZN01G",
+     "DIALOGO_PRE_CHECKIN": "61b7d6c3882b8e76421d9420",
+     "DIALOGO_PRE_CHECKOUT": "61b7d6c28bd2c66a11dfe8c0",
+     "NOME_COMERCIAL": "Casa ao Lado da Praia de Canasvieiras",
+     "PROPIETARIO": "Teresinha Mendes",
+     "N_WHATSAPP": "55 48 9953 5242",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "ZS01G",
+     "DIALOGO_PRE_CHECKIN": "61b7da1f876ad3a0905042d1",
+     "DIALOGO_PRE_CHECKOUT": "61b7da1d876ad3a0905042c5",
+     "NOME_COMERCIAL": "Apartamento Confort nos Ingleses",
+     "PROPIETARIO": "Eduardo Tegani",
+     "N_WHATSAPP": "55 11 947511757",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "ZS02G",
+     "DIALOGO_PRE_CHECKIN": "61b2044ca26608d2013a881f",
+     "DIALOGO_PRE_CHECKOUT": "61b2044a6b703fed086a4110",
+     "NOME_COMERCIAL": "Apartamento de Luxo em Balneário Camboriú",
+     "PROPIETARIO": "Ubirajara de Freitas",
+     "N_WHATSAPP": "55 46 99121767",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "ZX01G",
+     "DIALOGO_PRE_CHECKIN": "61bb531b67f5b26dc2ede14e",
+     "DIALOGO_PRE_CHECKOUT": "61bb531a876ad3a0905125e0",
+     "NOME_COMERCIAL": "Apto Lunata Rogga Easy",
+     "PROPIETARIO": "Daiana Pereira",
+     "N_WHATSAPP": "55 47 91265939",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "ZY01G",
+     "DIALOGO_PRE_CHECKIN": "61bca16b5978da2a5b4820b5",
+     "DIALOGO_PRE_CHECKOUT": "61bca1692c19e438b511f9ab",
+     "NOME_COMERCIAL": "Casa de Praia - Recanto das Oliveiras",
+     "PROPIETARIO": "André Lopes",
+     "N_WHATSAPP": "55 51 9890 0999",
+     "PIX": "ok"
+    },
+    {
+     "IDUNIDADE": "RZ06H",
+     "DIALOGO_PRE_CHECKIN": "650d84e9daa175b9cd970e1a",
+     "DIALOGO_PRE_CHECKOUT": "642349549ce4c01e608170b5",
+     "NOME_COMERCIAL": "Casa Master Mato Verde",
+     "PROPIETARIO": "Elqui Juliana",
+     "N_WHATSAPP": "55 49 84240623",
+     "N_WHATSAPP2": "55 49 84271773"
+    },
+    {
+     "IDUNIDADE": "YY01H",
+     "DIALOGO_PRE_CHECKIN": "65401a583224f79e8df9ba6a",
+     "DIALOGO_PRE_CHECKOUT": "65401a5c21e3f3c3a2a9724e",
+     "NOME_COMERCIAL": "Chalé Sol da Montanha em Termas",
+     "PROPIETARIO": "Celia Vicente",
+     "N_WHATSAPP": "55 48 96836913"
+    },
+    {
+     "IDUNIDADE": "YF03H",
+     "DIALOGO_PRE_CHECKIN": "64f8db82fccacc5cf9c4d86c",
+     "DIALOGO_PRE_CHECKOUT": "64f8db83dbc638cb46524097",
+     "NOME_COMERCIAL": "Recanto Revoar - Campeche",
+     "PROPIETARIO": "Vivianny Constantino",
+     "N_WHATSAPP": "55 48 91916112",
+     "N_WHATSAPP2": "55 48 91072366"
+    },
+    {
+     "IDUNIDADE": "YZ05H",
+     "DIALOGO_PRE_CHECKIN": "653fb73aa1963c7b4a928610",
+     "DIALOGO_PRE_CHECKOUT": "653fb686c378f280725767de",
+     "NOME_COMERCIAL": "Tenda Glamping Guardião da Montanha",
+     "PROPIETARIO": "Carlos Eduardo Kuhnen",
+     "N_WHATSAPP": "55 48 96214435",
+     "N_WHATSAPP2": "55 48 99880177"
+    },
+    {
+     "IDUNIDADE": "YZ01H",
+     "DIALOGO_PRE_CHECKIN": "653fb68477a8b97d78bec1ab",
+     "DIALOGO_PRE_CHECKOUT": "653fb686c378f280725767de",
+     "NOME_COMERCIAL": "Recanto das Águas",
+     "PROPIETARIO": "Carlos Eduardo Kuhnen",
+     "N_WHATSAPP": "55 48 96214435",
+     "N_WHATSAPP2": "55 48 99880177"
+    },
+    {
+     "IDUNIDADE": "YZ03H",
+     "DIALOGO_PRE_CHECKIN": "653fb68477a8b97d78bec1ab",
+     "DIALOGO_PRE_CHECKOUT": "653fb686c378f280725767de",
+     "NOME_COMERCIAL": "Recanto das Águas",
+     "PROPIETARIO": "Carlos Eduardo Kuhnen",
+     "N_WHATSAPP": "55 48 96214435",
+     "N_WHATSAPP2": "55 48 99880177"
+    },
+    {
+     "IDUNIDADE": "ZB01H",
+     "DIALOGO_PRE_CHECKIN": "653fb49350ab8c055c5906f1",
+     "DIALOGO_PRE_CHECKOUT": "653fb5a3c378f28072576798",
+     "NOME_COMERCIAL": "Cabanas Sunset",
+     "PROPIETARIO": "Ingrid Rech",
+     "N_WHATSAPP": "55 49 98181461",
+     "N_WHATSAPP2": "55 48 99679541"
+    },
+    {
+     "IDUNIDADE": "ZB03H",
+     "DIALOGO_PRE_CHECKIN": "653fb49350ab8c055c5906f1",
+     "DIALOGO_PRE_CHECKOUT": "653fb5a3c378f28072576798",
+     "NOME_COMERCIAL": "Cabanas Sunset",
+     "PROPIETARIO": "Ingrid Rech",
+     "N_WHATSAPP": "55 49 98181461",
+     "N_WHATSAPP2": "55 48 99679541"
+    },
+    {
+     "IDUNIDADE": "IK02G",
+     "DIALOGO_PRE_CHECKIN": "65982043ac81a11c9d9fb750",
+     "DIALOGO_PRE_CHECKOUT": "6441a4d9694e78504d69fb14",
+     "NOME_COMERCIAL": "Pousada Recanto do Sul",
+     "PROPIETARIO": "Teresinha Mendes",
+     "N_WHATSAPP": "55 48 99535242",
+     "N_WHATSAPP2": "55 48 98212001"
+    },
+    {
+     "IDUNIDADE": "ZG01H",
+     "DIALOGO_PRE_CHECKIN": "65402290e30a881eda982c2b",
+     "DIALOGO_PRE_CHECKOUT": "654022925895dcc8e3d4981b",
+     "NOME_COMERCIAL": "Velutti Maldivas - Penha - SC",
+     "PROPIETARIO": "Alessandra Mary",
+     "N_WHATSAPP": "55 41 99350244",
+     "N_WHATSAPP2": "55 47 91636038",
+     "N_FUNCIONARIO": 554796643531,
+     "N_FUNCIONARIO2": 554796461928
+    },
+    {
+     "IDUNIDADE": "ZN09H",
+     "DIALOGO_PRE_CHECKIN": "653fb4931c8a241bb407fced",
+     "DIALOGO_PRE_CHECKOUT": "653fb495afa2962372c153f9",
+     "NOME_COMERCIAL": "Lugar ao Sol - Praia do Rosa",
+     "PROPIETARIO": "Barbara Bathke",
+     "N_WHATSAPP": "55 48 98324639",
+     "N_WHATSAPP2": "55 41 98430346",
+     "N_WHATSAPP3": "55 48 98615265"
+    },
+    {
+     "IDUNIDADE": "ZN01H",
+     "DIALOGO_PRE_CHECKIN": "653fb4931c8a241bb407fced",
+     "DIALOGO_PRE_CHECKOUT": "653fb495afa2962372c153f9",
+     "NOME_COMERCIAL": "Lugar ao Sol - Praia do Rosa",
+     "PROPIETARIO": "Barbara Bathke",
+     "N_WHATSAPP": "55 48 98324639",
+     "N_WHATSAPP2": "55 41 98430346",
+     "N_WHATSAPP3": "55 48 98615265"
+    },
+    {
+     "IDUNIDADE": "ZN08H",
+     "DIALOGO_PRE_CHECKIN": "653fb4931c8a241bb407fced",
+     "DIALOGO_PRE_CHECKOUT": "653fb495afa2962372c153f9",
+     "NOME_COMERCIAL": "Lugar ao Sol - Praia do Rosa",
+     "PROPIETARIO": "Barbara Bathke",
+     "N_WHATSAPP": "55 48 98324639",
+     "N_WHATSAPP2": "55 41 98430346",
+     "N_WHATSAPP3": "55 48 98615265"
+    },
+    {
+     "IDUNIDADE": "ZN03H",
+     "DIALOGO_PRE_CHECKIN": "653fb4931c8a241bb407fced",
+     "DIALOGO_PRE_CHECKOUT": "653fb495afa2962372c153f9",
+     "NOME_COMERCIAL": "Lugar ao Sol - Praia do Rosa",
+     "PROPIETARIO": "Barbara Bathke",
+     "N_WHATSAPP": "55 48 98324639",
+     "N_WHATSAPP2": "55 41 98430346",
+     "N_WHATSAPP3": "55 48 98615265"
+    },
+    {
+     "IDUNIDADE": "ZN07H",
+     "DIALOGO_PRE_CHECKIN": "653fb4931c8a241bb407fced",
+     "DIALOGO_PRE_CHECKOUT": "653fb495afa2962372c153f9",
+     "NOME_COMERCIAL": "Lugar ao Sol - Praia do Rosa",
+     "PROPIETARIO": "Barbara Bathke",
+     "N_WHATSAPP": "55 48 98324639",
+     "N_WHATSAPP2": "55 41 98430346",
+     "N_WHATSAPP3": "55 48 98615265"
+    },
+    {
+     "IDUNIDADE": "ZN05H",
+     "DIALOGO_PRE_CHECKIN": "653fb4931c8a241bb407fced",
+     "DIALOGO_PRE_CHECKOUT": "653fb495afa2962372c153f9",
+     "NOME_COMERCIAL": "Lugar ao Sol - Praia do Rosa",
+     "PROPIETARIO": "Barbara Bathke",
+     "N_WHATSAPP": "55 48 98324639",
+     "N_WHATSAPP2": "55 41 98430346",
+     "N_WHATSAPP3": "55 48 98615265"
+    },
+    {
+     "IDUNIDADE": "ZQ01H",
+     "DIALOGO_PRE_CHECKIN": "65401d821c8a241bb40813a4",
+     "DIALOGO_PRE_CHECKOUT": "65401d8aafa2962372c16ea5",
+     "NOME_COMERCIAL": "Nautilus Brisa do Oceano - Penha - SC - Marilene",
+     "PROPIETARIO": "Marilene Cordeiro",
+     "N_WHATSAPP": "55 47 91976281",
+     "N_WHATSAPP2": "55 47 91826046",
+     "N_WHATSAPP3": "55 47 92680145"
+    },
+    {
+     "IDUNIDADE": "ZX05H",
+     "DIALOGO_PRE_CHECKIN": "653fb1e9afa2962372c1532f",
+     "DIALOGO_PRE_CHECKOUT": "653fb1eacafc0b541d467431",
+     "NOME_COMERCIAL": "CasaIvan",
+     "PROPIETARIO": "Ivanildo Dogado",
+     "N_WHATSAPP": "55 48 91555754"
+    },
+    {
+     "IDUNIDADE": "ZX03H",
+     "DIALOGO_PRE_CHECKIN": "653fb369c378f280725766d8",
+     "DIALOGO_PRE_CHECKOUT": "653fb1eacafc0b541d467431",
+     "NOME_COMERCIAL": "CasaIvan",
+     "PROPIETARIO": "Ivanildo Dogado",
+     "N_WHATSAPP": "55 48 91555754"
+    },
+    {
+     "IDUNIDADE": "ZX01H",
+     "DIALOGO_PRE_CHECKIN": "653fb3cdc378f280725766fe",
+     "DIALOGO_PRE_CHECKOUT": "653fb1eacafc0b541d467431",
+     "NOME_COMERCIAL": "CasaIvan",
+     "PROPIETARIO": "Ivanildo Dogado",
+     "N_WHATSAPP": "55 48 91555754"
+    },
+    {
+     "IDUNIDADE": "AB02I",
+     "DIALOGO_PRE_CHECKIN": "653fb1189138d7891365fc59",
+     "DIALOGO_PRE_CHECKOUT": "653fb11a21e3f3c3a2a957f2",
+     "NOME_COMERCIAL": "Solar dos Lirios",
+     "PROPIETARIO": "Amanda Rocha",
+     "N_WHATSAPP": "55 48 91292911",
+     "N_FUNCIONARIO": "55 48 91790840"
+    },
+    {
+     "IDUNIDADE": "AB03I",
+     "DIALOGO_PRE_CHECKIN": "653fb1189138d7891365fc59",
+     "DIALOGO_PRE_CHECKOUT": "653fb11a21e3f3c3a2a957f2",
+     "NOME_COMERCIAL": "Solar dos Lirios",
+     "PROPIETARIO": "Amanda Rocha",
+     "N_WHATSAPP": "55 48 91292911",
+     "N_FUNCIONARIO": "55 48 91790840"
+    },
+    {
+     "IDUNIDADE": "AB04I",
+     "DIALOGO_PRE_CHECKIN": "653fb1189138d7891365fc59",
+     "DIALOGO_PRE_CHECKOUT": "653fb11a21e3f3c3a2a957f2",
+     "NOME_COMERCIAL": "Solar dos Lirios",
+     "PROPIETARIO": "Amanda Rocha",
+     "N_WHATSAPP": "55 48 91292911",
+     "N_FUNCIONARIO": "55 48 91790840"
+    },
+    {
+     "IDUNIDADE": "AB05I",
+     "DIALOGO_PRE_CHECKIN": "653fb1189138d7891365fc59",
+     "DIALOGO_PRE_CHECKOUT": "653fb11a21e3f3c3a2a957f2",
+     "NOME_COMERCIAL": "Solar dos Lirios",
+     "PROPIETARIO": "Amanda Rocha",
+     "N_WHATSAPP": "55 48 91292911",
+     "N_FUNCIONARIO": "55 48 91790840"
+    },
+    {
+     "IDUNIDADE": "AB06I",
+     "DIALOGO_PRE_CHECKIN": "653fb1189138d7891365fc59",
+     "DIALOGO_PRE_CHECKOUT": "653fb11a21e3f3c3a2a957f2",
+     "NOME_COMERCIAL": "Solar dos Lirios",
+     "PROPIETARIO": "Amanda Rocha",
+     "N_WHATSAPP": "55 48 91292911",
+     "N_FUNCIONARIO": "55 48 91790840"
+    },
+    {
+     "IDUNIDADE": "AB07I",
+     "DIALOGO_PRE_CHECKIN": "653fb1189138d7891365fc59",
+     "DIALOGO_PRE_CHECKOUT": "653fb11a21e3f3c3a2a957f2",
+     "NOME_COMERCIAL": "Solar dos Lirios",
+     "PROPIETARIO": "Amanda Rocha",
+     "N_WHATSAPP": "55 48 91292911",
+     "N_FUNCIONARIO": "55 48 91790840"
+    },
+    {
+     "IDUNIDADE": "AB08I",
+     "DIALOGO_PRE_CHECKIN": "653fb1189138d7891365fc59",
+     "DIALOGO_PRE_CHECKOUT": "653fb11a21e3f3c3a2a957f2",
+     "NOME_COMERCIAL": "Solar dos Lirios",
+     "PROPIETARIO": "Amanda Rocha",
+     "N_WHATSAPP": "55 48 91292911",
+     "N_FUNCIONARIO": "55 48 91790840"
+    },
+    {
+     "IDUNIDADE": "AB09I",
+     "DIALOGO_PRE_CHECKIN": "653fb1189138d7891365fc59",
+     "DIALOGO_PRE_CHECKOUT": "653fb11a21e3f3c3a2a957f2",
+     "NOME_COMERCIAL": "Solar dos Lirios",
+     "PROPIETARIO": "Amanda Rocha",
+     "N_WHATSAPP": "55 48 91292911",
+     "N_FUNCIONARIO": "55 48 91790840"
+    },
+    {
+     "IDUNIDADE": "AB11I",
+     "DIALOGO_PRE_CHECKIN": "653fb1189138d7891365fc59",
+     "DIALOGO_PRE_CHECKOUT": "653fb11a21e3f3c3a2a957f2",
+     "NOME_COMERCIAL": "Solar dos Lirios",
+     "PROPIETARIO": "Amanda Rocha",
+     "N_WHATSAPP": "55 48 91292911",
+     "N_FUNCIONARIO": "55 48 91790840"
+    },
+    {
+     "IDUNIDADE": "AB12I",
+     "DIALOGO_PRE_CHECKIN": "653fb1189138d7891365fc59",
+     "DIALOGO_PRE_CHECKOUT": "653fb11a21e3f3c3a2a957f2",
+     "NOME_COMERCIAL": "Solar dos Lirios",
+     "PROPIETARIO": "Amanda Rocha",
+     "N_WHATSAPP": "55 48 91292911",
+     "N_FUNCIONARIO": "55 48 91790840"
+    },
+    {
+     "IDUNIDADE": "AC01I",
+     "DIALOGO_PRE_CHECKIN": "601977f2c2ce45d45497d627",
+     "DIALOGO_PRE_CHECKOUT": "601978e7099c3aff1e79542d",
+     "NOME_COMERCIAL": "Casa master luxo Jurere",
+     "PROPIETARIO": "Lucrécia Miranda",
+     "N_WHATSAPP": "55 48 9962 2210"
+    },
+    {
+     "IDUNIDADE": "AE03I",
+     "DIALOGO_PRE_CHECKIN": "6541675e9138d7891366409e",
+     "DIALOGO_PRE_CHECKOUT": "654161f33ac812a7267581bc",
+     "NOME_COMERCIAL": "Chalé Sítio Corvo Branco - Pouso do Corvo",
+     "PROPIETARIO": "Ronei Costa Bussolo",
+     "N_WHATSAPP": "55 48 920002347",
+     "N_WHATSAPP2": 554884824197
+    },
+    {
+     "IDUNIDADE": "AE05I",
+     "DIALOGO_PRE_CHECKIN": "654161f121e3f3c3a2a99301",
+     "DIALOGO_PRE_CHECKOUT": "654161f33ac812a7267581bc",
+     "NOME_COMERCIAL": "Leão Baio - Pouso do Corvo",
+     "PROPIETARIO": "Ronei Costa Bussolo",
+     "N_WHATSAPP": "55 48 920002347",
+     "N_WHATSAPP2": 554884824197
+    },
+    {
+     "IDUNIDADE": "AE01I",
+     "DIALOGO_PRE_CHECKIN": "654161f121e3f3c3a2a99301",
+     "DIALOGO_PRE_CHECKOUT": "654161f33ac812a7267581bc",
+     "NOME_COMERCIAL": "Curucaca - Pouso do Corvo",
+     "PROPIETARIO": "Ronei Costa Bussolo",
+     "N_WHATSAPP": "55 48 920002347",
+     "N_WHATSAPP2": 554884824197
+    },
+    {
+     "IDUNIDADE": "YF04H",
+     "DIALOGO_PRE_CHECKIN": "64f8db82fccacc5cf9c4d86c",
+     "DIALOGO_PRE_CHECKOUT": "64f8db83dbc638cb46524097",
+     "NOME_COMERCIAL": "Recanto Revoar - Campeche",
+     "PROPIETARIO": "Vivianny Constantino",
+     "N_WHATSAPP": "55 48 91916112",
+     "N_WHATSAPP2": "55 48 91072366"
+    },
+    {
+     "IDUNIDADE": "GJ08G",
+     "DIALOGO_PRE_CHECKIN": "6553e91789e394b1a7048208",
+     "DIALOGO_PRE_CHECKOUT": "5fa9c4d1cedf27a35699a935",
+     "NOME_COMERCIAL": "Quinta da Margem",
+     "PROPIETARIO": "Jalda Quintana",
+     "N_WHATSAPP": "55 48 9695 6823",
+     "N_WHATSAPP2": 554899238238,
+     "N_FUNCIONARIO": "55 48 96093968",
+     "N_FUNCIONARIO2": "55 48 32241061"
+    },
+    {
+     "IDUNIDADE": "GJ09G",
+     "DIALOGO_PRE_CHECKIN": "6553e91789e394b1a7048208",
+     "DIALOGO_PRE_CHECKOUT": "5fa9c4d1cedf27a35699a935",
+     "NOME_COMERCIAL": "Quinta da Margem",
+     "PROPIETARIO": "Jalda Quintana",
+     "N_WHATSAPP": "55 48 9695 6823",
+     "N_WHATSAPP2": 554899238238,
+     "N_FUNCIONARIO": "55 48 96093968",
+     "N_FUNCIONARIO2": "55 48 32241061"
+    },
+    {
+     "IDUNIDADE": "GJ10G",
+     "DIALOGO_PRE_CHECKIN": "6553e91789e394b1a7048208",
+     "DIALOGO_PRE_CHECKOUT": "5fa9c4d1cedf27a35699a935",
+     "NOME_COMERCIAL": "Quinta da Margem",
+     "PROPIETARIO": "Jalda Quintana",
+     "N_WHATSAPP": "55 48 9695 6823",
+     "N_WHATSAPP2": 554899238238,
+     "N_FUNCIONARIO": "55 48 96093968",
+     "N_FUNCIONARIO2": "55 48 32241061"
+    },
+    {
+     "IDUNIDADE": "GJ11G",
+     "DIALOGO_PRE_CHECKIN": "6553e91789e394b1a7048208",
+     "DIALOGO_PRE_CHECKOUT": "5fa9c4d1cedf27a35699a935",
+     "NOME_COMERCIAL": "Quinta da Margem",
+     "PROPIETARIO": "Jalda Quintana",
+     "N_WHATSAPP": "55 48 9695 6823",
+     "N_WHATSAPP2": 554899238238,
+     "N_FUNCIONARIO": "55 48 96093968",
+     "N_FUNCIONARIO2": "55 48 32241061"
+    },
+    {
+     "IDUNIDADE": "NK08H",
+     "DIALOGO_PRE_CHECKIN": "6387a5270e10d1c5155b1f93",
+     "DIALOGO_PRE_CHECKOUT": "6387a52030568cac76ca758c",
+     "NOME_COMERCIAL": "Casa Pantai Beach Village",
+     "PROPIETARIO": "Bruno Bertoluci",
+     "N_WHATSAPP": "55 51 9313 3009"
+    },
+    {
+     "IDUNIDADE": "AI01I",
+     "DIALOGO_PRE_CHECKIN": "6557a69a5ee3db801d8ab023",
+     "DIALOGO_PRE_CHECKOUT": "6557a69d5ee3db801d8ab028",
+     "NOME_COMERCIAL": "Cobertura Cezarium Club - Campeche",
+     "PROPIETARIO": "Ivan Saurer",
+     "N_WHATSAPP": "55 48 9168 8743",
+     "N_WHATSAPP2": 554899972444,
+     "N_FUNCIONARIO": 554197500010,
+     "N_FUNCIONARIO2": 554599839500
+    },
+    {
+     "IDUNIDADE": "AZ01I",
+     "DIALOGO_PRE_CHECKIN": "6557edd044c48422e6a6e535",
+     "DIALOGO_PRE_CHECKOUT": "6557edd2cfe73b86c2fe9b9e",
+     "NOME_COMERCIAL": "Cabana Bugaville",
+     "PROPIETARIO": "Adriano Barata",
+     "N_WHATSAPP": 554896031191,
+     "N_WHATSAPP2": "55 48 99525756"
+    },
+    {
+     "IDUNIDADE": "GJ12G",
+     "DIALOGO_PRE_CHECKIN": "5fa9c47fd512e11484bffea9",
+     "DIALOGO_PRE_CHECKOUT": "5fa9c4d1cedf27a35699a935",
+     "NOME_COMERCIAL": "Quinta da Margem",
+     "PROPIETARIO": "Jalda Quintana",
+     "N_WHATSAPP": "55 48 9695 6823",
+     "N_WHATSAPP2": 554899238238,
+     "N_FUNCIONARIO": "55 48 96093968",
+     "N_FUNCIONARIO2": "55 48 32241061"
+    },
+    {
+     "IDUNIDADE": "AB16I",
+     "DIALOGO_PRE_CHECKIN": "653fb1189138d7891365fc59",
+     "DIALOGO_PRE_CHECKOUT": "653fb11a21e3f3c3a2a957f2",
+     "NOME_COMERCIAL": "Solar dos Lirios",
+     "PROPIETARIO": "Amanda Rocha",
+     "N_WHATSAPP": "55 48 91292911",
+     "N_FUNCIONARIO": "55 48 91790840"
+    },
+    {
+     "IDUNIDADE": "AB15I",
+     "DIALOGO_PRE_CHECKIN": "653fb1189138d7891365fc59",
+     "DIALOGO_PRE_CHECKOUT": "653fb11a21e3f3c3a2a957f2",
+     "NOME_COMERCIAL": "Solar dos Lirios",
+     "PROPIETARIO": "Amanda Rocha",
+     "N_WHATSAPP": "55 48 91292911",
+     "N_FUNCIONARIO": "55 48 91790840"
+    },
+    {
+     "IDUNIDADE": "QF03H",
+     "DIALOGO_PRE_CHECKIN": "63e69f84aef3bfb75769204b",
+     "DIALOGO_PRE_CHECKOUT": "63e69f86983b571a955ecefc",
+     "NOME_COMERCIAL": "Casa Buda II",
+     "PROPIETARIO": "Ronaldo Gregory",
+     "N_WHATSAPP": "55 51 93070290"
+    },
+    {
+     "IDUNIDADE": "MS07H",
+     "DIALOGO_PRE_CHECKIN": "65662d25f7d95b5174f50f7b",
+     "DIALOGO_PRE_CHECKOUT": "637293eadc21c314a6d9b66e",
+     "NOME_COMERCIAL": "Residencial Praia Bella",
+     "PROPIETARIO": "Maria Inês Noronha",
+     "N_WHATSAPP": "55 48 9976 2266",
+     "N_FUNCIONARIO": "55 48 8869 5130"
+    },
+    {
+     "IDUNIDADE": "MS08H",
+     "DIALOGO_PRE_CHECKIN": "65625bf9589242b6f09cd202",
+     "DIALOGO_PRE_CHECKOUT": "637293eadc21c314a6d9b66e",
+     "NOME_COMERCIAL": "Residencial Praia Bella",
+     "PROPIETARIO": "Maria Inês Noronha",
+     "N_WHATSAPP": "55 48 9976 2266",
+     "N_FUNCIONARIO": "55 48 8869 5130"
+    },
+    {
+     "IDUNIDADE": "GJ13G",
+     "DIALOGO_PRE_CHECKIN": "6553e91789e394b1a7048208",
+     "DIALOGO_PRE_CHECKOUT": "5fa9c4d1cedf27a35699a935",
+     "NOME_COMERCIAL": "Quinta da Margem",
+     "PROPIETARIO": "Jalda Quintana",
+     "N_WHATSAPP": "55 48 9695 6823",
+     "N_WHATSAPP2": 554899238238,
+     "N_FUNCIONARIO": "55 48 96093968",
+     "N_FUNCIONARIO2": "55 48 32241061"
+    },
+    {
+     "IDUNIDADE": "AB17I",
+     "DIALOGO_PRE_CHECKIN": "653fb1189138d7891365fc59",
+     "DIALOGO_PRE_CHECKOUT": "653fb11a21e3f3c3a2a957f2",
+     "NOME_COMERCIAL": "Solar dos Lirios",
+     "PROPIETARIO": "Amanda Rocha",
+     "N_WHATSAPP": "55 48 91292911",
+     "N_FUNCIONARIO": "55 48 91790840"
+    },
+    {
+     "IDUNIDADE": "BN01I",
+     "DIALOGO_PRE_CHECKIN": "657230dbbbfef0b91239f57f",
+     "DIALOGO_PRE_CHECKOUT": "657230dc8cd00bff4548f552",
+     "NOME_COMERCIAL": "Apto Pé na Areia: Frente Mar",
+     "PROPIETARIO": "Tatiane Cristófoli",
+     "N_WHATSAPP": "55 51 85842021",
+     "N_WHATSAPP2": "55 48 96654700"
+    },
+    {
+     "IDUNIDADE": "BX01I",
+     "DIALOGO_PRE_CHECKIN": "6578a42fea0cd565a29dd8a8",
+     "DIALOGO_PRE_CHECKOUT": "6578a431bbfef0b9123a72c8",
+     "NOME_COMERCIAL": "Velutti Prime View",
+     "PROPIETARIO": "Magda Ribeiro",
+     "N_WHATSAPP": "55 41 96644278",
+     "N_FUNCIONARIO": "55 47 96643531"
+    },
+    {
+     "IDUNIDADE": "CA01I",
+     "DIALOGO_PRE_CHECKIN": "6580b2f1d5f0da54b3b4dbe9",
+     "DIALOGO_PRE_CHECKOUT": "6580b2f328c2eea9053b83cb",
+     "NOME_COMERCIAL": "Apto Brilho do Sol - Barra Velha",
+     "PROPIETARIO": "Aida Zabott",
+     "N_WHATSAPP": "55 47 99871062",
+     "N_WHATSAPP2": "55 47 91976281",
+     "N_FUNCIONARIO": "55 47 99607795"
+    },
+    {
+     "IDUNIDADE": "CF01I",
+     "DIALOGO_PRE_CHECKIN": "6581fc6594bb9bcd488a8ecd",
+     "DIALOGO_PRE_CHECKOUT": "6581fc668eeb687f8a671742",
+     "NOME_COMERCIAL": "Villa Verde Bangalo",
+     "PROPIETARIO": "Patric Rampanelli",
+     "N_WHATSAPP": "55 49 88274198"
+    },
+    {
+     "IDUNIDADE": "CF03I",
+     "DIALOGO_PRE_CHECKIN": "6581fc6594bb9bcd488a8ecd",
+     "DIALOGO_PRE_CHECKOUT": "6581fc668eeb687f8a671742",
+     "NOME_COMERCIAL": "Villa Verde Bangalo",
+     "PROPIETARIO": "Patric Rampanelli",
+     "N_WHATSAPP": "55 49 88274198"
+    },
+    {
+     "IDUNIDADE": "CF05I",
+     "DIALOGO_PRE_CHECKIN": "6581fc6594bb9bcd488a8ecd",
+     "DIALOGO_PRE_CHECKOUT": "6581fc668eeb687f8a671742",
+     "NOME_COMERCIAL": "Villa Verde Bangalo",
+     "PROPIETARIO": "Patric Rampanelli",
+     "N_WHATSAPP": "55 49 88274198"
+    },
+    {
+     "IDUNIDADE": "CE01I",
+     "DIALOGO_PRE_CHECKIN": "65820dc92134231e56975622",
+     "DIALOGO_PRE_CHECKOUT": "65820dca8ce1f8417280dde7",
+     "NOME_COMERCIAL": "Apto Panorâmico em Itapema",
+     "PROPIETARIO": "Gabriela Schmitt",
+     "N_WHATSAPP": "55 47 99852268",
+     "N_FUNCIONARIO": "55 54 81634594"
+    },
+    {
+     "IDUNIDADE": "ZN10H",
+     "DIALOGO_PRE_CHECKIN": "653fb4931c8a241bb407fced",
+     "DIALOGO_PRE_CHECKOUT": "653fb495afa2962372c153f9",
+     "NOME_COMERCIAL": "Lugar ao Sol - Praia do Rosa",
+     "PROPIETARIO": "Barbara Bathke",
+     "N_WHATSAPP": "55 48 98324639",
+     "N_WHATSAPP2": "55 41 98430346",
+     "N_WHATSAPP3": "55 48 98615265"
+    },
+    {
+     "IDUNIDADE": "GN08G",
+     "DIALOGO_PRE_CHECKIN": "658d73b47bb164e515e64c46",
+     "DIALOGO_PRE_CHECKOUT": "658d73b47bb164e515e64c46",
+     "NOME_COMERCIAL": "Casa EcoHouse",
+     "PROPIETARIO": "Affonso Orciuoli",
+     "N_WHATSAPP": 5511950235112
+    },
+    {
+     "IDUNIDADE": "CV01I",
+     "DIALOGO_PRE_CHECKIN": "65971551a4c7be2d0ddae568",
+     "DIALOGO_PRE_CHECKOUT": "65971553869b4a9813f0a8d1",
+     "NOME_COMERCIAL": "Nautilus Bahamas Vista Mar",
+     "PROPIETARIO": "Juliana Flores",
+     "N_WHATSAPP": "55 47 88244656",
+     "N_WHATSAPP2": "55 47 91976281"
+    },
+    {
+     "IDUNIDADE": "DG01I",
+     "DIALOGO_PRE_CHECKIN": "65a59bef59868a203f5d3579",
+     "DIALOGO_PRE_CHECKOUT": "65a59bf03be3abd8050770f0",
+     "NOME_COMERCIAL": "Refúgio na Praia do Campeche com Piscina Privativa",
+     "PROPIETARIO": "Almeri dos Passos",
+     "N_WHATSAPP": "55 48 84608711",
+     "N_WHATSAPP2": 554884586968
+    }
+   ]
+}

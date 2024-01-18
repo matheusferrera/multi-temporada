@@ -4,7 +4,7 @@ export default async function getAllClients() {
   const url = 'https://ssmt.stays.com.br/external/v1/booking/clients';
   const headers = {
     'Content-Type': 'application/json',
-    'Authorization': 'Basic ZWV0MHNxcGQ2cDg6dmwzbXBpOG5oc28='
+    'Authorization': 'Basic NzgyODc2N2Q6NzVjNDg0N2I='
   };
 
   try {
