@@ -9,6 +9,28 @@ body {
 
 }
 
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #e51f33 #e8e8e8;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #e8e8e8;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #e51f33;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+  }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
