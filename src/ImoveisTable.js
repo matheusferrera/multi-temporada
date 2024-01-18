@@ -95,7 +95,7 @@ function DataTable() {
 
   return (
     <div style={{ height: "100%", width: '100%', display: "flex", justifyContent: "center", alignItems: "center" }}>
-      <div style={{ height: "calc(100vh - 130px)", width: 'min-content' }}>
+      <div style={{ height: "74vh", width: 'min-content' }}>
 
         <Snackbar
           open={openSnack}
