@@ -11,7 +11,7 @@ async function getAllClients() {
     const response = await axios.get(url, { headers });
     console.log('Resposta get all clients:', response.data);
   } catch (error) {
-    console.error('Erro:', error.message);
+    console.error('Erro:', error);
   }
 }
 
