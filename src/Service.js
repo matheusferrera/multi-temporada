@@ -8,7 +8,7 @@ export default async function getAllClients() {
   };
 
   try {
-    const response = await axios.get(url, {}, { headers });
+    const response = await axios.get(url, { headers });
     console.log("RESPONSE ->", response)
     console.log('Resposta:', response.data);
   } catch (error) {
