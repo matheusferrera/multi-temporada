@@ -64,8 +64,26 @@ const resp = [
 
 
 function DataTable() {
+
   const [selectedUser, setSelectedUser] = React.useState(null);
   const [openDialog, setOpenDialog] = React.useState(false);
+  const [varTest, setVarTest] = React.useState(false);
+
+  
+  React.useEffect(() => {
+    // Utilize o método do Firebase para obter os dados desejados
+    const fetchData = async () => {
+      try {
+        const data = await Service.getAllClients()
+        console.log("GET ALL CLIENTS SATYS APIS ->", data)
+        setVarTest(data);
+      } catch (error) {
+        console.error('Erro ao obter dados do Firebase:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const columns = [
     {
@@ -113,6 +131,8 @@ function DataTable() {
 
   return (
     <div style={{ height: "100%", width: '100%', display: "flex" , justifyContent: "center", alignItems: "center"}}>
+      <p>VAR TEST - </p>
+      <p>{varTest}</p>
       <div style={{ height: 400, width: 'min-content'}}>
         <DataGrid
           rows={resp}

@@ -1,4 +1,5 @@
-const axios = require('axios');
+import axios from 'axios';
+
 
 async function getAllClients() {
   const url = 'https://ssmt.stays.com.br/external/v1/booking/clients';
@@ -10,9 +11,14 @@ async function getAllClients() {
   try {
     const response = await axios.get(url, { headers });
     console.log('Resposta get all clients:', response.data);
+    return response.data
   } catch (error) {
     console.error('Erro:', error);
   }
 }
 
-getAllClients();
+const Service = {
+    getAllClients
+};
+
+export default Service;
