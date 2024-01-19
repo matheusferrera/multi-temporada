@@ -8,7 +8,10 @@ async function getAllClients() {
     try {
       const response = await fetch(url, {
         method: 'GET',
-        headers: headers,
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Basic NzgyODc2N2Q6NzVjNDg0N2I='
+          },
       });
   
       if (!response.ok) {
@@ -18,7 +21,7 @@ async function getAllClients() {
       const responseData = await response.json();
       console.log('Resposta get all clients:', responseData);
     } catch (error) {
-      console.error('Erro:', error.message);
+      console.error('Erro:', error);
     }
   }
   
