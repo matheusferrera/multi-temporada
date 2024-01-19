@@ -1,6 +1,6 @@
-import axios from 'axios';
+const axios = require('axios');
 
-export default async function getAllClients() {
+async function getAllClients() {
   const url = 'https://ssmt.stays.com.br/external/v1/booking/clients';
   const headers = {
     'Content-Type': 'application/json',
@@ -9,8 +9,7 @@ export default async function getAllClients() {
 
   try {
     const response = await axios.get(url, { headers });
-    console.log("RESPONSE ->", response)
-    console.log('Resposta:', response.data);
+    console.log('Resposta get all clients:', response.data);
   } catch (error) {
     console.error('Erro:', error.message);
   }
