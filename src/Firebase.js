@@ -24,21 +24,21 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 
-const createDB = async function () {
-    let dataRef = ref(db, "Imoveis");
-    for (const item of json.users) {
-        const whatsappId = String(item.IDUNIDADE);
-        try {
-            await update(dataRef, { [whatsappId]: item }); 
-            console.error("======> [DB/createDB] INSERIU: " + whatsappId);
-        } catch (errorObject) {
-            console.error("======> [DB/createDB] ERRO de acesso: " + errorObject);
-            return errorObject;
-        }
-    }
-    console.error("<===== TODOS OS DADOS INSERIDOS =====>");
-    return 0
-};
+// const createDB = async function () {
+//     let dataRef = ref(db, "Imoveis");
+//     for (const item of json.users) {
+//         const whatsappId = String(item.IDUNIDADE);
+//         try {
+//             await update(dataRef, { [whatsappId]: item }); 
+//             console.error("======> [DB/createDB] INSERIU: " + whatsappId);
+//         } catch (errorObject) {
+//             console.error("======> [DB/createDB] ERRO de acesso: " + errorObject);
+//             return errorObject;
+//         }
+//     }
+//     console.error("<===== TODOS OS DADOS INSERIDOS =====>");
+//     return 0
+// };
 
 
 async function getImovel(id) {
@@ -63,6 +63,29 @@ async function getImovel(id) {
     }
   }
 
+  async function getReserva(id) {
+  
+    // Referência ao nó específico no Realtime Database
+    const dataRef = ref(db, "Reservas/" + id);
+  
+    try {
+      // Utiliza await para esperar a conclusão da operação get
+      const snapshot = await get(dataRef);
+  
+      if (snapshot.exists()) {
+        // Se o documento existir, snapshot.val() conterá os dados
+        const data = snapshot.val();
+        console.log("Dados encontrados para ID", id, ":", data);
+        return data
+        
+      } else {
+        console.log("Nenhum dado encontrado para ID", id);
+      }
+    } catch (error) {
+      console.error("Erro ao obter dados para ID", id, ":", error);
+    }
+  }
+  
   async function updateImovel(id, newData) {
     // Inicializar o Firebase
 
@@ -89,11 +112,12 @@ async function getImovel(id) {
   
 
 //   updateImovel("AB01H", {"PROPIETARIO" : "Daiana pereira"});
-getImovel("")
+getReserva("")
   
 const firebase = {
     getImovel,
-    updateImovel
+    updateImovel,
+    getReserva
 };
 
 module.exports = firebase;

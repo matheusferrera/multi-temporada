@@ -128,12 +128,12 @@ export default function HeadMenu() {
               </ListItemButton>
             </ListItem>
             <Divider/>
-            <ListItem key={"Clientes"} disablePadding>
-              <ListItemButton  onClick={() => window.location.href = '/clientes'}>
+            <ListItem key={"Reservas"} disablePadding>
+              <ListItemButton  onClick={() => window.location.href = '/reservas'}>
                 <ListItemIcon >
                  <Person2OutlinedIcon color="error" />
                 </ListItemIcon>
-                <ListItemText primary={"Clientes"} />
+                <ListItemText primary={"Reservas"} />
               </ListItemButton>
             </ListItem>
             <Divider/>

@@ -1,8 +1,7 @@
-import axios from 'axios';
-
+import axios from "axios"
 
 async function getAllClients() {
-  const url = 'https://ssmt.stays.com.br/external/v1/booking/clients';
+  const url = "https://ssmt.stays.com.br/external/v1/booking/clients";
   const headers = {
     'Content-Type': 'application/json',
     'Authorization': 'Basic NzgyODc2N2Q6NzVjNDg0N2I='
