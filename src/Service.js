@@ -1,15 +1,25 @@
 import axios from "axios"
 
-async function getAllClients() {
-  const url = "https://ssmt.stays.com.br/external/v1/booking/clients";
-  const headers = {
-    'Content-Type': 'application/json',
-    'Authorization': 'Basic NzgyODc2N2Q6NzVjNDg0N2I='
-  };
+async function getReserva(idReserva) {
+  const url = "https://multi-temporada.glitch.me/api/getReserva/" + idReserva;
+
 
   try {
-    const response = await axios.get(url, { headers });
-    console.log('Resposta get all clients:', response.data);
+    const response = await axios.get(url);
+  
+    return response.data
+  } catch (error) {
+    console.error('Erro:', error);
+  }
+}
+
+async function getImovel(idListening) {
+  const url = "https://multi-temporada.glitch.me/api/getImovel/" + idListening;
+
+
+  try {
+    const response = await axios.get(url);
+  
     return response.data
   } catch (error) {
     console.error('Erro:', error);
@@ -17,7 +27,8 @@ async function getAllClients() {
 }
 
 const Service = {
-    getAllClients
+    getReserva,
+    getImovel
 };
 
 export default Service;

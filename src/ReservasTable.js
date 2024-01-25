@@ -20,7 +20,11 @@ import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-
+import Service from './Service';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 
 
@@ -34,41 +38,59 @@ function DataTable() {
   const [openSnack, setOpenSnack] = useState(false);
 
   useEffect(() => {
-    // Utilize o método do Firebase para obter os dados desejados
     const fetchData = async () => {
-
       try {
         const data = await firebase.getReserva("");
-        console.log("Reservas GET DB ->", data)
-        setRespDbFull(data)
-        const reservas = Object.values(data);
-        let reservaFiltrada = {}
-        reservas.forEach((reserva) => {
+        console.log("Reservas GET DB ->", data);
+        setRespDbFull(data);
 
+        const reservasId = Object.keys(data);
+        console.log("ID RESERVAS -> ", reservasId);
 
-          let bodyObj = {}
-          bodyObj[reserva.idReserva] = {
-            idReserva: reserva.idReserva,
-            idImovel: reserva.idImovel,
-            idHospede: reserva.hospedeInfo.fName,
-            checkIn: reserva.checkInDate + " às " + reserva.checkInTime,
-            checkOut: reserva.checkOutDate + " às " + reserva.checkOutTime,
-            preco: "R$ " + reserva.price,
-            precoPago: "R$ " + reserva.paid,
-            precoRestante: "R$ " + (Number(reserva.price) - Number(reserva.paid)),
+        let objReservas = {};
+        let reservaFiltrada = {};
+        for (let i = 0; i < reservasId.length; i += 5) {
+          const batchReservas = reservasId.slice(i, i + 5);
+          const promises = batchReservas.map(async (reservaId) => {
+            const reservaInfo = await Service.getReserva(reservaId);
+            objReservas = {
+              ...objReservas,
+              [reservaId]: reservaInfo
+            };
+          });
+
+          await Promise.all(promises);
+
+          // Atualizar o estado após processar cada lote
+          const partialReservas = Object.values(objReservas);
+
+          for (const reserva of partialReservas) {
+            console.log("RESERVA -> ", data[reserva.id])
+
+            let bodyObj = {};
+            bodyObj[reserva.id] = {
+              idReserva: reserva.id,
+              idImovel: data[reserva.id].idImovel,
+              idHospede: "0",
+              checkIn: reserva.checkInDate + " às " + reserva.checkInTime,
+              checkOut: reserva.checkOutDate + " às " + reserva.checkOutTime,
+              preco: "R$ " + reserva.price.hostingDetails._f_total,
+              precoPago: "R$ " + reserva.stats._f_totalPaid,
+              precoRestante: "R$ " + (Number(reserva.price.hostingDetails._f_total) - Number(reserva.stats._f_totalPaid)),
+            };
+
+            reservaFiltrada = {
+              ...reservaFiltrada,
+              ...bodyObj
+            };
           }
 
+          console.log("RESERVA FILTRADA -> ", reservaFiltrada);
+        }
 
-          reservaFiltrada = {
-            ...reservaFiltrada,
-            ...bodyObj
-          }
-        })
-
-        console.log("RESERVA FILTRADA -> ", reservaFiltrada)
-        setRespDb(reservaFiltrada);
-        // setRespDb(data);
         setLoadingTable(false);
+        setRespDb(reservaFiltrada);
+
       } catch (error) {
         console.error('Erro ao obter dados do Firebase:', error);
       }
@@ -79,19 +101,20 @@ function DataTable() {
 
 
 
+
   const columns = [
     { field: 'idReserva', headerName: 'id reserva', width: 100 },
     { field: 'idImovel', headerName: 'id imovel', width: 100 },
     { field: 'idHospede', headerName: 'nome do hospede', width: 100 },
     { field: 'checkIn', headerName: 'check-in', width: 250 },
     { field: 'checkOut', headerName: 'check-out', width: 250 },
-    { field: 'preco', headerName: 'valor total', width: 200 },
-    { field: 'precoPago', headerName: 'valor pago', width: 200 },
-    { field: 'precoRestante', headerName: 'valor restante', width: 200 },
+    { field: 'preco', headerName: 'valor total', width: 125 },
+    { field: 'precoPago', headerName: 'valor pago', width: 125 },
+    { field: 'precoRestante', headerName: 'valor restante', width: 125 },
   ];
 
-  const handleUserButtonClick = (userId) => {
-    const user = Object.values(respDb).find((u) => u.IDUNIDADE === userId);
+  const handleReservaButtonClick = (reservaId) => {
+    const user = Object.values(respDb).find((u) => u.idReserva === reservaId);
     setSelectedReserva(user);
     setOpenDialog(true);
   };
@@ -123,6 +146,116 @@ function DataTable() {
     setOpenSnack(false);
   };
 
+
+  const PhoneNumberAccordion = ({ phoneNumber, label }) => (
+    <Accordion>
+      <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+        <Typography>{label}</Typography>
+      </AccordionSummary>
+      <AccordionDetails>
+        <Grid container spacing={2}>
+          <Grid item xs={3}>
+            <TextField
+              label="Número de Telefone"
+              name="telefone"
+              value={phoneNumber}
+              margin="normal"
+              InputLabelProps={{
+                shrink: true,
+              }}
+            />
+          </Grid>
+          <Grid item container spacing={2}>
+            <Grid item xs={4}>
+
+              <Card variant="outlined">
+                <Box sx={{ p: 2 }}>
+                  <Typography color="text.primary" variant="body1">
+                    Confirmação de reserva
+                  </Typography>
+                  <Typography color="text.secondary" variant="body2">
+                    <br />
+                  </Typography>
+                </Box>
+                <Divider light />
+                <Box sx={{ p: 2 }} id="boxMessage">
+                  <Stack direction="row" spacing={1}>
+
+                    {
+                      (() => {
+                        const status = "done";
+
+                        switch (status) {
+                          case 'done':
+                            return <Chip color="success" label="Enviada" size="small" />;
+                          case 'Em analise':
+                            return <Chip label="Em análise" color="warning" size="small" />;
+                          case 'error':
+                            return <Chip label="Erro de envio" color="error" size="small" />;
+                          default:
+                            return null;
+                        }
+                      })()
+                    }
+
+                  </Stack>
+                </Box>
+              </Card>
+
+            </Grid>
+            <Grid item xs={4}>
+
+              <Card variant="outlined">
+                <Box sx={{ p: 2 }}>
+                  <Typography color="text.primary" variant="body1">
+                    Pré Check-In
+                  </Typography>
+                  <Typography color="text.secondary" variant="body2">
+                    {respDbFull[selectedReserva.idReserva].imovelInfo.DIALOGO_PRE_CHECKIN}
+                  </Typography>
+                </Box>
+                <Divider light />
+                <Box sx={{ p: 2 }}>
+                  <Stack direction="row" spacing={1}>
+                    {/* <Chip color="success" label="Enviada" size="small" /> */}
+                    {/* <Chip label="Em analise" color="warning" size="small" /> */}
+                    {/* <Chip label="Erro de envio" color="error" size="small" /> */}
+                    <Chip label="Aguardando" size="small" />
+                  </Stack>
+                </Box>
+              </Card>
+
+            </Grid>
+            <Grid item xs={4}>
+
+              <Card variant="outlined">
+                <Box sx={{ p: 2 }}>
+                  <Typography color="text.primary" variant="body1">
+                    Pré Check-Out
+                  </Typography>
+                  <Typography color="text.secondary" variant="body2">
+                    {respDbFull[selectedReserva.idReserva].imovelInfo.DIALOGO_PRE_CHECKOUT}
+                  </Typography>
+                </Box>
+                <Divider light />
+                <Box sx={{ p: 2 }}>
+                  <Stack direction="row" spacing={1}>
+                    {/* <Chip color="success" label="Enviada" size="small" /> */}
+                    {/* <Chip label="Em analise" color="warning" size="small" /> */}
+                    {/* <Chip label="Erro de envio" color="error" size="small" /> */}
+                    <Chip label="Aguardando" size="small" />
+                  </Stack>
+                </Box>
+              </Card>
+
+            </Grid>
+          </Grid>
+          {/* Adicione mais campos conforme necessário */}
+        </Grid>
+      </AccordionDetails>
+    </Accordion>
+  );
+
   console.log("DB -> ", respDbFull)
 
   return (
@@ -144,7 +277,8 @@ function DataTable() {
             columns={columns}
             pageSizeOptions={[5, 10]}
             style={{ cursor: "pointer" }}
-            onRowClick={(params) => handleUserButtonClick(params.row.IDUNIDADE)}
+            onRowClick={(params) => handleReservaButtonClick(params.row.idReserva)}
+            // onRowClick={(params) =>  console.log("params ->> ",  params.row)}
             getRowId={getRowId}
           />
         )}
@@ -179,7 +313,9 @@ function DataTable() {
                               value={selectedReserva.checkIn}
                               fullWidth
                               margin="normal"
-
+                              InputLabelProps={{
+                                shrink: true,
+                              }}
                             />
                           </Grid>
                           <Grid item xs={6} lg={3}>
@@ -189,6 +325,9 @@ function DataTable() {
                               value={selectedReserva.checkOut}
                               fullWidth
                               margin="normal"
+                              InputLabelProps={{
+                                shrink: true,
+                              }}
                             />
                           </Grid>
                           <Grid item xs={6} lg={2}>
@@ -198,6 +337,9 @@ function DataTable() {
                               value={selectedReserva.preco}
                               fullWidth
                               margin="normal"
+                              InputLabelProps={{
+                                shrink: true,
+                              }}
                             />
                           </Grid>
                           <Grid item xs={6} lg={2}>
@@ -207,27 +349,35 @@ function DataTable() {
                               value={selectedReserva.precoPago}
                               fullWidth
                               margin="normal"
+                              InputLabelProps={{
+                                shrink: true,
+                              }}
                             />
                           </Grid>
                         </Grid>
                         <Grid container spacing={2}>
                           <Grid item xs={2}>
                             <TextField
-                              label="id Imovel"
+                              label="id Reserva"
                               name="nome"
-                              value={selectedReserva.idImovel}
+                              value={selectedReserva.idReserva}
                               fullWidth
                               margin="normal"
-
+                              InputLabelProps={{
+                                shrink: true,
+                              }}
                             />
                           </Grid>
                           <Grid item xs={6}>
                             <TextField
                               label="nome do imovel"
                               name="telefone"
-                              value={respDbFull[selectedReserva.idReserva].imovelInfo.NOME_COMERCIAL}
+                              value={respDbFull[selectedReserva.idReserva].imovelStays._mstitle.pt_BR}
                               fullWidth
                               margin="normal"
+                              InputLabelProps={{
+                                shrink: true,
+                              }}
                             />
                           </Grid>
                           <Grid item xs={2}>
@@ -237,7 +387,9 @@ function DataTable() {
                               value={respDbFull[selectedReserva.idReserva].adults}
                               fullWidth
                               margin="normal"
-
+                              InputLabelProps={{
+                                shrink: true,
+                              }}
                             />
                           </Grid>
                           <Grid item xs={2}>
@@ -247,10 +399,15 @@ function DataTable() {
                               value={respDbFull[selectedReserva.idReserva].childs}
                               fullWidth
                               margin="normal"
+                              InputLabelProps={{
+                                shrink: true,
+                              }}
                             />
                           </Grid>
                         </Grid>
-
+                        <CardActions>
+                          <Button size="small" color="error" href={"https://www.multitemporada.com/i/reservation/" + selectedReserva.idReserva} target="_blank">Ver detalhes da reserva</Button>
+                        </CardActions>
                       </CardContent>
                     </Card>
                     <Divider sx={{ margin: "30px" }}></Divider>
@@ -260,7 +417,7 @@ function DataTable() {
                           Dados gerais do proprietario
                         </Typography>
                         <Grid container spacing={2}>
-                        <Grid item xs={3}>
+                          <Grid item xs={3}>
                             <TextField
                               label="Nome"
                               name="nome"
@@ -309,96 +466,39 @@ function DataTable() {
                             />
                           </Grid>
                         </Grid>
-                        <Grid container spacing={2}>
-                          <Grid item xs={4}>
-
-                            <Card variant="outlined">
-                              <Box sx={{ p: 2 }}>
-                                <Typography color="text.primary" variant="body1">
-                                  Welcome
-                                </Typography>
-                                <Typography color="text.secondary" variant="body2">
-                                  .
-                                </Typography>
-                              </Box>
-                              <Divider light />
-                              <Box sx={{ p: 2 }}>
-                                <Stack direction="row" spacing={1}>
-
-                                  {
-                                    (() => {
-                                      const status = Object.values(respDbFull[selectedReserva.idReserva].messages.boasVindas)[0].status;
-
-                                      switch (status) {
-                                        case 'done':
-                                          return <Chip color="success" label="Enviada" size="small" />;
-                                        case 'Em analise':
-                                          return <Chip label="Em análise" color="warning" size="small" />;
-                                        case 'error':
-                                          return <Chip label="Erro de envio" color="error" size="small" />;
-                                        default:
-                                          return null;
-                                      }
-                                    })()
-                                  }
-
-                                </Stack>
-                              </Box>
-                            </Card>
-
+                        <Grid container spacing={0} direction="column">
+                          <Grid item xs={12}>
+                            {respDbFull[selectedReserva.idReserva].imovelInfo.N_WHATSAPP && (
+                              <PhoneNumberAccordion phoneNumber={respDbFull[selectedReserva.idReserva].imovelInfo.N_WHATSAPP} label="whatsapp 1" />
+                            )}
                           </Grid>
-                          <Grid item xs={4}>
-
-                            <Card variant="outlined">
-                              <Box sx={{ p: 2 }}>
-                                <Typography color="text.primary" variant="body1">
-                                  Pré Check-In
-                                </Typography>
-                                <Typography color="text.secondary" variant="body2">
-                                  {respDbFull[selectedReserva.idReserva].imovelInfo.DIALOGO_PRE_CHECKIN}
-                                </Typography>
-                              </Box>
-                              <Divider light />
-                              <Box sx={{ p: 2 }}>
-                                <Stack direction="row" spacing={1}>
-                                  {/* <Chip color="success" label="Enviada" size="small" /> */}
-                                  {/* <Chip label="Em analise" color="warning" size="small" /> */}
-                                  {/* <Chip label="Erro de envio" color="error" size="small" /> */}
-                                  <Chip label="Aguardando" size="small" />
-                                </Stack>
-                              </Box>
-                            </Card>
-
+                          <Grid item xs={12}>
+                            {respDbFull[selectedReserva.idReserva].imovelInfo.N_WHATSAPP2 && (
+                              <PhoneNumberAccordion phoneNumber={respDbFull[selectedReserva.idReserva].imovelInfo.N_WHATSAPP2} label="whatsapp 2" />
+                            )}
                           </Grid>
-                          <Grid item xs={4}>
-
-                            <Card variant="outlined">
-                              <Box sx={{ p: 2 }}>
-                                <Typography color="text.primary" variant="body1">
-                                  Pré Check-Out
-                                </Typography>
-                                <Typography color="text.secondary" variant="body2">
-                                  {respDbFull[selectedReserva.idReserva].imovelInfo.DIALOGO_PRE_CHECKOUT}
-                                </Typography>
-                              </Box>
-                              <Divider light />
-                              <Box sx={{ p: 2 }}>
-                                <Stack direction="row" spacing={1}>
-                                  {/* <Chip color="success" label="Enviada" size="small" /> */}
-                                  {/* <Chip label="Em analise" color="warning" size="small" /> */}
-                                  {/* <Chip label="Erro de envio" color="error" size="small" /> */}
-                                  <Chip label="Aguardando" size="small" />
-                                </Stack>
-                              </Box>
-                            </Card>
-
+                          <Grid item xs={12}>
+                            {respDbFull[selectedReserva.idReserva].imovelInfo.N_WHATSAPP3 && (
+                              <PhoneNumberAccordion phoneNumber={respDbFull[selectedReserva.idReserva].imovelInfo.N_WHATSAPP3} label="whatsapp 3" />
+                            )}
+                          </Grid>
+                          <Grid item xs={12}>
+                            {respDbFull[selectedReserva.idReserva].imovelInfo.N_FUNCIONARIO && (
+                              <PhoneNumberAccordion phoneNumber={respDbFull[selectedReserva.idReserva].imovelInfo.N_FUNCIONARIO} label="funcionario" />
+                            )}
+                          </Grid>
+                          <Grid item xs={12}>
+                            {respDbFull[selectedReserva.idReserva].imovelInfo.N_PARCEIRO && (
+                              <PhoneNumberAccordion phoneNumber={respDbFull[selectedReserva.idReserva].imovelInfo.N_PARCEIRO} label="parceiro" />
+                            )}
                           </Grid>
                         </Grid>
-
                       </CardContent>
                       <CardActions>
-                        <Button size="small" color="error" href={"https://ssmt.stays.com.br/i/account-overview/" + respDbFull[selectedReserva.idReserva].idHospede} target="_blank">Ver perfil stays</Button>
+                        <Button size="small" color="error" href={"https://www.multitemporada.com/pt/apartment/" + respDbFull[selectedReserva.idReserva].idImovel} target="_blank">Ver detalhes do imovel</Button>
                       </CardActions>
+
+
                     </Card>
                     <Divider sx={{ margin: "30px" }}></Divider>
                     <Card fullWidth variant="outlined" >
@@ -426,8 +526,8 @@ function DataTable() {
 
                             />
                           </Grid>
-                         
-   
+
+
                         </Grid>
                         <Grid container spacing={2}>
                           <Grid item xs={4}>
@@ -447,8 +547,8 @@ function DataTable() {
 
                                   {
                                     (() => {
-                                      const status = Object.values(respDbFull[selectedReserva.idReserva].messages.boasVindas)[0].status;
-
+                                      // const status = Object.values(respDbFull[selectedReserva.idReserva].messages.boasVindas)[0].status;
+                                      const status = 'done'
                                       switch (status) {
                                         case 'done':
                                           return <Chip color="success" label="Enviada" size="small" />;

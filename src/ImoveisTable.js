@@ -45,7 +45,12 @@ function DataTable() {
     { field: 'IDUNIDADE', headerName: 'ID', width: 100 },
     { field: 'PROPIETARIO', headerName: 'Nome do proprietario', width: 250 },
     { field: 'NOME_COMERCIAL', headerName: 'Nome imovel', width: 250 },
-    { field: 'N_WHATSAPP', headerName: 'Telefone', width: 150 },
+    { field: 'N_WHATSAPP', headerName: 'Whatsapp', width: 150 },
+    { field: 'N_WHATSAPP2', headerName: 'Whatsapp 2', width: 150 },
+    { field: 'N_WHATSAPP3', headerName: 'Whatsapp 3', width: 150 },
+    { field: 'N_FUNCIONARIO', headerName: 'Funcionario', width: 150 },
+    { field: 'N_FUNCIONARIO2', headerName: 'Funcionario 2', width: 150 },
+    { field: 'N_PARCEIRO', headerName: 'Parceiro', width: 150 },
     { field: 'DIALOGO_PRE_CHECKOUT', headerName: 'pre-checkout', width: 200 },
     { field: 'DIALOGO_PRE_CHECKIN', headerName: 'pre-checkin', width: 200 },
   ];
@@ -117,7 +122,7 @@ function DataTable() {
           />
         )}
 
-        <Dialog open={openDialog} onClose={handleCloseDialog} fullWidth>
+        <Dialog open={openDialog} onClose={handleCloseDialog} maxWidth="md" fullWidth>
 
 
 
@@ -181,14 +186,84 @@ function DataTable() {
                       </Grid>
                     </Grid>
                     <Grid container spacing={2}>
-                      <Grid item xs={6}>
+                      <Grid item xs={4}>
                         <TextField
-                          label="Numero de telefone"
-                          name="PROPIETARIO"
+                          label="whatsapp"
+                          name="N_WHATSAPP"
                           value={selectedUser.N_WHATSAPP}
                           onChange={handleInputChange}
                           fullWidth
                           margin="normal"
+                          InputLabelProps={{
+                            shrink: true,
+                          }}
+                        />
+                      </Grid>
+                      <Grid item xs={4}>
+                        <TextField
+                          label="whatsapp 2"
+                          name="N_WHATSAPP2"
+                          value={selectedUser.N_WHATSAPP2}
+                          onChange={handleInputChange}
+                          fullWidth
+                          margin="normal"
+                          InputLabelProps={{
+                            shrink: true,
+                          }}
+                        />
+                      </Grid>
+                      <Grid item xs={4}>
+                        <TextField
+                          label="whatsapp 3"
+                          name="N_WHATSAPP3"
+                          value={selectedUser.N_WHATSAPP3}
+                          onChange={handleInputChange}
+                          fullWidth
+                          margin="normal"
+                          InputLabelProps={{
+                            shrink: true,
+                          }}
+                        />
+                      </Grid>
+                    </Grid>
+                    <Grid container spacing={2}>
+                      <Grid item xs={4}>
+                        <TextField
+                          label="funcionario"
+                          name="N_FUNCIONARIO"
+                          value={selectedUser.N_FUNCIONARIO}
+                          onChange={handleInputChange}
+                          fullWidth
+                          margin="normal"
+                          InputLabelProps={{
+                            shrink: true,
+                          }}
+                        />
+                      </Grid>
+                      <Grid item xs={4}>
+                        <TextField
+                          label="funcionario 2"
+                          name="N_FUNCIONARIO2"
+                          value={selectedUser.N_FUNCIONARIO2}
+                          onChange={handleInputChange}
+                          fullWidth
+                          margin="normal"
+                          InputLabelProps={{
+                            shrink: true,
+                          }}
+                        />
+                      </Grid>
+                      <Grid item xs={4}>
+                        <TextField
+                          label="parceiro"
+                          name="N_PARCEIRO"
+                          value={selectedUser.N_PARCEIRO}
+                          onChange={handleInputChange}
+                          fullWidth
+                          margin="normal"
+                          InputLabelProps={{
+                            shrink: true,
+                          }}
                         />
                       </Grid>
                     </Grid>

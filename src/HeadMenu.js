@@ -21,7 +21,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import logo from './image32.png';
-import { Divider } from '@mui/material';
+import { Divider, Typography } from '@mui/material';
 import App from './App';
 import { Link } from 'react-router-dom';
 
@@ -49,7 +49,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
 })(({ theme, open }) => ({
-    backgroundColor: 'white',
+  backgroundColor: 'white',
   transition: theme.transitions.create(['margin', 'width'], {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
@@ -86,11 +86,11 @@ export default function HeadMenu() {
   };
 
   return (
-    <Box sx={{ display: 'flex'}}>
+    <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Toolbar>
-        <IconButton onClick={handleDrawerClose} color="error" sx={{ mr: 2, ...(!open && { display: 'none' }) }}> 
+          <IconButton onClick={handleDrawerClose} color="error" sx={{ mr: 2, ...(!open && { display: 'none' }) }}>
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
           <IconButton
@@ -102,7 +102,11 @@ export default function HeadMenu() {
           >
             <MenuIcon />
           </IconButton>
-          <img src={logo} alt="Logo" style={{width: "50px", height: '50px'}} />
+
+          <img src={logo} alt="Logo" style={{ width: "50px", height: '50px', marginRight: "30px" }} />
+          <Typography color="text.primary" variant="h6">
+            Reservas
+          </Typography>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -119,41 +123,41 @@ export default function HeadMenu() {
         open={open}
       >
         <List>
-            <ListItem key={"Imóveis"} disablePadding>
-              <ListItemButton onClick={() => window.location.href = '/'}>
-                <ListItemIcon>
-                 <HomeOutlinedIcon color="error" />
-                </ListItemIcon>
-                <ListItemText primary={"Imóveis"} />
-              </ListItemButton>
-            </ListItem>
-            <Divider/>
-            <ListItem key={"Reservas"} disablePadding>
-              <ListItemButton  onClick={() => window.location.href = '/reservas'}>
-                <ListItemIcon >
-                 <Person2OutlinedIcon color="error" />
-                </ListItemIcon>
-                <ListItemText primary={"Reservas"} />
-              </ListItemButton>
-            </ListItem>
-            <Divider/>
-            <ListItem key={"Mensagens"} disablePadding>
-              <ListItemButton color="error" >
-                <ListItemIcon>
-                 <ChatOutlinedIcon color="error" />
-                </ListItemIcon>
-                <ListItemText primary={"Mensagens"} />
-              </ListItemButton>
-            </ListItem>
-            <Divider/>
-            <ListItem key={"Erros"} disablePadding>
-              <ListItemButton color="error" >
-                <ListItemIcon>
-                 <ErrorOutlineOutlinedIcon color="error" />
-                </ListItemIcon>
-                <ListItemText primary={"Erros"} />
-              </ListItemButton>
-            </ListItem>
+          <ListItem key={"Imóveis"} disablePadding>
+            <ListItemButton onClick={() => window.location.href = '/'}>
+              <ListItemIcon>
+                <HomeOutlinedIcon color="error" />
+              </ListItemIcon>
+              <ListItemText primary={"Imóveis"} />
+            </ListItemButton>
+          </ListItem>
+          <Divider />
+          <ListItem key={"Reservas"} disablePadding>
+            <ListItemButton onClick={() => window.location.href = '/reservas'}>
+              <ListItemIcon >
+                <Person2OutlinedIcon color="error" />
+              </ListItemIcon>
+              <ListItemText primary={"Reservas"} />
+            </ListItemButton>
+          </ListItem>
+          <Divider />
+          <ListItem key={"Mensagens"} disablePadding>
+            <ListItemButton color="error" >
+              <ListItemIcon>
+                <ChatOutlinedIcon color="error" />
+              </ListItemIcon>
+              <ListItemText primary={"Mensagens"} />
+            </ListItemButton>
+          </ListItem>
+          <Divider />
+          <ListItem key={"Erros"} disablePadding>
+            <ListItemButton color="error" >
+              <ListItemIcon>
+                <ErrorOutlineOutlinedIcon color="error" />
+              </ListItemIcon>
+              <ListItemText primary={"Erros"} />
+            </ListItemButton>
+          </ListItem>
 
         </List>
       </Drawer>
