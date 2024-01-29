@@ -63,6 +63,30 @@ async function getImovel(id) {
     }
   }
 
+
+  async function getMessage(id) {
+  
+    // Referência ao nó específico no Realtime Database
+    const dataRef = ref(db, "Mensagens/" + id);
+  
+    try {
+      // Utiliza await para esperar a conclusão da operação get
+      const snapshot = await get(dataRef);
+  
+      if (snapshot.exists()) {
+        // Se o documento existir, snapshot.val() conterá os dados
+        const data = snapshot.val();
+        console.log("Dados encontrados para ID", id, ":", data);
+        return data
+        
+      } else {
+        console.log("Nenhum dado encontrado para ID", id);
+      }
+    } catch (error) {
+      console.error("Erro ao obter dados para ID", id, ":", error);
+    }
+  }
+
   async function getReserva(id) {
   
     // Referência ao nó específico no Realtime Database
@@ -117,7 +141,8 @@ getReserva("")
 const firebase = {
     getImovel,
     updateImovel,
-    getReserva
+    getReserva,
+    getMessage
 };
 
 module.exports = firebase;

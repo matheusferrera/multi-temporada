@@ -23,7 +23,11 @@ import MailIcon from '@mui/icons-material/Mail';
 import logo from './image32.png';
 import { Divider, Typography } from '@mui/material';
 import App from './App';
-import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+
+
+const location = useLocation;
+const path = window.location.pathname;
 
 const drawerWidth = 240;
 
@@ -102,11 +106,17 @@ export default function HeadMenu() {
           >
             <MenuIcon />
           </IconButton>
-
           <img src={logo} alt="Logo" style={{ width: "50px", height: '50px', marginRight: "30px" }} />
-          <Typography color="text.primary" variant="h6">
-            Reservas
-          </Typography>
+          {path !== '/' && (
+            <Typography color="text.primary" variant="h6">
+              {path.substring(1)}
+            </Typography>
+          )}
+          {path === '/' && (
+            <Typography color="text.primary" variant="h6">
+              Imoveis
+            </Typography>
+          )}
         </Toolbar>
       </AppBar>
       <Drawer

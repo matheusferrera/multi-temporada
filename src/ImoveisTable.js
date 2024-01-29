@@ -51,6 +51,7 @@ function DataTable() {
     { field: 'N_FUNCIONARIO', headerName: 'Funcionario', width: 150 },
     { field: 'N_FUNCIONARIO2', headerName: 'Funcionario 2', width: 150 },
     { field: 'N_PARCEIRO', headerName: 'Parceiro', width: 150 },
+    { field: 'DIALOGO_POS_RESERVA', headerName: 'pos-reserva', width: 200 },
     { field: 'DIALOGO_PRE_CHECKOUT', headerName: 'pre-checkout', width: 200 },
     { field: 'DIALOGO_PRE_CHECKIN', headerName: 'pre-checkin', width: 200 },
   ];
@@ -100,7 +101,7 @@ function DataTable() {
 
   return (
     <div style={{ height: "100%", width: '100%', display: "flex", justifyContent: "center", alignItems: "center" }}>
-      <div style={{ height: "74vh", width: 'min-content' }}>
+      <div style={{ height: "72vh", width: 'min-content' }}>
 
         <Snackbar
           open={openSnack}
@@ -112,6 +113,7 @@ function DataTable() {
         {loadingTable ? (
           <CircularProgress color="error" />
         ) : (
+          <>
           <DataGrid
             rows={Object.values(respDb)}
             columns={columns}
@@ -120,7 +122,18 @@ function DataTable() {
             onRowClick={(params) => handleUserButtonClick(params.row.IDUNIDADE)}
             getRowId={getRowId}
           />
+           <Grid container spacing={18}>
+            <Grid item xs={2}>
+            <Button onClick={handleUpdateUser} variant="contained" color="error">
+              Adicionar novo imovel
+            </Button>
+            </Grid>
+            </Grid>
+          </>
+          
+          
         )}
+       
 
         <Dialog open={openDialog} onClose={handleCloseDialog} maxWidth="md" fullWidth>
 
@@ -162,7 +175,20 @@ function DataTable() {
                       </Grid>
                     </Grid>
                     <Grid container spacing={2}>
-                      <Grid item xs={6}>
+                    <Grid item xs={4}>
+                        <TextField
+                          label="Dialogo de pós reserva"
+                          name="DIALOGO_POS_RESERVA"
+                          value={selectedUser.DIALOGO_POS_RESERVA}
+                          onChange={handleInputChange}
+                          fullWidth
+                          margin="normal"
+                          InputLabelProps={{
+                            shrink: true,
+                          }}
+                        />
+                      </Grid>
+                      <Grid item xs={4}>
                         <TextField
                           disabled
                           label="Dialogo de check-in"
@@ -173,7 +199,7 @@ function DataTable() {
                           margin="normal"
                         />
                       </Grid>
-                      <Grid item xs={6}>
+                      <Grid item xs={4}>
                         <TextField
                           disabled
                           label="Dialogo de check-out"
@@ -188,7 +214,7 @@ function DataTable() {
                     <Grid container spacing={2}>
                       <Grid item xs={4}>
                         <TextField
-                          label="whatsapp"
+                          label="proprietario"
                           name="N_WHATSAPP"
                           value={selectedUser.N_WHATSAPP}
                           onChange={handleInputChange}
@@ -201,7 +227,7 @@ function DataTable() {
                       </Grid>
                       <Grid item xs={4}>
                         <TextField
-                          label="whatsapp 2"
+                          label="proprietario 2"
                           name="N_WHATSAPP2"
                           value={selectedUser.N_WHATSAPP2}
                           onChange={handleInputChange}
@@ -245,19 +271,6 @@ function DataTable() {
                           label="funcionario 2"
                           name="N_FUNCIONARIO2"
                           value={selectedUser.N_FUNCIONARIO2}
-                          onChange={handleInputChange}
-                          fullWidth
-                          margin="normal"
-                          InputLabelProps={{
-                            shrink: true,
-                          }}
-                        />
-                      </Grid>
-                      <Grid item xs={4}>
-                        <TextField
-                          label="parceiro"
-                          name="N_PARCEIRO"
-                          value={selectedUser.N_PARCEIRO}
                           onChange={handleInputChange}
                           fullWidth
                           margin="normal"

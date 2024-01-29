@@ -13,6 +13,19 @@ async function getReserva(idReserva) {
   }
 }
 
+async function getClient(idClient) {
+  const url = "https://multi-temporada.glitch.me/api/getClient/" + idClient;
+
+
+  try {
+    const response = await axios.get(url);
+  
+    return response.data
+  } catch (error) {
+    console.error('Erro:', error);
+  }
+}
+
 async function getImovel(idListening) {
   const url = "https://multi-temporada.glitch.me/api/getImovel/" + idListening;
 
@@ -26,9 +39,26 @@ async function getImovel(idListening) {
   }
 }
 
+async function getAllReservation(checkin, checkout, dateType) {
+  const url = "https://multi-temporada.glitch.me/api/getAllReservas/"+checkin+"/"+checkout+"/"+dateType+"";
+
+
+  try {
+    const response = await axios.get(url);
+  
+    return response.data
+  } catch (error) {
+    console.error('Erro:', error);
+  }
+}
+
+
+
 const Service = {
     getReserva,
-    getImovel
+    getImovel,
+    getClient,
+    getAllReservation
 };
 
 export default Service;

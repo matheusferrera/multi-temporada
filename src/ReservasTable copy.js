@@ -11,7 +11,6 @@ import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import { Divider, Snackbar } from '@mui/material';
 import { pink } from '@mui/material/colors';
-import LinearProgress from '@mui/material/LinearProgress';
 import firebase from './Firebase';
 import CircularProgress from '@mui/material/CircularProgress';
 import Card from '@mui/material/Card';
@@ -32,56 +31,69 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 function DataTable() {
   const [selectedReserva, setSelectedReserva] = useState(null);
   const [openDialog, setOpenDialog] = useState(false);
-
+  const [respDb, setRespDb] = useState({})
+  const [respDbFull, setRespDbFull] = useState({})
   const [loadingTable, setLoadingTable] = useState(true);
-  const [loadingModal, setLoadingModal] = useState(true);
+  const [loadingModal, setLoadingModal] = useState(false);
   const [openSnack, setOpenSnack] = useState(false);
 
   const [allReservas, setAllReservas] = useState({})
   const [selectedHospede, setSelectedHospede] = useState({})
   const [selectedImovel, setSelectedImovel] = useState({})
   const [selectedMessage, setSelectedMessage] = useState({})
-  const [selectedImovelDb, setSelectedImovelDb] = useState({})
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let allReservasFetch = await Service.getAllReservation("2024-04-29", "2024-05-02", "arrival")
-        allReservasFetch = transformArrayToObject(allReservasFetch)
-        let allReservasTratada = tratarReservasTabela(allReservasFetch)
+        const data = await firebase.getReserva("");
+        const allReservas = await Service.getAllReservation("2024-01-29", "2024-01-30", "arrival")
 
+        console.log("allReservas --->", transformArrayToObject(allReservas))
+        setAllReservas(transformArrayToObject(allReservas))
+        setRespDbFull(data);
 
-        setAllReservas(allReservasTratada)
-        setLoadingTable(false);
+        const reservasId = Object.keys(data)
 
-        let novoAllReservasTratada = { ...allReservasTratada }
-        async function processarReservas() {
-          for (const reserva of Object.values(novoAllReservasTratada)) {
-            try {
-              let imovelInfo = await Service.getImovel(reserva.listingId);
-              let hospedeInfo = await Service.getClient(reserva.clientId);
+        let objReservas = {};
+        let reservaFiltrada = {};
+        for (let i = 0; i < reservasId.length; i += 5) {
+          const batchReservas = reservasId.slice(i, i + 5);
+          const promises = batchReservas.map(async (reservaId) => {
+            const reservaInfo = await Service.getReserva(reservaId);
+            objReservas = {
+              ...objReservas,
+              [reservaId]: reservaInfo
+            };
+          });
 
+          await Promise.all(promises);
 
-              if (!novoAllReservasTratada[reserva.id].hasOwnProperty("idImovel") && !novoAllReservasTratada[reserva.id].hasOwnProperty("idHospede")) {
-                novoAllReservasTratada[reserva.id] = {
-                  ...novoAllReservasTratada[reserva.id],
-                  idImovel: imovelInfo.id,
-                  idHospede: hospedeInfo.name,
-                };
-                setAllReservas(novoAllReservasTratada);
-              }
+          // Atualizar o estado após processar cada lote
+          const partialReservas = Object.values(objReservas);
 
+          for (const reserva of partialReservas) {
 
-            } catch (error) {
-              console.error("Erro ao processar reserva:", error);
-              // Lida com o erro, se necessário
-            }
+            let bodyObj = {};
+            bodyObj[reserva.id] = {
+              idReserva: reserva.id,
+              idImovel: data[reserva.id].idImovel,
+              idHospede: "0",
+              checkIn: reserva.checkInDate + " às " + reserva.checkInTime,
+              checkOut: reserva.checkOutDate + " às " + reserva.checkOutTime,
+              preco: "R$ " + reserva.price.hostingDetails._f_total,
+              precoPago: "R$ " + reserva.stats._f_totalPaid,
+              precoRestante: "R$ " + (Number(reserva.price.hostingDetails._f_total) - Number(reserva.stats._f_totalPaid)),
+            };
+
+            reservaFiltrada = {
+              ...reservaFiltrada,
+              ...bodyObj
+            };
           }
         }
-
-        processarReservas();
-
-
+        console.log("RESERVA FILTRADA -> ", reservaFiltrada)
+        setLoadingTable(false);
+        setRespDb(reservaFiltrada);
 
       } catch (error) {
         console.error('Erro ao obter dados do Firebase:', error);
@@ -95,60 +107,37 @@ function DataTable() {
 
 
   const columns = [
-    { field: 'id', headerName: 'id reserva', width: 100 },
-    {
-      field: 'idImovel',
-      headerName: 'id imovel',
-      width: 70,
-      renderCell: (params) => params.value ? params.value : <><Box sx={{ width: '100%' }}>
-        <LinearProgress color="error" />
-      </Box></>
-    },
-    {
-      field: 'idHospede',
-      headerName: 'nome hospede',
-      width: 150,
-      renderCell: (params) => params.value ? params.value : <><Box sx={{ width: '100%' }}>
-        <LinearProgress color="error" />
-      </Box></>
-    },
+    { field: 'idReserva', headerName: 'id reserva', width: 100 },
+    { field: 'idImovel', headerName: 'id imovel', width: 100 },
+    { field: 'idHospede', headerName: 'nome do hospede', width: 100 },
     { field: 'checkIn', headerName: 'check-in', width: 250 },
     { field: 'checkOut', headerName: 'check-out', width: 250 },
-    { field: 'price', headerName: 'valor total', width: 125 },
-    { field: 'totalPaid', headerName: 'valor pago', width: 125 },
-    { field: 'restPaid', headerName: 'valor restante', width: 125 },
+    { field: 'preco', headerName: 'valor total', width: 125 },
+    { field: 'precoPago', headerName: 'valor pago', width: 125 },
+    { field: 'precoRestante', headerName: 'valor restante', width: 125 },
   ];
 
   const handleReservaButtonClick = async (reservaId) => {
-    setOpenDialog(true);
     setLoadingModal(true)
-
-    console.log("RESERVA SELECIONADA -> ", reservaId)
-    const reservaSelect = Object.values(allReservas).find((u) => u.id === reservaId);
-    console.log("Dados da reserva selecionada ->", reservaSelect)
-
-    setSelectedReserva(reservaSelect)
-
-    const dadosReserva = reservaSelect
-    const dadosHospede = await Service.getClient(dadosReserva.clientId)
-    const dadosImovel = await Service.getImovel(dadosReserva.listingId)
-    const dadosImovelDb = await firebase.getImovel(dadosImovel.id)
-    const dadosMessage = await firebase.getMessage(dadosReserva.id)
+    setOpenDialog(true);
+    const reservaSelect = Object.values(respDb).find((u) => u.idReserva === reservaId);
+    const dadosReserva = await Service.getReserva(reservaSelect.idReserva)
+    const dadosHospede = await Service.getClient(dadosReserva._idclient)
+    const dadosImovel = await Service.getImovel(dadosReserva._idlisting)
+    const dadosMessages = await firebase.getImovel(dadosImovel.id)
 
     console.log("DADOS DA RESERVA -> ", dadosReserva)
     console.log("DADOS IMOVEL -> ", dadosImovel)
-    console.log("DADOS IMOVEL DB -> ", dadosImovelDb)
+    console.log("DADOS MESSAGE -> ", dadosMessages)
     console.log("DADOS HOSPEDE -> ", dadosHospede)
-    console.log("DADOS MESSAGE -> ", dadosMessage)
 
-
+    setSelectedReserva(dadosReserva)
     setSelectedImovel(dadosImovel)
     setSelectedHospede(dadosHospede)
-    setSelectedImovelDb(dadosImovelDb)
-    setSelectedMessage(dadosMessage)
+    setSelectedMessage(dadosMessages)
     setLoadingModal(false)
     // setSelectedReserva(reserva);
-
+    
   };
 
   const handleCloseDialog = () => {
@@ -180,7 +169,7 @@ function DataTable() {
 
 
   const PhoneNumberAccordion = ({ phoneNumber, label }) => (
-    <Accordion variant="outlined">
+    <Accordion>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         <Typography>{label}</Typography>
       </AccordionSummary>
@@ -188,16 +177,11 @@ function DataTable() {
         <p>{ }</p>
 
         <Grid container spacing={2}>
-          <Grid item xs={2}>
+          <Grid item xs={3}>
             <TextField
               label="Número de Telefone"
               name="telefone"
               value={phoneNumber}
-              InputProps={{
-                readOnly: true,
-              }}
-              variant="standard"
-              fullWidth
               margin="normal"
               InputLabelProps={{
                 shrink: true,
@@ -222,38 +206,21 @@ function DataTable() {
 
                     {
                       (() => {
-                        // let status = respDbFull[selectedReserva.idReserva].messages.boasVindas.imovel[tratarTelefone(phoneNumber)]?.status ? respDbFull[selectedReserva.idReserva].messages.boasVindas.imovel[tratarTelefone(phoneNumber)].status : " ";
-                        const status = selectedMessage?.boasVindas[phoneNumber]?.status
-                        //const status = "error";
+                        let status = respDbFull[selectedReserva.idReserva].messages.boasVindas.imovel[tratarTelefone(phoneNumber)]?.status ? respDbFull[selectedReserva.idReserva].messages.boasVindas.imovel[tratarTelefone(phoneNumber)].status : " ";
+
                         switch (status) {
                           case 'done':
-                            return <>
-                              <Chip label="Enviada" color="success" size="small" />
-                          
-                            </>;
+                            return <Chip color="success" label="Enviada" size="small" />;
                           case 'sent':
-                            return <>
-                              <Chip label="Enviada" color="success" size="small" />
-                             
-                            </>;
+                            return <Chip color="success" label="Enviada" size="small" />;
                           case 'fetched':
-                            return <Chip label="Tentando enviar" color="warning" size="small" />;
+                            return <Chip label="Em análise" color="warning" size="small" />;
                           case 'pending':
                             return <Chip label="Em análise" color="warning" size="small" />;
                           case 'error':
-                            return <>
-
-                              <Chip label="Erro de envio" color="error" size="small" />
-                              
-                            </>
-
+                            return <Chip label="Erro de envio" color="error" size="small" />;
                           default:
-                            return <>
-
-                              <Chip label="Não enviada" color="default" size="small" />
-                              
-                            </>
-
+                            return <Chip label="caso desconhecido" color="error" size="small" />;;
                         }
                       })()
                     }
@@ -271,7 +238,7 @@ function DataTable() {
                     Pré Check-In
                   </Typography>
                   <Typography color="text.secondary" variant="body2">
-                    {selectedImovelDb.DIALOGO_PRE_CHECKIN}
+                    {respDbFull[selectedReserva.idReserva].imovelInfo.DIALOGO_PRE_CHECKIN}
                   </Typography>
                 </Box>
                 <Divider light />
@@ -294,7 +261,7 @@ function DataTable() {
                     Pré Check-Out
                   </Typography>
                   <Typography color="text.secondary" variant="body2">
-                    {selectedImovelDb.DIALOGO_PRE_CHECKOUT}
+                    {respDbFull[selectedReserva.idReserva].imovelInfo.DIALOGO_PRE_CHECKOUT}
                   </Typography>
                 </Box>
                 <Divider light />
@@ -317,20 +284,36 @@ function DataTable() {
   );
 
   const resendMessage = async function (idReserva) {
-    try {
-      setLoadingModal(true)
-      const response = await fetch('https://multi-temporada.glitch.me/api/resendMessage/' + idReserva);
-      const dadosMessage = await firebase.getMessage(idReserva)
+    console.log("RESEND MESSAGE!!!")
+    const url = 'https://multi-temporada.glitch.me/api/resendMessage/HK13I';
 
-      if (!response.ok) {
-        throw new Error('Erro ao reenviar mensagem');
-      }
-      setSelectedMessage(dadosMessage)
-      setLoadingModal(false)
-      const data = await response.json(); // ou response.text(), dependendo do tipo de resposta esperada
-      console.log(data);
+    try {
+      // Fazendo a solicitação GET usando fetch e esperando pela resposta
+      const response = await fetch(url);
+
+      //Rechamando os dados do DB
+      const data = await firebase.getReserva(idReserva);
+
+
+      setRespDbFull({
+        ...respDbFull,
+        [idReserva]: {
+          ...respDbFull[idReserva],
+          messages: {
+            ...respDbFull[idReserva].messages,
+            boasVindas: {
+              ...respDbFull[idReserva].messages.boasVindas,
+              hospede: data.messages.boasVindas.hospede,
+            },
+          },
+        },
+      });
+
+      return response
+
     } catch (error) {
-      console.error('Erro:', error);
+      // Lidando com erros durante a solicitação
+      console.error('Erro durante a solicitação:', error);
     }
   }
 
@@ -350,12 +333,13 @@ function DataTable() {
           <CircularProgress color="error" />
         ) : (
           <DataGrid
-            rows={Object.values(allReservas)}
+            rows={Object.values(respDb)}
             columns={columns}
             pageSizeOptions={[5, 10]}
             style={{ cursor: "pointer" }}
-            onRowClick={(params) => handleReservaButtonClick(params.row.id)}
-
+            onRowClick={(params) => handleReservaButtonClick(params.row.idReserva)}
+            // onRowClick={(params) =>  console.log("params ->> ",  params.row)}
+            getRowId={getRowId}
           />
         )}
 
@@ -381,16 +365,12 @@ function DataTable() {
                         <Typography gutterBottom variant="h6" component="div">
                           Dados gerais da reserva
                         </Typography>
-                        <Grid container spacing={6}>
-                          <Grid item xs={6} lg={2.3}>
+                        <Grid container spacing={2}>
+                          <Grid item xs={6} lg={3}>
                             <TextField
                               label="check-in"
                               name="nome"
-                              value={selectedReserva.checkIn}
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard"
+                              value={selectedReserva.checkInDate}
                               fullWidth
                               margin="normal"
                               InputLabelProps={{
@@ -398,14 +378,11 @@ function DataTable() {
                               }}
                             />
                           </Grid>
-                          <Grid item xs={6} lg={2.3}>
+                          <Grid item xs={6} lg={3}>
                             <TextField
                               label="checkout"
                               name="telefone"
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard" value={selectedReserva.checkOut}
+                              value={selectedReserva.checkOutDate}
                               fullWidth
                               margin="normal"
                               InputLabelProps={{
@@ -413,14 +390,11 @@ function DataTable() {
                               }}
                             />
                           </Grid>
-                          <Grid item xs={6} lg={1.4}>
+                          <Grid item xs={6} lg={2}>
                             <TextField
                               label="valor total"
                               name="telefone"
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard" value={selectedReserva.price}
+                              value={selectedReserva.price._f_total}
                               fullWidth
                               margin="normal"
                               InputLabelProps={{
@@ -428,14 +402,11 @@ function DataTable() {
                               }}
                             />
                           </Grid>
-                          <Grid item xs={6} lg={1.4}>
+                          <Grid item xs={6} lg={2}>
                             <TextField
                               label="valor pago"
                               name="telefone"
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard" value={selectedReserva.totalPaid}
+                              value={selectedReserva.stats._f_totalPaid}
                               fullWidth
                               margin="normal"
                               InputLabelProps={{
@@ -444,15 +415,12 @@ function DataTable() {
                             />
                           </Grid>
                         </Grid>
-                        <Grid container spacing={1.4}>
-                          <Grid item xs={1.3}>
+                        <Grid container spacing={2}>
+                          <Grid item xs={2}>
                             <TextField
                               label="id Reserva"
                               name="nome"
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard" value={selectedReserva.id}
+                              value={selectedReserva.id}
                               fullWidth
                               margin="normal"
                               InputLabelProps={{
@@ -464,10 +432,7 @@ function DataTable() {
                             <TextField
                               label="nome do imovel"
                               name="telefone"
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard" value={selectedImovel._mstitle.pt_BR}
+                              value={selectedImovel._mstitle.pt_BR}
                               fullWidth
                               margin="normal"
                               InputLabelProps={{
@@ -475,14 +440,11 @@ function DataTable() {
                               }}
                             />
                           </Grid>
-                          <Grid item xs={1}>
+                          <Grid item xs={2}>
                             <TextField
                               label="nº de adultos"
                               name="nome"
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard" value={selectedReserva.guestsDetails.adults}
+                              value={selectedReserva.guestsDetails.adults}
                               fullWidth
                               margin="normal"
                               InputLabelProps={{
@@ -490,14 +452,11 @@ function DataTable() {
                               }}
                             />
                           </Grid>
-                          <Grid item xs={1}>
+                          <Grid item xs={2}>
                             <TextField
                               label="nº de crianças"
                               name="telefone"
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard" value={selectedReserva.guestsDetails.children}
+                              value={selectedReserva.guestsDetails.children}
                               fullWidth
                               margin="normal"
                               InputLabelProps={{
@@ -518,15 +477,12 @@ function DataTable() {
                           Dados gerais do proprietario
                         </Typography>
 
-                        <Grid container spacing={4}>
+                        <Grid container spacing={2}>
                           <Grid item xs={3}>
                             <TextField
                               label="Nome"
                               name="nome"
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard" value={selectedImovel.owner.name}
+                              value={selectedImovel.owner.name}
                               fullWidth
                               margin="normal"
                               InputLabelProps={{
@@ -534,14 +490,11 @@ function DataTable() {
                               }}
                             />
                           </Grid>
-                          <Grid item xs={2.3}>
+                          <Grid item xs={3}>
                             <TextField
-                              label="Whatsapp 1"
+                              label="Telefone"
                               name="nome"
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard" value={selectedImovelDb.N_WHATSAPP}
+                              value={selectedMessage.N_WHATSAPP}
                               fullWidth
                               margin="normal"
                               InputLabelProps={{
@@ -549,14 +502,11 @@ function DataTable() {
                               }}
                             />
                           </Grid>
-                          <Grid item xs={2.3}>
+                          <Grid item xs={3}>
                             <TextField
-                              label="Whatsapp 2"
+                              label="Telefone 2"
                               name="nome"
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard" defaultValue={selectedImovelDb.N_WHATSAPP2}
+                              defaultValue={selectedMessage.N_WHATSAPP2}
                               fullWidth
                               margin="normal"
                               InputLabelProps={{
@@ -564,14 +514,11 @@ function DataTable() {
                               }}
                             />
                           </Grid>
-                          <Grid item xs={2.3}>
+                          <Grid item xs={3}>
                             <TextField
                               label="Funcionário"
                               name="nome"
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard" value={selectedImovelDb.N_FUNCIONARIO}
+                              value={selectedMessage.N_FUNCIONARIO}
                               fullWidth
                               margin="normal"
                               InputLabelProps={{
@@ -582,31 +529,31 @@ function DataTable() {
                         </Grid>
 
                         <Grid container spacing={0} direction="column">
-                          <Grid item xs={12}>
-                            {selectedImovelDb.N_WHATSAPP && (
-                              <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_WHATSAPP} label="whatsapp 1" />
+                          {/* <Grid item xs={12}>
+                            {respDbFull[selectedReserva.idReserva].imovelInfo.N_WHATSAPP && (
+                              <PhoneNumberAccordion phoneNumber={respDbFull[selectedReserva.idReserva].imovelInfo.N_WHATSAPP} label="whatsapp 1" />
                             )}
                           </Grid>
                           <Grid item xs={12}>
-                            {selectedImovelDb.N_WHATSAPP2 && (
-                              <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_WHATSAPP2} label="whatsapp 2" />
+                            {respDbFull[selectedReserva.idReserva].imovelInfo.N_WHATSAPP2 && (
+                              <PhoneNumberAccordion phoneNumber={respDbFull[selectedReserva.idReserva].imovelInfo.N_WHATSAPP2} label="whatsapp 2" />
                             )}
                           </Grid>
                           <Grid item xs={12}>
-                            {selectedImovelDb.N_WHATSAPP3 && (
-                              <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_WHATSAPP3} label="whatsapp 3" />
+                            {respDbFull[selectedReserva.idReserva].imovelInfo.N_WHATSAPP3 && (
+                              <PhoneNumberAccordion phoneNumber={respDbFull[selectedReserva.idReserva].imovelInfo.N_WHATSAPP3} label="whatsapp 3" />
                             )}
                           </Grid>
                           <Grid item xs={12}>
-                            {selectedImovelDb.N_FUNCIONARIO && (
-                              <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_FUNCIONARIO} label="funcionario" />
+                            {respDbFull[selectedReserva.idReserva].imovelInfo.N_FUNCIONARIO && (
+                              <PhoneNumberAccordion phoneNumber={respDbFull[selectedReserva.idReserva].imovelInfo.N_FUNCIONARIO} label="funcionario" />
                             )}
                           </Grid>
                           <Grid item xs={12}>
-                            {selectedImovelDb.N_PARCEIRO && (
-                              <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_PARCEIRO} label="parceiro" />
+                            {respDbFull[selectedReserva.idReserva].imovelInfo.N_PARCEIRO && (
+                              <PhoneNumberAccordion phoneNumber={respDbFull[selectedReserva.idReserva].imovelInfo.N_PARCEIRO} label="parceiro" />
                             )}
-                          </Grid>
+                          </Grid> */}
                         </Grid>
                       </CardContent>
                       <CardActions>
@@ -627,31 +574,17 @@ function DataTable() {
                               label="Nome do hospede"
                               name="nome"
                               value={selectedHospede.name}
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard"
                               fullWidth
                               margin="normal"
-                              InputLabelProps={{
-                                shrink: true,
-                              }}
                             />
                           </Grid>
-                          <Grid item xs={2}>
+                          <Grid item xs={3}>
                             <TextField
                               label="Telefone"
                               name="nome"
                               value={selectedHospede.phones[0].iso}
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard"
                               fullWidth
                               margin="normal"
-                              InputLabelProps={{
-                                shrink: true,
-                              }}
 
                             />
                           </Grid>
@@ -676,7 +609,7 @@ function DataTable() {
 
                                   {
                                     (() => {
-                                      const status = selectedMessage?.boasVindas[tratarTelefone(selectedHospede.phones[0].iso)]?.status
+                                      const status = "done"
                                       //const status = "error";
                                       switch (status) {
                                         case 'done':
@@ -695,18 +628,12 @@ function DataTable() {
                                           return <Chip label="Em análise" color="warning" size="small" />;
                                         case 'error':
                                           return <>
-
                                             <Chip label="Erro de envio" color="error" size="small" />
                                             <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.id) }} >rechamar hospede</Button>
                                           </>
 
                                         default:
-                                          return <>
-
-                                            <Chip label="Não enviada" color="default" size="small" />
-                                            <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.id) }} >rechamar hospede</Button>
-                                          </>
-
+                                          return <Chip label="caso desconhecido" color="error" size="small" />;;
                                       }
                                     })()
                                   }
@@ -724,7 +651,7 @@ function DataTable() {
                                   Pré Check-In
                                 </Typography>
                                 <Typography color="text.secondary" variant="body2">
-                                  {selectedImovelDb.DIALOGO_PRE_CHECKIN}
+                                  {selectedMessage.DIALOGO_PRE_CHECKIN}
                                 </Typography>
                               </Box>
                               <Divider light />
@@ -747,7 +674,7 @@ function DataTable() {
                                   Pré Check-Out
                                 </Typography>
                                 <Typography color="text.secondary" variant="body2">
-                                  {selectedImovelDb.DIALOGO_PRE_CHECKOUT}
+                                  {selectedMessage.DIALOGO_PRE_CHECKOUT}
                                 </Typography>
                               </Box>
                               <Divider light />
@@ -788,50 +715,9 @@ function DataTable() {
 function transformArrayToObject(array) {
   const transformedObject = {};
   array.forEach(item => {
-    transformedObject[item.id] = item;
+      transformedObject[item.id] = item;
   });
   return transformedObject;
-}
-
-function tratarReservasTabela(originalObject) {
-
-  const transformedObject = {};
-
-  for (const key in originalObject) {
-    if (originalObject.hasOwnProperty(key)) {
-      const reservation = originalObject[key];
-      const newReservation = {
-        id: reservation.id,
-        creationDate: reservation.creationDate,
-        checkIn: formatarData(reservation.checkInDate) + " às " + reservation.checkInTime,
-        checkOut: formatarData(reservation.checkOutDate) + " às " + reservation.checkOutTime,
-        listingId: reservation._idlisting,
-        clientId: reservation._idclient,
-        type: reservation.type,
-        price: "R$ " + reservation.price._f_total,
-        totalPaid: "R$ " + reservation.stats._f_totalPaid,
-        restPaid: "R$ " + (reservation.price._f_total - reservation.stats._f_totalPaid),
-        guests: reservation.guests,
-        guestsDetails: reservation.guestsDetails,
-        partner: {
-          id: reservation.partner._id,
-          name: reservation.partner.name
-        },
-        reservationUrl: reservation.reservationUrl
-      };
-      transformedObject[key] = newReservation;
-    }
-  }
-
-  return transformedObject
-}
-
-function formatarData(data) {
-  const partes = data.split('-');
-  if (partes.length !== 3) return data; // Retorna a data original se não estiver no formato esperado
-
-  const [ano, mes, dia] = partes;
-  return `${dia.padStart(2, '0')}/${mes.padStart(2, '0')}/${ano}`;
 }
 
 function tratarTelefone(telefone) {
