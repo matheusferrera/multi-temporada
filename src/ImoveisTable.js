@@ -45,12 +45,11 @@ function DataTable() {
     { field: 'IDUNIDADE', headerName: 'ID', width: 100 },
     { field: 'PROPIETARIO', headerName: 'Nome do proprietario', width: 250 },
     { field: 'NOME_COMERCIAL', headerName: 'Nome imovel', width: 250 },
-    { field: 'N_WHATSAPP', headerName: 'Whatsapp', width: 150 },
-    { field: 'N_WHATSAPP2', headerName: 'Whatsapp 2', width: 150 },
-    { field: 'N_WHATSAPP3', headerName: 'Whatsapp 3', width: 150 },
-    { field: 'N_FUNCIONARIO', headerName: 'Funcionario', width: 150 },
-    { field: 'N_FUNCIONARIO2', headerName: 'Funcionario 2', width: 150 },
-    { field: 'N_PARCEIRO', headerName: 'Parceiro', width: 150 },
+    { field: 'N_WHATSAPP', headerName: 'Tel. Proprietario', width: 150 },
+    { field: 'N_WHATSAPP2', headerName: 'Tel. Proprietario 2', width: 150 },
+    { field: 'N_WHATSAPP3', headerName: 'Tel. Proprietario 3', width: 150 },
+    { field: 'N_FUNCIONARIO', headerName: 'Tel. Funcionario', width: 150 },
+    { field: 'N_FUNCIONARIO2', headerName: 'Tel. Funcionario 2', width: 150 },
     { field: 'DIALOGO_POS_RESERVA', headerName: 'pos-reserva', width: 200 },
     { field: 'DIALOGO_PRE_CHECKOUT', headerName: 'pre-checkout', width: 200 },
     { field: 'DIALOGO_PRE_CHECKIN', headerName: 'pre-checkin', width: 200 },
@@ -59,6 +58,25 @@ function DataTable() {
   const handleUserButtonClick = (userId) => {
     const user = Object.values(respDb).find((u) => u.IDUNIDADE === userId);
     setSelectedUser(user);
+    setOpenDialog(true);
+  };
+
+  const handleNewReservationButtonClick = () => {
+    let emptyObj =  {
+      "NEW": true,
+      "IDUNIDADE": "",
+      "DIALOGO_PRE_CHECKIN": "",
+      "DIALOGO_PRE_CHECKOUT": "",
+      "DIALOGO_POS_RESERVA":"",
+      "NOME_COMERCIAL": "",
+      "PROPIETARIO": "",
+      "N_WHATSAPP": "",
+      "N_WHATSAPP2": "",
+      "N_WHATSAPP3": "",
+      "N_FUNCIONARIO": "",
+      "N_FUNCIONARIO2": ""
+     }
+    setSelectedUser(emptyObj);
     setOpenDialog(true);
   };
 
@@ -122,9 +140,9 @@ function DataTable() {
             onRowClick={(params) => handleUserButtonClick(params.row.IDUNIDADE)}
             getRowId={getRowId}
           />
-           <Grid container spacing={18}>
-            <Grid item xs={2}>
-            <Button onClick={handleUpdateUser} variant="contained" color="error">
+           <Grid container justifyContent="flex-start" alignItems="start" style={{marginTop: "0.8vh"}}>
+            <Grid item justifyContent="flex-start" alignItems="start">
+            <Button onClick={handleNewReservationButtonClick} variant="outlined" color="error">
               Adicionar novo imovel
             </Button>
             </Grid>
@@ -143,8 +161,12 @@ function DataTable() {
             <div>
 
 
-
-              <DialogTitle>Editar Dados do Imovel - {selectedUser.IDUNIDADE}</DialogTitle>
+          {!selectedUser?.hasOwnProperty("NEW") ? (
+                  <DialogTitle>Editar Dados do Imovel - {selectedUser.IDUNIDADE}</DialogTitle>
+                ) : ( 
+                  <DialogTitle>Criar novo imovel</DialogTitle>
+                )}
+              
               <DialogContent>
                 {loadingModal ? (
                   <div style={{ widht: "100%", height: "100%", display: "flex", justifyContent: "center" }}>
@@ -152,6 +174,26 @@ function DataTable() {
                   </div>
                 ) : (
                   <div>
+
+                    {selectedUser?.hasOwnProperty("NEW") && (
+                        <Grid container spacing={2}>
+                          <Grid item xs={3}>
+                            <TextField
+                              label="Id da unidade"
+                              name="IDUNIDADE"
+                              value={selectedUser.IDUNIDADE}
+                              onChange={handleInputChange}
+                              fullWidth
+                              margin="normal"
+                              InputLabelProps={{
+                                shrink: true,
+                              }}
+                            />
+                          </Grid>
+                        </Grid>
+                      )
+                    }
+
                     <Grid container spacing={2}>
                       <Grid item xs={6}>
                         <TextField
@@ -161,6 +203,9 @@ function DataTable() {
                           onChange={handleInputChange}
                           fullWidth
                           margin="normal"
+                          InputLabelProps={{
+                            shrink: true,
+                          }}
                         />
                       </Grid>
                       <Grid item xs={6}>
@@ -171,6 +216,9 @@ function DataTable() {
                           onChange={handleInputChange}
                           fullWidth
                           margin="normal"
+                          InputLabelProps={{
+                            shrink: true,
+                          }}
                         />
                       </Grid>
                     </Grid>
@@ -190,24 +238,28 @@ function DataTable() {
                       </Grid>
                       <Grid item xs={4}>
                         <TextField
-                          disabled
                           label="Dialogo de check-in"
                           name="DIALOGO_PRE_CHECKIN"
                           value={selectedUser.DIALOGO_PRE_CHECKIN}
                           onChange={handleInputChange}
                           fullWidth
                           margin="normal"
+                          InputLabelProps={{
+                            shrink: true,
+                          }}
                         />
                       </Grid>
                       <Grid item xs={4}>
                         <TextField
-                          disabled
                           label="Dialogo de check-out"
                           name="DIALOGO_PRE_CHECKOUT"
                           value={selectedUser.DIALOGO_PRE_CHECKOUT}
                           onChange={handleInputChange}
                           fullWidth
                           margin="normal"
+                          InputLabelProps={{
+                            shrink: true,
+                          }}
                         />
                       </Grid>
                     </Grid>
@@ -240,7 +292,7 @@ function DataTable() {
                       </Grid>
                       <Grid item xs={4}>
                         <TextField
-                          label="whatsapp 3"
+                          label="propietario 3"
                           name="N_WHATSAPP3"
                           value={selectedUser.N_WHATSAPP3}
                           onChange={handleInputChange}
@@ -288,9 +340,16 @@ function DataTable() {
 
           <DialogActions>
             <Button onClick={handleCloseDialog} color="error">Fechar</Button>
-            <Button onClick={handleUpdateUser} variant="contained" color="error">
-              Atualizar
+            {!selectedUser?.hasOwnProperty("NEW") ? (
+                  <Button onClick={handleUpdateUser} variant="contained" color="error">
+                  Atualizar
+                </Button>
+                ) : ( 
+                  <Button onClick={handleUpdateUser} variant="contained" color="error">
+              Adicionar novo imovel
             </Button>
+                )}
+            
           </DialogActions>
         </Dialog>
       </div>
