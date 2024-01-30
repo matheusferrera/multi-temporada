@@ -26,7 +26,9 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
+import { DatePicker } from '@mui/x-date-pickers/DatePicker'
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
 
 
 function DataTable() {
@@ -42,6 +44,7 @@ function DataTable() {
   const [selectedImovel, setSelectedImovel] = useState({})
   const [selectedMessage, setSelectedMessage] = useState({})
   const [selectedImovelDb, setSelectedImovelDb] = useState({})
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -229,12 +232,12 @@ function DataTable() {
                           case 'done':
                             return <>
                               <Chip label="Enviada" color="success" size="small" />
-                          
+
                             </>;
                           case 'sent':
                             return <>
                               <Chip label="Enviada" color="success" size="small" />
-                             
+
                             </>;
                           case 'fetched':
                             return <Chip label="Tentando enviar" color="warning" size="small" />;
@@ -244,14 +247,14 @@ function DataTable() {
                             return <>
 
                               <Chip label="Erro de envio" color="error" size="small" />
-                              
+
                             </>
 
                           default:
                             return <>
 
                               <Chip label="Não enviada" color="default" size="small" />
-                              
+
                             </>
 
                         }
@@ -338,7 +341,17 @@ function DataTable() {
   return (
     <div style={{ height: "100%", width: '100%', display: "flex", justifyContent: "center", alignItems: "center" }}>
       <div style={{ height: "74vh", width: 'min-content' }}>
+      <Grid container justifyContent="flex-start" alignItems="start" style={{marginBottom: "0.8vh"}}>
+            <Grid item justifyContent="flex-start" alignItems="start">
+            <Button variant="outlined" color="error">
+              Adicionar novo imovel
+            </Button>
+            </Grid>
+            </Grid>
 
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <DatePicker />
+          </LocalizationProvider>
         <Snackbar
           open={openSnack}
           autoHideDuration={2000}
@@ -717,7 +730,7 @@ function DataTable() {
 
                           </Grid>
                           {selectedImovelDb.hasOwnProperty("DIALOGO_POS_RESERVA") && (
-                              <Grid item xs={4}>
+                            <Grid item xs={4}>
 
                               <Card variant="outlined">
                                 <Box sx={{ p: 2 }}>
@@ -725,14 +738,14 @@ function DataTable() {
                                     Pós reserva
                                   </Typography>
                                   <Typography color="text.secondary" variant="body2">
-                                  id - {selectedImovelDb.DIALOGO_POS_RESERVA}
+                                    id - {selectedImovelDb.DIALOGO_POS_RESERVA}
                                   </Typography>
                                 </Box>
                                 <Divider light />
                                 <Box sx={{ p: 2 }}>
 
                                   <Stack direction="row" spacing={1}>
-  
+
                                     {
                                       (() => {
                                         const status = selectedMessage?.posReserva2
@@ -754,29 +767,29 @@ function DataTable() {
                                             return <Chip label="Em análise" color="warning" size="small" />;
                                           case 'error':
                                             return <>
-  
+
                                               <Chip label="Erro de envio" color="error" size="small" />
                                               <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.id) }} >rechamar hospede</Button>
                                             </>
-  
+
                                           default:
                                             return <>
-  
+
                                               <Chip label="Não enviada" color="default" size="small" />
                                               <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.id) }} >rechamar hospede</Button>
                                             </>
-  
+
                                         }
                                       })()
                                     }
-  
+
                                   </Stack>
                                 </Box>
                               </Card>
-  
+
                             </Grid>
                           )}
-                          
+
                           <Grid item xs={4}>
 
                             <Card variant="outlined">
@@ -785,7 +798,7 @@ function DataTable() {
                                   Pré Check-In
                                 </Typography>
                                 <Typography color="text.secondary" variant="body2">
-                                id - {selectedImovelDb.DIALOGO_PRE_CHECKIN}
+                                  id - {selectedImovelDb.DIALOGO_PRE_CHECKIN}
                                 </Typography>
                               </Box>
                               <Divider light />
@@ -808,7 +821,7 @@ function DataTable() {
                                   Pré Check-Out
                                 </Typography>
                                 <Typography color="text.secondary" variant="body2">
-                                id - {selectedImovelDb.DIALOGO_PRE_CHECKOUT}
+                                  id - {selectedImovelDb.DIALOGO_PRE_CHECKOUT}
                                 </Typography>
                               </Box>
                               <Divider light />
