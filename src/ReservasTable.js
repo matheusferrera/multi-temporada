@@ -223,7 +223,7 @@ function DataTable() {
                     {
                       (() => {
                         // let status = respDbFull[selectedReserva.idReserva].messages.boasVindas.imovel[tratarTelefone(phoneNumber)]?.status ? respDbFull[selectedReserva.idReserva].messages.boasVindas.imovel[tratarTelefone(phoneNumber)].status : " ";
-                        const status = selectedMessage?.boasVindas[phoneNumber]?.status
+                        const status = selectedMessage?.boasVindas[tratarTelefone(phoneNumber)]?.status
                         //const status = "error";
                         switch (status) {
                           case 'done':
@@ -716,6 +716,67 @@ function DataTable() {
                             </Card>
 
                           </Grid>
+                          {selectedImovelDb.hasOwnProperty("DIALOGO_POS_RESERVA") && (
+                              <Grid item xs={4}>
+
+                              <Card variant="outlined">
+                                <Box sx={{ p: 2 }}>
+                                  <Typography color="text.primary" variant="body1">
+                                    Pós reserva
+                                  </Typography>
+                                  <Typography color="text.secondary" variant="body2">
+                                  id - {selectedImovelDb.DIALOGO_POS_RESERVA}
+                                  </Typography>
+                                </Box>
+                                <Divider light />
+                                <Box sx={{ p: 2 }}>
+
+                                  <Stack direction="row" spacing={1}>
+  
+                                    {
+                                      (() => {
+                                        const status = selectedMessage?.posReserva2
+                                        //const status = "error";
+                                        switch (status) {
+                                          case 'done':
+                                            return <>
+                                              <Chip label="Enviada" color="success" size="small" />
+                                              <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.id) }} >rechamar hospede</Button>
+                                            </>;
+                                          case 'sent':
+                                            return <>
+                                              <Chip label="Enviada" color="success" size="small" />
+                                              <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.id) }} >rechamar hospede</Button>
+                                            </>;
+                                          case 'fetched':
+                                            return <Chip label="Em análise" color="warning" size="small" />;
+                                          case 'pending':
+                                            return <Chip label="Em análise" color="warning" size="small" />;
+                                          case 'error':
+                                            return <>
+  
+                                              <Chip label="Erro de envio" color="error" size="small" />
+                                              <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.id) }} >rechamar hospede</Button>
+                                            </>
+  
+                                          default:
+                                            return <>
+  
+                                              <Chip label="Não enviada" color="default" size="small" />
+                                              <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.id) }} >rechamar hospede</Button>
+                                            </>
+  
+                                        }
+                                      })()
+                                    }
+  
+                                  </Stack>
+                                </Box>
+                              </Card>
+  
+                            </Grid>
+                          )}
+                          
                           <Grid item xs={4}>
 
                             <Card variant="outlined">
@@ -724,7 +785,7 @@ function DataTable() {
                                   Pré Check-In
                                 </Typography>
                                 <Typography color="text.secondary" variant="body2">
-                                  {selectedImovelDb.DIALOGO_PRE_CHECKIN}
+                                id - {selectedImovelDb.DIALOGO_PRE_CHECKIN}
                                 </Typography>
                               </Box>
                               <Divider light />
@@ -747,7 +808,7 @@ function DataTable() {
                                   Pré Check-Out
                                 </Typography>
                                 <Typography color="text.secondary" variant="body2">
-                                  {selectedImovelDb.DIALOGO_PRE_CHECKOUT}
+                                id - {selectedImovelDb.DIALOGO_PRE_CHECKOUT}
                                 </Typography>
                               </Box>
                               <Divider light />
@@ -766,7 +827,7 @@ function DataTable() {
 
                       </CardContent>
                       <CardActions>
-                        <Button size="small" color="error" href={"https://ssmt.stays.com.br/i/account-overview/" + selectedHospede.id} target="_blank">Ver perfil stays</Button>
+                        <Button size="small" color="error" href={"https://ssmt.stays.com.br/i/account-overview/" + selectedHospede._id} target="_blank">Ver perfil stays</Button>
                       </CardActions>
                     </Card>
 
