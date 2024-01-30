@@ -29,10 +29,15 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
-
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import dayjs from 'dayjs';
 
 function DataTable() {
   const [selectedReserva, setSelectedReserva] = useState(null);
+  const [selectedId, setSelectedId] = useState(null);
   const [openDialog, setOpenDialog] = useState(false);
 
   const [loadingTable, setLoadingTable] = useState(true);
@@ -45,6 +50,9 @@ function DataTable() {
   const [selectedMessage, setSelectedMessage] = useState({})
   const [selectedImovelDb, setSelectedImovelDb] = useState({})
 
+  const [dataInicial, setDataInicial] = useState('2024-04-29')
+  const [dataFinal, setDataFinal] = useState('2024-05-02')
+  const [dataType, setDataType] = useState("arrival")
 
   useEffect(() => {
     const fetchData = async () => {
@@ -169,6 +177,11 @@ function DataTable() {
       ...prevUser,
       [name]: value,
     }));
+  };
+
+  const handleIdChange = (e) => {
+    const { name, value } = e.target;
+    setSelectedId(value);
   };
 
   const getRowId = (row) => row.idReserva;
@@ -337,21 +350,160 @@ function DataTable() {
     }
   }
 
+  const handleChangeDataInicial = (newDate) => {
+    console.log("NEW DATA ->", newDate.format("YYYY-MM-DD"))
+    setDataInicial(newDate.format("YYYY-MM-DD"));
+  };
+
+  const handleChangeDataFinal = (newDate) => {
+    setDataFinal(newDate.format("YYYY-MM-DD"));
+  };
+
+  const handleChangeDataType = (event) => {
+    setDataType(event.target.value);
+  };
+
+  const searchNewReservation = async () => {
+    setLoadingTable(true);
+
+    try {
+      let allReservasFetch = await Service.getAllReservation(dataInicial, dataFinal, dataType);
+      allReservasFetch = transformArrayToObject(allReservasFetch);
+      let allReservasTratada = tratarReservasTabela(allReservasFetch);
+
+      setAllReservas(allReservasTratada);
+
+      console.log("RESERVAS TRATADAS ->", allReservasTratada);
+
+      // Verifica se o número de reservas tratadas é maior que 19
+      if (Object.keys(allReservasTratada).length > 19) {
+        console.log("BUSCAR NOVAS RESERVAS!!!!");
+        await fetchNewReservations(20); // Inicia a busca com um limite de 20
+      }
+      await processarReservas();
+    } catch (error) {
+      console.error('Erro ao obter dados do Firebase:', error);
+    } finally {
+      setLoadingTable(false);
+    }
+  };
+  const processarReservas = async () => {
+    const novasReservas = {};
+    console.log("ALL RESERVAS ->", allReservas)
+    await Promise.all(
+      Object.values(allReservas).map(async (reserva) => {
+        console.log("PROCURANDO DADOS DA RESERVA ->", reserva);
+        try {
+          let imovelInfo = await Service.getImovel(reserva.listingId);
+          let hospedeInfo = await Service.getClient(reserva.clientId);
+
+          novasReservas[reserva.id] = {
+            ...reserva,
+            idImovel: imovelInfo.id,
+            idHospede: hospedeInfo.name,
+          };
+        } catch (error) {
+          console.error("Erro ao processar reserva:", error);
+          // Lida com o erro, se necessário
+        }
+      })
+    );
+
+    setAllReservas((prevReservas) => ({ ...prevReservas, ...novasReservas }));
+  }
+
+
+
+  const fetchNewReservations = async (limit) => {
+    try {
+      let newReservasFetch = await Service.getAllReservation(dataInicial, dataFinal, dataType, limit);
+      newReservasFetch = transformArrayToObject(newReservasFetch);
+      let newReservasTratada = tratarReservasTabela(newReservasFetch);
+
+      setAllReservas((prevAllReservas) => ({ ...prevAllReservas, ...newReservasTratada }));
+
+      console.log("ALL RESERVAS ->", allReservas)
+      console.log(`NOVAS RESERVAS TRATADAS (${limit}) ->`, newReservasTratada);
+
+      // Verifica se o número de novas reservas tratadas é maior que 19
+      if (Object.keys(newReservasTratada).length > 19) {
+        // Se sim, chama recursivamente a função com um limite maior (dobrando o limite)
+        await fetchNewReservations(limit * 2);
+      }
+    } catch (error) {
+      console.error('Erro ao obter novas reservas do Firebase:', error);
+    }
+  };
 
   return (
     <div style={{ height: "100%", width: '100%', display: "flex", justifyContent: "center", alignItems: "center" }}>
-      <div style={{ height: "74vh", width: 'min-content' }}>
-      <Grid container justifyContent="flex-start" alignItems="start" style={{marginBottom: "0.8vh"}}>
-            <Grid item justifyContent="flex-start" alignItems="start">
-            <Button variant="outlined" color="error">
-              Adicionar novo imovel
-            </Button>
-            </Grid>
-            </Grid>
-
+      <div style={{ height: "74vh", width: "100%" }}>
+        <Grid fullWidth container spacing={2} justifyContent="start" alignItems="center" style={{ marginBottom: "0.8vh" }}>
+          <Grid item xs={2} justifyContent="start" alignItems="start">
+            <LocalizationProvider size="small" dateAdapter={AdapterDayjs}>
+              <DatePicker
+                slotProps={{ textField: { size: 'small' } }}
+                format="DD/MM/YYYY"
+                label="Data inicial"
+                defaultValue={dayjs(dataInicial)}
+                onChange={handleChangeDataInicial}
+              />
+            </LocalizationProvider>
+          </Grid>
+          <Grid item xs={2} justifyContent="start" alignItems="start">
             <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <DatePicker />
-          </LocalizationProvider>
+              <DatePicker
+                slotProps={{ textField: { size: 'small' } }}
+                format="DD/MM/YYYY"
+                label="Data final"
+                defaultValue={dayjs(dataFinal)}
+                onChange={handleChangeDataFinal}
+              />
+
+            </LocalizationProvider>
+          </Grid>
+          <Grid item xs={2} justifyContent="start" alignItems="start">
+            <FormControl fullWidth>
+              <InputLabel id="demo-simple-select-label">Tipo</InputLabel>
+              <Select
+                size="small"
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={dataType}
+                defaultValue={"arrival"}
+                label="Tipo"
+                onChange={handleChangeDataType}
+              >
+                <MenuItem value={"arrival"}>Check-in</MenuItem>
+                <MenuItem value={"departure"}>check-out</MenuItem>
+              </Select>
+            </FormControl>
+          </Grid>
+          <Grid item xs={2} justifyContent="start" alignItems="start">
+            <Button variant="outlined" onClick={searchNewReservation} color="error">
+              Refiltrar tabela
+            </Button>
+          </Grid>
+          <Grid item xs={2} justifyContent="start" alignItems="start">
+            <TextField
+              label="Pesquisar reserva"
+              size="small"
+              name="idReserva"
+              value={selectedId}
+              onChange={handleIdChange}
+              fullWidth
+              margin="normal"
+              InputLabelProps={{
+                shrink: true,
+              }}
+            />
+          </Grid>
+          <Grid item xs={2} justifyContent="start" alignItems="start">
+            <Button variant="outlined" onClick={() => handleReservaButtonClick(selectedId)} color="error">
+              Buscar reserva
+            </Button>
+          </Grid>
+        </Grid>
         <Snackbar
           open={openSnack}
           autoHideDuration={2000}

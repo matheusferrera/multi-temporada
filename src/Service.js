@@ -39,9 +39,14 @@ async function getImovel(idListening) {
   }
 }
 
-async function getAllReservation(checkin, checkout, dateType) {
-  const url = "https://multi-temporada.glitch.me/api/getAllReservas/"+checkin+"/"+checkout+"/"+dateType+"";
-
+async function getAllReservation(checkin, checkout, dateType, skip) {
+  
+  if(skip == null){
+    skip = 0
+  }
+  
+  let url = "https://multi-temporada.glitch.me/api/getAllReservas/"+checkin+"/"+checkout+"/"+dateType+"/"+skip
+  
 
   try {
     const response = await axios.get(url);
