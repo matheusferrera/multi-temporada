@@ -50,47 +50,27 @@ function DataTable() {
   const [selectedMessage, setSelectedMessage] = useState({})
   const [selectedImovelDb, setSelectedImovelDb] = useState({})
 
-  const [dataInicial, setDataInicial] = useState('2024-04-29')
-  const [dataFinal, setDataFinal] = useState('2024-05-02')
+  const [dataInicial, setDataInicial] = useState(obterData(0))
+  const [dataFinal, setDataFinal] = useState(obterData(2))
   const [dataType, setDataType] = useState("arrival")
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let allReservasFetch = await Service.getAllReservation("2024-04-29", "2024-05-02", "arrival")
+        let allReservasFetch = await Service.getAllReservation(obterData(0), obterData(2), "arrival")
         allReservasFetch = transformArrayToObject(allReservasFetch)
         let allReservasTratada = tratarReservasTabela(allReservasFetch)
 
-
         setAllReservas(allReservasTratada)
-        setLoadingTable(false);
 
-        let novoAllReservasTratada = { ...allReservasTratada }
-        async function processarReservas() {
-          for (const reserva of Object.values(novoAllReservasTratada)) {
-            try {
-              let imovelInfo = await Service.getImovel(reserva.listingId);
-              let hospedeInfo = await Service.getClient(reserva.clientId);
-
-
-              if (!novoAllReservasTratada[reserva.id].hasOwnProperty("idImovel") && !novoAllReservasTratada[reserva.id].hasOwnProperty("idHospede")) {
-                novoAllReservasTratada[reserva.id] = {
-                  ...novoAllReservasTratada[reserva.id],
-                  idImovel: imovelInfo.id,
-                  idHospede: hospedeInfo.name,
-                };
-                setAllReservas(novoAllReservasTratada);
-              }
-
-
-            } catch (error) {
-              console.error("Erro ao processar reserva:", error);
-              // Lida com o erro, se necessário
-            }
-          }
+        // Verifica se o número de reservas tratadas é maior que 19
+        if (Object.keys(allReservasTratada).length > 19) {
+          console.log("BUSCAR NOVAS RESERVAS!!!!");
+          await fetchNewReservations(20); // Inicia a busca com um limite de 20
         }
 
-        processarReservas();
+
+        setLoadingTable(false);
 
 
 
@@ -107,22 +87,6 @@ function DataTable() {
 
   const columns = [
     { field: 'id', headerName: 'id reserva', width: 100 },
-    {
-      field: 'idImovel',
-      headerName: 'id imovel',
-      width: 70,
-      renderCell: (params) => params.value ? params.value : <><Box sx={{ width: '100%' }}>
-        <LinearProgress color="error" />
-      </Box></>
-    },
-    {
-      field: 'idHospede',
-      headerName: 'nome hospede',
-      width: 150,
-      renderCell: (params) => params.value ? params.value : <><Box sx={{ width: '100%' }}>
-        <LinearProgress color="error" />
-      </Box></>
-    },
     { field: 'checkIn', headerName: 'check-in', width: 250 },
     { field: 'checkOut', headerName: 'check-out', width: 250 },
     { field: 'price', headerName: 'valor total', width: 125 },
@@ -134,31 +98,30 @@ function DataTable() {
     setOpenDialog(true);
     setLoadingModal(true)
 
-    console.log("RESERVA SELECIONADA -> ", reservaId)
-    const reservaSelect = Object.values(allReservas).find((u) => u.id === reservaId);
-    console.log("Dados da reserva selecionada ->", reservaSelect)
-
-    setSelectedReserva(reservaSelect)
-
-    const dadosReserva = reservaSelect
-    const dadosHospede = await Service.getClient(dadosReserva.clientId)
-    const dadosImovel = await Service.getImovel(dadosReserva.listingId)
-    const dadosImovelDb = await firebase.getImovel(dadosImovel.id)
-    const dadosMessage = await firebase.getMessage(dadosReserva.id)
-
+    const dadosReserva = await Service.getReserva(reservaId)
     console.log("DADOS DA RESERVA -> ", dadosReserva)
-    console.log("DADOS IMOVEL -> ", dadosImovel)
-    console.log("DADOS IMOVEL DB -> ", dadosImovelDb)
-    console.log("DADOS HOSPEDE -> ", dadosHospede)
-    console.log("DADOS MESSAGE -> ", dadosMessage)
+
+    if (dadosReserva?.status == 404 || dadosReserva == undefined) {
+      console.log("Reserva", reservaId, "nao encontrada")
+      setSelectedReserva(-1)
+      setLoadingModal(false)
+      return
+    } else {
+      setSelectedReserva(tratarReservasTabela({ dadosReserva }))
+      const dadosHospede = await Service.getClient(dadosReserva._idclient)
+      const dadosImovel = await Service.getImovel(dadosReserva._idlisting)
+      const dadosImovelDb = await firebase.getImovel(dadosImovel.id)
+      const dadosMessage = await firebase.getMessage(dadosReserva.id)
 
 
-    setSelectedImovel(dadosImovel)
-    setSelectedHospede(dadosHospede)
-    setSelectedImovelDb(dadosImovelDb)
-    setSelectedMessage(dadosMessage)
-    setLoadingModal(false)
-    // setSelectedReserva(reserva);
+      setSelectedImovel(dadosImovel)
+      setSelectedHospede(dadosHospede)
+      setSelectedImovelDb(dadosImovelDb)
+      setSelectedMessage(dadosMessage)
+      setLoadingModal(false)
+      // setSelectedReserva(reserva);
+    }
+
 
   };
 
@@ -373,44 +336,19 @@ function DataTable() {
 
       setAllReservas(allReservasTratada);
 
-      console.log("RESERVAS TRATADAS ->", allReservasTratada);
 
       // Verifica se o número de reservas tratadas é maior que 19
       if (Object.keys(allReservasTratada).length > 19) {
         console.log("BUSCAR NOVAS RESERVAS!!!!");
         await fetchNewReservations(20); // Inicia a busca com um limite de 20
       }
-      await processarReservas();
+
     } catch (error) {
       console.error('Erro ao obter dados do Firebase:', error);
     } finally {
       setLoadingTable(false);
     }
   };
-  const processarReservas = async () => {
-    const novasReservas = {};
-    console.log("ALL RESERVAS ->", allReservas)
-    await Promise.all(
-      Object.values(allReservas).map(async (reserva) => {
-        console.log("PROCURANDO DADOS DA RESERVA ->", reserva);
-        try {
-          let imovelInfo = await Service.getImovel(reserva.listingId);
-          let hospedeInfo = await Service.getClient(reserva.clientId);
-
-          novasReservas[reserva.id] = {
-            ...reserva,
-            idImovel: imovelInfo.id,
-            idHospede: hospedeInfo.name,
-          };
-        } catch (error) {
-          console.error("Erro ao processar reserva:", error);
-          // Lida com o erro, se necessário
-        }
-      })
-    );
-
-    setAllReservas((prevReservas) => ({ ...prevReservas, ...novasReservas }));
-  }
 
 
 
@@ -475,7 +413,8 @@ function DataTable() {
                 onChange={handleChangeDataType}
               >
                 <MenuItem value={"arrival"}>Check-in</MenuItem>
-                <MenuItem value={"departure"}>check-out</MenuItem>
+                <MenuItem value={"departure"}>Check-out</MenuItem>
+                <MenuItem value={"creation"}>Data de criação</MenuItem>
               </Select>
             </FormControl>
           </Grid>
@@ -491,15 +430,11 @@ function DataTable() {
               name="idReserva"
               value={selectedId}
               onChange={handleIdChange}
-              fullWidth
               margin="normal"
-              InputLabelProps={{
-                shrink: true,
-              }}
             />
           </Grid>
           <Grid item xs={2} justifyContent="start" alignItems="start">
-            <Button variant="outlined" onClick={() => handleReservaButtonClick(selectedId)} color="error">
+            <Button variant="outlined" onClick={() => handleReservaButtonClick(selectedId.toUpperCase())} color="error">
               Buscar reserva
             </Button>
           </Grid>
@@ -533,471 +468,499 @@ function DataTable() {
 
 
 
-              <DialogTitle>Dados da reserva - {selectedReserva.id}</DialogTitle>
+              <DialogTitle>Dados da reserva - {selectedId}</DialogTitle>
               <DialogContent>
                 {loadingModal ? (
                   <div style={{ widht: "100%", height: "100%", display: "flex", justifyContent: "center" }}>
                     <CircularProgress color="error" />
                   </div>
                 ) : (
+
                   <div>
-                    <Card fullWidth variant="outlined">
-                      <CardContent>
-                        <Typography gutterBottom variant="h6" component="div">
-                          Dados gerais da reserva
-                        </Typography>
-                        <Grid container spacing={6}>
-                          <Grid item xs={6} lg={2.3}>
-                            <TextField
-                              label="check-in"
-                              name="nome"
-                              value={selectedReserva.checkIn}
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard"
-                              fullWidth
-                              margin="normal"
-                              InputLabelProps={{
-                                shrink: true,
-                              }}
-                            />
-                          </Grid>
-                          <Grid item xs={6} lg={2.3}>
-                            <TextField
-                              label="checkout"
-                              name="telefone"
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard" value={selectedReserva.checkOut}
-                              fullWidth
-                              margin="normal"
-                              InputLabelProps={{
-                                shrink: true,
-                              }}
-                            />
-                          </Grid>
-                          <Grid item xs={6} lg={1.4}>
-                            <TextField
-                              label="valor total"
-                              name="telefone"
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard" value={selectedReserva.price}
-                              fullWidth
-                              margin="normal"
-                              InputLabelProps={{
-                                shrink: true,
-                              }}
-                            />
-                          </Grid>
-                          <Grid item xs={6} lg={1.4}>
-                            <TextField
-                              label="valor pago"
-                              name="telefone"
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard" value={selectedReserva.totalPaid}
-                              fullWidth
-                              margin="normal"
-                              InputLabelProps={{
-                                shrink: true,
-                              }}
-                            />
-                          </Grid>
-                        </Grid>
-                        <Grid container spacing={1.4}>
-                          <Grid item xs={1.3}>
-                            <TextField
-                              label="id Reserva"
-                              name="nome"
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard" value={selectedReserva.id}
-                              fullWidth
-                              margin="normal"
-                              InputLabelProps={{
-                                shrink: true,
-                              }}
-                            />
-                          </Grid>
-                          <Grid item xs={6}>
-                            <TextField
-                              label="nome do imovel"
-                              name="telefone"
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard" value={selectedImovel._mstitle.pt_BR}
-                              fullWidth
-                              margin="normal"
-                              InputLabelProps={{
-                                shrink: true,
-                              }}
-                            />
-                          </Grid>
-                          <Grid item xs={1}>
-                            <TextField
-                              label="nº de adultos"
-                              name="nome"
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard" value={selectedReserva.guestsDetails.adults}
-                              fullWidth
-                              margin="normal"
-                              InputLabelProps={{
-                                shrink: true,
-                              }}
-                            />
-                          </Grid>
-                          <Grid item xs={1}>
-                            <TextField
-                              label="nº de crianças"
-                              name="telefone"
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard" value={selectedReserva.guestsDetails.children}
-                              fullWidth
-                              margin="normal"
-                              InputLabelProps={{
-                                shrink: true,
-                              }}
-                            />
-                          </Grid>
-                        </Grid>
-                        <CardActions>
-                          <Button size="small" color="error" href={"https://www.multitemporada.com/i/reservation/" + selectedReserva.id} target="_blank">Ver detalhes da reserva</Button>
-                        </CardActions>
-                      </CardContent>
-                    </Card>
-                    <Divider sx={{ margin: "30px" }}></Divider>
-                    <Card fullWidth variant="outlined" >
-                      <CardContent>
-                        <Typography gutterBottom variant="h6" component="div">
-                          Dados gerais do proprietario
-                        </Typography>
+                    {selectedReserva == -1 ? (
+                      <Card fullWidth variant="outlined" justifyContent="center">
+                        <CardContent>
+                          <Typography gutterBottom variant="h5" textAlign="center" component="div">
+                            Reserva {selectedId} Não encontrada!
+                          </Typography>
+                        </CardContent>
+                      </Card>
+                    ) : (
+                      <div>
+                        <Card fullWidth variant="outlined">
 
-                        <Grid container spacing={4}>
-                          <Grid item xs={3}>
-                            <TextField
-                              label="Nome"
-                              name="nome"
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard" value={selectedImovel.owner.name}
-                              fullWidth
-                              margin="normal"
-                              InputLabelProps={{
-                                shrink: true,
-                              }}
-                            />
-                          </Grid>
-                          <Grid item xs={2.3}>
-                            <TextField
-                              label="Whatsapp 1"
-                              name="nome"
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard" value={selectedImovelDb.N_WHATSAPP}
-                              fullWidth
-                              margin="normal"
-                              InputLabelProps={{
-                                shrink: true,
-                              }}
-                            />
-                          </Grid>
-                          <Grid item xs={2.3}>
-                            <TextField
-                              label="Whatsapp 2"
-                              name="nome"
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard" defaultValue={selectedImovelDb.N_WHATSAPP2}
-                              fullWidth
-                              margin="normal"
-                              InputLabelProps={{
-                                shrink: true,
-                              }}
-                            />
-                          </Grid>
-                          <Grid item xs={2.3}>
-                            <TextField
-                              label="Funcionário"
-                              name="nome"
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard" value={selectedImovelDb.N_FUNCIONARIO}
-                              fullWidth
-                              margin="normal"
-                              InputLabelProps={{
-                                shrink: true,
-                              }}
-                            />
-                          </Grid>
-                        </Grid>
+                          <CardContent>
+                            <Typography gutterBottom variant="h6" component="div">
+                              Dados gerais da reserva
+                            </Typography>
+                            <Grid container spacing={6}>
+                            <Grid item xs={1.3}>
+                                <TextField
+                                  label="id Reserva"
+                                  name="nome"
+                                  InputProps={{
+                                    readOnly: true,
+                                  }}
+                                  variant="standard" value={selectedReserva.dadosReserva.id}
+                                  fullWidth
+                                  margin="normal"
+                                  InputLabelProps={{
+                                    shrink: true,
+                                  }}
+                                />
+                              </Grid>
+                              <Grid item xs={6} lg={2.3}>
+                                <TextField
+                                  label="check-in"
+                                  name="nome"
+                                  value={selectedReserva.dadosReserva.checkIn}
+                                  InputProps={{
+                                    readOnly: true,
+                                  }}
+                                  variant="standard"
+                                  fullWidth
+                                  margin="normal"
+                                  InputLabelProps={{
+                                    shrink: true,
+                                  }}
+                                />
+                              </Grid>
+                              <Grid item xs={6} lg={2.3}>
+                                <TextField
+                                  label="checkout"
+                                  name="telefone"
+                                  InputProps={{
+                                    readOnly: true,
+                                  }}
+                                  variant="standard" value={selectedReserva.dadosReserva.checkOut}
+                                  fullWidth
+                                  margin="normal"
+                                  InputLabelProps={{
+                                    shrink: true,
+                                  }}
+                                />
+                              </Grid>
+                              <Grid item xs={6} lg={1.4}>
+                                <TextField
+                                  label="valor total"
+                                  name="telefone"
+                                  InputProps={{
+                                    readOnly: true,
+                                  }}
+                                  variant="standard" value={selectedReserva.dadosReserva.price}
+                                  fullWidth
+                                  margin="normal"
+                                  InputLabelProps={{
+                                    shrink: true,
+                                  }}
+                                />
+                              </Grid>
+                              <Grid item xs={6} lg={1.4}>
+                                <TextField
+                                  label="valor pago"
+                                  name="telefone"
+                                  InputProps={{
+                                    readOnly: true,
+                                  }}
+                                  variant="standard" value={selectedReserva.dadosReserva.totalPaid}
+                                  fullWidth
+                                  margin="normal"
+                                  InputLabelProps={{
+                                    shrink: true,
+                                  }}
+                                />
+                              </Grid>
+                            </Grid>
+                            <Grid container spacing={1.4}>
+                              <Grid item xs={1.3}>
+                                <TextField
+                                  label="ID Imovel"
+                                  name="nome"
+                                  InputProps={{
+                                    readOnly: true,
+                                  }}
+                                  variant="standard" value={selectedImovel.id}
+                                  fullWidth
+                                  margin="normal"
+                                  InputLabelProps={{
+                                    shrink: true,
+                                  }}
+                                />
+                              </Grid>
+                              <Grid item xs={6}>
+                                <TextField
+                                  label="nome do imovel"
+                                  name="telefone"
+                                  InputProps={{
+                                    readOnly: true,
+                                  }}
+                                  variant="standard" value={selectedImovel._mstitle.pt_BR}
+                                  fullWidth
+                                  margin="normal"
+                                  InputLabelProps={{
+                                    shrink: true,
+                                  }}
+                                />
+                              </Grid>
+                              <Grid item xs={1}>
+                                <TextField
+                                  label="nº de adultos"
+                                  name="nome"
+                                  InputProps={{
+                                    readOnly: true,
+                                  }}
+                                  variant="standard" value={selectedReserva.dadosReserva.guestsDetails?.adults}
+                                  fullWidth
+                                  margin="normal"
+                                  InputLabelProps={{
+                                    shrink: true,
+                                  }}
+                                />
+                              </Grid>
+                              <Grid item xs={1}>
+                                <TextField
+                                  label="nº de crianças"
+                                  name="telefone"
+                                  InputProps={{
+                                    readOnly: true,
+                                  }}
+                                  variant="standard" value={selectedReserva.dadosReserva.guestsDetails?.children}
+                                  fullWidth
+                                  margin="normal"
+                                  InputLabelProps={{
+                                    shrink: true,
+                                  }}
+                                />
+                              </Grid>
+                            </Grid>
+                            <CardActions>
+                              <Button size="small" color="error" href={"https://www.multitemporada.com/i/reservation/" + selectedReserva.dadosReserva.id} target="_blank">Ver detalhes da reserva</Button>
+                            </CardActions>
+                          </CardContent>
+                        </Card>
+                        <Divider sx={{ margin: "30px" }}></Divider>
+                        <Card fullWidth variant="outlined" >
+                          <CardContent>
+                            <Typography gutterBottom variant="h6" component="div">
+                              Dados gerais do proprietario
+                            </Typography>
 
-                        <Grid container spacing={0} direction="column">
-                          <Grid item xs={12}>
-                            {selectedImovelDb.N_WHATSAPP && (
-                              <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_WHATSAPP} label="whatsapp 1" />
-                            )}
-                          </Grid>
-                          <Grid item xs={12}>
-                            {selectedImovelDb.N_WHATSAPP2 && (
-                              <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_WHATSAPP2} label="whatsapp 2" />
-                            )}
-                          </Grid>
-                          <Grid item xs={12}>
-                            {selectedImovelDb.N_WHATSAPP3 && (
-                              <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_WHATSAPP3} label="whatsapp 3" />
-                            )}
-                          </Grid>
-                          <Grid item xs={12}>
-                            {selectedImovelDb.N_FUNCIONARIO && (
-                              <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_FUNCIONARIO} label="funcionario" />
-                            )}
-                          </Grid>
-                          <Grid item xs={12}>
-                            {selectedImovelDb.N_PARCEIRO && (
-                              <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_PARCEIRO} label="parceiro" />
-                            )}
-                          </Grid>
-                        </Grid>
-                      </CardContent>
-                      <CardActions>
-                        <Button size="small" color="error" href={"https://www.multitemporada.com/pt/apartment/" + selectedImovel.id} target="_blank">Ver detalhes do imovel</Button>
-                      </CardActions>
+                            <Grid container spacing={4}>
+                              <Grid item xs={3}>
+                                <TextField
+                                  label="Nome"
+                                  name="nome"
+                                  InputProps={{
+                                    readOnly: true,
+                                  }}
+                                  variant="standard" value={selectedImovel.owner.name}
+                                  fullWidth
+                                  margin="normal"
+                                  InputLabelProps={{
+                                    shrink: true,
+                                  }}
+                                />
+                              </Grid>
+                              <Grid item xs={2.3}>
+                                <TextField
+                                  label="Whatsapp 1"
+                                  name="nome"
+                                  InputProps={{
+                                    readOnly: true,
+                                  }}
+                                  variant="standard" value={selectedImovelDb.N_WHATSAPP}
+                                  fullWidth
+                                  margin="normal"
+                                  InputLabelProps={{
+                                    shrink: true,
+                                  }}
+                                />
+                              </Grid>
+                              <Grid item xs={2.3}>
+                                <TextField
+                                  label="Whatsapp 2"
+                                  name="nome"
+                                  InputProps={{
+                                    readOnly: true,
+                                  }}
+                                  variant="standard" defaultValue={selectedImovelDb.N_WHATSAPP2}
+                                  fullWidth
+                                  margin="normal"
+                                  InputLabelProps={{
+                                    shrink: true,
+                                  }}
+                                />
+                              </Grid>
+                              <Grid item xs={2.3}>
+                                <TextField
+                                  label="Funcionário"
+                                  name="nome"
+                                  InputProps={{
+                                    readOnly: true,
+                                  }}
+                                  variant="standard" value={selectedImovelDb.N_FUNCIONARIO}
+                                  fullWidth
+                                  margin="normal"
+                                  InputLabelProps={{
+                                    shrink: true,
+                                  }}
+                                />
+                              </Grid>
+                            </Grid>
 
-
-                    </Card>
-                    <Divider sx={{ margin: "30px" }}></Divider>
-                    <Card fullWidth variant="outlined" >
-                      <CardContent>
-                        <Typography gutterBottom variant="h6" component="div">
-                          Dados gerais do hospede
-                        </Typography>
-                        <Grid container spacing={2}>
-                          <Grid item xs={4}>
-                            <TextField
-                              label="Nome do hospede"
-                              name="nome"
-                              value={selectedHospede.name}
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard"
-                              fullWidth
-                              margin="normal"
-                              InputLabelProps={{
-                                shrink: true,
-                              }}
-                            />
-                          </Grid>
-                          <Grid item xs={2}>
-                            <TextField
-                              label="Telefone"
-                              name="nome"
-                              value={selectedHospede.phones[0].iso}
-                              InputProps={{
-                                readOnly: true,
-                              }}
-                              variant="standard"
-                              fullWidth
-                              margin="normal"
-                              InputLabelProps={{
-                                shrink: true,
-                              }}
-
-                            />
-                          </Grid>
+                            <Grid container spacing={0} direction="column">
+                              <Grid item xs={12}>
+                                {selectedImovelDb.N_WHATSAPP && (
+                                  <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_WHATSAPP} label="whatsapp 1" />
+                                )}
+                              </Grid>
+                              <Grid item xs={12}>
+                                {selectedImovelDb.N_WHATSAPP2 && (
+                                  <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_WHATSAPP2} label="whatsapp 2" />
+                                )}
+                              </Grid>
+                              <Grid item xs={12}>
+                                {selectedImovelDb.N_WHATSAPP3 && (
+                                  <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_WHATSAPP3} label="whatsapp 3" />
+                                )}
+                              </Grid>
+                              <Grid item xs={12}>
+                                {selectedImovelDb.N_FUNCIONARIO && (
+                                  <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_FUNCIONARIO} label="funcionario" />
+                                )}
+                              </Grid>
+                              <Grid item xs={12}>
+                                {selectedImovelDb.N_PARCEIRO && (
+                                  <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_PARCEIRO} label="parceiro" />
+                                )}
+                              </Grid>
+                            </Grid>
+                          </CardContent>
+                          <CardActions>
+                            <Button size="small" color="error" href={"https://www.multitemporada.com/pt/apartment/" + selectedImovel.id} target="_blank">Ver detalhes do imovel</Button>
+                          </CardActions>
 
 
-                        </Grid>
-                        <Grid container spacing={2}>
-                          <Grid item xs={4}>
+                        </Card>
+                        <Divider sx={{ margin: "30px" }}></Divider>
+                        <Card fullWidth variant="outlined" >
+                          <CardContent>
+                            <Typography gutterBottom variant="h6" component="div">
+                              Dados gerais do hospede
+                            </Typography>
+                            <Grid container spacing={2}>
+                              <Grid item xs={4}>
+                                <TextField
+                                  label="Nome do hospede"
+                                  name="nome"
+                                  value={selectedHospede.name}
+                                  InputProps={{
+                                    readOnly: true,
+                                  }}
+                                  variant="standard"
+                                  fullWidth
+                                  margin="normal"
+                                  InputLabelProps={{
+                                    shrink: true,
+                                  }}
+                                />
+                              </Grid>
+                              <Grid item xs={2}>
+                                <TextField
+                                  label="Telefone"
+                                  name="nome"
+                                  value={selectedHospede.phones[0].iso}
+                                  InputProps={{
+                                    readOnly: true,
+                                  }}
+                                  variant="standard"
+                                  fullWidth
+                                  margin="normal"
+                                  InputLabelProps={{
+                                    shrink: true,
+                                  }}
 
-                            <Card variant="outlined">
-                              <Box sx={{ p: 2 }}>
-                                <Typography color="text.primary" variant="body1">
-                                  Confirmação de reserva
-                                </Typography>
-                                <Typography color="text.secondary" variant="body2">
-                                  <br />
-                                </Typography>
-                              </Box>
-                              <Divider light />
-                              <Box sx={{ p: 2 }}>
-                                <Stack direction="row" spacing={1}>
+                                />
+                              </Grid>
 
-                                  {
-                                    (() => {
-                                      const status = selectedMessage?.boasVindas[tratarTelefone(selectedHospede.phones[0].iso)]?.status
-                                      //const status = "error";
-                                      switch (status) {
-                                        case 'done':
-                                          return <>
-                                            <Chip label="Enviada" color="success" size="small" />
-                                            <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.id) }} >rechamar hospede</Button>
-                                          </>;
-                                        case 'sent':
-                                          return <>
-                                            <Chip label="Enviada" color="success" size="small" />
-                                            <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.id) }} >rechamar hospede</Button>
-                                          </>;
-                                        case 'fetched':
-                                          return <Chip label="Em análise" color="warning" size="small" />;
-                                        case 'pending':
-                                          return <Chip label="Em análise" color="warning" size="small" />;
-                                        case 'error':
-                                          return <>
-
-                                            <Chip label="Erro de envio" color="error" size="small" />
-                                            <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.id) }} >rechamar hospede</Button>
-                                          </>
-
-                                        default:
-                                          return <>
-
-                                            <Chip label="Não enviada" color="default" size="small" />
-                                            <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.id) }} >rechamar hospede</Button>
-                                          </>
-
-                                      }
-                                    })()
-                                  }
-
-                                </Stack>
-                              </Box>
-                            </Card>
-
-                          </Grid>
-                          {selectedImovelDb.hasOwnProperty("DIALOGO_POS_RESERVA") && (
-                            <Grid item xs={4}>
-
-                              <Card variant="outlined">
-                                <Box sx={{ p: 2 }}>
-                                  <Typography color="text.primary" variant="body1">
-                                    Pós reserva
-                                  </Typography>
-                                  <Typography color="text.secondary" variant="body2">
-                                    id - {selectedImovelDb.DIALOGO_POS_RESERVA}
-                                  </Typography>
-                                </Box>
-                                <Divider light />
-                                <Box sx={{ p: 2 }}>
-
-                                  <Stack direction="row" spacing={1}>
-
-                                    {
-                                      (() => {
-                                        const status = selectedMessage?.posReserva2
-                                        //const status = "error";
-                                        switch (status) {
-                                          case 'done':
-                                            return <>
-                                              <Chip label="Enviada" color="success" size="small" />
-                                              <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.id) }} >rechamar hospede</Button>
-                                            </>;
-                                          case 'sent':
-                                            return <>
-                                              <Chip label="Enviada" color="success" size="small" />
-                                              <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.id) }} >rechamar hospede</Button>
-                                            </>;
-                                          case 'fetched':
-                                            return <Chip label="Em análise" color="warning" size="small" />;
-                                          case 'pending':
-                                            return <Chip label="Em análise" color="warning" size="small" />;
-                                          case 'error':
-                                            return <>
-
-                                              <Chip label="Erro de envio" color="error" size="small" />
-                                              <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.id) }} >rechamar hospede</Button>
-                                            </>
-
-                                          default:
-                                            return <>
-
-                                              <Chip label="Não enviada" color="default" size="small" />
-                                              <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.id) }} >rechamar hospede</Button>
-                                            </>
-
-                                        }
-                                      })()
-                                    }
-
-                                  </Stack>
-                                </Box>
-                              </Card>
 
                             </Grid>
-                          )}
+                            <Grid container spacing={2}>
+                              <Grid item xs={4}>
 
-                          <Grid item xs={4}>
+                                <Card variant="outlined">
+                                  <Box sx={{ p: 2 }}>
+                                    <Typography color="text.primary" variant="body1">
+                                      Confirmação de reserva
+                                    </Typography>
+                                    <Typography color="text.secondary" variant="body2">
+                                      <br />
+                                    </Typography>
+                                  </Box>
+                                  <Divider light />
+                                  <Box sx={{ p: 2 }}>
+                                    <Stack direction="row" spacing={1}>
 
-                            <Card variant="outlined">
-                              <Box sx={{ p: 2 }}>
-                                <Typography color="text.primary" variant="body1">
-                                  Pré Check-In
-                                </Typography>
-                                <Typography color="text.secondary" variant="body2">
-                                  id - {selectedImovelDb.DIALOGO_PRE_CHECKIN}
-                                </Typography>
-                              </Box>
-                              <Divider light />
-                              <Box sx={{ p: 2 }}>
-                                <Stack direction="row" spacing={1}>
-                                  {/* <Chip color="success" label="Enviada" size="small" /> */}
-                                  {/* <Chip label="Em analise" color="warning" size="small" /> */}
-                                  {/* <Chip label="Erro de envio" color="error" size="small" /> */}
-                                  <Chip label="Aguardando" size="small" />
-                                </Stack>
-                              </Box>
-                            </Card>
+                                      {
+                                        (() => {
+                                          const status = selectedMessage?.boasVindas[tratarTelefone(selectedHospede.phones[0].iso)]?.status
+                                          //const status = "error";
+                                          switch (status) {
+                                            case 'done':
+                                              return <>
+                                                <Chip label="Enviada" color="success" size="small" />
+                                                <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.dadosReserva.id) }} >rechamar hospede</Button>
+                                              </>;
+                                            case 'sent':
+                                              return <>
+                                                <Chip label="Enviada" color="success" size="small" />
+                                                <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.dadosReserva.id) }} >rechamar hospede</Button>
+                                              </>;
+                                            case 'fetched':
+                                              return <Chip label="Em análise" color="warning" size="small" />;
+                                            case 'pending':
+                                              return <Chip label="Em análise" color="warning" size="small" />;
+                                            case 'error':
+                                              return <>
 
-                          </Grid>
-                          <Grid item xs={4}>
+                                                <Chip label="Erro de envio" color="error" size="small" />
+                                                <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.dadosReserva.id) }} >rechamar hospede</Button>
+                                              </>
 
-                            <Card variant="outlined">
-                              <Box sx={{ p: 2 }}>
-                                <Typography color="text.primary" variant="body1">
-                                  Pré Check-Out
-                                </Typography>
-                                <Typography color="text.secondary" variant="body2">
-                                  id - {selectedImovelDb.DIALOGO_PRE_CHECKOUT}
-                                </Typography>
-                              </Box>
-                              <Divider light />
-                              <Box sx={{ p: 2 }}>
-                                <Stack direction="row" spacing={1}>
-                                  {/* <Chip color="success" label="Enviada" size="small" /> */}
-                                  {/* <Chip label="Em analise" color="warning" size="small" /> */}
-                                  {/* <Chip label="Erro de envio" color="error" size="small" /> */}
-                                  <Chip label="Aguardando" size="small" />
-                                </Stack>
-                              </Box>
-                            </Card>
+                                            default:
+                                              return <>
 
-                          </Grid>
-                        </Grid>
+                                                <Chip label="Não enviada" color="default" size="small" />
+                                                <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.dadosReserva.id) }} >rechamar hospede</Button>
+                                              </>
 
-                      </CardContent>
-                      <CardActions>
-                        <Button size="small" color="error" href={"https://ssmt.stays.com.br/i/account-overview/" + selectedHospede._id} target="_blank">Ver perfil stays</Button>
-                      </CardActions>
-                    </Card>
+                                          }
+                                        })()
+                                      }
 
-                  </div>)}
-                {/* Adicione mais campos conforme necessário */}
+                                    </Stack>
+                                  </Box>
+                                </Card>
+
+                              </Grid>
+                              {selectedImovelDb.hasOwnProperty("DIALOGO_POS_RESERVA") && (
+                                <Grid item xs={4}>
+
+                                  <Card variant="outlined">
+                                    <Box sx={{ p: 2 }}>
+                                      <Typography color="text.primary" variant="body1">
+                                        Pós reserva
+                                      </Typography>
+                                      <Typography color="text.secondary" variant="body2">
+                                        id - {selectedImovelDb.DIALOGO_POS_RESERVA}
+                                      </Typography>
+                                    </Box>
+                                    <Divider light />
+                                    <Box sx={{ p: 2 }}>
+
+                                      <Stack direction="row" spacing={1}>
+
+                                        {
+                                          (() => {
+                                            const status = selectedMessage?.posReserva2
+                                            //const status = "error";
+                                            switch (status) {
+                                              case 'done':
+                                                return <>
+                                                  <Chip label="Enviada" color="success" size="small" />
+                                                  <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.dadosReserva.id) }} >rechamar hospede</Button>
+                                                </>;
+                                              case 'sent':
+                                                return <>
+                                                  <Chip label="Enviada" color="success" size="small" />
+                                                  <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.dadosReserva.id) }} >rechamar hospede</Button>
+                                                </>;
+                                              case 'fetched':
+                                                return <Chip label="Em análise" color="warning" size="small" />;
+                                              case 'pending':
+                                                return <Chip label="Em análise" color="warning" size="small" />;
+                                              case 'error':
+                                                return <>
+
+                                                  <Chip label="Erro de envio" color="error" size="small" />
+                                                  <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.dadosReserva.id) }} >rechamar hospede</Button>
+                                                </>
+
+                                              default:
+                                                return <>
+
+                                                  <Chip label="Não enviada" color="default" size="small" />
+                                                  <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.dadosReserva.id) }} >rechamar hospede</Button>
+                                                </>
+
+                                            }
+                                          })()
+                                        }
+
+                                      </Stack>
+                                    </Box>
+                                  </Card>
+
+                                </Grid>
+                              )}
+
+                              <Grid item xs={4}>
+
+                                <Card variant="outlined">
+                                  <Box sx={{ p: 2 }}>
+                                    <Typography color="text.primary" variant="body1">
+                                      Pré Check-In
+                                    </Typography>
+                                    <Typography color="text.secondary" variant="body2">
+                                      id - {selectedImovelDb.DIALOGO_PRE_CHECKIN}
+                                    </Typography>
+                                  </Box>
+                                  <Divider light />
+                                  <Box sx={{ p: 2 }}>
+                                    <Stack direction="row" spacing={1}>
+                                      {/* <Chip color="success" label="Enviada" size="small" /> */}
+                                      {/* <Chip label="Em analise" color="warning" size="small" /> */}
+                                      {/* <Chip label="Erro de envio" color="error" size="small" /> */}
+                                      <Chip label="Aguardando" size="small" />
+                                    </Stack>
+                                  </Box>
+                                </Card>
+
+                              </Grid>
+                              <Grid item xs={4}>
+
+                                <Card variant="outlined">
+                                  <Box sx={{ p: 2 }}>
+                                    <Typography color="text.primary" variant="body1">
+                                      Pré Check-Out
+                                    </Typography>
+                                    <Typography color="text.secondary" variant="body2">
+                                      id - {selectedImovelDb.DIALOGO_PRE_CHECKOUT}
+                                    </Typography>
+                                  </Box>
+                                  <Divider light />
+                                  <Box sx={{ p: 2 }}>
+                                    <Stack direction="row" spacing={1}>
+                                      {/* <Chip color="success" label="Enviada" size="small" /> */}
+                                      {/* <Chip label="Em analise" color="warning" size="small" /> */}
+                                      {/* <Chip label="Erro de envio" color="error" size="small" /> */}
+                                      <Chip label="Aguardando" size="small" />
+                                    </Stack>
+                                  </Box>
+                                </Card>
+
+                              </Grid>
+                            </Grid>
+
+                          </CardContent>
+                          <CardActions>
+                            <Button size="small" color="error" href={"https://ssmt.stays.com.br/i/account-overview/" + selectedHospede._id} target="_blank">Ver perfil stays</Button>
+                          </CardActions>
+                        </Card>
+                      </div>
+                    )}
+                  </div>
+                )}
               </DialogContent>
             </div>
           )}
@@ -1050,6 +1013,21 @@ function tratarReservasTabela(originalObject) {
   }
 
   return transformedObject
+}
+
+function obterData(diasAdicionais) {
+  const dataAtual = new Date();
+
+  // Adiciona dias adicionais à data atual
+  dataAtual.setDate(dataAtual.getDate() + diasAdicionais);
+
+  const ano = dataAtual.getFullYear();
+  const mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); // Adiciona zero à esquerda se for menor que 10
+  const dia = String(dataAtual.getDate()).padStart(2, '0'); // Adiciona zero à esquerda se for menor que 10
+
+  const dataFormatada = `${ano}-${mes}-${dia}`;
+
+  return dataFormatada;
 }
 
 function formatarData(data) {

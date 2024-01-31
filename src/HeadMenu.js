@@ -161,7 +161,7 @@ export default function HeadMenu() {
           </ListItem>
           <Divider />
           <ListItem key={"Erros"} disablePadding>
-            <ListItemButton color="error" >
+            <ListItemButton color="error" onClick={() => window.location.href = '/erros'} >
               <ListItemIcon>
                 <ErrorOutlineOutlinedIcon color="error" />
               </ListItemIcon>
