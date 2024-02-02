@@ -113,7 +113,7 @@ function DataTable() {
       const dadosImovelDb = await firebase.getImovel(dadosImovel.id)
       const dadosMessage = await firebase.getMessage(dadosReserva.id)
 
-
+      console.log("DADOS IMOVEL DB ->", dadosImovelDb)
       setSelectedImovel(dadosImovel)
       setSelectedHospede(dadosHospede)
       setSelectedImovelDb(dadosImovelDb)
@@ -202,7 +202,7 @@ function DataTable() {
                     {
                       (() => {
                         // let status = respDbFull[selectedReserva.idReserva].messages.boasVindas.imovel[tratarTelefone(phoneNumber)]?.status ? respDbFull[selectedReserva.idReserva].messages.boasVindas.imovel[tratarTelefone(phoneNumber)].status : " ";
-                        const status = selectedMessage?.boasVindas[tratarTelefone(phoneNumber)]?.status
+                        const status = selectedMessage?.boasVindas[tratarTelefone(phoneNumber.toString())]?.status
                         //const status = "error";
                         switch (status) {
                           case 'done':
@@ -468,7 +468,7 @@ function DataTable() {
 
 
 
-              <DialogTitle>Dados da reserva - {selectedId}</DialogTitle>
+              <DialogTitle>Dados da reserva</DialogTitle>
               <DialogContent>
                 {loadingModal ? (
                   <div style={{ widht: "100%", height: "100%", display: "flex", justifyContent: "center" }}>

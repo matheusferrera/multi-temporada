@@ -90,6 +90,7 @@ function DataTable() {
                       id,
                       chaveExterna,
                       chaveInterna: tratarStatus(chaveInterna),
+                      messageId: parametro[telefone].messageId,
                       telefone,
                     });
                   }
@@ -121,7 +122,8 @@ function DataTable() {
   const columns = [
     { field: 'chaveExterna', headerName: 'Reserva', width: 100 },
     { field: 'chaveInterna', headerName: 'Dialogo', width: 250 },
-    { field: 'telefone', headerName: 'Telefone', width: 150 }
+    { field: 'telefone', headerName: 'Telefone', width: 150 },
+    {field: 'messageId', headerName: 'Motivo', width: 300 }
   ];
 
   const handleReservaButtonClick = async (idReserva) => {
