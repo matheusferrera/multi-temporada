@@ -106,10 +106,12 @@ function DataTable() {
         };
         
         const erros = encontrarErros(dataMessage);
+        const errosFiltrado = erros.filter(objeto => objeto.chaveInterna != 'Dialogo de pós reserva');
         
         console.log("Parâmetros com erro:", erros);
+        console.log("Parâmetros com erro filtrado:", errosFiltrado);
 
-        setRespDb(erros);
+        setRespDb(errosFiltrado);
         setLoadingTable(false);
       } catch (error) {
         console.error('Erro ao obter dados do Firebase:', error);
@@ -842,7 +844,7 @@ function tratarStatus(stats){
     case "boasVindas":
         return "Boas vindas"
         case "posReserva":
-          return "Pós boas vindas"
+          return "Dialogo Pós boas vindas"
           case "posReserva2":
         return "Dialogo de pós reserva"
     default:
