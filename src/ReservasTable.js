@@ -158,7 +158,7 @@ function DataTable() {
   };
 
 
-  const PhoneNumberAccordion = ({ phoneNumber, label }) => (
+  const PhoneNumberAccordion = ({ phoneNumber, label, idReserva }) => (
     <Accordion variant="outlined">
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         <Typography>{label}</Typography>
@@ -208,12 +208,12 @@ function DataTable() {
                           case 'done':
                             return <>
                               <Chip label="Enviada" color="success" size="small" />
-
+                              <Button size="small" color="error" onClick={() => { resendMessageUser(idReserva, phoneNumber.toString()) }} >rechamar usuário</Button>
                             </>;
                           case 'sent':
                             return <>
                               <Chip label="Enviada" color="success" size="small" />
-
+                              <Button size="small" color="error" onClick={() => { resendMessageUser(idReserva, phoneNumber.toString())  }} >rechamar usuário</Button>
                             </>;
                           case 'fetched':
                             return <Chip label="Tentando enviar" color="warning" size="small" />;
@@ -223,14 +223,14 @@ function DataTable() {
                             return <>
 
                               <Chip label="Erro de envio" color="error" size="small" />
-
+                              <Button size="small" color="error" onClick={() => { resendMessageUser(idReserva, phoneNumber.toString())  }} >rechamar usuário</Button>
                             </>
 
                           default:
                             return <>
 
                               <Chip label="Não enviada" color="default" size="small" />
-
+                              <Button size="small" color="error" onClick={() => { resendMessageUser(idReserva, phoneNumber.toString())  }} >rechamar usuário</Button>
                             </>
 
                         }
@@ -299,6 +299,24 @@ function DataTable() {
     try {
       setLoadingModal(true)
       const response = await fetch('https://multi-temporada.glitch.me/api/resendMessage/' + idReserva);
+      const dadosMessage = await firebase.getMessage(idReserva)
+
+      if (!response.ok) {
+        throw new Error('Erro ao reenviar mensagem');
+      }
+      setSelectedMessage(dadosMessage)
+      setLoadingModal(false)
+      const data = await response.json(); // ou response.text(), dependendo do tipo de resposta esperada
+      console.log(data);
+    } catch (error) {
+      console.error('Erro:', error);
+    }
+  }
+
+  const resendMessageUser = async function (idReserva, phoneNumber) {
+    try {
+      setLoadingModal(true)
+      const response = await fetch('https://multi-temporada.glitch.me/api/resendMessagePhone/' + idReserva + "/" + phoneNumber);
       const dadosMessage = await firebase.getMessage(idReserva)
 
       if (!response.ok) {
@@ -711,27 +729,27 @@ function DataTable() {
                             <Grid container spacing={0} direction="column">
                               <Grid item xs={12}>
                                 {selectedImovelDb.N_WHATSAPP && (
-                                  <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_WHATSAPP} label="whatsapp 1" />
+                                  <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_WHATSAPP} idReserva={selectedReserva.dadosReserva.id} label="whatsapp 1" />
                                 )}
                               </Grid>
                               <Grid item xs={12}>
                                 {selectedImovelDb.N_WHATSAPP2 && (
-                                  <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_WHATSAPP2} label="whatsapp 2" />
+                                  <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_WHATSAPP2} idReserva={selectedReserva.dadosReserva.id} label="whatsapp 2" />
                                 )}
                               </Grid>
                               <Grid item xs={12}>
                                 {selectedImovelDb.N_WHATSAPP3 && (
-                                  <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_WHATSAPP3} label="whatsapp 3" />
+                                  <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_WHATSAPP3} idReserva={selectedReserva.dadosReserva.id} label="whatsapp 3" />
                                 )}
                               </Grid>
                               <Grid item xs={12}>
                                 {selectedImovelDb.N_FUNCIONARIO && (
-                                  <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_FUNCIONARIO} label="funcionario" />
+                                  <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_FUNCIONARIO} idReserva={selectedReserva.dadosReserva.id} label="funcionario" />
                                 )}
                               </Grid>
                               <Grid item xs={12}>
                                 {selectedImovelDb.N_PARCEIRO && (
-                                  <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_PARCEIRO} label="parceiro" />
+                                  <PhoneNumberAccordion phoneNumber={selectedImovelDb.N_PARCEIRO} idReserva={selectedReserva.dadosReserva.id} label="parceiro" />
                                 )}
                               </Grid>
                             </Grid>

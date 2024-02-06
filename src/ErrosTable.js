@@ -90,7 +90,7 @@ function DataTable() {
                       id,
                       chaveExterna,
                       chaveInterna: tratarStatus(chaveInterna),
-                      messageId: parametro[telefone].messageId,
+                      messageId: parametro[telefone].messageId ? parametro[telefone].messageId : parametro[telefone].chatId ,
                       telefone,
                     });
                   }
