@@ -198,12 +198,7 @@ function DataTable() {
                 <Divider light />
                 <Box sx={{ p: 2 }} id="boxMessage">
                   <Stack direction="row" spacing={1}>
-                  <p> TELEFONE DONO - { 
-                      tratarTelefone(phoneNumber.toString()) == tratarTelefone(selectedImovelDb?.N_WHATSAPP) ? "true" : 
-                      tratarTelefone(phoneNumber.toString()) == tratarTelefone(selectedImovelDb?.N_WHATSAPP2) ? "true" : 
-                      tratarTelefone(phoneNumber.toString()) == tratarTelefone(selectedImovelDb?.N_WHATSAPP3) ? "true" : 
-                      "false"
-                  }</p>
+    
 
                     {
                       (() => {
