@@ -198,22 +198,33 @@ function DataTable() {
                 <Divider light />
                 <Box sx={{ p: 2 }} id="boxMessage">
                   <Stack direction="row" spacing={1}>
+                  <p> TELEFONE DONO - { 
+                      tratarTelefone(phoneNumber.toString()) == tratarTelefone(selectedImovelDb?.N_WHATSAPP) ? "true" : 
+                      tratarTelefone(phoneNumber.toString()) == tratarTelefone(selectedImovelDb?.N_WHATSAPP2) ? "true" : 
+                      tratarTelefone(phoneNumber.toString()) == tratarTelefone(selectedImovelDb?.N_WHATSAPP3) ? "true" : 
+                      "false"
+                  }</p>
 
                     {
                       (() => {
                         // let status = respDbFull[selectedReserva.idReserva].messages.boasVindas.imovel[tratarTelefone(phoneNumber)]?.status ? respDbFull[selectedReserva.idReserva].messages.boasVindas.imovel[tratarTelefone(phoneNumber)].status : " ";
                         const status = selectedMessage?.boasVindas[tratarTelefone(phoneNumber.toString())]?.status
+                        const dono = tratarTelefone(phoneNumber.toString()) == tratarTelefone(selectedImovelDb?.N_WHATSAPP) ? "true" : 
+                        tratarTelefone(phoneNumber.toString()) == tratarTelefone(selectedImovelDb?.N_WHATSAPP2) ? "true" : 
+                        tratarTelefone(phoneNumber.toString()) == tratarTelefone(selectedImovelDb?.N_WHATSAPP3) ? "true" : 
+                        "false"
+                        
                         //const status = "error";
                         switch (status) {
                           case 'done':
                             return <>
                               <Chip label="Enviada" color="success" size="small" />
-                              <Button size="small" color="error" onClick={() => { resendMessageUser(idReserva, phoneNumber.toString()) }} >rechamar usuário</Button>
+                              <Button size="small" color="error" onClick={() => { dono ? resendMessageUser(idReserva, phoneNumber.toString()) : resendMessageFunci(idReserva, phoneNumber.toString()) }} >rechamar usuário</Button>
                             </>;
                           case 'sent':
                             return <>
                               <Chip label="Enviada" color="success" size="small" />
-                              <Button size="small" color="error" onClick={() => { resendMessageUser(idReserva, phoneNumber.toString())  }} >rechamar usuário</Button>
+                              <Button size="small" color="error" onClick={() => { dono ? resendMessageUser(idReserva, phoneNumber.toString()) : resendMessageFunci(idReserva, phoneNumber.toString()) }} >rechamar usuário</Button>
                             </>;
                           case 'fetched':
                             return <Chip label="Tentando enviar" color="warning" size="small" />;
@@ -223,14 +234,14 @@ function DataTable() {
                             return <>
 
                               <Chip label="Erro de envio" color="error" size="small" />
-                              <Button size="small" color="error" onClick={() => { resendMessageUser(idReserva, phoneNumber.toString())  }} >rechamar usuário</Button>
+                              <Button size="small" color="error" onClick={() => { dono ? resendMessageUser(idReserva, phoneNumber.toString()) : resendMessageFunci(idReserva, phoneNumber.toString()) }}  >rechamar usuário</Button>
                             </>
 
                           default:
                             return <>
 
                               <Chip label="Não enviada" color="default" size="small" />
-                              <Button size="small" color="error" onClick={() => { resendMessageUser(idReserva, phoneNumber.toString())  }} >rechamar usuário</Button>
+                              <Button size="small" color="error" onClick={() => { dono ? resendMessageUser(idReserva, phoneNumber.toString()) : resendMessageFunci(idReserva, phoneNumber.toString()) }} >rechamar usuário</Button>
                             </>
 
                         }
@@ -242,52 +253,8 @@ function DataTable() {
               </Card>
 
             </Grid>
-            <Grid item xs={4}>
+            
 
-              <Card variant="outlined">
-                <Box sx={{ p: 2 }}>
-                  <Typography color="text.primary" variant="body1">
-                    Pré Check-In
-                  </Typography>
-                  <Typography color="text.secondary" variant="body2">
-                    {selectedImovelDb.DIALOGO_PRE_CHECKIN}
-                  </Typography>
-                </Box>
-                <Divider light />
-                <Box sx={{ p: 2 }}>
-                  <Stack direction="row" spacing={1}>
-                    {/* <Chip color="success" label="Enviada" size="small" /> */}
-                    {/* <Chip label="Em analise" color="warning" size="small" /> */}
-                    {/* <Chip label="Erro de envio" color="error" size="small" /> */}
-                    <Chip label="Aguardando" size="small" />
-                  </Stack>
-                </Box>
-              </Card>
-
-            </Grid>
-            <Grid item xs={4}>
-
-              <Card variant="outlined">
-                <Box sx={{ p: 2 }}>
-                  <Typography color="text.primary" variant="body1">
-                    Pré Check-Out
-                  </Typography>
-                  <Typography color="text.secondary" variant="body2">
-                    {selectedImovelDb.DIALOGO_PRE_CHECKOUT}
-                  </Typography>
-                </Box>
-                <Divider light />
-                <Box sx={{ p: 2 }}>
-                  <Stack direction="row" spacing={1}>
-                    {/* <Chip color="success" label="Enviada" size="small" /> */}
-                    {/* <Chip label="Em analise" color="warning" size="small" /> */}
-                    {/* <Chip label="Erro de envio" color="error" size="small" /> */}
-                    <Chip label="Aguardando" size="small" />
-                  </Stack>
-                </Box>
-              </Card>
-
-            </Grid>
           </Grid>
           {/* Adicione mais campos conforme necessário */}
         </Grid>
@@ -314,6 +281,24 @@ function DataTable() {
   }
 
   const resendMessageUser = async function (idReserva, phoneNumber) {
+    try {
+      setLoadingModal(true)
+      const response = await fetch('https://multi-temporada.glitch.me/api/resendMessagePhone/' + idReserva + "/" + phoneNumber);
+      const dadosMessage = await firebase.getMessage(idReserva)
+
+      if (!response.ok) {
+        throw new Error('Erro ao reenviar mensagem');
+      }
+      setSelectedMessage(dadosMessage)
+      setLoadingModal(false)
+      const data = await response.json(); // ou response.text(), dependendo do tipo de resposta esperada
+      console.log(data);
+    } catch (error) {
+      console.error('Erro:', error);
+    }
+  }
+
+  const resendMessageFunci = async function (idReserva, phoneNumber) {
     try {
       setLoadingModal(true)
       const response = await fetch('https://multi-temporada.glitch.me/api/resendMessagePhone/' + idReserva + "/" + phoneNumber);
@@ -936,10 +921,42 @@ function DataTable() {
                                   <Divider light />
                                   <Box sx={{ p: 2 }}>
                                     <Stack direction="row" spacing={1}>
-                                      {/* <Chip color="success" label="Enviada" size="small" /> */}
-                                      {/* <Chip label="Em analise" color="warning" size="small" /> */}
-                                      {/* <Chip label="Erro de envio" color="error" size="small" /> */}
-                                      <Chip label="Aguardando" size="small" />
+                                    {
+                                          (() => {
+                                            const status = JSON.stringify(selectedMessage?.preCheckin)
+                                            //const status = "error";
+                                            switch (status) {
+                                              case 'true':
+                                                return <>
+                                                  <Chip label="Enviada" color="success" size="small" />
+                                                  <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.dadosReserva.id) }} >rechamar hospede</Button>
+                                                </>;
+                                              case 'sent':
+                                                return <>
+                                                  <Chip label="Enviada" color="success" size="small" />
+                                                  <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.dadosReserva.id) }} >rechamar hospede</Button>
+                                                </>;
+                                              case 'fetched':
+                                                return <Chip label="Em análise" color="warning" size="small" />;
+                                              case 'pending':
+                                                return <Chip label="Em análise" color="warning" size="small" />;
+                                              case 'error':
+                                                return <>
+
+                                                  <Chip label="Erro de envio" color="error" size="small" />
+                                                  <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.dadosReserva.id) }} >rechamar hospede</Button>
+                                                </>
+
+                                              default:
+                                                return <>
+
+                                                  <Chip label="Não enviada" color="default" size="small" />
+                                                  <Button size="small" color="error" onClick={() => { resendMessage(selectedReserva.dadosReserva.id) }} >rechamar hospede</Button>
+                                                </>
+
+                                            }
+                                          })()
+                                        }
                                     </Stack>
                                   </Box>
                                 </Card>
