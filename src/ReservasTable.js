@@ -1069,6 +1069,10 @@ function formatarData(data) {
 }
 
 function tratarTelefone(telefone) {
+
+  if (telefone == undefined){
+    return 0
+  }
   const numeroLimpo = telefone.replace(/\D/g, ""); // Remove caracteres não numéricos
 
   if (numeroLimpo.startsWith("55") && numeroLimpo.length === 13) {
