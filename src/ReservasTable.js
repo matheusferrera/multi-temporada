@@ -666,7 +666,7 @@ function DataTable() {
                                   InputProps={{
                                     readOnly: true,
                                   }}
-                                  variant="standard" value={selectedImovelDb.N_WHATSAPP}
+                                  variant="standard" value={selectedImovelDb.N_WHATSAPP ?  selectedImovelDb.N_WHATSAPP : ""}
                                   fullWidth
                                   margin="normal"
                                   InputLabelProps={{
@@ -681,7 +681,7 @@ function DataTable() {
                                   InputProps={{
                                     readOnly: true,
                                   }}
-                                  variant="standard" defaultValue={selectedImovelDb.N_WHATSAPP2}
+                                  variant="standard" defaultValue={selectedImovelDb.N_WHATSAPP2 ?  selectedImovelDb.N_WHATSAPP2 : ""}
                                   fullWidth
                                   margin="normal"
                                   InputLabelProps={{
@@ -696,7 +696,7 @@ function DataTable() {
                                   InputProps={{
                                     readOnly: true,
                                   }}
-                                  variant="standard" value={selectedImovelDb.N_FUNCIONARIO}
+                                  variant="standard" value={selectedImovelDb.N_FUNCIONARIO ?  selectedImovelDb.N_FUNCIONARIO : ""}
                                   fullWidth
                                   margin="normal"
                                   InputLabelProps={{
@@ -1069,11 +1069,11 @@ function formatarData(data) {
 }
 
 function tratarTelefone(telefone) {
-
+  console.log("TRATAR TELEFONE ---> ", telefone)
   if (telefone == undefined){
     return 0
   }
-  const numeroLimpo = telefone.replace(/\D/g, ""); // Remove caracteres não numéricos
+  const numeroLimpo = telefone.toString().replace(/\D/g, ""); // Remove caracteres não numéricos
 
   if (numeroLimpo.startsWith("55") && numeroLimpo.length === 13) {
     return numeroLimpo.slice(0, 4) + numeroLimpo.slice(5);
