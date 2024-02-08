@@ -86,6 +86,11 @@ function DataTable() {
 
   const handleUpdateUser = async () => {
     // Lógica para atualizar os dados do usuário
+    if (!selectedUser.IDUNIDADE) {
+      alert("Por favor, preencha o campo ID da unidade e nome do proprietario");
+      return;
+    }
+
     console.log('Dados atualizados:', selectedUser);
     setLoadingModal(true)
     await firebase.updateImovel(selectedUser.IDUNIDADE, selectedUser)
@@ -181,6 +186,7 @@ function DataTable() {
                             <TextField
                               label="Id da unidade"
                               name="IDUNIDADE"
+                              requierd
                               value={selectedUser.IDUNIDADE}
                               onChange={handleInputChange}
                               fullWidth
