@@ -133,16 +133,38 @@ async function getImovel(id) {
       console.error("Erro ao atualizar dados para ID", id, ":", error);
     }
   }
-  
 
-//   updateImovel("AB01H", {"PROPIETARIO" : "Daiana pereira"});
-getReserva("")
+  async function updateMessages(id, newData) {
+    // Inicializar o Firebase
+
+  
+    // Referência ao nó específico no Realtime Database
+    const dataRef = ref(db, "Mensagens/" + id);
+  
+    try {
+      // Utiliza await para esperar a conclusão da operação update
+      const getRef = await get(dataRef)
+      const newObjt = {
+        ...getRef.val(),
+        ...newData
+      }
+      console.log("NEWOBJT ->", newObjt)
+      await update(dataRef, newObjt);
+  
+      console.log("Dados para ID", id, "atualizados com sucesso:", newData);
+      return 0
+    } catch (error) {
+      console.error("Erro ao atualizar dados para ID", id, ":", error);
+    }
+  }
+  
   
 const firebase = {
     getImovel,
     updateImovel,
     getReserva,
-    getMessage
+    getMessage,
+    updateMessages
 };
 
 module.exports = firebase;
