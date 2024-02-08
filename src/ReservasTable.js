@@ -202,8 +202,7 @@ function DataTable() {
 
                     {
                       (() => {
-                        // let status = respDbFull[selectedReserva.idReserva].messages.boasVindas.imovel[tratarTelefone(phoneNumber)]?.status ? respDbFull[selectedReserva.idReserva].messages.boasVindas.imovel[tratarTelefone(phoneNumber)].status : " ";
-                        const status = selectedMessage?.boasVindas[tratarTelefone(phoneNumber.toString())]?.status
+                        const status = selectedMessage?.boasVindas  ? selectedMessage?.boasVindas[tratarTelefone(phoneNumber.toString())]?.status : "" 
                         const dono = tratarTelefone(phoneNumber.toString()) == tratarTelefone(selectedImovelDb?.N_WHATSAPP) ? "true" :
                           tratarTelefone(phoneNumber.toString()) == tratarTelefone(selectedImovelDb?.N_WHATSAPP2) ? "true" :
                             tratarTelefone(phoneNumber.toString()) == tratarTelefone(selectedImovelDb?.N_WHATSAPP3) ? "true" :
@@ -818,7 +817,7 @@ function DataTable() {
 
                                       {
                                         (() => {
-                                          const status = selectedMessage?.boasVindas[tratarTelefone(selectedHospede.phones[0].iso)]?.status
+                                          const status = selectedMessage?.boasVindas ? selectedMessage.boasVindas[tratarTelefone(selectedHospede.phones[0].iso)]?.status ?? "" : ""
                                           //const status = "error";
                                           switch (status) {
                                             case 'done':
