@@ -12,7 +12,7 @@ import TextField from '@mui/material/TextField';
 import { Divider, Snackbar } from '@mui/material';
 import { pink } from '@mui/material/colors';
 import LinearProgress from '@mui/material/LinearProgress';
-import firebase from './Firebase';
+import firebase, { updateMessages } from './Firebase';
 import CircularProgress from '@mui/material/CircularProgress';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -44,7 +44,7 @@ function DataTable() {
   const [respDb, setRespDb] = useState({})
   const [loadingTable, setLoadingTable] = useState(true);
   const [loadingModal, setLoadingModal] = useState(true);
-
+  const [openSnack, setOpenSnack] = useState(false);
   const [selectedHospede, setSelectedHospede] = useState({})
   const [selectedImovel, setSelectedImovel] = useState({})
   const [selectedMessage, setSelectedMessage] = useState({})
@@ -64,14 +64,11 @@ function DataTable() {
           // Itera sobre os níveis mais externos do objeto
           Object.keys(dados).forEach((chaveExterna) => {
             const dadosInternos = dados[chaveExterna];
-            console.log("DADOS INTERNOS ->", dadosInternos)
             // Itera sobre os níveis internos do objeto
             Object.keys(dadosInternos).forEach((chaveInterna) => {
               const parametro = dadosInternos[chaveInterna];
-              console.log("PARAMETROS ->", parametro)
               // Verifica se o status é "error"
               if (typeof parametro == "string" && parametro === "error") {
-                console.log("ENCONTROU UM ERRO ->", chaveExterna, "////", chaveInterna)
                 id++
                 erros.push({
                   id,
@@ -82,10 +79,9 @@ function DataTable() {
               }
               if (typeof parametro == "object") {
                 Object.keys(parametro).forEach(telefone => {
-                  console.log("PARAMETRO DO OBJ ->", telefone)
+     
                   if(parametro[telefone].status == "error"){
                     id++
-                    console.log("ENCONTROU UM ERRO ->", chaveExterna, "////", chaveInterna)
                     erros.push({
                       id,
                       chaveExterna,
@@ -106,7 +102,8 @@ function DataTable() {
         };
         
         const erros = encontrarErros(dataMessage);
-        const errosFiltrado = erros.filter(objeto => objeto.chaveInterna != 'Dialogo de pós reserva');
+        let errosFiltrado = erros.filter(objeto => objeto.chaveInterna != 'Dialogo de pós reserva');
+        errosFiltrado = errosFiltrado.filter(objeto => objeto.chaveInterna != 'Dialogo Pós boas vindas');
         
         console.log("Parâmetros com erro:", erros);
         console.log("Parâmetros com erro filtrado:", errosFiltrado);
@@ -121,11 +118,35 @@ function DataTable() {
     fetchData();
   }, []);
 
+  const apagarErro = async (id, tipo, telefone) => {
+    
+    let dadosMessage = await firebase.getMessage(id)
+      console.log("DADOS MESSAGE ->", dadosMessage)
+    if(tipo == "Boas vindas"){
+      dadosMessage.boasVindas[telefone].status = "sent"
+      console.log("DADOS MESSAGE TRATADO -> ", dadosMessage)
+      setRespDb(prevData => prevData.filter(item => item.chaveExterna !== id && item.telefone != telefone));
+      
+      
+      firebase.updateMessages(id, dadosMessage)
+      setOpenSnack(true)
+    }
+    console.log("ID -> ", id, " fone -> ", telefone)
+  }
+
+  
+
   const columns = [
     { field: 'chaveExterna', headerName: 'Reserva', width: 100 },
     { field: 'chaveInterna', headerName: 'Dialogo', width: 250 },
     { field: 'telefone', headerName: 'Telefone', width: 150 },
-    {field: 'messageId', headerName: 'Motivo', width: 300 }
+    {field: 'messageId', headerName: 'Motivo', width: 300 },
+    { id: 'actions', label: 'Ações', width: 120 , renderCell: (row) => (
+      <Button variant="outlined" onClick={() => {apagarErro(row.row.chaveExterna, row.row.chaveInterna, row.row.telefone)}} color="error">
+      Apagar
+    </Button>
+    )
+  },
   ];
 
   const handleReservaButtonClick = async (idReserva) => {
@@ -313,11 +334,25 @@ function DataTable() {
     }
   }
 
+  const handleCloseSnack = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpenSnack(false);
+  };
+
+
 
   return (
     <div style={{ height: "100%", width: '100%', display: "flex", justifyContent: "center", alignItems: "center" }}>
       <div style={{ height: "72vh", width: 'min-content' }}>
-
+      <Snackbar
+          open={openSnack}
+          autoHideDuration={2000}
+          message={"Erro apagado com sucesso!"}
+          onClose={handleCloseSnack}
+        />
         {loadingTable ? (
           <CircularProgress color="error" />
         ) : (
@@ -327,7 +362,6 @@ function DataTable() {
             columns={columns}
             pageSizeOptions={[5, 10]}
             style={{ cursor: "pointer" }}
-            onRowClick={(params) => handleReservaButtonClick(params.row.chaveExterna)}
           />
           </>
           
