@@ -208,6 +208,8 @@ function DataTable() {
                             tratarTelefone(phoneNumber.toString()) == tratarTelefone(selectedImovelDb?.N_WHATSAPP3) ? "true" :
                               "false"
 
+                              console.log(phoneNumber, "  // STATUS ->", status, "dono -> ", dono)
+
                         //const status = "error";
                         switch (status) {
                           case 'done':
