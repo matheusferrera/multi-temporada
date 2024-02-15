@@ -881,7 +881,7 @@ function DataTable() {
                                             const status = selectedMessage?.posReserva2
                                             //const status = "error";
                                             switch (status) {
-                                              case 'done':
+                                              case 'success':
                                                 return <>
                                                   <Chip label="Enviada" color="success" size="small" />
                                                 </>;
