@@ -114,6 +114,7 @@ function DataTable() {
       const dadosMessage = await firebase.getMessage(dadosReserva.id)
 
       console.log("DADOS IMOVEL DB ->", dadosImovelDb)
+      console.log("DADOS MESSAGE ->", dadosMessage)
       setSelectedImovel(dadosImovel)
       setSelectedHospede(dadosHospede)
       setSelectedImovelDb(dadosImovelDb)

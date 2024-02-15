@@ -7,6 +7,8 @@ const {
   get
 } = require("firebase/database");
 
+
+
 const { getFirestore } = require("firebase/firestore")
 const { collection, getDocs, doc, setDoc, getDoc, updateDoc } = require("firebase/firestore");
 
@@ -23,15 +25,15 @@ const { collection, getDocs, doc, setDoc, getDoc, updateDoc } = require("firebas
 //   };
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDF9AyJH_TIweKlyRG8uMf8dS3_QKiCAxU",
-  authDomain: "multitemporada-api.firebaseapp.com",
-  databaseURL: "https://multitemporada-api-default-rtdb.firebaseio.com",
-  projectId: "multitemporada-api",
-  storageBucket: "multitemporada-api.appspot.com",
-  messagingSenderId: "17067214021",
-  appId: "1:17067214021:web:6bf8a328f9c834bd3f5cac",
-  measurementId: "G-6DXKVNK2KJ"
+  apiKey: "AIzaSyCx2zHOu6W1iKfReB3gTae-3xZVVaiQBgE",
+  authDomain: "multitemporada-db.firebaseapp.com",
+  projectId: "multitemporada-db",
+  storageBucket: "multitemporada-db.appspot.com",
+  messagingSenderId: "35204927998",
+  appId: "1:35204927998:web:3451bac508ee585b5770af",
+  measurementId: "G-1YRBR74GYD"
 };
+
 
 // Inicializar o Firebase
 const app = initializeApp(firebaseConfig);
@@ -64,28 +66,28 @@ const db2 = getFirestore(app);
 //   }
 
 
-async function getMessage(id) {
+// async function getMessage(id) {
 
-  // Referência ao nó específico no Realtime Database
-  const dataRef = ref(db, "Mensagens/" + id);
+//   // Referência ao nó específico no Realtime Database
+//   const dataRef = ref(db, "Mensagens/" + id);
 
-  try {
-    // Utiliza await para esperar a conclusão da operação get
-    const snapshot = await get(dataRef);
+//   try {
+//     // Utiliza await para esperar a conclusão da operação get
+//     const snapshot = await get(dataRef);
 
-    if (snapshot.exists()) {
-      // Se o documento existir, snapshot.val() conterá os dados
-      const data = snapshot.val();
-      console.log("Dados encontrados para ID", id, ":", data);
-      return data
+//     if (snapshot.exists()) {
+//       // Se o documento existir, snapshot.val() conterá os dados
+//       const data = snapshot.val();
+//       console.log("Dados encontrados para ID", id, ":", data);
+//       return data
 
-    } else {
-      console.log("Nenhum dado encontrado para ID", id);
-    }
-  } catch (error) {
-    console.error("Erro ao obter dados para ID", id, ":", error);
-  }
-}
+//     } else {
+//       console.log("Nenhum dado encontrado para ID", id);
+//     }
+//   } catch (error) {
+//     console.error("Erro ao obter dados para ID", id, ":", error);
+//   }
+// }
 
 
 // async function updateImovel(id, newData) {
@@ -159,17 +161,20 @@ async function getImovel(id) {
   }
 }
 
-async function getMessage2(id) {
+async function getMessage(id) {
   try {
-    let objResp = {}
+    if (id == "") {
+      let objResp = {}
+      const querySnapshot = await getDocs(collection(db2, "Mensagens", id));
+      querySnapshot.forEach((doc) => {
+        objResp[doc.id] = doc.data()
+      });
+      return objResp
+    }
 
-    const querySnapshot = await getDocs(collection(db2, "Mensagens", id));
-    querySnapshot.forEach((doc) => {
-      objResp[doc.id] = doc.data()
-
-    });
-    console.log("OBJ  --> ", objResp);
-    return objResp
+    const docRef = doc(db2, "Mensagens", id);
+    const docSnap = await getDoc(docRef);
+    return docSnap.data()
   } catch (e) {
     console.log("ERRO -> ", e)
   }
@@ -194,7 +199,8 @@ async function updateImovel(id, newData) {
 }
 
 
-getMessage2("")
+
+
 
 
 
@@ -204,5 +210,30 @@ const firebase = {
   getMessage,
   updateMessages
 };
+
+
+// const jsonData = JSON.parse(fs.readFileSync("./src/imoveisAtualizados.json", "utf8"));
+
+//   async function testeDb2(id, newData) {
+//   try{
+//     console.log("TESTANDO!!!")
+//     for (const idUnidade in jsonData.Imoveis) {
+//       const docId = idUnidade;
+//       const data = jsonData.Imoveis[idUnidade];
+//       const docRef = doc(db2, 'Imoveis', docId);
+//       const resp = await setDoc(docRef, data);
+//       console.log("ID -> ", idUnidade, "obj -> ", jsonData.Imoveis[idUnidade], "RESP DB -> ", resp)
+//     }
+//     const querySnapshot = await getDocs(collection(db2, "mensagens"));
+//     querySnapshot.forEach((doc) => {
+//       console.log(doc.id, " --> ", doc.data());
+//     });
+    
+//   }catch(e){
+//     console.log("ERRO -> ", e)
+//   }
+//   }
+
+//   testeDb2()
 
 module.exports = firebase;
