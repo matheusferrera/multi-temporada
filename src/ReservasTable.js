@@ -203,13 +203,13 @@ function DataTable() {
 
                     {
                       (() => {
-                        const status = selectedMessage?.boasVindas  ? selectedMessage?.boasVindas[tratarTelefone(phoneNumber.toString())]?.status : "" 
+                        const status = selectedMessage?.boasVindas ? selectedMessage?.boasVindas[tratarTelefone(phoneNumber.toString())]?.status : ""
                         const dono = tratarTelefone(phoneNumber.toString()) == tratarTelefone(selectedImovelDb?.N_WHATSAPP) ? "true" :
                           tratarTelefone(phoneNumber.toString()) == tratarTelefone(selectedImovelDb?.N_WHATSAPP2) ? "true" :
                             tratarTelefone(phoneNumber.toString()) == tratarTelefone(selectedImovelDb?.N_WHATSAPP3) ? "true" :
                               "false"
 
-                              console.log(phoneNumber, "  // STATUS ->", status, "dono -> ", dono)
+                        console.log(phoneNumber, "  // STATUS ->", status, "dono -> ", dono)
 
                         //const status = "error";
                         switch (status) {
@@ -288,8 +288,8 @@ function DataTable() {
       const dadosMessage = await firebase.getMessage(idReserva)
       setSelectedMessage(dadosMessage)
       setLoadingModal(false)
-      
-      
+
+
     } catch (error) {
       console.error('Erro:', error);
     }
@@ -306,7 +306,7 @@ function DataTable() {
       const dadosMessage = await firebase.getMessage(idReserva)
       setSelectedMessage(dadosMessage)
       setLoadingModal(false)
-     
+
     } catch (error) {
       console.error('Erro:', error);
     }
@@ -314,7 +314,7 @@ function DataTable() {
 
 
 
-  
+
   const cancelCheckin = async function (idReserva, type) {
     const cancelCheckin = await firebase.updateMessages(idReserva, { preCheckin: type })
     setSelectedMessage(prevData => ({
@@ -899,14 +899,14 @@ function DataTable() {
                                                 return <>
 
                                                   <Chip label="Erro de envio" color="error" size="small" />
-                          
+
                                                 </>
 
                                               default:
                                                 return <>
 
                                                   <Chip label="Não enviada" color="default" size="small" />
-                                                 
+
                                                 </>
 
                                             }
@@ -934,7 +934,7 @@ function DataTable() {
                                   <Divider light />
                                   <Box sx={{ p: 2 }}>
                                     <Stack direction="row" spacing={1}>
-                                    {
+                                      {
                                         (() => {
                                           const status = selectedMessage?.preCheckin
                                           //const status = "error";
@@ -949,11 +949,13 @@ function DataTable() {
                                               </>;
                                             case 'cancel':
                                               return <>
-                                              <Chip label="Envio cancelado" color="warning" size="small" />
-                                              <Button size="small" color="error" onClick={() => { cancelCheckin(selectedReserva.dadosReserva.id, false) }} >Reativar envio</Button>
+                                                <Chip label="Envio cancelado" color="warning" size="small" />
+                                                <Button size="small" color="error" onClick={() => { cancelCheckin(selectedReserva.dadosReserva.id, false) }} >Reativar envio</Button>
                                               </>
-                                              
-
+                                            case 'error':
+                                              return <>
+                                                <Chip label="Erro no envio" color="error" size="small" />
+                                              </>
                                             default:
                                               return <>
                                                 <Chip label="Não enviada" color="default" size="small" />
@@ -997,10 +999,14 @@ function DataTable() {
                                               </>;
                                             case 'cancel':
                                               return <>
-                                              <Chip label="Envio cancelado" color="warning" size="small" />
-                                              <Button size="small" color="error" onClick={() => { cancelCheckout(selectedReserva.dadosReserva.id, false) }} >Reativar envio</Button>
+                                                <Chip label="Envio cancelado" color="warning" size="small" />
+                                                <Button size="small" color="error" onClick={() => { cancelCheckout(selectedReserva.dadosReserva.id, false) }} >Reativar envio</Button>
                                               </>
-                                              
+                                            case 'error':
+                                              return <>
+                                                <Chip label="Erro no envio" color="error" size="small" />
+
+                                              </>
 
                                             default:
                                               return <>

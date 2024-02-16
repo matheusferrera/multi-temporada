@@ -111,12 +111,19 @@ function DataTable() {
 
     let dadosMessage = await firebase.getMessage(id)
     console.log("DADOS MESSAGE ->", dadosMessage)
+    console.log("TIPO -> ", tipo)
+    telefone = telefone.split(" -")[0]
     if (tipo == "Boas vindas") {
       dadosMessage.boasVindas[telefone].status = "sent"
       console.log("DADOS MESSAGE TRATADO -> ", dadosMessage)
       setRespDb(prevData => prevData.filter(item => item.idReserva !== id && item.telefone != telefone));
-
-
+      firebase.updateMessages(id, dadosMessage)
+      setOpenSnack(true)
+    }
+    if (tipo == "Pré checkout") {
+      dadosMessage.preCheckout = "success"
+      console.log("DADOS MESSAGE TRATADO -> ", dadosMessage)
+      setRespDb(prevData => prevData.filter(item => item.idReserva !== id && item.telefone != telefone));
       firebase.updateMessages(id, dadosMessage)
       setOpenSnack(true)
     }
