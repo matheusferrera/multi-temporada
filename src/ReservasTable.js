@@ -281,15 +281,15 @@ function DataTable() {
     try {
       setLoadingModal(true)
       const response = await fetch('https://multi-temporada.glitch.me/api/resendMessagePhone/' + idReserva + "/" + phoneNumber);
-      const dadosMessage = await firebase.getMessage(idReserva)
-
+      const data = await response.json(); // ou response.text(), dependendo do tipo de resposta esperada
       if (!response.ok) {
         throw new Error('Erro ao reenviar mensagem');
       }
+      const dadosMessage = await firebase.getMessage(idReserva)
       setSelectedMessage(dadosMessage)
       setLoadingModal(false)
-      const data = await response.json(); // ou response.text(), dependendo do tipo de resposta esperada
-      console.log(data);
+      
+      
     } catch (error) {
       console.error('Erro:', error);
     }
@@ -298,28 +298,21 @@ function DataTable() {
   const resendMessageFunci = async function (idReserva, phoneNumber) {
     try {
       setLoadingModal(true)
-      const response = await fetch('https://multi-temporada.glitch.me/api/resendMessagePhone/' + idReserva + "/" + phoneNumber);
-      const dadosMessage = await firebase.getMessage(idReserva)
-
+      const response = await fetch('https://multi-temporada.glitch.me/api/resendMessageFunci/' + idReserva + "/" + phoneNumber);
+      const data = await response.json();
       if (!response.ok) {
         throw new Error('Erro ao reenviar mensagem');
       }
+      const dadosMessage = await firebase.getMessage(idReserva)
       setSelectedMessage(dadosMessage)
       setLoadingModal(false)
-      const data = await response.json(); // ou response.text(), dependendo do tipo de resposta esperada
-      console.log(data);
+     
     } catch (error) {
       console.error('Erro:', error);
     }
   }
 
-  const cancelCheckout = async function (idReserva, type) {
-    const cancelCheckout = await firebase.updateMessages(idReserva, { preCheckout: type })
-    setSelectedMessage(prevData => ({
-      ...prevData,  // mantém os outros parâmetros do estado inalterados
-      preCheckout: type       // define o novo valor apenas para 'age'
-    }));
-  }
+
 
   
   const cancelCheckin = async function (idReserva, type) {
@@ -327,6 +320,14 @@ function DataTable() {
     setSelectedMessage(prevData => ({
       ...prevData,  // mantém os outros parâmetros do estado inalterados
       preCheckin: type       // define o novo valor apenas para 'age'
+    }));
+  }
+
+  const cancelCheckout = async function (idReserva, type) {
+    const cancelCheckin = await firebase.updateMessages(idReserva, { preCheckout: type })
+    setSelectedMessage(prevData => ({
+      ...prevData,  // mantém os outros parâmetros do estado inalterados
+      preCheckout: type       // define o novo valor apenas para 'age'
     }));
   }
 
@@ -942,7 +943,7 @@ function DataTable() {
                                               return <>
                                                 <Chip label="Aguardando envio" color="default" size="small" />
                                               </>;
-                                            case 'true':
+                                            case 'success':
                                               return <>
                                                 <Chip label="Enviada" color="success" size="small" />
                                               </>;
@@ -990,7 +991,7 @@ function DataTable() {
                                               return <>
                                                 <Chip label="Aguardando envio" color="default" size="small" />
                                               </>;
-                                            case 'true':
+                                            case 'success':
                                               return <>
                                                 <Chip label="Enviada" color="success" size="small" />
                                               </>;
@@ -1103,7 +1104,6 @@ function formatarData(data) {
 }
 
 function tratarTelefone(telefone) {
-  console.log("TRATAR TELEFONE ---> ", telefone)
   if (telefone == undefined) {
     return 0
   }

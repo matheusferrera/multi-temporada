@@ -10,7 +10,7 @@ const {
 
 
 const { getFirestore } = require("firebase/firestore")
-const { collection, getDocs, doc, setDoc, getDoc, updateDoc } = require("firebase/firestore");
+const { collection, getDocs, doc, setDoc, getDoc, updateDoc, where, deleteDoc, query } = require("firebase/firestore");
 
 
 // Your web app's Firebase configuration
@@ -42,99 +42,23 @@ const db = getDatabase(app);
 const db2 = getFirestore(app);
 
 
-// async function getImovel(id) {
-
-//     // Referência ao nó específico no Realtime Database
-//     const dataRef = ref(db, "Imoveis/" + id);
-
-//     try {
-//       // Utiliza await para esperar a conclusão da operação get
-//       const snapshot = await get(dataRef);
-
-//       if (snapshot.exists()) {
-//         // Se o documento existir, snapshot.val() conterá os dados
-//         const data = snapshot.val();
-//         console.log("Dados encontrados para ID", id, ":", data);
-//         return data
-
-//       } else {
-//         console.log("Nenhum dado encontrado para ID", id);
-//       }
-//     } catch (error) {
-//       console.error("Erro ao obter dados para ID", id, ":", error);
-//     }
-//   }
-
-
-// async function getMessage(id) {
-
-//   // Referência ao nó específico no Realtime Database
-//   const dataRef = ref(db, "Mensagens/" + id);
-
-//   try {
-//     // Utiliza await para esperar a conclusão da operação get
-//     const snapshot = await get(dataRef);
-
-//     if (snapshot.exists()) {
-//       // Se o documento existir, snapshot.val() conterá os dados
-//       const data = snapshot.val();
-//       console.log("Dados encontrados para ID", id, ":", data);
-//       return data
-
-//     } else {
-//       console.log("Nenhum dado encontrado para ID", id);
-//     }
-//   } catch (error) {
-//     console.error("Erro ao obter dados para ID", id, ":", error);
-//   }
-// }
-
-
-// async function updateImovel(id, newData) {
-//   // Inicializar o Firebase
-
-
-//   // Referência ao nó específico no Realtime Database
-//   const dataRef = ref(db, "Imoveis/" + id);
-
-//   try {
-//     // Utiliza await para esperar a conclusão da operação update
-//     const getRef = await get(dataRef)
-//     const newObjt = {
-//       ...getRef.val(),
-//       ...newData
-//     }
-//     console.log("NEWOBJT ->", newObjt)
-//     await update(dataRef, newObjt);
-
-//     console.log("Dados para ID", id, "atualizados com sucesso:", newData);
-//     return 0
-//   } catch (error) {
-//     console.error("Erro ao atualizar dados para ID", id, ":", error);
-//   }
-// }
-
 async function updateMessages(id, newData) {
-  // Inicializar o Firebase
-
-
-  // Referência ao nó específico no Realtime Database
-  const dataRef = ref(db, "Mensagens/" + id);
-
   try {
-    // Utiliza await para esperar a conclusão da operação update
-    const getRef = await get(dataRef)
-    const newObjt = {
-      ...getRef.val(),
-      ...newData
-    }
-    console.log("NEWOBJT ->", newObjt)
-    await update(dataRef, newObjt);
+    const docRef = doc(db2, "Mensagens", id);
 
-    console.log("Dados para ID", id, "atualizados com sucesso:", newData);
-    return 0
-  } catch (error) {
-    console.error("Erro ao atualizar dados para ID", id, ":", error);
+    // Verifica se o documento existe
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+      // Atualiza o parâmetro específico no documento
+      await updateDoc(docRef, newData);
+
+    } else {
+      const resp = await setDoc(docRef, newData);
+      console.log(`[updateMessages] - Documento com ID '${id}' não encontrado. CRIANDO UMA REF NO DB`);
+      
+    }
+  } catch (e) {
+    console.error("Erro ao atualizar parâmetro:", e);
   }
 }
 
@@ -210,6 +134,23 @@ const firebase = {
   getMessage,
   updateMessages
 };
+
+// async function limpaDB(){
+//   // Query para buscar os documentos que atendam à condição
+//   console.log("LIMPANDO O DB!")
+//   const q = query(collection(db2, 'Mensagens'), where('preCheckout', '==', 'success'));
+
+//   // Execute a consulta
+//   const querySnapshot = await getDocs(q);
+  
+//   // Para cada documento retornado pela consulta, exclua-o
+//   querySnapshot.forEach(async (doc) => {
+//       // Exclua o documento
+//       await deleteDoc(doc.ref);
+//   });
+// }
+
+// limpaDB()
 
 
 // const jsonData = JSON.parse(fs.readFileSync("./src/imoveisAtualizados.json", "utf8"));
