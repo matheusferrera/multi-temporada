@@ -115,6 +115,7 @@ async function updateImovel(id, newData) {
       await updateDoc(docRef, newData);
 
     } else {
+      await setDoc(docRef, newData);
       console.log(`Documento com ID '${id}' não encontrado.`);
     }
   } catch (e) {

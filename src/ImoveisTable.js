@@ -91,9 +91,15 @@ function DataTable() {
       return;
     }
 
-    console.log('Dados atualizados:', selectedUser);
+    if (selectedUser.NEW) {//Retira campo de new imovel
+      const updatedUser = { ...selectedUser };
+      delete updatedUser.NEW;
+      await firebase.updateImovel(selectedUser.IDUNIDADE, updatedUser)
+    } else {
+      await firebase.updateImovel(selectedUser.IDUNIDADE, selectedUser)
+    }
+
     setLoadingModal(true)
-    await firebase.updateImovel(selectedUser.IDUNIDADE, selectedUser)
     setLoadingModal(false)
     setOpenDialog(false);
     setOpenSnack(true)
