@@ -582,7 +582,7 @@ function DataTable() {
                             <TextField
                               label="Telefone"
                               name="nome"
-                              value={selectedHospede.phones[0].iso}
+                              value={selectedHospede.phones?.[0]?.iso ?? "99999999"}
                               fullWidth
                               margin="normal"
 

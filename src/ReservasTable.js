@@ -787,7 +787,7 @@ function DataTable() {
                                 <TextField
                                   label="Telefone"
                                   name="nome"
-                                  value={selectedHospede.phones[0].iso}
+                                  value={selectedHospede.phones?.[0]?.iso ?? "Não informado"}
                                   InputProps={{
                                     readOnly: true,
                                   }}
@@ -821,7 +821,7 @@ function DataTable() {
 
                                       {
                                         (() => {
-                                          const status = selectedMessage?.boasVindas ? selectedMessage.boasVindas[tratarTelefone(selectedHospede.phones[0].iso)]?.status ?? "" : ""
+                                          const status = selectedMessage?.boasVindas ? selectedMessage.boasVindas[tratarTelefone(selectedHospede.phones?.[0]?.iso ?? "99999999")]?.status ?? "" : ""
                                           //const status = "error";
                                           switch (status) {
                                             case 'done':
