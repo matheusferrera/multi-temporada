@@ -880,6 +880,8 @@ function tratarStatus(stats) {
       return "Dialogo de pós reserva"
       case "preCheckout":
       return "Pré checkout"
+      case "preCheckin":
+      return "Pré checkin"
     default:
       return "nao encontrado"
   }
