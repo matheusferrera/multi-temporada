@@ -65,20 +65,27 @@ function DataTable() {
                 erros.push({
                   id,
                   idReserva,
+                  checkIn: formatarData(dadosReserva.checkInDate),
+                  checkOut: formatarData(dadosReserva.checkOutDate),
                   chaveInterna: tratarStatus(chaveInterna),
                   telefone: telefoneHospede + " - hospede",
                   messageId: "Chat não existe com número informado. Lembre-se de informar o número completo com DDI+DDD+NUMERO"
                 });
               }
               if (typeof parametro == "object") {
+                
+        
                 for (const telefone in parametro) {
                   if (parametro[telefone].status == "error") {
+                    const dadosReserva = await Service.getReserva(idReserva);
                     id++;
                     erros.push({
                       id,
                       idReserva,
                       chaveInterna: tratarStatus(chaveInterna),
                       messageId: parametro[telefone].messageId ? parametro[telefone].messageId : parametro[telefone].chatId,
+                      checkIn: formatarData(dadosReserva.checkInDate),
+                      checkOut: formatarData(dadosReserva.checkOutDate),
                       telefone: telefone + " - imovel",
                     });
                   }
@@ -127,6 +134,13 @@ function DataTable() {
       firebase.updateMessages(id, dadosMessage)
       setOpenSnack(true)
     }
+    if (tipo == "Pré checkin") {
+      dadosMessage.preCheckin = "success"
+      console.log("DADOS MESSAGE TRATADO -> ", dadosMessage)
+      setRespDb(prevData => prevData.filter(item => item.idReserva !== id && item.telefone != telefone));
+      firebase.updateMessages(id, dadosMessage)
+      setOpenSnack(true)
+    }
     console.log("ID -> ", id, " fone -> ", telefone)
   }
 
@@ -135,6 +149,8 @@ function DataTable() {
   const columns = [
     { field: 'idReserva', headerName: 'Reserva', width: 100 },
     { field: 'chaveInterna', headerName: 'Dialogo', width: 170 },
+    { field: 'checkIn', headerName: 'Check in', width: 100 },
+    { field: 'checkOut', headerName: 'Check out', width: 100 },
     { field: 'telefone', headerName: 'Telefone', width: 200 },
     { field: 'messageId', headerName: 'Motivo', width: 300 },
     {
