@@ -216,12 +216,12 @@ function DataTable() {
                           case 'done':
                             return <>
                               <Chip label="Enviada" color="success" size="small" />
-                              <Button size="small" color="error" onClick={() => { dono ? resendMessageUser(idReserva, phoneNumber.toString()) : resendMessageFunci(idReserva, phoneNumber.toString()) }} >rechamar usuário</Button>
+                              <Button size="small" color="error" onClick={() => { dono == "true" ? resendMessageUser(idReserva, phoneNumber.toString()) : resendMessageFunci(idReserva, phoneNumber.toString()) }} >rechamar usuário</Button>
                             </>;
                           case 'sent':
                             return <>
                               <Chip label="Enviada" color="success" size="small" />
-                              <Button size="small" color="error" onClick={() => { dono ? resendMessageUser(idReserva, phoneNumber.toString()) : resendMessageFunci(idReserva, phoneNumber.toString()) }} >rechamar usuário</Button>
+                              <Button size="small" color="error" onClick={() => { dono == "true" ? resendMessageUser(idReserva, phoneNumber.toString()) : resendMessageFunci(idReserva, phoneNumber.toString()) }} >rechamar usuário</Button>
                             </>;
                           case 'fetched':
                             return <Chip label="Tentando enviar" color="warning" size="small" />;
@@ -231,14 +231,14 @@ function DataTable() {
                             return <>
 
                               <Chip label="Erro de envio" color="error" size="small" />
-                              <Button size="small" color="error" onClick={() => { dono ? resendMessageUser(idReserva, phoneNumber.toString()) : resendMessageFunci(idReserva, phoneNumber.toString()) }}  >rechamar usuário</Button>
+                              <Button size="small" color="error" onClick={() => { dono == "true" ? resendMessageUser(idReserva, phoneNumber.toString()) : resendMessageFunci(idReserva, phoneNumber.toString()) }}  >rechamar usuário</Button>
                             </>
 
                           default:
                             return <>
 
                               <Chip label="Não enviada" color="default" size="small" />
-                              <Button size="small" color="error" onClick={() => { dono ? resendMessageUser(idReserva, phoneNumber.toString()) : resendMessageFunci(idReserva, phoneNumber.toString()) }} >rechamar usuário</Button>
+                              <Button size="small" color="error" onClick={() => { dono == "true" ? resendMessageUser(idReserva, phoneNumber.toString()) : resendMessageFunci(idReserva, phoneNumber.toString()) }} >rechamar usuário</Button>
                             </>
 
                         }

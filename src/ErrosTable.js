@@ -26,13 +26,13 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
+import { v4 as uuidv4 } from 'uuid';
 
 
 function DataTable() {
 
   const [openDialog, setOpenDialog] = useState(false);
-  const [respDb, setRespDb] = useState({})
+  const [respDb, setRespDb] = useState([])
   const [loadingTable, setLoadingTable] = useState(true);
   const [loadingModal, setLoadingModal] = useState(true);
   const [openSnack, setOpenSnack] = useState(false);
@@ -41,78 +41,192 @@ function DataTable() {
   const [selectedMessage, setSelectedMessage] = useState({})
   const [selectedImovelDb, setSelectedImovelDb] = useState({})
   const [selectedReserva, setSelectedReserva] = useState({});
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await firebase.getImovel("");
-        const dataMessage = await firebase.getMessage("");
-  
-        const encontrarErros = async (dados) => {
-          const erros = [];
-          let id = 0;
-          for (const idReserva in dados) {
-            const dadosInternos = dados[idReserva];
-       
-            for (const chaveInterna in dadosInternos) {
-              const parametro = dadosInternos[chaveInterna];
-              if (typeof parametro == "string" && parametro === "error") {
 
-                const dadosReserva = await Service.getReserva(idReserva);
-                const dadosHospede = await Service.getClient(dadosReserva._idclient);
-                const telefoneHospede = tratarTelefone(dadosHospede.phones[0].iso);
 
-                id++;
-                erros.push({
-                  id,
-                  idReserva,
-                  checkIn: formatarData(dadosReserva.checkInDate),
-                  checkOut: formatarData(dadosReserva.checkOutDate),
-                  chaveInterna: tratarStatus(chaveInterna),
-                  telefone: telefoneHospede + " - hospede",
-                  messageId: "Chat não existe com número informado. Lembre-se de informar o número completo com DDI+DDD+NUMERO"
-                });
+  const encontrarErros = (dados) => {
+    const novosErros = [];
+    for (const idReserva in dados) {
+      const dadosInternos = dados[idReserva];
+      console.log("ANALISANDO - ", idReserva);
+      for (const chaveInterna in dadosInternos) {
+        const parametro = dadosInternos[chaveInterna];
+        if (typeof parametro === "string" && parametro === "error" && chaveInterna !== "posReserva2") {
+          console.log("Encontrou erro - ", idReserva, " - ", dadosInternos, " chave inter - ", chaveInterna);
+          Service.getReserva(idReserva)
+            // eslint-disable-next-line no-loop-func
+            .then(dadosReserva => {
+              if (!dadosReserva) {
+                throw new Error("Reserva não encontrada");
               }
-              if (typeof parametro == "object") {
-                
-        
-                for (const telefone in parametro) {
-                  if (parametro[telefone].status == "error") {
-                    const dadosReserva = await Service.getReserva(idReserva);
-                    id++;
-                    erros.push({
-                      id,
-                      idReserva,
-                      chaveInterna: tratarStatus(chaveInterna),
-                      messageId: parametro[telefone].messageId ? parametro[telefone].messageId : parametro[telefone].chatId,
-                      checkIn: formatarData(dadosReserva.checkInDate),
-                      checkOut: formatarData(dadosReserva.checkOutDate),
-                      telefone: telefone + " - imovel",
-                    });
+              return Service.getClient(dadosReserva._idclient)
+                .then(dadosHospede => {
+                  if (!dadosHospede) {
+                    throw new Error("Hóspede não encontrado");
                   }
-                }
-              }
+                  
+                  const telefoneHospede = tratarTelefone(dadosHospede?.phones ? dadosHospede?.phones[0]?.iso : "0000000000000");
+                  let novosErros = {
+                    id: uuidv4(),
+                    idReserva,
+                    checkIn: formatarData(dadosReserva.checkInDate),
+                    checkOut: formatarData(dadosReserva.checkOutDate),
+                    chaveInterna: tratarStatus(chaveInterna),
+                    telefone: telefoneHospede + " - hospede",
+                    messageId: "Chat não existe com número informado. Lembre-se de informar o número completo com DDI+DDD+NUMERO"
+                  };
+                  setRespDb(prevState => {
+                    const isDuplicate = prevState.some(item => item.idReserva === idReserva && item.telefone === novosErros.telefone);
+                  
+                    if (!isDuplicate) {
+                      return [...prevState, novosErros];
+                    }
+                    return prevState; 
+                  });
+                });
+            })
+            .catch(error => {
+              console.error("Erro ao buscar dados da reserva ou do hóspede:", error);
+              // Trate o erro adequadamente, como exibir uma mensagem de erro ao usuário
+            });
+
+        }
+        if (typeof parametro === "object" && chaveInterna !== "posReserva2") {
+          for (const telefone in parametro) {
+            if (parametro[telefone].status === "error") {
+              Service.getReserva(idReserva)
+                // eslint-disable-next-line no-loop-func
+                .then(dadosReserva => {
+                  if (!dadosReserva) {
+                    throw new Error("Reserva não encontrada");
+                  }
+                  let novosErros = {
+                    id: uuidv4(),
+                    idReserva,
+                    chaveInterna: tratarStatus(chaveInterna),
+                    messageId: parametro[telefone].messageId ? parametro[telefone].messageId : parametro[telefone].chatId,
+                    checkIn: formatarData(dadosReserva.checkInDate),
+                    checkOut: formatarData(dadosReserva.checkOutDate),
+                    telefone: telefone + " - imovel",
+                  };
+                  
+                  setRespDb(prevState => {
+                    const isDuplicate = prevState.some(item => item.idReserva === idReserva && item.telefone === novosErros.telefone);
+                  
+                    if (!isDuplicate) {
+                      return [...prevState, novosErros];
+                    }
+                    return prevState; 
+                  });
+             
+                })
+                .catch(error => {
+                  console.error("Erro ao buscar dados da reserva:", error);
+                  // Trate o erro adequadamente
+                });
             }
           }
-          return erros;
-        };
-  
-        const erros = await encontrarErros(dataMessage);
-        let errosFiltrado = erros.filter(objeto => objeto.chaveInterna != 'Dialogo de pós reserva');
-        errosFiltrado = errosFiltrado.filter(objeto => objeto.chaveInterna != 'Dialogo Pós boas vindas');
-  
-        console.log("Parâmetros com erro:", erros);
-        console.log("Parâmetros com erro filtrado:", errosFiltrado);
-  
-        setRespDb(errosFiltrado);
-        setLoadingTable(false);
-      } catch (error) {
-        console.error('Erro ao obter dados do Firebase:', error);
+        }
       }
+    }
+    
+    setLoadingTable(false)
+    return
+  };
+
+
+
+  useEffect(() => {
+    const fetchData = () => {
+
+      firebase.getMessage("")
+        .then(dataMessage => {
+          encontrarErros(dataMessage)
+        }).catch(error => {
+          console.error('Erro ao obter dados do Firebase:', error);
+        });
     };
-  
+
     fetchData();
   }, []);
-  
+
+
+
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const data = await firebase.getImovel("");
+  //       const dataMessage = await firebase.getMessage("");
+
+  //       const encontrarErros = async (dados) => {
+  //         const erros = [];
+  //         let id = 0;
+  //         for (const idReserva in dados) {
+  //           const dadosInternos = dados[idReserva];
+  //           console.log("Dados internos fora do for - ", idReserva, " - ",  dadosInternos)
+  //           for (const chaveInterna in dadosInternos) {
+
+  //             const parametro = dadosInternos[chaveInterna];
+  //             if (typeof parametro == "string" && parametro == "error") {
+
+  //               const dadosReserva = await Service.getReserva(idReserva);
+  //               const dadosHospede = await Service.getClient(dadosReserva._idclient);
+  //               const telefoneHospede = tratarTelefone(dadosHospede.phones[0].iso);
+
+  //               id++;
+  //               erros.push({
+  //                 id,
+  //                 idReserva,
+  //                 checkIn: formatarData(dadosReserva.checkInDate),
+  //                 checkOut: formatarData(dadosReserva.checkOutDate),
+  //                 chaveInterna: tratarStatus(chaveInterna),
+  //                 telefone: telefoneHospede + " - hospede",
+  //                 messageId: "Chat não existe com número informado. Lembre-se de informar o número completo com DDI+DDD+NUMERO"
+  //               });
+  //               console.log("ERROS -> ", erros)
+  //             }
+  //             if (typeof parametro == "object") {
+
+
+  //               for (const telefone in parametro) {
+  //                 if (parametro[telefone].status == "error") {
+  //                   const dadosReserva = await Service.getReserva(idReserva);
+  //                   id++;
+  //                   erros.push({
+  //                     id,
+  //                     idReserva,
+  //                     chaveInterna: tratarStatus(chaveInterna),
+  //                     messageId: parametro[telefone].messageId ? parametro[telefone].messageId : parametro[telefone].chatId,
+  //                     checkIn: formatarData(dadosReserva.checkInDate),
+  //                     checkOut: formatarData(dadosReserva.checkOutDate),
+  //                     telefone: telefone + " - imovel",
+  //                   });
+  //                   console.log("ERROS -> ", erros)
+  //                 }
+  //               }
+  //             }
+  //           }
+  //         }
+  //         return erros;
+  //       };
+
+  //       const erros = await encontrarErros(dataMessage);
+  //       let errosFiltrado = erros.filter(objeto => objeto.chaveInterna != 'Dialogo de pós reserva');
+  //       errosFiltrado = errosFiltrado.filter(objeto => objeto.chaveInterna != 'Dialogo Pós boas vindas');
+
+  //       console.log("Parâmetros com erro:", erros);
+  //       console.log("Parâmetros com erro filtrado:", errosFiltrado);
+
+  //       setRespDb(errosFiltrado);
+  //       setLoadingTable(false);
+  //     } catch (error) {
+  //       console.error('Erro ao obter dados do Firebase:', error);
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, []);
+
 
   const apagarErro = async (id, tipo, telefone) => {
 
@@ -894,9 +1008,9 @@ function tratarStatus(stats) {
       return "Dialogo Pós boas vindas"
     case "posReserva2":
       return "Dialogo de pós reserva"
-      case "preCheckout":
+    case "preCheckout":
       return "Pré checkout"
-      case "preCheckin":
+    case "preCheckin":
       return "Pré checkin"
     default:
       return "nao encontrado"
