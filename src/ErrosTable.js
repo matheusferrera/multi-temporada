@@ -47,12 +47,10 @@ function DataTable() {
     const novosErros = [];
     for (const idReserva in dados) {
       const dadosInternos = dados[idReserva];
-      console.log("ANALISANDO - ", idReserva);
       for (const chaveInterna in dadosInternos) {
         const parametro = dadosInternos[chaveInterna];
         if (typeof parametro === "string" && parametro === "error" && chaveInterna !== "posReserva2") {
-          console.log("Encontrou erro - ", idReserva, " - ", dadosInternos, " chave inter - ", chaveInterna);
-          Service.getReserva(idReserva)
+           Service.getReserva(idReserva)
             // eslint-disable-next-line no-loop-func
             .then(dadosReserva => {
               if (!dadosReserva) {
@@ -161,7 +159,7 @@ function DataTable() {
 
 
   const apagarErro = async (id, tipo, telefone) => {
-
+    console.log("TIPO DE ERRO - ", tipo)
     let dadosMessage = await firebase.getMessage(id)
     telefone = telefone.split(" -")[0]
     if (tipo == "Boas vindas") {
@@ -170,8 +168,20 @@ function DataTable() {
       firebase.updateMessages(id, dadosMessage)
       setOpenSnack(true)
     }
-    if (tipo == "Pré checkout" || tipo == "Pré checkin" || tipo == "Dialogo Pós boas vindas") {
+    if (tipo == "Pré checkout") {
       dadosMessage.preCheckout = "success"
+      setRespDb(prevData => prevData.filter(item => item.idReserva !== id && item.telefone != telefone));
+      firebase.updateMessages(id, dadosMessage)
+      setOpenSnack(true)
+    }
+    if (tipo == "Pré checkin") {
+      dadosMessage.preCheckin = "success"
+      setRespDb(prevData => prevData.filter(item => item.idReserva !== id && item.telefone != telefone));
+      firebase.updateMessages(id, dadosMessage)
+      setOpenSnack(true)
+    }
+    if (tipo == "Dialogo Pós boas vindas") {
+      dadosMessage.posReserva = "success"
       setRespDb(prevData => prevData.filter(item => item.idReserva !== id && item.telefone != telefone));
       firebase.updateMessages(id, dadosMessage)
       setOpenSnack(true)
@@ -265,38 +275,6 @@ function tratarTelefone(telefone) {
   return numeroLimpo;
 }
 
-
-function tratarReservasTabela(originalObject) {
-
-
-
-
-
-  const newReservation = {
-    id: originalObject.id,
-    creationDate: originalObject.creationDate,
-    checkIn: formatarData(originalObject.checkInDate) + " às " + originalObject.checkInTime,
-    checkOut: formatarData(originalObject.checkOutDate) + " às " + originalObject.checkOutTime,
-    listingId: originalObject._idlisting,
-    clientId: originalObject._idclient,
-    type: originalObject.type,
-    price: "R$ " + originalObject.price._f_total,
-    totalPaid: "R$ " + originalObject.stats._f_totalPaid,
-    restPaid: "R$ " + (originalObject.price._f_total - originalObject.stats._f_totalPaid),
-    guests: originalObject.guests,
-    guestsDetails: originalObject.guestsDetails,
-    partner: {
-      id: originalObject.partner._id,
-      name: originalObject.partner.name
-    },
-    reservationUrl: originalObject.reservationUrl
-
-
-
-  }
-
-  return newReservation
-}
 
 function formatarData(data) {
   const partes = data.split('-');

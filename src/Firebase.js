@@ -48,7 +48,11 @@ async function updateMessages(id, newData) {
 
     // Verifica se o documento existe
     const docSnap = await getDoc(docRef);
+    
     if (docSnap.exists()) {
+      console.log("documento existe - ")
+      console.log("NEW DATA -> ", newData)
+      console.log("DOC - ", docSnap.data())
       // Atualiza o parâmetro específico no documento
       await updateDoc(docRef, newData);
 
